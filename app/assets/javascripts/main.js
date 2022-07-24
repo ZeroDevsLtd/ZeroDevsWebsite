@@ -2,7 +2,7 @@ $(function () {
     // portfolio filter
     $(window).load(function(){'use strict';
         var $portfolio_selectors = $('.portfolio-filter >li>a');
-        var $portfolio = $('.syftet-flex-row');
+        var $portfolio = $('.zerodevs-flex-row');
         $portfolio.isotope({
             itemSelector : '.portfolio-item',
             layoutMode : 'masonry'

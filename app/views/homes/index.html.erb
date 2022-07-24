@@ -137,13 +137,13 @@
 </section>
 <script>
     function initMap() {
-        var syftet = {lat: 23.8366336, lng: 90.3679753};
+        var zerodevs = {lat: 23.8366336, lng: 90.3679753};
         var map = new google.maps.Map(document.getElementById('map-canvas'), {
             zoom: 15,
-            center: syftet
+            center: zerodevs
         });
         var marker = new google.maps.Marker({
-            position: syftet,
+            position: zerodevs,
             map: map
         });
         var contentString = '<div id="content">' +
@@ -160,7 +160,7 @@
         });
 
         var marker = new google.maps.Marker({
-            position: syftet,
+            position: zerodevs,
             map: map,
             title: 'Ruby on Rails Software Company'
         });

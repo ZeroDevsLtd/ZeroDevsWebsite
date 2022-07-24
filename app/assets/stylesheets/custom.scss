@@ -4,13 +4,13 @@
   }
 }
 //.company-background {
-//  background: linear-gradient(rgba(255, 255, 255, 0.87), rgba(255, 255, 255, 0.75)), url('syftet-logo.png') center center no-repeat  ;
+//  background: linear-gradient(rgba(255, 255, 255, 0.87), rgba(255, 255, 255, 0.75)), url('zerodevs-logo.png') center center no-repeat  ;
 //  background-size: 1213px 1268px;
 //  color: #113448;
 //}
 .background-color::after {
   content: "";
-  background-image: url("syftet-logo.png");
+  background-image: url("zerodevs-logo.png");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
