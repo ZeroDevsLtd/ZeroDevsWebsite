@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 # AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
 AdminUser.create!(email: 'info@syftet.com', password: 'cse070222#', password_confirmation: 'cse070222#')
+AdminUser.create!(email: 'zerodevs@gmail.com', password: 'Zero123#@', password_confirmation: 'Zero123#@')
 
 HomeSlider.create!(image: 'slider1.jpg', title: 'Feel your Dream in Reality!', sub_title: 'We encourage you to dream and share your dreams with us. Our team of expertise is always up for the challenge to make your concept and demands into the final product.', link_text: 'Contact Us!' , is_active: false )
 HomeSlider.create!(image: 'slider2.png', title: 'Sophisticated development', sub_title: 'Our team of expertise has years of experience to deal with your most sophisticated applications. We provide special care, focus and emphasis on what you think deserves special attention.', link_text: 'Lets Cheer Up!', is_active: false )

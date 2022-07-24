@@ -14,14 +14,14 @@ Rails.application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
-  config.action_mailer.default_url_options = {host: 'https://syftet.com'}
+  config.action_mailer.default_url_options = {host: 'https://zerodevs.com'}
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address:   "smtp.gmail.com",
     port:  587,
     domain:  "gmail.com",
-    user_name:  "syftetltd@gmail.com",
-    password:  "nazrulziko",
+    user_name:  "zerodevs@gmail.com",
+    password:  "zerodevs",
     authentication:  "plain",
     enable_starttls_auto: true
   }
@@ -91,7 +91,7 @@ Rails.application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  config.asset_host = "https://syftet.com/"
+  config.asset_host = "https://zerodevs.com/"
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')

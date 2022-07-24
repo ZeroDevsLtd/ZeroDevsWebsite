@@ -3,7 +3,7 @@
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
 
-server "173.212.248.182", user: "deployer", roles: %w{app db web}
+server "217.21.77.134", user: "deployer", roles: %w{app db web}
 # server "example.com", user: "deploy", roles: %w{app db web}, my_property: :my_value
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
@@ -18,9 +18,9 @@ server "173.212.248.182", user: "deployer", roles: %w{app db web}
 # property set. Specify the username and a domain or IP for the server.
 # Don't use `:all`, it's a meta role.
 
-role :app, %w{deployer@173.212.248.182}
-role :web, %w{deployer@173.212.248.182}
-role :db,  %w{deployer@173.212.248.182}
+role :app, %w{deployer@217.21.77.134}
+role :web, %w{deployer@217.21.77.134}
+role :db,  %w{deployer@217.21.77.134}
 
 
 
@@ -60,6 +60,6 @@ role :db,  %w{deployer@173.212.248.182}
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
-set :repo_url, "git@github.com:nazrulcse/syftetltd.git"
-set :branch, "tuhin_dev"
-set :deploy_to, "/home/deployer/apps/syftet_staging"
+set :repo_url, "https://github.com/ZeroDevsLtd/ZeroDevsWebsite"
+set :branch, "main"
+set :deploy_to, "/home/deployer/apps/ZeroDevsWebsite"
