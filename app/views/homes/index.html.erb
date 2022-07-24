@@ -1,0 +1,176 @@
+<% content_for :title do %>
+  Software Company in Dhaka,Bangladesh | Syftet Limited.
+<% end %>
+<% content_for :meta_title do %>
+  Software Company in Bangladesh | Syftet
+<% end %>
+<% content_for :meta_description do %>
+  “SYFTED LTD” is the best software company in Bangladesh that takes full pride in its quality service. Our team of experts take pride in their tasks.
+<% end %>
+
+<!-- Swipper -->
+<%= render 'homes/shared/swipper' %>
+
+<!-- Best Services Offer -->
+<%= render 'homes/shared/service' %>
+
+<!--Why choose us-->
+<%= render 'homes/shared/why_choose_us' %>
+<!-- Our clients -->
+<%= render 'homes/shared/clients', @clients => @clients, :reviews => @reviews %>
+<%#= render 'homes/shared/new_clients', :clients => @clients, :reviews => @reviews %>
+
+<!-- portfolio -->
+<%= render 'homes/shared/portfolio', :portfolios => @portfolios %>
+<!-- counters-->
+<section class="section-md bg-accent text-center bg-image-7" style="position: relative">
+  <div class="about-overlay bg-img-src2"></div>
+  <div class="container">
+    <div class="row justify-content-md-center row-50">
+      <div class="col-md-6 col-lg-3">
+        <!-- Box counter-->
+        <article class="box-counter">
+          <div class="box-counter__icon linear-icon-mustache-glasses"></div>
+          <div class="box-counter__wrap">
+            <div class="counter">96</div>
+            <span>%</span>
+          </div>
+          <p class="box-counter__title text-center">Project Success Rate</p>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <!-- Box counter-->
+        <article class="box-counter">
+          <div class="box-counter__icon linear-icon-smile"></div>
+          <div class="box-counter__wrap">
+            <div class="counter">98</div>
+            <span>%</span>
+          </div>
+          <p class="box-counter__title text-center"> Client Positive Feedback </p>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <!-- Box counter-->
+        <article class="box-counter">
+          <div class="box-counter__icon linear-icon-code"></div>
+          <div class="box-counter__wrap">
+            <div class="counter">92</div>
+            <span>%</span>
+          </div>
+          <p class="box-counter__title text-center">Test Code Coverage</p>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <!-- Box counter-->
+        <article class="box-counter">
+          <div class="box-counter__icon linear-icon-library"></div>
+          <div class="box-counter__wrap">
+            <div class="counter">400</div>
+          </div>
+          <p class="box-counter__title text-center">Project Completed</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section><!-- Project success history-->
+
+<!-- What make us unique?-->
+<%= render 'homes/shared/makes_us_unique' %>
+<!-- What technology we use-->
+<%= render 'homes/shared/technologies', :technologies => @technologies %>
+<!-- Promo line-->
+<section id="promo-line" class="promo-line row-promotion bg-custom">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="themesflat-spacer clearfix" data-desktop="24" data-mobi="40" data-smobi="40" style="height:24px"></div>
+
+        <div class="themesflat-action-box style-1 has-icon padding-left-106 padding-right-113">
+          <div class="inner">
+            <div class="heading-wrap">
+              <div class="text-wrap">
+                <span class="iconify icon mdi mdi-hops" data-icon="mdi:hops"></span>
+                <h3 class="heading p20">
+                  If you can envision it, then we can design it. <br>Tell us more about
+                  your project!
+                </h3>
+                <span class="icon"><i class="as-icon-speedometer2"></i></span>
+              </div>
+            </div>
+            <div class="button-wrap pt30">
+              <a href="#contact-us" class="button button-default">CONTACT US</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="themesflat-spacer clearfix" data-desktop="20" data-mobi="40" data-smobi="40" style="height:20px"></div>
+      </div><!-- /.col-md-12 -->
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+</section><!--cta-->
+
+<!--Feature blog-->
+<section id="feature-blog" class="section-md bg-gray-lighter ">
+
+  <%= render 'homes/shared/feature_blogs', featured_blogs: @featured_blogs %>
+
+</section>
+<!--Lets start project together-->
+
+<section id="contact-us" class="bg-gray-lighter object-wrap">
+  <%= render 'homes/shared/start_project_form', contact: @contactinfo %>
+</section>
+
+
+<!--you can add Posts from partial-->
+
+<!-- Page Footer -->
+<%#= render 'shared/footer' %>
+<section class="">
+  <div class="container-fluid">
+    <div class="col-md-12 map-wrap">
+      <!-- RD Google Map-->
+      <div id="map-canvas" class="google-map-footer"></div>
+    </div>
+
+  </div>
+</section>
+<script>
+    function initMap() {
+        var zerodevs = {lat: 23.8366336, lng: 90.3679753};
+        var map = new google.maps.Map(document.getElementById('map-canvas'), {
+            zoom: 15,
+            center: zerodevs
+        });
+        var marker = new google.maps.Marker({
+            position: zerodevs,
+            map: map
+        });
+        var contentString = '<div id="content">' +
+            '<div id="siteNotice">' +
+            '</div>' +
+            '<h5 id="firstHeading" class="firstHeading text-center primary-color">Syftet Ltd</h5>' +
+            '<div id="bodyContent" class="text-center">' +
+            '<p><strong>Address:</strong> House #512(3rd-floor), Road #07, Avenue #03, Mirpur DOHS, Pallabi, Dhaka 1216</p>'+
+            '</div>' +
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+
+        var marker = new google.maps.Marker({
+            position: zerodevs,
+            map: map,
+            title: 'Ruby on Rails Software Company'
+        });
+        marker.addListener('click', function () {
+            infowindow.open(map, marker);
+        });
+        infowindow.open(map, marker);
+
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKHLMWiIs_kLXWj4q40Pr_mtaJYbMfqrE&callback=initMap">
+</script>

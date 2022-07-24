@@ -1,0 +1,61 @@
+<div class="section ">
+  <div class="container">
+    <div class="cb row justify-content-endx">
+      <div class="col-lg-12 col-md-12 mb40" style="padding: 10px">
+        <h4 class=" start-project-title">Let's work Together </h4>
+        <p class="start-project-title-text">
+          <% if yield(:lets_work_text).present? %>
+            <%= yield(:lets_work_text) %>
+          <% else %>
+            We are very excited to work with you and deal with your new project. We will never leave waiting hours after hours for a simple email. Our staff will reply to you back as soon as they receive your inquiry. At Syftet, you will find everything very comfortable.
+        <% end %>
+        </p>
+        <div class="row">
+          <div class="col-lg-2 col-md-2"></div>
+          <div class="col-lg-8 col-md-8">
+            <div role="form" class="wpcf7" id="wpcf7-f55-o1" lang="en-GB" dir="ltr">
+              <div class="screen-reader-response"></div>
+              <%= form_for contact, url: start_project_path, id: 'contactid', class: "wpcf7-form", novalidate: "novalidate", remote: true do |form| %>
+                <p>
+                <div class="col-xs-12">
+                  <span class="wpcf7-form-control-wrap your-name">
+                    <%= form.text_field :name, id: 'textid', required: true, size: "40", class: "wpcf7-form-control wpcf7-text wpcf7-validates-as-required", aria: { required: "true", invalid: "false" }, placeholder: "Name *"  %>
+                  </span>
+                </div>
+                <p>
+                <div class="col-xs-12">
+                  <span class="wpcf7-form-control-wrap your-email">
+                    <%= form.email_field :email, id: 'emailid', required: true, size: "40", class: "wpcf7-form-control wpcf7-text wpcf7-validates-as-required", aria: { required: "true", invalid: "false" }, placeholder: "Email *"  %>
+                  </span>
+                </div>
+
+                <p>
+                <div class="col-xs-12">
+                  <span class="wpcf7-form-control-wrap text-phone">
+                    <%= form.text_field :telephone, id: 'telephoneid', required: true, size: "40", class: "wpcf7-form-control wpcf7-text wpcf7-validates-as-required", aria: { required: "true", invalid: "false" }, placeholder: "Phone Number *"  %>
+                  </span>
+                </div>
+
+                <p>
+                <div class="col-xs-12">
+                  <span class="wpcf7-form-control-wrap text-sms">
+                    <%= form.text_area :message, id: 'messageid', rows: '7', required: true, class: "wpcf7-form-control wpcf7-text wpcf7-validates-as-required", aria: { required: "true", invalid: "false" }, placeholder: "Message *"  %>
+                  </span>
+                </div>
+
+                <p style="text-align: center;">
+                  <%= form.submit "Contact Us", class: "wpcf7-form-control wpcf7-submit", id: "contact-form-submit" %>
+                </p>
+
+              <% end %>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

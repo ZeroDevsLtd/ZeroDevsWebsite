@@ -1,0 +1,25 @@
+
+<h2>Sir</h2>
+<h4>I am </h4>
+<strong> <%= @apply_info[:name] %></strong>
+
+<p>
+  My Email :<%= @apply_info[:email] %>
+  <br>
+  My phone :<%= @apply_info[:phone] %>
+  <br>
+  my expected job : <%= @apply_info[:position] %>
+</p>
+
+<p>
+  why Need:
+  <%= @apply_info[:message] %>
+</p>
+
+<p>
+  my cv:
+  <% @apply_info[:cv]%>
+</p>
+
+
+<%#= @apply_info.cv %>

@@ -1,0 +1,372 @@
+footer {
+  float: left;
+  width: 100%;
+  background-color: #232323
+}
+.ftr-top {
+  float: left;
+  width: 100%;
+  padding: 35px 0 15px
+}
+
+.links ul li {
+  display: inline-block;
+  margin-left: -12px
+}
+
+.links {
+  width: 100%;
+  text-align: center;
+  float: left;
+  padding: 0;
+  margin-bottom: 20px
+}
+
+.links ul li a {
+  padding: 0 19px;
+  border-bottom: 1px solid transparent;
+  font-family: "HelveticaNeueCyr Thin";
+  font-size: 20px;
+  cursor: pointer;
+  color: #b9cbd3
+}
+
+.links ul li a:after {
+  content: '/';
+  width: 8px;
+  margin-left: -8px;
+  display: block;
+  float: right;
+  color: #b9cbd3
+}
+
+.links ul li.hover-link a:after {
+  color: #0087c4
+}
+
+.links ul li a:hover {
+  color: #0087c4;
+  cursor: pointer;
+  border-color: #0a6e9e
+}
+.links ul li a.open-block-menu {
+  color: #0087c4
+}
+.links ul li:last-child {
+  margin-top: 20px
+}
+
+.links ul li:last-child a {
+  font-size: 18px
+}
+
+.links ul li:last-child a:after {
+  content: ''
+}
+
+
+.follow {
+  text-align: center;
+  width: 100%;
+  float: left;
+  margin-bottom: 24px
+}
+
+.follow ul {
+  display: table;
+  margin: 0 auto;
+  border-top: 1px solid #b9cbd3;
+  border-bottom: 1px solid #b9cbd3
+}
+
+.follow ul li:first-child {
+  margin-left: 0
+}
+
+.follow li a {
+  font-size: 18px;
+  color: #b9cbd3;
+  font-family: "HelveticaNeueCyr Light"
+}
+
+.follow li a:hover {
+  color: #0087c4
+}
+
+.follow li a:before {
+  content: '';
+  height: 20px;
+  width: 20px;
+  float: left;
+  display: block;
+  margin-right: 5px
+}
+
+.follow li.email a:before {
+  background: url(https://existek-838c.kxcdn.com/wp-content/themes/roadrunner/images/mail.svg) no-repeat;
+  background-size: cover;
+  width: 24px;
+  height: 22px
+}
+
+.follow-new li.phone a:before {
+  content: none
+}
+
+.follow-new ul {
+  padding: 20px 0 10px
+}
+
+.follow-new ul li {
+  margin-left: 0;
+  display: list-item
+}
+
+.follow-new ul li a {
+  display: inline-block
+}
+
+.follow-new .phone-new {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10px;
+  margin-top: 20px
+}
+
+.follow-new .usa-number {
+  margin-right: 15px
+}
+
+.new-footer-nav {
+  display: flex;
+  flex-direction: row;
+  text-align: left
+}
+
+.footer-nav-column {
+  width: 20%
+}
+
+.footer-column-name {
+  width: 100%;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #fff
+}
+
+.footer-column-name a {
+  color: #fff
+}
+
+.new-footer-nav .footer-nav-column .footer-column-name a:hover {
+  color: #23527c
+}
+
+.new-footer-nav .footer-nav-column ul li {
+  width: 100%
+}
+
+.new-footer-nav .footer-nav-column:last-child ul li {
+  font-size: 18px;
+  color: #b9cbd3;
+  margin-left: 0;
+  line-height: 20px
+}
+
+.new-footer-nav .footer-nav-column ul li a {
+  padding: 0 15px;
+  border-bottom: none;
+  font-size: 18px
+}
+
+.new-footer-nav .footer-nav-column ul li a:hover {
+  color: #0087c4;
+  cursor: pointer
+}
+
+.new-footer-nav .footer-nav-column ul li a:after {
+  content: unset
+}
+
+.new-footer-nav .footer-nav-column ul li:last-child {
+  margin-top: 0
+}
+
+#footer-address-list a {
+  padding: 0;
+  transition: all .5s
+}
+
+#footer-address-list a:hover {
+  color: #00abc9
+}
+.social {
+  float: left;
+  text-align: center;
+  padding-bottom: 40px;
+  //width: 31%;
+  //display: flex;
+}
+
+.social li {
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer
+}
+
+.social li a {
+  width: 34px;
+  height: 34px;
+  display: block;
+  cursor: pointer
+}
+
+.ftr-btm {
+  float: left;
+  width: 100%;
+  background-color: #030303;
+  text-align: center;
+  padding: 27px 0
+}
+
+.ftr-btm, .ftr-btm p, .ftr-btm a, .net-development-company .ftr-btm .container, .net-development-company .ftr-btm p, .net-development-company .ftr-btm a {
+  font-size: 14px !important;
+  font-family: "HelveticaNeueCyr Thin";
+  color: #878787
+}
+
+@media (max-width: 1199px) {
+  .new-footer-nav .footer-nav-column ul li a, .new-footer-nav .footer-nav-column ul li a:last-child {
+    padding: 0 15px;
+    border-bottom: 0;
+    font-size: 17px
+  }
+
+  .new-footer-nav .footer-nav-column:last-child ul li {
+    font-size: 17px;
+    line-height: 19px
+  }
+}
+
+@media (max-width: 1024px) {
+  .new-footer-nav .footer-nav-column ul li a, .new-footer-nav .footer-nav-column ul li a:last-child {
+    padding: 0 0 0 15px;
+    border-bottom: 0;
+    font-size: 12px
+  }
+
+  .new-footer-nav .footer-nav-column:last-child ul li {
+    font-size: 12px;
+    line-height: 14px
+  }
+}
+
+@media (max-width: 768px) {
+
+  .links ul li {
+    line-height: 40px
+  }
+  .ftr-btm {
+    padding: 10px 0
+  }
+  .new-footer-nav {
+    flex-direction: column;
+    padding: 0 24px
+  }
+
+  .footer-nav-column {
+    width: 100%
+  }
+
+  .new-footer-nav .footer-nav-column ul {
+    height: 0;
+    overflow: hidden;
+    transition: all ease-in-out .3s
+  }
+
+  .new-footer-nav .footer-nav-column ul li a:last-child {
+    padding: 0 0 0 15px;
+    border-bottom: 0;
+    font-size: 18px
+  }
+
+  .new-footer-nav .footer-nav-column .footer-column-name span:before {
+    content: "\f107 ";
+    font-family: FontAwesome;
+    position: absolute;
+    right: 24px;
+    cursor: pointer
+  }
+
+  .footer-column-name {
+    border-bottom: 1px solid
+  }
+
+  .footer-column-name.address {
+    border-bottom: none
+  }
+
+  .new-footer-nav .footer-nav-column ul li {
+    line-height: 20px
+  }
+
+  #footer-company-list.open {
+    height: 180px;
+    transition: all ease-in-out .3s
+  }
+
+  #footer-expertise-list.open {
+    height: 150px;
+    transition: all ease-in-out .3s
+  }
+
+  #footer-techno-list.open {
+    height: 110px;
+    transition: all ease-in-out .3s
+  }
+
+  #footer-about-us-list.open {
+    height: 110px;
+    transition: all ease-in-out .3s
+  }
+
+  .new-footer-nav .footer-nav-column:last-child ul {
+    height: auto
+  }
+
+  .new-footer-nav .footer-nav-column:last-child ul li {
+    font-size: 18px;
+    color: #fff;
+    margin-left: 0;
+    line-height: 20px;
+
+  }
+
+  .new-footer-nav .footer-nav-column:last-child {
+    text-align: center;
+    margin-top: 10px
+  }
+
+  .new-footer-nav #footer-nav-col:hover #footer-company, .new-footer-nav #footer-nav-col:hover #footer-expertise, .new-footer-nav #footer-nav-col:hover #footer-techno, .new-footer-nav #footer-nav-col:hover #footer-about-us {
+    color: #23527c
+  }
+
+  .new-footer-nav #footer-nav-col:hover #footer-company a, .new-footer-nav #footer-nav-col:hover #footer-expertise a, .new-footer-nav #footer-nav-col:hover #footer-techno a, .new-footer-nav #footer-nav-col:hover #footer-about-us a {
+    color: #23527c
+  }
+}
+
+@media (max-width: 480px){
+  .follow ul li.phone, .follow ul li.email {
+    float: none !important;
+    line-height: 34px
+  }
+
+  .follow li a:before {
+    margin-top: 5px
+  }
+
+  .follow ul {
+    padding: 8px 0
+  }
+}

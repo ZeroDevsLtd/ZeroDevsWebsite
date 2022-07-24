@@ -1,0 +1,73 @@
+<% content_for :title do %>
+  Best Ruby On Rails Development Team in Bangladesh | Syftet Limited
+<% end %>
+<% content_for :meta_title do %>
+  Best Ruby On Rails Development Team in Bangladesh | Syftet
+<% end %>
+
+<div class="custom custom-software-dev">
+  <header id="header" class="header">
+    <div class="header-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="text-container">
+              <h1>Syftet Team Details</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="section-md bg-default text-center">
+    <div class="container">
+      <h2 class="text-center"><%= @team.name %></h2>
+      <div class="row">
+        <div class="leader-holder">
+          <div class="leader-container">
+            <div class="leader-content">
+              <%=image_tag @team.image_url, alt: "#{@team.name}", class: 'leader-image'%>
+              <div class="leader-text">
+                <div class="leader-text-review">
+                  <%= @team.description %>
+                </div>
+                <br>
+                <div class="leader-text-designation">
+                  <div><%= @team.name %></div>&nbsp;&nbsp;|&nbsp;&nbsp;<span><%= @team.designation %></span>
+                </div>
+                <div class="social-icons" style="text-align-last: left; padding-top: 10px;">
+                  <ul class="social">
+                    <li><a target="_blank" href="<%= @team.facebook_link %>"><i class="fa fa-facebook"></i></a></li>
+                    <li><a target="_blank" href="<%= @team.twitter_link %>"><i class="fa fa-twitter"></i></a></li>
+                    <li><a target="_blank" href="<%= @team.github_link %>"><i class="fa fa-github"></i></a></li>
+                    <li><a target="_blank" href="<%= @team.linkedin_link %>"><i class="fa fa-linkedin"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="team" class="section-md bg-default text-center">
+    <div class="container">
+      <h2 class="text-center">Our Valuable Team</h2>
+      <div class="row row-50">
+        <% @teams.each do |member| %>
+          <div class="col-md-4 col-xl-3">
+            <article>
+              <a style="text-align: left" href="<%= best_team_path(member.slug) %>">
+                <%= image_tag member.image_url, alt: "#{member.name}", class: "content-image thumb-flat__image" %>
+                <h3 class="team-title"><%= member.name %></h3>
+                <span class="team-post"><%= member.designation %></span>
+              </a>
+            </article>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </section>
+</div>

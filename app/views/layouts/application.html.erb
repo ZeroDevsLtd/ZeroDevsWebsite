@@ -1,16 +1,102 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Zerodeves</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>
+    <% if yield(:title).present? %>
+      <%= yield :title %>
+    <% else %>
+      ZeroDevs | A First Growing Software Company.
+    <% end %>
+  </title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <body>
-    <%= yield %>
-  </body>
+  <!-- Link share and SEO friendly -->
+
+  <% if yield(:meta_title).present? %>
+    <meta name="title" content="<%= yield(:meta_title)%>">
+  <% else %>
+    <meta name="title" content="StartUp Software Company | ZeroDevs">
+  <% end %>
+  <% if yield(:meta_description).present? %>
+    <meta name="description" content="<%= yield(:meta_description) %>">
+  <% else %>
+    <meta name="description" content="Fast growing software company in Bangladesh. We have a team of talented engineer expertise on MENT, Android and iOS.">
+  <% end %>
+  <meta name="keywords" content="<%= render 'shared/seo_keywords' %>">
+
+  <!-- Open graph meta, for share link and SEO -->
+  <meta property="og:title" content="<%= yield(:meta_title)%>">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="<%= request.original_url %>">
+  <meta property="og:description" content="<%= yield(:meta_description) %>">
+  <meta property="og:site_name" content="<%= yield(:meta_title) %>">
+  <meta property="og:image" content="<% image_tag('best-services/desktop.jpg') %>">
+  <meta property="og:image:secure_url" content="<% image_tag('best-services/web.jpg') %>">
+  <meta property="og:image:width" content="300">
+  <meta property="og:image:height" content="200">
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="https://twitter.com/syftetltd">
+  <meta name="twitter:title" content="<%= yield(:meta_title) %>">
+  <meta name="twitter:description" content="<%= yield(:meta_description) %>">
+  <meta name="twitter:creator" content="https://twitter.com/syftetltd">
+  <meta name="twitter:image:src" content="<% image_tag('best-services/desktop.jpg') %>">
+  <meta name="twitter:image:src" content="<% image_tag('best-services/android.jpg') %>">
+
+  <%= favicon_link_tag 'zerodevs-favicon.ico'%>
+
+  <!-- Google fonts and Fontawesome-->
+<!--  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada|Montserrat:300,400,500,600,700,800" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%#= javascript_include_tag Ckeditor.cdn_url %>
+<!--  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEmGuIceexKma4Q6yyRD8M-KS5vbPtUVM"></script>-->
+<!--  <script src="https://cdn.jsdelivr.net/gmap3/7.2.0/gmap3.min.js"></script>-->
+  <!-- Chart js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+  <!-- Chart js helper plugin for lable customize -->
+  <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
+
+  <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+</head>
+
+<body class="home blog elementor-default" >
+<div class="page">
+<!--   Main header -->
+  <%= render 'shared/top_header'%>
+  <%= render 'shared/header'%>
+
+  <%= yield %>
+
+  <!-- Main footer -->
+  <%= render 'shared/footer'%>
+
+  <%= render 'shared/flash_messages'%>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KGX09C5SGC"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KGX09C5SGC');
+  </script>
+</div>
+<script>
+    $('html, body').animate({scrollTop:0},'50');
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
+</script>
+</body>
 </html>

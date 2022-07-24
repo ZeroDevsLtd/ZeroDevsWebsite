@@ -1,0 +1,309 @@
+.col-xs-offset-1 {
+  margin-left: 8.33333333%;
+}
+
+
+.top-flowers-row {
+  padding-bottom: 150px;
+}
+
+.chamomile-block-java {
+  background: url('bg-java-chamomile.png') no-repeat;
+  background-position: center bottom
+}
+
+.chamomile-block .top-left {
+  padding-top: 150px;
+  margin: auto 0;
+  color: #540d6e;
+}
+
+.chamomile-block .top-center {
+  margin: 0 auto 180px;
+  color: #1f487e;
+}
+
+.chamomile-block .top-right {
+  padding-top: 150px;
+  margin: auto 0;
+  color: #3bceac;
+}
+
+.chamomile-block .bottom-left {
+  margin: auto 0;
+  color: #ee4266;
+}
+
+.chamomile-block .bottom-right {
+  margin: auto 0;
+  color: #0ead69;
+}
+
+.chamomile-block .flowers-block .flowers-title {
+  margin-left: -20px;
+}
+
+.custom .chamomile-block .flowers-block .flowers-title {
+  font-size: 36px !important;
+}
+.custom .chamomile-block .flowers-block ul li {
+  list-style-type: circle !important;
+}
+.custom .chamomile-block .flowers-block li {
+  font-size: 18px !important;
+  line-height: 1.7;
+  font-weight: bolder;
+}
+.chamomile-block-net {
+  background: url('bg-chamomile-1.png') no-repeat;
+  background-position: center bottom;
+}
+
+.chamomile-block-ruby {
+  margin-bottom: 50px;
+}
+@media (max-width: 768px) {
+  .chamomile-block-bg-image {
+    display: grid !important;
+    width: 100% !important;
+    height: 250px !important;
+  }
+  .col-xxs-12 col-md-4 {
+    text-align: -webkit-center !important;
+  }
+  .top-flowers-row {
+    display: inline-block;
+  }
+  .display-inline-block {
+    display: inline-block;
+  }
+}
+
+.chamomile-block-bg-image {
+  background: url('technology/zerodevs-ruby-on-rails-development-company.png') no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  width: 100%;
+  height: 550px;
+  display: flex;
+  justify-content: space-between;
+}
+.left-flowers-row {
+  display: inline-block;
+  float: left;
+  width: 33%;
+  text-align: right;
+  padding-right: 70px;
+}
+.left-flowers-block {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  padding: 0;
+  margin: 0 0 190px;
+}
+.flowers-color {
+  color: #ec1622 !important;
+}
+.flowers-name {
+  display: inline-block;
+  width: 180px;
+}
+.midle-left {
+  padding-right: 30px;
+}
+.left-flowers-block-mg {
+  margin: 0 !important;
+}
+.right-flowers-row {
+  display: inline-block;
+  float: left;
+  text-align: left;
+  width: 33%;
+  padding-left: 70px;
+}
+.right-flowers-block {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  margin: 0 0 220px;
+  padding: 0;
+}
+.midle-right {
+  padding-left: 30px;
+}
+.right-flowers-block-mg {
+  margin: 0 !important;
+}
+
+
+@media (max-width: 768px) {
+  .chamomile-block-java {
+    background: 0 0
+  }
+  .chamomile-block .top-left, .chamomile-block .top-right, .chamomile-block .top-center, .chamomile-block .top-flowers-row {
+    margin: 0;
+    padding: 0;
+  }
+  .chamomile-block-net {
+    background: 0 0;
+  }
+}
+@media (max-width: 992px) {
+  .chamomile-block .top-flowers-row {
+    min-height: 420px
+  }
+
+  .top-flowers-row .flowers-block {
+    display: flex;
+    height: 420px
+  }
+  .chamomile-block .top-center {
+    margin-top: -40px
+  }
+
+
+}
+
+//@media (min-width: 990px) {
+//  .chamomile-block {
+//    margin-top: 180px
+//  }
+//
+//  .chamomile-block-java {
+//    background-position: center
+//  }
+//
+//  .chamomile-block .top-center {
+//    position: relative;
+//    top: -225px
+//  }
+//}
+.job-position-block {
+  margin-bottom: 30px;
+  background: linear-gradient(
+                  90deg
+          ,#f5f5f5 0%,rgba(245,245,245,0) 100%);
+}
+.Management {
+  background: url(https://cdn.shortpixel.ai/client/q_lossless,ret_img/https://existek.com/wp-content/themes/roadrunner/images/management.png) no-repeat right 100px center;
+  background-size: auto 68%;
+}
+
+.we-hire-section-bg {
+  padding: 60px 0;
+}
+.job-position-content-left {
+  width: 54%;
+  padding-right: 30px;
+}
+.job-position-content-left h3 {
+  width: 100%;
+  margin-bottom: 30px;
+  padding-right: 0;
+}
+.job-position-content-left h3 a {
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.job-page-new h5, .job-page-new h4, .job-page-new h3 {
+  display: inline-block;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: #343434;
+  padding-bottom: 10px;
+  padding-right: 40px;
+  border-bottom: 3px solid #113448;
+  text-transform: capitalize;
+  font-feature-settings: 'cpsp';
+}
+.job-position-content-left p:last-child {
+  margin-top: 15px;
+}
+.job-position-content-left p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #343434;
+}
+.job-position-content-right {
+  width: 46%;
+  padding-left: 30px;
+}
+.job-position-content-right h4 {
+  margin-bottom: 0 !important;
+  padding: 0;
+  max-height: 30px;
+  font-family: "HelveticaNeueCyr Light" !important;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px !important;
+  line-height: 24px !important;
+  color: #343434;
+  border: none;
+}
+.job-page-new ul, .job-page-new ol {
+  margin: 20px auto 30px auto;
+  padding-left: 20px;
+}
+.job-page-new li {
+  color: #343434;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px !important;
+  line-height: 37px;
+}
+.job-page-new li:before {
+  content: "•";
+  font-size: 18px;
+  color: #113448;
+  margin-left: -20px;
+  margin-right: 10px;
+  text-align: center;
+}
+.job-position-content-right a {
+  display: block;
+  max-width: 249px;
+  padding: 17px 30px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #113448 !important;
+  border: 1px solid #113448;
+  text-decoration: none !important;
+  transition: all .5s !important;
+}
+.job-position-content-right a:hover {
+  color: #fff !important;
+  background: #113448;
+  text-decoration: none !important
+}
+
+
+@media (max-width: 640px){
+  .job-position-content-right a {
+    margin: 0 auto;
+  }
+
+  .job-position-content-right h4 {
+    margin-top: 20px !important;
+    font-size: 18px !important;
+    max-height: 20px !important
+  }
+
+  .job-position-content-left, .job-position-content-right {
+    width: 100% !important;
+    padding: 0 !important;
+  }
+  .job-position-content-right {
+    margin-top: 20px !important;
+  }
+
+}

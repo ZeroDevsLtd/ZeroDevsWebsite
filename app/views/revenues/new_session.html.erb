@@ -1,0 +1,21 @@
+<section class="section-md bg-gray-lighter">
+  <div class="user-signin-form">
+    <h5>Sign in</h5>
+
+    <%= form_tag auth_revenues_path do %>
+        <div class="form-wrap form-wrap_icon linear-icon-envelope">
+          <%= email_field_tag :email, '', class: 'form-input', placeholder: 'Your web-email', required: true%>
+        </div>
+
+        <%= csrf_meta_tags %>
+
+        <div class="form-wrap form-wrap_icon linear-icon-key form-group">
+          <%= password_field_tag :password, '', class: 'form-input', placeholder: 'Your web-mail password', required: true %>
+        </div>
+
+        <div class="form-group">
+          <%= submit_tag 'Sign In', class: "button button-primary button-block" %>
+        </div>
+    <% end %>
+  </div>
+</section>

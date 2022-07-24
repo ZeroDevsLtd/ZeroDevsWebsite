@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="top">
+    <ul>
+      <% photos.each do |photo| %>
+        <li>
+          <a href="#img_<%= photo.id %>">
+            <img src="<%= photo.image %>">
+          </a>
+        </li>
+        <a href="#_<%= photo.id %>" class="lightbox trans" id="img_<%= photo.id %>">
+          <img src="<%= photo.image %>">
+        </a>
+      <% end %>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,202 @@
+.mobile-app-process .service .row .work-column {
+  width: 49% !important;
+  //height: 230px;
+  padding-top: 30px;
+}
+@media (max-width: 768px) {
+  .custom p, .custom div, .custom span {
+    font-size: 18px !important;
+    flex-wrap: wrap;
+  }
+  .row {
+    .work-text-width {
+      height: 30px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    .work-column-width {
+      height: 380px;
+      .work-photo {
+        display: contents;
+      }
+    }
+  }
+  .mobile-app-process .service .row .work-column {
+    width: 77% !important;
+    display:contents;
+    a {
+      display: contents;
+
+      .work-text-sm {
+        display: block !important;
+        padding-top: 35px !important;
+        padding-bottom: 10px !important;
+        text-align: center !important;
+      }
+
+      .work-text-md {
+        display: none !important;
+      }
+
+    }
+    .col-xs-12 .work-column .text-right {
+      height: 10px;
+      width: 10px;
+    }
+  }
+  .col-xs-12 {
+    margin: 0;
+    padding: 0;
+  }
+  .top-border, .center-border, .second-block-border {
+    display: none;
+  }
+  .bottom-border {
+    .mobile-left-block, .center-blok-border, .mobile-right-block {
+      display: none;
+    }
+  }
+  .mobile-app-process-third-block {
+    .service {
+      .row {
+        .third-block-border {
+          display: none;
+        }
+      }
+    }
+  }
+  .row {
+    //flex-direction: column;
+  }
+  .center-border {
+    flex-direction: row;
+  }
+  .custom-software-dev h4 {
+    display: contents;
+  }
+  .work-text-contents {
+    display: contents;
+  }
+  .mobile-app-process-second-block .service .row :nth-child(3) a .work-text {
+    display: contents;
+  }
+  .mobile-app-process .service .row :nth-child(3) a .work-text {
+    float: left;
+    display: contents;
+    align-self: center;
+  }
+  .mobile-app-process .service .row :nth-child(5) a .work-text {
+    display: contents;
+  }
+  .padding-top {
+    padding-top: 30px !important;
+  }
+  .mobile-app-process .service .row :nth-child(1) a h4 {
+    color: black;
+  }
+  .mobile-app-process .service .row :nth-child(5) a .work-text .text-service p {
+    text-align: center !important;
+  }
+  .mobile-app-process-second-block .service .row :nth-child(1) a h4, .mobile-app-process-second-block .service .row :nth-child(7) a h4 {
+    color: #000000 !important;
+  }
+}
+
+.mobile-app-process .service .row a .center-border {
+  display: none;
+}
+.mobile-app-process .service .row :nth-child(1) a .work-photo {
+  display: none;
+}
+.mobile-app-process .service .row :nth-child(3) a .work-photo, .mobile-app-process .service .row :nth-child(5) a .work-photo {
+  width: 23%;
+}
+.mobile-app-process .service .row :nth-child(3) a .work-photo {
+  float: left;
+}
+.mobile-app-process .service .row :nth-child(5) a .work-photo {
+  float: right;
+}
+
+
+
+.mobile-app-process .service .row :nth-child(3) a .work-text, .mobile-app-process .service .row :nth-child(5) a .work-text {
+  width: 77%;
+}
+.mobile-app-process .service .row :nth-child(3) a .work-text {
+  float: left;
+}
+.mobile-app-process .service .row :nth-child(1) a .work-text, .mobile-app-process .service .row :nth-child(7) a .work-text {
+  width: 100%;
+  padding-top: 35px;
+}
+.mobile-app-process .service .row :nth-child(4n) {
+  display: none;
+}
+
+.mobile-app-process .service .row :nth-child(5) a .work-text h4, .mobile-app-process .service .row :nth-child(5) a .work-text .text-service p {
+  text-align: right;
+}
+.mobile-app-process .service .row :nth-child(7) a .work-text h4 {
+  text-align: left;
+  margin: 0;
+  height: auto;
+}
+.mobile-app-process .service .row :nth-child(1) a .work-text h4 {
+  text-align: right;
+  margin: 0;
+  height: auto;
+}
+
+.mobile-app-process-second-block .service {
+  margin-bottom: 0 !important;
+}
+.mobile-app-process-second-block .service .row .work-column {
+  width: 49%;
+}
+.mobile-app-process-second-block .service .row :nth-child(1) a .work-text h4 {
+  text-align: right;
+  margin: 0;
+  height: auto;
+}
+.mobile-app-process-second-block .service .row :nth-child(1) a h4, .mobile-app-process-second-block .service .row :nth-child(7) a h4 {
+  color: #cf2a3a;
+}
+.mobile-app-process-second-block .service .row :nth-child(3) a .work-text h4 {
+  text-align: left;
+}
+.mobile-app-process-second-block .service .row :nth-child(4n) {
+  display: none;
+}
+
+.mobile-app-process-second-block .service .row :nth-child(5) a .work-photo, .mobile-app-process-second-block .service .row :nth-child(3) a .work-photo {
+  width: 23%;
+}
+.mobile-app-process-second-block .service .row :nth-child(5) a .work-photo {
+  float: right;
+}
+.mobile-app-process-second-block .service .row :nth-child(1) a .work-text, .mobile-app-process-second-block .service .row :nth-child(7) a .work-text {
+  width: 100%;
+  padding-top: 35px;
+  //height: 225px;
+}
+.mobile-app-process-second-block .service .row :nth-child(7) a .work-text h4 {
+  text-align: left;
+  margin: 0;
+  height: auto;
+}
+.mobile-app-process-third-block .service .row a .third-block-border {
+  display: none;
+}
+.third-block-border {
+  display: flex;
+  //height: 225px;
+  float: left;
+  border-left: 2px #cf2a3a dashed;
+}
+.center-blok-border {
+  display: flex;
+  border-left: 2px #6f6f6f dashed;
+  float: left;
+  height: 30px;
+}

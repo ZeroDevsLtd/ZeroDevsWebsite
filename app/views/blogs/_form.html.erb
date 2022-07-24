@@ -1,0 +1,51 @@
+<div class="jumbotron jumbotron-fluid">
+<%= form_for(@blog) do |form| %>
+    <% if @blog.errors.any? %>
+          <h2><%= pluralize(@blog.errors.count, "error") %> prohibited this Post from being saved:</h2>
+
+            <% @blog.errors.full_messages.each do |message| %>
+                <li style="color: #B00100"><%= message %></li>
+            <% end %>
+       <% end %>
+      <div class="form-group">
+        <%= form.label :author %><!---->
+        <br>
+        <%= form.text_field :author %>
+      </div>
+
+    <div class="form-group">
+      <%= form.label :title %><!---->
+      <br>
+      <%= form.text_field :title %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :sub_title %>
+      <br>
+      <%= form.text_field :sub_title %>
+    </div><br>
+  <div class="form-group">
+    <%= form.label :banner %><br>
+    <%= form.file_field :banner %>
+    <%#= form.file_field :header_image_url %>
+  </div>
+  <br>
+
+    <div class="form-group">
+      <%= form.label :content %>
+      <br>
+      <%= form.text_area :content, rows: 6 %>
+    </div>
+  <br>
+    <div class="form-group">
+      <%= form.label :tag_list %>
+      <br>
+      <%= form.text_field :tag_list %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit class: "btn btn-primary"%>
+
+    </div>
+</div>
+<% end %>

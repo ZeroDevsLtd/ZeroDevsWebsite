@@ -1,0 +1,35 @@
+<% content_for :title do %>
+  Web Development Company in Bangladesh|Syftet Limited
+<% end %>
+<% content_for :meta_title do %>
+  Web Development Company in Bangladesh | Syftet
+<% end %>
+
+<% content_for :lets_work_text do %>
+  We can’t wait to meet with you and listen to your project.Our dedicated IT Team will always reply to you promptly as we are just a click away. We can assure you that you will never regret the decision to work with us and will have the best service ever. Let’s begin then!
+<% end %>
+
+<div class="custom-software-dev custom web-develop-comp">
+  <header id="header" class="header">
+    <div class="header-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="text-container">
+              <h1>Web Development Company </h1>
+              <p class="p-heading p-large">
+                Syftet is a very renowned web development company highly experienced in developing beautiful and responsive websites. We build a mobile-friendly  interface from scratch and make it functionable across all platforms and devices.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <%= render 'homes/shared/web_application' %>
+</div>
+<section class="bg-gray-lighter section-md">
+  <%= render 'homes/shared/start_project_form', contact: @contactinfo %>
+</section>
+

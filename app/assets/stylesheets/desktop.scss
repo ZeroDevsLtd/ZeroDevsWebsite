@@ -1,0 +1,672 @@
+.desktop-software-next-project-section-avatar {
+  float: left;
+  width: 100px;
+  margin-left: 70px;
+  overflow: hidden;
+  padding-top: 35px;
+}
+
+.mobile-app-next-project-section-avatar {
+  width: 100px;
+  margin-left: 70px;
+}
+
+@media (max-width: 786px) {
+  #mobile-app-development-process-section {
+    padding: 24px !important;
+  }
+}
+.custom p, .custom span {
+  font-size: 20px!important;
+  line-height: 1.34783;
+  font-weight: 400;
+  letter-spacing: .01em;
+}
+.custom div {
+  font-size: 25px !important;
+  line-height: 1.34783;
+  font-weight: 400;
+  letter-spacing: .01em;
+}
+
+.custom-software-dev-new p, .custom-software-dev-new div, .custom-software-dev-new span {
+  font-size: 20px ;
+  line-height: 1.34783;
+  font-weight: 400;
+  letter-spacing: .01em;
+}
+.desktop-soft-col-md-6 {
+  width: 33.33333%;
+  padding: 5px 5px 10px
+}
+
+.desktop-soft-my-head-purple-block, .desktop-soft-my-head-blue-block {
+  margin-bottom: 20px;
+}
+
+
+.blockchain-my-head-purple-block, .blockchain-my-head-blue-block {
+  color: #111;
+  font-weight: 900 !important;
+  margin-left: 10px;
+  padding: 0;
+  font-size: 25px !important;
+}
+
+.blockchain-my-text-purple-block, .blockchain-my-text-blue-block {
+  padding: 0;
+  border-left: 1px solid #113448
+}
+
+.blockchain-my-text-purple-block p {
+  margin-left: 10px
+}
+
+.blockchain-my-text-blue-block p {
+  margin-left: 10px
+}
+
+body, h1, h2, h3, h4, h5, h6, p, span, a, .title-post, .quote-sevice, .title-case, .title-blog-post, .title-sidebar, .header-block-teams-title, .title-quote, .customers-title {
+  font-family: "HelveticaNeueCyr Light" !important;
+}
+
+.desktop-soft-monitor-block {
+  background: url(https://cdn.shortpixel.ai/client/q_lossless,ret_img/https://existek.com/wp-content/uploads/2018/07/RELATED.png)
+}
+.my-monitor-block .row {
+  padding: 20px
+}
+
+.my-monitor-block ul {
+  margin-left: 40px
+}
+
+.my-monitor-block .approach-list {
+  padding: 0 0 0 40px !important;
+  margin: 0 !important
+}
+
+.my-monitor-block .approach-list-item:before {
+  top: 3px !important
+}
+
+.my-monitor-block a {
+  font-size: 20px;
+  width: 200px;
+  line-height: 45px;
+  display: block;
+  margin: 25px auto;
+  border: 1px solid #113448;
+  color: #113448;
+  transition: all .3s;
+  cursor: pointer;
+  text-align: center
+}
+
+.my-monitor-block a:hover {
+  background-color: #113448;
+  color: #fff
+}
+
+.blockchain-row {
+  padding: 0 0 30px 0 !important
+}
+
+.blockchain-row .col-md-6 {
+  padding: 0 !important
+}
+
+.blockchain-row .col-md-6 img {
+  margin-bottom: 30px !important;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .5)
+}
+
+.blockchain-row .min-980-padding-20 {
+  padding-right: 15px !important
+}
+
+.blockchain-my-monitor-block {
+  float: initial;
+  display: inline-block
+}
+.text_criptucyrrent {
+  margin-bottom: 30px
+}
+.desktop-soft-monitor ul li:before {
+  content: "●";
+  color: #111 !important;
+  margin-right: 3px;
+  float: left
+}
+.cryptocurrency-block ul {
+  margin-left: 0 !important
+}
+
+.cryptocurrency-block ul li {
+  margin: 10px 0
+}
+
+.cryptocurrency-block ul li div {
+  display: inline-block;
+  width: 85%
+}
+
+.cryptocurrency-block ul li:before {
+  content: "●";
+  color: #fff;
+  margin-right: 3px;
+  float: left
+}
+.desktop-soft-button {
+  text-align: center;
+  margin-top: 30px;
+  padding-bottom: 30px
+
+}
+
+.desktop-soft-button a {
+  color: #fff
+}
+
+.full-case-study-butt {
+  border: 1px solid #fff;
+  width: 240px;
+  height: 60px;
+  background: #113448;
+  color: white;
+  outline: none
+}
+
+.full-case-study-butt:hover {
+  background: #fff;
+  border: 1px solid #113448
+}
+
+.full-case-study-butt:hover div {
+  color: #113448
+}
+
+.our-work-example-butt {
+  border: 1px solid #113448;
+  width: 270px;
+  height: 60px;
+  background: #113448;
+  color: white;
+}
+
+.our-work-example-butt a {
+  color: #fff
+}
+
+.our-work-example-butt:hover {
+  background: #fff;
+  border: 1px solid #113448
+}
+
+.our-work-example-butt:hover div {
+  color: #113448
+}
+
+.inrcontent {
+  width: 100%;
+  float: left
+}
+
+
+.service {
+  margin-bottom: 60px
+}
+
+.service:last-of-type {
+  margin-bottom: 0
+}
+
+.service h3 {
+  color: #343434;
+  font-size: 28px;
+  font-family: "Merriweather Bold";
+  text-align: center;
+  margin-bottom: 45px
+}
+.custom-software-dev .service, .software-product-dev .service, .it-consulting-services .service, .dedicated-development-team .service {
+  margin-bottom: 10px
+}
+
+.second-block-border {
+  display: flex;
+  height: 225px;
+  float: left;
+  border-left: 2px #cf2a3a dashed
+}
+
+.web-develop-service-col-size .col-picture .size-block-image-stage svg {
+  max-width: 70px;
+  height: 74px;
+  margin: 2px auto;
+}
+.custom-software-dev > div a:hover h4, .software-product-dev > div a:hover h4, .it-consulting-services > div a:hover h4, .dedicated-development-team > div a:hover h4 {
+  color: #113448
+}
+
+//.custom-software-dev .service-tab:nth-child(4), .software-product-dev .service-tab:nth-child(4), .it-consulting-services .service-tab:nth-child(4), .dedicated-development-team .service-tab:nth-child(4) {
+//  margin-bottom: 70px
+//}
+
+
+.custom .service-tab:hover h4, .new-service-content .main-services .service-tab:hover h4 {
+  text-decoration: underline;
+  color: #113448
+}
+
+.custom .service-tab:hover .block-image-stage, .new-service-content .main-services .service-tab:hover .block-image-stage {
+  background: #113448
+}
+
+.custom .service-tab:hover .block-image-stage:before, .new-service-content .main-services .service-tab:hover .block-image-stage:before {
+  border-color: #fff
+}
+
+.custom .service-tab:hover .block-image-stage svg path, .new-service-content .main-services .service-tab:hover .block-image-stage svg path {
+  fill: #fff;
+  stroke: #fff
+}
+
+.custom .service-tab:hover .block-image-stage svg circle, .new-service-content .main-services .service-tab:hover .block-image-stage svg circle {
+  stroke: #fff
+}
+
+.custom .service-tab:nth-child(4) :hover .block-image-stage svg path, .new-service-content .main-services .service-tab:nth-child(4) :hover .block-image-stage svg path {
+  stroke: #113448
+}
+
+.custom .service-tab:last-child :hover .block-image-stage svg path, .new-service-content .main-services .service-tab:last-child :hover .block-image-stage svg path {
+  fill: #fff;
+  stroke: #113448
+}
+
+.custom .service-tab:hover h4 {
+  cursor: pointer;
+  text-decoration: none
+}
+
+.custom .service-tab:hover h4 {
+  cursor: pointer;
+  text-decoration: none
+}
+.new-service-content .service-tab:nth-child(2), .custom-software-dev .service-tab:nth-child(2), .software-product-dev .service-tab:nth-child(2), .it-consulting-services .service-tab:nth-child(2), .dedicated-development-team .service-tab:nth-child(2) {
+  margin-bottom: 60px
+}
+.service-col-size {
+  width: 19.5% ;
+  margin-bottom: 0 ;
+}
+.dedicated-development-team-new .service-col-size .size-block-image-stage:hover svg path, .size-block-career:hover svg path, .size-block-career:hover svg rect, .size-block-career-top:hover svg path, .size-block-career-top:hover svg rect, .dedicated-development-team-new .col-picture .block-image-stage:hover svg path {
+  fill: #fff;
+  stroke: none
+}
+
+
+.stage:nth-child(1):hover .block-image-stage, .block-image-stage:hover {
+  background: #113448
+}
+
+.stage:nth-child(1):hover .block-image-stage svg path, .block-image-stage:hover svg path {
+  fill: #fff;
+  stroke: #fff
+}
+.custom-software-dev > div .text-service {
+  text-align: left !important;
+  font-size: 20px !important
+}
+
+.bloch-auto-height {
+  display: table-row
+}
+.post-service {
+  margin-bottom: 50px;
+  min-height: 160px
+}
+
+.text-post {
+  float: right;
+  width: calc(100% - 65px)
+}
+
+.image-post {
+  float: left;
+  width: 48px;
+  overflow: hidden
+}
+
+.title-post {
+  font-size: 24px;
+  color: #343434;
+  padding-top: 15px;
+  //border-top: 1px solid #113448;
+  margin-bottom: 20px;
+  display: table;
+  font-family: "Merriweather Bold"
+}
+
+.desc-post {
+  font-size: 16px;
+  font-family: "HelveticaNeueCyr Light"
+}
+.custom .title-post {
+  font-weight: 600;
+  font-size: 24px !important;
+  color: #343434;
+  padding-top: 15px;
+  border-top: 1px solid #F8F8F8;
+  margin-bottom: 20px;
+  display: table
+}
+.desktop-soft-middleware-desktop {
+  background: url(https://cdn.shortpixel.ai/client/q_lossless,ret_img/https://existek.com/wp-content/uploads/2018/07/RELATED_2.png)
+}
+.text-header-service img {
+  width: 100%
+}
+.web-page, .web-develop-over-blue-block, .web-develop-text-header-service {
+  margin-bottom: 0 !important
+}
+.custom-software-dev .text-header-service p, .custom-software-dev .content-page, .quote-sevice, .custom-software-dev .case-one, .custom-software-dev .case-two, .custom-software-dev .approach-list, .desc-post {
+  font-size: 20px !important
+}
+.custom-software-dev .text-header-service p, .software-product-dev .text-header-service p, .it-consulting-services .text-header-service p, .dedicated-development-team .text-header-service p {
+  font-size: 16px
+}
+
+.desktop-soft-row {
+  padding: 0 !important
+}
+.desktop-soft-my-monitor-block {
+  padding: 0 !important
+}
+.desktop-soft-text-criptucyrrent {
+  margin: 70px 0
+}
+.size-block-image-stage {
+  margin-left: -54px;
+  margin-bottom: 20px;
+  width: 130px;
+  height: 130px;
+}
+
+.size-block-image-stage:before {
+  width: 120px;
+  height: 120px;
+}
+.custom-software-dev>div h4, .software-product-dev>div h4, .custom>div h4, .dedicated-development-team>div h4 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+.new-service-content .main-services>div h4, .custom-software-dev>div h4, .software-product-dev>div h4, .it-consulting-services>div h4, .dedicated-development-team>div h4 {
+  font-size: 24px;
+  word-spacing: 1px;
+  line-height: 120%;
+  font-weight: 600;
+}
+.new-service-content h2, .new-service-content h3, .new-service-content h4, .custom-software-dev h2, .custom-software-dev h3, .custom-software-dev h4, .software-product-dev h2, .software-product-dev h3, .software-product-dev h4, .it-consulting-services h2, .it-consulting-services h3, .it-consulting-services h4, .dedicated-development-team h2, .dedicated-development-team h3, .dedicated-development-team h4, .custom h4 {
+  font-family: "HelveticaNeueCyr Bold" !important;
+}
+
+.custom-software-dev h4, .software-product-dev h4, .it-consulting-services h4, .dedicated-development-team>div h4 {
+  margin-bottom: 15px ;
+  //text-align: center ;
+}
+.case-slider__item.case-slider__item--fit {
+  position: relative;
+}
+.case-slider__item {
+  width: 100%;
+  display: flex;
+  color: #343434;
+  padding: 28px 28px 32px 110px;
+}
+.case-slider__item.case-slider__item--fit:before {
+  position: absolute;
+  content: "";
+  background-image: url('fit_slider_bg.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left center;
+  width: 520px;
+  height: 516px;
+  top: 20px;
+  right: -15px;
+  z-index: 3;
+}
+.case-slider__item-img {
+  position: relative;
+  margin-right: 87px;
+}
+.case-slider__item-img:before {
+  position: absolute;
+  content: "";
+  background-image: url('fit_demo_bg.svg');
+  width: 514px;
+  height: 504px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left center;
+  top: -7px;
+  left: -115px;
+  z-index: 3;
+}
+#case-slider__item-title {
+  font-weight: 500;
+  font-family: "HelveticaNeueCyr Medium" !important;
+  font-size: 60px!important;
+  line-height: 69px;
+}
+.case-slider__item-text {
+  font-weight: 300;
+  font-family: "HelveticaNeueCyr Light" !important;
+  font-size: 16px;
+  line-height: 21px;
+  margin-bottom: 21px;
+}
+.case-slider__item-description {
+  display: flex;
+  margin-bottom: 25px;
+}
+.case-slider__item-country {
+  margin-right: 60px;
+}
+.case-slider__item-images {
+  height: 53px;
+  margin-bottom: 15px;
+}
+.case-slider__item-images.case-slider__item-images--country img {
+  width: 80px;
+  height: 49px;
+  border-radius: 4px;
+}
+
+.case-slider__item-images img {
+  object-fit: cover;
+}
+.case-slider__item-inform {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  font-family: "HelveticaNeueCyr Medium" !important;
+  text-align: center;
+}
+.case-slider__item-tech {
+  margin-right: 57px;
+}
+.case-slider__item-image--swift {
+  margin-right: 20px;
+}
+.case-slider__item-image--apple {
+  margin-right: 7px;
+}
+.case-slider__item-images.case-slider__item-images--platforms img {
+  width: 45px;
+  height: 53px;
+}
+.case-slider__item-images.case-slider__item-images--tech img {
+  width: 51px;
+  height: 51px;
+}
+.case-slider__item-subtitle {
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 500;
+  font-family: "HelveticaNeueCyr Medium" !important;
+  margin-bottom: 10px;
+}
+.case-slider__item-list {
+  margin-bottom: 44px;
+}
+.case-slider__item-list-item {
+  position: relative;
+  font-size: 16px;
+  line-height: 24px;
+  padding-left: 21px;
+}
+.case-slider__item-list-item:before {
+  position: absolute;
+  content: "";
+  background-image: url(https://existek-838c.kxcdn.com/wp-content/themes/roadrunner/css/../images/rhombus.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
+  width: 16px;
+  height: 16px;
+  left: 0;
+  top: 3px;
+}
+.case-slider__item-list-item+.case-slider__item-list-item {
+  margin-top: 10px;
+}
+
+.case-slider__item-link {
+  max-width: 160px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+  font-family: "HelveticaNeueCyr Medium" !important;
+  background-color: #113448;
+  padding: 14px;
+  transition: all .5s!important;
+  text-align: center;
+  border: 1px solid #113448;
+}
+
+.case-slider__item-link:hover {
+  background: #fff;
+  border: 1px solid #113448
+}
+
+.case-slider__item-link:hover div {
+  color: #113448
+}
+.mobile-development-my-monitor-block {
+  padding: 0 !important;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.monitor-block img {
+  margin-bottom: 20px;
+}
+
+.mobile-development-my-monitor-block img {
+  width: 50%;
+}
+.top-border, .bottom-border {
+  height: 30px;
+}
+.top-border .mobile-left-block, .bottom-border .mobile-left-block {
+  width: 49%;
+  height: 30px;
+  float: left;
+}
+.center-block-border {
+  display: flex;
+  border-left: 2px #6f6f6f dashed;
+  float: left;
+  height: 30px;
+}
+.mobile-development-text-center {
+  margin: 20px !important;
+  font-size: 22px;
+  line-height: 1.45;
+}
+.center-border {
+  display: flex;
+  height: 225px;
+  float: left;
+  border-left: 2px #35a0d0 dashed;
+}
+.mobile-development-svg-wrapper svg, .mobile-development-svg-wrapper {
+  width: 100px;
+  height: 100px;
+}
+.mobile-app-process .service .row .work-flow {
+  width: 49%;
+}
+
+.mobile-app-process .service .row .work-flow {
+  height: 230px;
+  padding-top: 30px;
+}
+.mobile-app-process .service .row :nth-child(1) a .work-photo, .mobile-app-process .service .row :nth-child(7) a .work-photo, .mobile-app-process .service .row a .center-border, .mobile-app-process-second-block .service .row a .second-block-border, .mobile-app-process-third-block .service .row a .third-block-border {
+  display: none;
+}
+.mobile-app-process .service .row :nth-child(1) a .col-md-8, .mobile-app-process .service .row :nth-child(7) a .col-md-8 {
+  width: 100%;
+  padding-top: 35px;
+}
+.mobile-app-process .service .row :nth-child(1) a .col-md-8 h4 {
+  text-align: right;
+  margin: 0;
+  height: auto;
+}
+
+.mobile-app-process .service .row :nth-child(1) a h4, .mobile-app-process .service .row :nth-child(7) a h4 {
+  color: #0087c4;
+}
+.custom-software-dev > div .text-service {
+  text-align: left !important;
+  font-size: 20px !important;
+}
+.custom .text-service {
+  text-align: left !important;
+}
+.mobile-app-process .service .row :nth-child(5) a .work-photo, .mobile-app-process .service .row :nth-child(3) a .work-photo {
+  width: 23%;
+}
+.mobile-app-process .service .row :nth-child(5) a .col-md-8, .mobile-app-process .service .row :nth-child(3) a .col-md-8 {
+  width: 77%;
+}
+#custom-text {
+  font-size: 25px !important;
+  font-weight: 800;
+}
+@media (max-width: 786px) {
+  #custom-text {
+    font-size: 20px !important;
+  }
+  #custom-text-with-padding {
+    font-size: 20px !important;
+    padding-bottom: 15px !important;
+  }
+  .col-name h4 {
+    font-size: 18px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .size-block-image-stage {
+    margin-left: 4px;
+  }
+}
+.logo-column-2, .blockchain-purple-container {
+  display: -webkit-inline-box;
+}
+.blockchain-my-text-purple-block, .desktop-soft-my-text-blue-block {
+  border: none !important;
+}

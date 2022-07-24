@@ -1,0 +1,120 @@
+<% content_for :title do %>
+  <%= @blog.title %> | Syftet Limited.
+<% end %>
+<% content_for :meta_title do %>
+  <%= @blog.title %> | Syftet Blog
+<% end %>
+
+<div class="custom-software-dev custom">
+  <header id="header" class="header">
+    <div class="header-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="text-container">
+              <h1> <%= @blog.title %></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+
+<section class="section-sm blog-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <% if @blog.banner.present? %>
+          <%= image_tag @blog.banner_url, alt: "zerodevs blog", class: "blog-banner-img" %>
+        <% end %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 blog-socail-icon">
+        <div class="clearfix author-wrap text-left">
+          Published on <time>  <%= @blog.created_at.strftime("  %d %b, %Y  ") %> </time> by
+          <span class="meta-author"><%= @blog.author %></span>
+          <ul class="list-inline-tag">
+            <% @blog.tags.each do |tag| %>
+              <li><%= tag.name %></li>
+            <% end %>
+          </ul>
+        </div>
+        <%= social_share_button_tag(@blog.title, :allow_sites => %w(twitter facebook email linkedin)) %>
+      </div>
+      <div class="col-md-8">
+        <p class="first-letter">
+          <%= render 'blogs/shared/post_single_body' %>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <% if @comments.present? %>
+          <section class="section-sm">
+            <!-- Main comment -->
+            <% @comments.each do |comment| %>
+              <% if comment.status == 'approved' %>
+
+                <div class="box-comment">
+                  <div class="unit flex-sm-row unit-spacing-md">
+                    <div class="unit__left">
+                      <div class="box-comment__icon margin-left-15">
+                        <span class="icon linear-icon-man icon-locate"></span>
+                      </div>
+                    </div>
+                    <div class="unit__body">
+                      <div class="box-comment__body">
+                        <div class="box-comment__header">
+                          <div class="box-comment__header-left">
+                            <p class="box-comment__title"><%= comment.name %></p>
+                            <time><%= comment.created_at.strftime("%d  %b, %Y") %></time>
+                          </div>
+                          <div class="box-comment__header-right">
+                            <a href="mailto:<%= comment.email %>"><%= comment.email %></a></div>
+                        </div>
+                        <p><%= comment.text %></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+            <% end %>
+
+            <!-- Comment reply -->
+            <!--<div class="box-comment box-comment-reply">-->
+            <!--<div class="unit flex-sm-row unit-spacing-md">-->
+            <!--<div class="unit__left">-->
+            <!--<img class="rounded-circle" src="images/post-author-109x109.jpg" alt="" width="109" height="109"/>-->
+            <!--</div>-->
+            <!--<div class="unit__body">-->
+            <!--<div class="box-comment__body">-->
+            <!--<div class="box-comment__header">-->
+            <!--<div class="box-comment__header-left">-->
+            <!--<p class="box-comment__title">Brian Williamson</p>-->
+            <!--<time datetime="2017">Jul 18, 2017</time>-->
+            <!--</div>-->
+            <!--<div class="box-comment__header-right"><a href="#">Reply</a></div>-->
+            <!--</div>-->
+            <!--<p>I work for this company, and I’m so incredibly glad we’ve switched to storing and viewing all the-->
+            <!--blueprints in an easily accessible, digital format</p>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+          </section>
+        <% end %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <section class="section-sm">
+          <h5>Leave a comment</h5>
+          <%= render 'comments/form' %>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+
