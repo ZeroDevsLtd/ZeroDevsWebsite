@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  logo: MyString
+  preview: MyText
+  content: MyText
+  for_backend: false
+  for_frontend: false
+
+two:
+  name: MyString
+  logo: MyString
+  preview: MyText
+  content: MyText
+  for_backend: false
+  for_frontend: false

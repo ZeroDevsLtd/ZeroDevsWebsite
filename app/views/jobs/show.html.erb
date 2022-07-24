@@ -1,0 +1,165 @@
+<% content_for :title do %>
+  <%= @job.title %> | Syftet Limited.
+<% end %>
+<% content_for :meta_title do %>
+  <%= @job.title %> | Syftet Job
+<% end %>
+<div class="contentarea we-hire-new">
+  <header id="header" class="header">
+    <div class="header-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="text-container">
+              <h1> <%= @job.title %> | Syftet Limited</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="maincontent job-page-new">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="text-center">POSITION DESCRIPTION AND QUIREMENTS</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="job-side margin-end-page">
+          <div class="post-content">
+            <div class="text-content">
+              <div class="job-page-icon description">
+                <h5>Job Summary</h5>
+              </div>
+              <ul>
+                <li><strong>Published on:</strong> <%= @job.updated_at %></li>
+                <li>Vacancy: <%= @job.vacancy %></li>
+                <li>Job Type: <%= @job.job_type %></li>
+                <li>Working Hours: 10-7pm, Mon-Fri</li>
+                <li>Location: DOHS, Mirpur-12, Dhaka, Bangladesh</li>
+                <li>Application Deadline: <%= @job.deadline %></li>
+              </ul>
+              <div class="job-page-icon role">
+                <h5>Your Role Will Be:</h5>
+              </div>
+              <ul>
+                <% @job.job_responsibilities.each do |responsibility| %>
+                  <li><%= responsibility.required_responsible %></li>
+                <% end %>
+              </ul>
+              <div class="job-page-icon skills">
+                <h5>Required Skills:</h5></div>
+              <ul>
+                <% @job.job_skills.each do |skill| %>
+                  <li><%= skill.skill_required %></li>
+                <% end %>
+              </ul>
+              <div class="job-page-icon offer">
+                <h5>We offer:</h5></div>
+              <ul>
+                <% @job.job_offers.each do |job_offer| %>
+                  <li><%= job_offer.offer %></li>
+                <% end %>
+              </ul>
+
+              <% if @job.job_additional_skills.present? %>
+                <div class="job-page-icon plus">
+                  <h5>Will be a plus:</h5></div>
+                <ul>
+                  <% @job.job_additional_skills.each do |add_skill| %>
+                    <li> <%= add_skill.additional_skill %></li>
+                  <% end %>
+                </ul>
+              <% end %>
+
+              <div class="job-page-icon plus">
+                <h5>Benefits:</h5>
+              </div>
+              <ul>
+                <li> 5 days a week, Mon-Fri</li>
+                <li> Evening snacks </li>
+                <li> 2 Yearly bonus </li>
+                <li> Performance bonus </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="job-apply-side block-sidebar-right">
+          <div class="block-fixed mobile-block-fixed fixed-4" style="top: -43px;">
+            <div class="discuss">
+              <div class="contact-form" id="block-form">
+                <div role="form" class="wpcf7" id="wpcf7-f48536-p48863-o1" lang="en-US" dir="ltr">
+                  <div class="screen-reader-response">
+                    <p role="status" aria-live="polite" aria-atomic="true"></p>
+                    <ul></ul>
+                  </div>
+                  <p class="form-title">Apply for the Position</p>
+                  <%= render 'homes/shared/apply_form', job: @job %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+<script type="text/javascript">
+    var recaptchaWidgets = [];
+    var recaptchaCallback = function () {
+        var forms = document.getElementsByTagName('form');
+        var pattern = /(^|\s)g-recaptcha(\s|$)/;
+
+        for (var i = 0; i < forms.length; i++) {
+            var divs = forms[i].getElementsByTagName('div');
+
+            for (var j = 0; j < divs.length; j++) {
+                var sitekey = divs[j].getAttribute('data-sitekey');
+
+                if (divs[j].className && divs[j].className.match(pattern) && sitekey) {
+                    var params = {
+                        'sitekey': sitekey,
+                        'type': divs[j].getAttribute('data-type'),
+                        'size': divs[j].getAttribute('data-size'),
+                        'theme': divs[j].getAttribute('data-theme'),
+                        'badge': divs[j].getAttribute('data-badge'),
+                        'tabindex': divs[j].getAttribute('data-tabindex')
+                    };
+
+                    var callback = divs[j].getAttribute('data-callback');
+
+                    if (callback && 'function' == typeof window[callback]) {
+                        params['callback'] = window[callback];
+                    }
+
+                    var expired_callback = divs[j].getAttribute('data-expired-callback');
+
+                    if (expired_callback && 'function' == typeof window[expired_callback]) {
+                        params['expired-callback'] = window[expired_callback];
+                    }
+
+                    var widget_id = grecaptcha.render(divs[j], params);
+                    recaptchaWidgets.push(widget_id);
+                    break;
+                }
+            }
+        }
+    };
+
+    document.addEventListener('wpcf7submit', function (event) {
+        switch (event.detail.status) {
+            case 'spam':
+            case 'mail_sent':
+            case 'mail_failed':
+                for (var i = 0; i < recaptchaWidgets.length; i++) {
+                    grecaptcha.reset(recaptchaWidgets[i]);
+                }
+        }
+    }, false);
+</script>

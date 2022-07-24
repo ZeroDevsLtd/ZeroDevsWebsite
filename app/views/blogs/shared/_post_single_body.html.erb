@@ -1,0 +1,24 @@
+<div class="">
+  <p class="first-letter">
+    <%= raw @blog.content %>
+  </p>
+
+<!--  <div class="img-wrap">-->
+    <%# if @blog.banner.present? %>
+      <%#= image_tag @blog.banner_url, alt: "" %>
+    <%# end %>
+<!--  </div>-->
+
+    <div style="display: flex; justify-content: space-between;">
+      <div style="text-align: left">
+        <% if @blog.previous %>
+          <%= link_to "< Previous", @blog.previous, class: "btn blue-primary-btn btn-get-started blue-primary-btn-custom" %>
+        <% end %>
+      </div>
+      <div style="text-align: right">
+        <% if @blog.next %>
+          <%= link_to "Next >", @blog.next, class: "btn blue-primary-btn btn-get-started blue-primary-btn-custom" %>
+        <% end %>
+      </div>
+    </div>
+</div>

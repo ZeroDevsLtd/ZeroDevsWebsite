@@ -1,0 +1,129 @@
+<section class="section-mdx post-single__body pt20 pb0 mt0 mb40">
+  <div class="container">
+    <div class="revenue-wrap mb50">
+      <p class="text-center"> Hello <%= @current_user['email'] %>! <%= link_to 'logout', destroy_session_revenues_path %> </p>
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="lead pt5"> <b> Revenue index </b> </h4>
+        </div>
+        <div class="col-md-5 mx-md-6">
+          <%= form_tag '', method: :get, id: "revenue_year" do %>
+            <%= select_tag(:year, options_for_select(@years, @year), {id: "year_select"}) %>
+            <%#= hidden_field_tag :month , Revenue.all.map(&:month).first%>
+          <% end %>
+        </div>
+      </div>
+      <p>
+        <canvas id="revenue-index" width="400" height="200"></canvas>
+      </p>
+    </div><!-- revenue-wrap -->
+
+    <div class="contribution-wrap">
+      <h4 class="text-center">Contribution</h4>
+      <div class="row">
+        <div class="col-md-3">
+          <p class="lead pt5"> Select month </p>
+        </div>
+        <div class="col-md-5 mx-md-6">
+          <%= form_tag '', method: :get, id: "revenue_month" do %>
+            <%= select_tag(:month, options_for_select(@months.map {|m| [Date::MONTHNAMES[m], m]}, @month), {id: "month_select"}) %>
+            <%= hidden_field_tag :year, @year %>
+          <% end %>
+        </div>
+      </div>
+      <p>
+        <canvas id="contribution" width="400" height="200"></canvas>
+      </p>
+    </div><!-- contribution-wrap -->
+
+  </div>
+</section>
+
+<script>
+
+    /* Revenue index */
+    $('#year_select').change(function () {
+        $('#revenue_year').submit();
+    });
+
+    var ctx = document.getElementById("revenue-index").getContext('2d');
+    var myRevenueLineChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: <%= raw @months.map{|m| Date::MONTHNAMES[m]} %>,
+            datasets: [{
+                label: 'Target',
+                data: <%= @revenues.map(&:target) %>,
+                fill: false,
+                backgroundColor: '#4D5B55',
+                borderColor: '#4D5B55'
+            },
+
+                {
+                    label: 'Revenue',
+                    data: <%= @revenues.map(&:earn) %>,
+                    fill: false,
+                    backgroundColor: '#F92A85',
+                    borderColor: '#F92A85'
+                }
+            ]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+
+    $('#month_select').change(function () {
+        $('#revenue_month').submit();
+    });
+
+    /* Contribution */
+    var ctx = document.getElementById("contribution").getContext('2d');
+    var contributionData = {
+        labels: <%= raw @employee_name %>,
+        datasets: [{
+            label: 'Contribution',
+            data: <%= @contribute %>,
+            backgroundColor: <%= raw @colors %>,
+            borderColor: <%= raw @colors %>,
+            borderWidth: 1
+        }]
+    };
+    var contributionOption = {
+        plugins: {
+            labels: [
+                {
+                    render: 'label',
+                    position: 'outside',
+                    arc: false,
+                    fontColor: '#000'
+                },
+                {
+                    render: 'percentage',
+                    fontColor: '#fff',
+                    fontSize: 16
+                }
+            ]
+        },
+        pieceLabel: {
+            render: 'label',
+            fontColor: '#000',
+            position: 'outside',
+            segment: true
+        }
+    };
+    var myPieChart = new Chart(ctx, {
+        type: 'pie',
+       data: contributionData,
+       options: contributionOption
+    });
+
+
+</script>
+

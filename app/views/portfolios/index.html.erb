@@ -1,0 +1,99 @@
+<% content_for :title do %>
+  Web Application & Desktop Application Portfolio | Syftet Limited
+<% end %>
+<% content_for :meta_title do %>
+  Portfolio Of Web Application & Desktop Application | Syftet
+<% end %>
+
+
+<div class="custom custom-software-dev">
+  <header id="header" class="header">
+    <div class="header-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="text-container">
+              <h1>Web Application & Desktop Application Portfolios</h1>
+              <p class="p-heading p-large">
+                We go the extra mile in all our projects. Starting with the discovery stage when we carefully analyze your requirements and up to the launch of the finalized product. SYFTET’s main goal is to exceed expectations and deliver solution which will be the best fit for each specific business case and take your company to the next level of efficiency.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+<section id="portfolio" class="section-md">
+  <section id="portfolio" class="section-md">
+    <div class="container">
+      <div class="text-center">
+        <ul class="portfolio-filter " id="myBtnContainer">
+          <li><a class="active" href="#" data-filter="*" >All</a></li>
+          <li><a href="#" data-filter=".apps-ios" >Apps & IOS</a></li>
+          <li><a href="#" data-filter=".web" >Web</a></li>
+          <li><a href="#" data-filter=".desktop" >Desktop</a></li>
+          <li><a href="#" data-filter=".products" >Products</a></li>
+        </ul>
+      </div>
+
+      <div class="portfolio-items" id="portfolio-items-loading">
+        <div class="syftet-flex-row">
+          <% @portfolios.each do |portfolio| %>
+            <% if portfolio.portfolio_photos.present? %>
+              <a href="<%= portfolio_path(portfolio) %>">
+                <div class="portfolio-item <%= portfolio.portfolio_type %> ">
+                  <div class="portfolio-item-inner" >
+                    <div class="portfolio-overlay"></div>
+                    <%= image_tag portfolio.portfolio_photos.first.image_url, alt: "#{portfolio.title}", class: 'img-responsive'%>
+                    <div class="portfolio-info">
+                      <div class="display-table">
+                        <div class="display-table-cell">
+                          <h3><%= portfolio.title %></h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            <% else %>
+              <a href="<%= portfolio_path(portfolio) %>">
+                <div class="portfolio-item <%= portfolio.portfolio_type %> ">
+                  <div class="portfolio-item-inner" >
+                    <div class="portfolio-overlay"></div>
+                    <%= image_tag 'default.jpg', alt: "#{portfolio.title}", class: 'img-responsive'%>
+                    <div class="portfolio-info">
+                      <div class="display-table">
+                        <div class="display-table-cell">
+                          <i class="fa fa-link hover-icon--before"></i>
+                          <h3><%= portfolio.title %></h3>
+                          <p>
+                            <%= truncate(portfolio.content, :length => 150 )%>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<section class="section-md bg-gray-lighter">
+  <%= render 'homes/shared/start_project_form', contact: @contactinfo %>
+</section>
+
+<!--<script>-->
+<!--    const myTimeout = setTimeout(myGreeting, 2000);-->
+<!--    document.getElementById("portfolio-items-loading").style.display = 'none';-->
+<!--    function myGreeting() {-->
+<!--        document.getElementById("portfolio-items-loading").style.display = 'block';-->
+<!--    }-->
+<!--</script>-->
+
+

@@ -1,0 +1,959 @@
+<% content_for :title do %>
+  Mobile app Development Company in Bangladesh|Syftet Limited
+<% end %>
+<% content_for :meta_title do %>
+  Mobile Application Development Services in Bangladesh | Syftet
+<% end %>
+
+
+
+<div class="custom-software-dev custom">
+  <header id="header" class="header">
+    <div class="header-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="text-container">
+              <h1>Mobile Application Development Services Company </h1>
+              <p class="p-heading p-large">Desktop software development is the core strength of SYFTET as a company.
+                Combination of the rich technical expertise, years of experience, and deep understanding of the
+                low-level desktop operating systems architecture help us to span the full cycle of the desktop
+                application development services needed to solve our customer's most complex challenges.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section-md bg-gray-lighter">
+    <div class="container">
+      <div class="row">
+        <h2 class="text-center line">WHAT WE DO</h2>
+        <div class="text-header-service content-page over-blue-block"><p>
+          <span style="font-weight: 400;">Are you looking for the trustworthy development service provider who can research and implement the most advanced features for your application that your competitors don’t have? You came to a right place. Our experience in many domains of IT gives us a capability to create innovative solutions. No matter if you need building everything from scratch or, for example, implement OCR features in the existing product - we got it all covered.</span>
+        </p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-md bg-default">
+    <div class="container">
+      <div class="row">
+        <div class="mobile-development-col-md-6 desktop-soft-col-md-6 min-980-padding-20">
+          <div class="blockchain-border">
+            <div class="desktop-soft-my-head-purple-block blockchain-my-head-purple-block" style="font-size: 25px">NATIVE
+              iOS &amp; ANDROID <br> APPLICATION DEVELOPMENT
+            </div>
+            <div class="desktop-soft-my-text-purple-block blockchain-my-text-purple-block ">
+              <p>
+                <span style="font-weight: 400;">Our team knows how to develop the most advanced application that runs smoothly on any platform leveraging all power of the languages and frameworks for the native mobile development, utilizing strong points of each OS and avoiding its weaknesses.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-development-col-md-6 desktop-soft-col-md-6 min-980-padding-20">
+          <div class="blockchain-border">
+            <div class="desktop-soft-my-head-purple-block blockchain-my-head-purple-block" style="font-size: 25px">CROSS-PLATFORM
+              DEVELOPMENT
+            </div>
+            <div class="desktop-soft-my-text-purple-block blockchain-my-text-purple-block ">
+              <p>
+                <span style="font-weight: 400;">Whether you’re a startup company launching the first version of your product or an enterprise company who needs a cost-effective transition of the business software into the mobile app - we make sure that your cross-platform application will work perfectly on all devices. </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-development-col-md-6 desktop-soft-col-md-6 min-980-padding-20">
+          <div class="blockchain-border">
+            <div class="desktop-soft-my-head-purple-block blockchain-my-head-purple-block" style="font-size: 25px">MOBILE
+              FRONT-END <br>DEVELOPMENT
+            </div>
+            <div class="desktop-soft-my-text-purple-block blockchain-my-text-purple-block">
+              <p>
+                <span style="font-weight: 400;">Having a great product or business software that is needed to be introduced to the wider audience on the mobile devices? We can help. Our UX, UI, and front-end software engineers will transform your solution into the excellent mobile application that is a joy to use.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-md bg-default">
+    <div class="mobile-development-monitor-block">
+      <div class="container">
+        <h2 class="text-center">RELATED CASE STUDY</h2>
+      </div>
+      <div class="container">
+        <div class="blockchain-row row">
+          <div class="col-sm-6 min-980-padding-20">
+            <h3 class="title-desktop-soft text_criptucyrrent ">
+              <%= @portfolio.title %>
+            </h3>
+            <p class="text_criptucyrrent">
+              <%= truncate(@portfolio.content, :length => 500) %>
+            </p>
+
+            <div class="desktop-soft-monitor cryptocurrency-block">
+              <ul>
+                <li>
+                  <div>Team Size: <%= @portfolio.team_size %> Developers</div>
+                </li>
+                <li>
+                  <div>Technologies:
+                    <%= @portfolio.portfolio_technologies.collect{|e| e.technology.name }.join(", ") %>
+                  </div>
+                </li>
+                <li>
+                  <div>Project Duration: <%= @portfolio.project_duration %></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="blockchain-my-monitor-block col-sm-6" style="float: initial;">
+            <noscript>
+              <%= image_tag @portfolio.portfolio_photos.first.image_url, alt: "#{@portfolio.title}"%>
+            </noscript>
+            <%= image_tag @portfolio.portfolio_photos.first.image_url, alt: "#{@portfolio.title}", class: 'lazyloaded'%>
+          </div>
+
+          <div class="desktop-soft-button ">
+            <a href="<%= portfolio_path(@portfolio) %>">
+              <button class="btn blue-primary-btn btn-get-started blue-primary-btn-custom">
+                <div>Full Case Study</div>
+              </button>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-md bg-default">
+    <div class="container">
+      <div class="row"><h2 class="text-center">TECHNOLOGIES WE USE</h2>
+        <div class="text-header-service content-page web-page">
+          <p>
+            <span style="font-weight: 400;"></span>
+          </p>
+          <p>
+            <span style="font-weight: 400;">Our team combines knowledge of the frameworks, libraries, and SDKs needed to create the powerful backend and beautiful frontend to provide your application with both reliable server-side architecture and fluent interface.</span>
+          </p>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <div class="container custom-software-content">
+      <div class="service" id="service_24">
+        <div class="row rows-block-align-center">
+          <div class="col-xs-6 col-md-4 col-sm-3 col-lg-2 web-develop-service-col-size service-tab service-col-size mobile-development-service-col-size">
+            <a href="#">
+              <div class="col-xs-12 col-md-4 col-picture" style="padding: 0;">
+                <div class="mob-dev-block-image-stage block-image-stage my-block-image-stage size-block-image-stage margin-auto">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Слой_1" x="0px" y="0px" width="396.21px" height="535.9px" viewBox="71.374 2.749 396.21 535.9" enable-background="new 71.374 2.749 396.21 535.9" xml:space="preserve" class="svg replaced-svg">
+                      <g>
+                        <g>
+                          <path fill="#0C88C4" stroke="#0C88C4" stroke-width="3" stroke-miterlimit="10" d="M382.002,396.825    c-0.485-2.063,3.416-3.839,4.766-4.521c2.392-1.21,4.748-2.431,7.071-3.771c4.839-2.793,9.597-5.732,14.193-8.908    c9.102-6.289,17.602-13.559,24.52-22.231c6.149-7.711,11.056-16.29,11.402-26.382c0.305-8.855-2.867-17.065-9.439-23.088    c-10.956-10.04-27.541-11.695-40.872-5.73c2.369-3.878,6.651-6.146,10.832-7.562c5.093-1.724,10.555-2.435,15.912-2.619    c10.162-0.35,20.178,2.204,28.685,7.83c7.92,5.239,13.963,12.949,16.028,22.331c2.316,10.523-0.442,21.119-6.314,29.974    c-11.323,17.072-29.901,27.766-48.501,35.234C401.055,391.087,391.564,394.108,382.002,396.825    C381.813,396.02,411.231,388.521,382.002,396.825z"></path>
+                          <path fill="#0C88C4" stroke="#0C88C4" stroke-width="3" stroke-miterlimit="10" d="M208.684,297.234    c-12.023,3.28-24.137,6.391-35.781,10.882c-4.578,1.766-9.259,3.655-13.547,6.065c-2.56,1.439-7.463,4.878-4.605,8.251    c1.319,1.558,3.453,2.381,5.329,3.027c2.294,0.79,4.674,1.345,7.045,1.847c5.854,1.239,11.809,1.969,17.769,2.452    c12.896,1.045,25.877,1,38.806,0.931c25.377-0.136,50.752-1.193,76.048-3.242c23.591-1.911,47.118-4.682,70.485-8.455    c4.216-0.681,8.427-1.394,12.631-2.142c-5.271,2.662-10.687,5.038-15.871,7.875c-1.214,0.664-2.447,1.322-3.57,2.135    c-1.158,0.838-2.232,1.809-3.474,2.526c-2.278,1.314-5.174,1.526-7.693,2.124c-12.092,2.857-24.368,4.912-36.678,6.566    c-25.514,3.428-51.186,4.613-76.879,5.793c-12.852,0.59-25.667,0.472-38.518-0.128c-12.432-0.58-24.876-1.158-37.258-2.457    c-5.916-0.62-11.816-1.409-17.673-2.449c-5.922-1.052-11.936-2.188-17.661-4.055c-2.42-0.789-4.832-1.717-7.049-2.979    c-1.777-1.011-3.779-2.377-4.519-4.381c-1.299-3.521,2.482-6.502,5.031-8.151c3.164-2.048,6.661-3.484,10.106-4.975    c4.53-1.96,9.068-3.875,13.705-5.573c10.254-3.756,20.818-6.669,31.568-8.603C187.07,298.207,197.875,297.254,208.684,297.234    C193.49,301.38,178.797,297.289,208.684,297.234z"></path>
+                          <path fill="#0C88C4" stroke="#0C88C4" stroke-width="3" stroke-miterlimit="10" d="M465.859,486.72    c0.393-0.09-0.316,2.83-0.414,3.188c-0.33,1.215-0.749,2.406-1.253,3.561c-0.935,2.139-2.163,4.142-3.611,5.971    c-2.908,3.676-6.639,6.619-10.598,9.089c-9.663,6.028-20.66,9.932-31.55,13.077c-23.491,6.785-47.891,10.035-72.195,12.181    c-24.617,2.174-49.331,3.331-74.045,3.363c-24.027,0.031-48.09-0.913-71.998-3.371c-9.619-0.989-19.254-2.154-28.767-3.907    c-9.28-1.71-18.666-4.072-26.983-8.661c21.479,3.16,43.127,5.163,64.803,6.33c22.854,1.23,45.763,1.519,68.643,0.896    c22.457-0.612,44.902-2.097,67.22-4.698c20.973-2.445,41.804-5.939,62.34-10.868c11.508-2.763,22.945-5.959,33.963-10.312    c4.801-1.896,9.54-4.026,13.959-6.707C459.326,493.451,463.185,490.549,465.859,486.72    C466.043,486.678,460.13,494.92,465.859,486.72z"></path>
+                          <path fill="#CE2030" stroke="#CE2030" stroke-width="3" stroke-miterlimit="10" d="M322.937,4.274    c0.971-0.414,2.858,3.219,3.31,3.86c1.237,1.757,2.38,3.582,3.416,5.465c2.254,4.093,3.994,8.459,5.196,12.974    c2.921,10.968,2.867,22.781,0.101,33.769c-2.691,10.684-7.669,20.682-13.455,30.006c-6.2,9.992-13.729,19.071-21.889,27.517    c-8.651,8.955-18.133,16.976-27.71,24.913c-9.106,7.546-18.154,15.156-25.903,24.136c-7.066,8.188-13.136,17.354-16.352,27.76    c-1.646,5.325-2.528,10.887-2.474,16.464c0.056,5.812,1.225,11.489,2.975,17.014c3.019,9.536,7.868,18.299,13.455,26.553    c5.403,7.983,11.4,15.548,16.724,23.587c1.845,2.786,3.608,5.627,5.241,8.542c0.833,1.486,1.631,2.992,2.39,4.518    c0.362,0.728,0.715,1.46,1.058,2.196c0.18,0.386,0.725,2.144,1.103,2.177c-9.229-7.435-17.629-15.869-25.99-24.248    c-8.427-8.446-16.844-16.882-24.189-26.311c-7.256-9.315-13.913-19.646-17.663-30.915c-3.674-11.039-3.4-23.132,1.303-33.816    c4.442-10.093,11.798-18.51,19.641-26.116c8.261-8.011,17.096-15.378,26.105-22.527c18.288-14.512,37.648-28.342,53.091-46.019    c7.336-8.397,13.538-17.787,17.755-28.137c3.974-9.754,5.762-20.442,5.847-30.947C326.082,19.135,325.218,11.495,322.937,4.274    C323.662,3.965,328.317,21.307,322.937,4.274z"></path>
+                          <path fill="#CE2030" stroke="#CE2030" stroke-width="3" stroke-miterlimit="10" d="M389.117,112.705    c-18.917,12.148-38.803,22.917-56.46,36.932c-8.351,6.628-16.334,14.006-22.896,22.442c-3.148,4.047-5.872,8.485-7.49,13.374    c-1.72,5.191-2.051,10.734-1.046,16.104c1.811,9.667,7.523,17.745,13.029,25.648c5.365,7.704,11.97,14.782,14.876,23.9    c3.221,10.104,1.481,20.973-3.829,30.028c-5.024,8.567-12.479,15.938-20.188,22.095c-2.628,2.098-5.354,4.071-8.147,5.941    c-1.425,0.953-2.866,1.88-4.322,2.783c-0.789,0.49-1.583,0.974-2.38,1.451c-0.463,0.276-1.628,1.281-2.167,1.23    c0.023,0.003,1.298-1.612,1.451-1.777c0.7-0.752,1.4-1.504,2.093-2.263c1.378-1.508,2.728-3.042,3.999-4.641    c2.689-3.382,5.011-7.073,6.528-11.134c1.78-4.764,2.386-9.895,1.989-14.955c-0.406-5.179-2.291-10.029-5.05-14.396    c-2.606-4.126-5.849-7.789-8.906-11.577c-3.166-3.921-6.157-7.992-8.792-12.291c-5.788-9.444-9.655-19.996-10.492-31.088    c-0.764-10.121,1.303-20.107,6.127-29.04c4.486-8.308,10.803-15.724,17.669-22.154c16.147-15.121,36.35-25.318,56.642-33.668    C363.69,120.573,376.307,116.41,389.117,112.705C364.088,128.779,378.39,115.807,389.117,112.705z"></path>
+                          <path fill="#0C88C4" stroke="#0C88C4" stroke-width="3" stroke-miterlimit="10" d="M362.818,384.97    c-21.142,6.025-42.768,10.287-64.601,12.837c-24.48,2.858-49.362,3.904-73.976,2.399c-11.599-0.709-23.209-2.036-34.553-4.605    c-5.102-1.156-10.153-2.572-15.065-4.377c-3.869-1.422-7.779-2.994-11.164-5.387c-2.541-1.797-4.975-4.277-5.377-7.506    c-0.466-3.738,2.015-6.893,4.711-9.164c3.035-2.557,6.642-4.49,10.227-6.15c2.292-1.062,4.642-1.988,7.013-2.854    c1.105-0.404,2.215-0.796,3.326-1.188c0.559-0.196,1.118-0.394,1.677-0.591c0.196-0.069,1.346-0.395,1.369-0.433    c-0.401,0.663-1.305,1.347-1.882,1.891c-0.757,0.714-1.534,1.407-2.258,2.155c-1.435,1.484-2.605,3.223-2.867,5.314    c-0.568,4.548,3.222,7.029,7.004,8.436c5.024,1.866,10.527,2.485,15.823,3.034c6.043,0.625,12.122,1.048,18.184,1.448    c25.411,1.681,50.963,0.967,76.271-1.807c6.048-0.663,12.084-1.443,18.102-2.338c5.76-0.856,11.595-1.655,17.285-2.901    c2.273-0.498,4.493-1.243,6.786-1.652c0.705-0.126,1.576-0.313,2.275-0.065c0.957,0.341,1.785,1.131,2.537,1.784    c4.113,3.571,8.646,6.484,13.473,9.008C358.999,383.23,360.892,384.141,362.818,384.97    C331.878,393.789,357.385,382.632,362.818,384.97z"></path>
+                          <path fill="#0C88C4" stroke="#0C88C4" stroke-width="3" stroke-miterlimit="10" d="M198.768,416.228    c0.072,0.004,0.144,0.004,0.216,0c-0.848,1.361-2.506,2.156-3.628,3.27c-1.33,1.32-2.177,3.188-1.563,5.062    c1.221,3.724,6.742,4.806,10.022,5.573c5.865,1.373,11.821,2.069,17.803,2.695c6.528,0.681,13.067,1.271,19.62,1.66    c12.804,0.761,25.625,0.602,38.403-0.519c11.388-0.999,22.694-2.72,33.939-4.755c3.142-0.568,6.28-1.159,9.416-1.759    c0.309-0.059,0.617-0.117,0.926-0.177c0.48-0.092,0.824,0.241,1.237,0.479c0.829,0.478,1.66,0.951,2.494,1.421    c1.676,0.942,3.362,1.867,5.06,2.769c6.745,3.584,13.683,6.813,20.834,9.501c-17.384,8.178-36.469,12.822-55.399,15.665    c-21.577,3.24-43.667,4.021-65.375,1.654c-10.985-1.198-21.936-3.229-32.521-6.425c-5.074-1.533-10.075-3.411-14.78-5.866    c-3.559-1.857-7.214-4.153-9.582-7.473c-1.473-2.064-2.299-4.595-1.834-7.135c0.529-2.888,2.674-5.187,4.913-6.931    C184.778,420.414,191.97,418.677,198.768,416.228C198.798,416.203,193.762,418.032,198.768,416.228z"></path>
+                          <path fill="#0C88C4" stroke="#0C88C4" stroke-width="3" stroke-miterlimit="10" d="M432.877,459.774    c3.471,1.616,7.717,3.361,9.214,7.21c1.976,5.078-2.503,9.732-6.213,12.566c-8.59,6.562-19.54,9.823-29.761,12.85    c-21.078,6.24-42.6,10.473-64.402,13.208c-23.832,2.99-47.836,4.419-71.822,5.447c-26.022,1.115-52.002,0.577-77.988-1.126    c-25.301-1.659-50.618-3.883-75.709-7.583c-6.21-0.916-12.407-1.929-18.581-3.066c-5.62-1.036-11.401-2.102-16.646-4.457    c-4.033-1.812-8.842-5.132-7.986-10.193c0.733-4.337,4.625-7.609,8.01-10.019c8.365-5.953,18.181-10.167,27.907-13.312    c10.028-3.241,20.625-5.656,31.162-6.392c5.685-0.396,12.908-0.643,17.747,2.927c-11.381,0.376-22.72,2.41-33.384,6.451    c-4.32,1.637-8.684,3.516-12.632,5.937c-2.652,1.627-7.078,5.021-4.528,8.504c2.181,2.98,6.638,4.283,9.978,5.369    c4.569,1.485,9.21,2.778,13.884,3.889c11.89,2.825,24.028,4.553,36.177,5.799c24.656,2.528,49.541,3.382,74.315,3.59    c24.791,0.208,49.595-0.464,74.335-2.076c24.171-1.575,48.444-3.836,72.349-7.817c6.082-1.013,12.112-2.244,18.111-3.666    c5.628-1.335,11.297-2.669,16.642-4.927c4-1.689,8.306-3.904,11.039-7.387c1.346-1.714,2.065-3.734,1.823-5.929    C435.667,463.306,434.386,461.409,432.877,459.774C436.646,461.529,434.596,461.636,432.877,459.774z"></path>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center col-name">
+                <h4>Java</h4>
+                <div class="text-service"></div>
+              </div>
+            </a>
+          </div>
+          <div class="col-xs-6 col-md-4 col-sm-3 col-lg-2 mobile-development-service-col-size web-develop-service-col-size service-tab service-col-size">
+            <a href="#">
+              <div class="col-xs-12 col-md-4 col-picture" style="padding: 0;">
+                <div class="mob-dev-block-image-stage block-image-stage my-block-image-stage size-block-image-stage margin-auto">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Слой_1" x="0px" y="0px" width="533.193px" height="466.508px" viewBox="0 0 533.193 466.508" enable-background="new 0 0 533.193 466.508" xml:space="preserve" class="svg replaced-svg">
+                      <g>
+                        <path fill-rule="evenodd" clip-rule="evenodd" fill="#0C88C4" d="M324.411,8.138c88.092,49.487,185.02,161.107,151.474,312.218   c22.208,35.366,49.383,79.208,40.186,136.015c-11.722-10.73-24.208-34.325-40.186-40.185   c-58.252-21.371-126.197,40.185-191.659,40.185c-128.676,0-203.543-76.1-268.94-154.564c55.017,41.26,201.43,89.274,284.396,30.916   C211.086,257.478,133.859,170.869,64.746,76.145c57.738,45.309,128.227,104.645,197.841,148.381   c-40.695-49.986-94.104-114.038-136.016-173.112c71.231,62.724,152.624,142.074,244.21,194.75   C403.37,161.537,367.797,56.031,324.411,8.138z"></path>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center col-name"><h4>Swift</h4>
+                <div class="text-service"></div>
+              </div>
+            </a>
+          </div>
+          <div class="col-xs-6 col-md-4 col-sm-3 col-lg-2 mobile-development-service-col-size web-develop-service-col-size service-tab service-col-size">
+            <a href="#">
+              <div class="col-xs-12 col-md-4 col-picture" style="padding: 0;">
+                <div class="mob-dev-block-image-stage block-image-stage my-block-image-stage size-block-image-stage margin-auto">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="497.726px" height="443.49px" viewBox="48.78 20.545 497.726 443.49" enable-background="new 48.78 20.545 497.726 443.49" xml:space="preserve" class="svg replaced-svg">
+                      <g>
+                        <path fill="#CE152F" d="M441.954,158.251c19.851,7.148,40.635,14.775,58.977,25.642c17.43,10.323,34.808,23.554,42.311,42.311   c13.546,33.854-18.213,59.652-37.607,71.797c-20.008,12.524-40.832,20.877-63.25,27.777   c11.465,46.324,14.901,118.925-25.642,134.619c-24.421,9.454-51.59-3.737-68.378-13.248   c-19.316-10.941-35.266-23.314-50.002-37.606c-15.482,13.818-31.015,26.448-50.429,37.606   c-16.787,9.648-43.809,23.124-68.378,13.676c-40.775-15.681-37.547-87.369-26.497-134.618   c-34.405-12.117-68.067-24.964-90.174-50.856c-7.255-8.497-13.992-18.729-14.103-32.479c-0.212-26.389,21.671-43.995,38.89-55.131   c19.616-12.686,41.3-21.254,64.959-28.634c-10.844-46.962-14.621-119.426,26.069-135.047c24.066-9.239,51.727,3.609,68.378,13.249   c19.151,11.086,35.045,23.551,50.001,37.608c27.048-21.884,54.077-48.943,96.584-53.85c0.65-0.073,0.759-0.397,1.282-0.428   C458.088,17.246,454.17,105.641,441.954,158.251z M426.997,97.137c-0.598-26.925-4.901-56.767-32.907-53.42   c-34.491,4.122-59.292,29.595-80.344,47.438c11.398,11.864,21.725,24.095,32.052,37.608c2.938,3.841,7.378,11.376,10.687,12.821   c3.947,1.727,11.527,1.468,16.237,2.137c16.896,2.398,32.365,5.186,47.438,8.975C422.891,138.031,427.446,117.404,426.997,97.137z    M243.23,61.666c-12.66-7.982-30.146-19.557-49.574-17.949c-21.802,1.802-25.642,29.48-25.642,52.993   c0,20.859,3.011,40.683,6.838,55.983c20.15-4.922,41.591-8.553,64.104-11.11c13.459-17.598,27.27-34.84,42.309-50.856   C269.395,80.194,257.772,70.835,243.23,61.666z M297.078,106.967c-9.455,10.489-19.247,20.64-27.351,32.479   c17.719-1.159,37.385-1.083,55.13,0C317.515,128.411,306.874,116.972,297.078,106.967z M355.626,181.756   c-2.51-3.914-9.256-16.761-13.248-18.377c-2.481-1.005-7.617-0.542-12.394-0.854c-26.521-1.736-53.228-1.398-77.78,0.854   c-14.484,20.417-29.4,44.291-41.027,68.378c-1.816,3.763-4.75,8.802-4.701,11.111c0.048,2.265,3.481,6.979,5.128,10.257   c9.695,19.285,17.259,32.712,28.206,50.001c2.187,3.453,8.923,16.799,12.821,18.376c5.396,2.184,15.32,0.954,22.223,1.282   c23.564,1.12,47.026,0.729,68.378-1.282c17.271-24.467,32.363-51.114,45.729-79.489   C378.681,221.205,368.113,201.226,355.626,181.756z M180.408,174.49c4.149,13.943,8.436,27.748,14.103,40.174   c7.447-14.115,15.818-29.33,23.932-42.311c1.043-1.668,3.369-3.398,2.564-5.556C207.046,168.934,193.793,171.779,180.408,174.49z    M400.927,214.662c4.416-13.393,9.811-25.807,13.248-40.174c-13.448-2.792-26.669-5.811-41.024-7.691   C382.755,182.405,392.037,198.339,400.927,214.662z M80.405,222.781c-4.956,5.554-10.504,13.869-8.975,23.078   c2.706,16.293,22.689,28.488,36.326,36.326c16.688,9.591,32.858,16.391,51.284,21.795c5.805-21.974,13.679-41.878,22.223-61.111   c-8.879-19.612-15.829-41.153-23.505-61.97C129.508,190.852,98.446,202.568,80.405,222.781z M413.749,242.441   c8.967,19.239,16.221,40.19,23.077,61.54c16.374-5.538,33.05-11.636,48.72-20.513c14.089-7.981,30.695-18.395,36.753-32.907   c5.615-13.456-4.132-24.188-11.966-31.625c-19.351-18.367-47.466-29.813-73.935-38.036   C429.818,202.385,422.167,222.797,413.749,242.441z M373.576,318.084c13.872-2.512,27.854-4.911,41.025-8.12   c-4.109-13.98-8.542-27.644-14.104-40.172C392.502,286.582,381.615,302.76,373.576,318.084z M180.835,309.965   c12.996,3.102,28.016,6.458,41.455,7.69c-10.42-14.794-18.948-31.479-28.206-47.438   C189.567,283.368,184.39,295.855,180.835,309.965z M356.054,342.871c-13.058,17.854-27.253,34.57-41.882,50.854   c10.42,9.611,22.104,19.44,35.472,28.206c12.614,8.271,28.041,17.495,45.302,18.805c27.563,2.091,31.817-25.158,32.053-50.854   c0.194-21.388-2.616-42.818-6.838-57.694C400.925,336.174,378.687,340.86,356.054,342.871z M174.852,333.469   c-4.181,16.949-6.751,36.229-6.411,58.549c0.385,25.211,5.616,51.249,32.907,49.146c17.037-1.313,31.704-10.696,44.446-19.229   c13.506-9.044,26.457-18.287,35.471-28.633c-11.553-11.692-21.691-24.123-32.052-37.608c-2.792-3.633-7.569-11.615-10.684-12.819   c-3.96-1.53-11.258-1.477-16.24-2.139c-16.399-2.18-33.739-5.279-47.01-8.547C174.781,332.259,174.815,332.863,174.852,333.469z    M297.933,377.488c7.234-7.066,14.567-16.074,20.94-23.933c2.271-2.801,5.901-5.5,5.556-8.12   c-17.516,1.037-37.852-0.055-54.703,0.427C279.002,356.531,287.529,367.948,297.933,377.488z"></path>
+                        <path fill="#0087C4" d="M294.514,196.286c25.669-1.842,46.831,16.873,49.146,40.6c2.81,28.792-17.396,49.594-41.454,51.711   c-16.122,1.418-29.428-5.068-37.608-13.249c-7.489-7.49-13.535-18.215-13.675-32.479c-0.13-13.186,5.787-24.644,12.821-32.054   C270.917,203.259,280.365,197.3,294.514,196.286z"></path>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center col-name"><h4>React Native</h4>
+                <div class="text-service"></div>
+              </div>
+            </a></div>
+          <div class="col-xs-6 col-md-4 col-sm-3 col-lg-2 mobile-development-service-col-size web-develop-service-col-size service-tab service-col-size">
+            <a href="#">
+              <div class="col-xs-12 col-md-4 col-picture" style="padding: 0;">
+                <div class="mob-dev-block-image-stage block-image-stage my-block-image-stage size-block-image-stage margin-auto">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Слой_1" x="0px" y="0px" width="427.306px" height="457.508px" viewBox="17.042 4.461 427.306 457.508" enable-background="new 17.042 4.461 427.306 457.508" xml:space="preserve" class="svg replaced-svg">
+                      <g>
+                        <g>
+                          <path fill="#0C88C4" d="M442.386,117.101c-32.906,18.734-65.857,37.425-98.542,56.38c-22.052-35.829-72.401-67.633-131.392-49.516    c-43.797,13.451-81.925,52.689-81.382,110.309c0.269,28.728,11.598,53.261,25.493,70.599    c14.621,18.246,33.281,31.198,57.361,38.241c58.991,17.252,108.961-14.605,130.411-51.479    c33.84,19.675,66.259,36.697,100.013,54.419c-18.771,33.931-42.718,57.89-73.54,78.443    c-30.252,20.172-68.021,35.411-114.229,37.26c-49.571,1.981-89.332-10.046-122.567-28.927    c-31.919-18.134-58.69-43.345-78.442-73.05c-20.35-30.601-36.073-66.663-38.241-113.253c-2.263-48.622,9.075-89.45,27.946-123.544    C62.83,91.262,87.195,65.115,117.832,44.05C148.098,23.241,186.18,7.267,232.064,4.829c54.301-2.885,96.58,11.542,129.917,31.376    C396.031,56.463,422.71,83.385,442.386,117.101z"></path>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center col-name"><h4>Objective-C</h4>
+                <div class="text-service"></div>
+              </div>
+            </a></div>
+          <div class="col-xs-6 col-md-4 col-sm-3 col-lg-2 mobile-development-service-col-size web-develop-service-col-size service-tab service-col-size">
+            <a href="#">
+              <div class="col-xs-12 col-md-4 col-picture" style="padding: 0;">
+                <div class="mob-dev-block-image-stage block-image-stage my-block-image-stage size-block-image-stage margin-auto">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Слой_1" x="0px" y="0px" width="533.193px" height="466.508px" viewBox="0 0 533.193 466.508" enable-background="new 0 0 533.193 466.508" xml:space="preserve" class="svg replaced-svg">
+                      <path fill="#0C88C4" d="M523.263,240.564l-0.473-5.211c-1.232-6.819-1.421-7.768-3.852-13.849  c-15.604-28.821-68.896-127.372-89.288-166.522c-9.487-18.214-20.901-40.406-38.837-46.762c-13.844-4.907-40.133-2.378-59.442-2.378  H207.729c-25.153,0-52.397-2.215-67.37,6.341c-14.382,8.218-23.88,30.623-34.081,48.347  c-20.517,35.646-40.252,69.308-60.236,103.828c-10.087,17.425-22.468,33.906-30.117,51.517c-1.893,4.359-3.102,12.756-3.963,15.06  v7.132c1.406,12.209,7.955,21.591,14.267,32.496c27.34,47.23,51.178,88.394,78.465,135.531  c10.617,18.336,20.052,41.882,34.874,50.725c14.653,8.742,43.563,6.342,68.162,6.342h123.642c21.497,0,45.631,1.89,59.441-3.173  c20.688-7.579,28.877-29.838,40.424-49.931c21.513-37.432,40.996-70.438,61.82-106.207c12.297-21.117,27.362-50.211,29.447-57.033  C522.801,245.855,523.263,240.564,523.263,240.564z M334.733,355.766c-22.621-39.658-41.717-75.427-65.935-118.228  c-23.431,41.741-41.832,76.128-65.247,118.228h-44.619c18.068-41.424,41.778-80.217,62.121-119.363  c-15.092-29.883-30.506-60.067-46.608-89.805c-5.186-9.577-10.018-19.474-15.513-30.465h45.448  c21.953,39.822,40.2,72.385,64.417,116.86c23.96-43.616,40.987-76.318,64.488-116.86h45.451  c-21.954,42.838-42.871,80.494-63.289,119.566c21.963,41.97,37.568,72.007,63.669,120.067  C365.665,355.766,348.8,356.223,334.733,355.766z"></path>
+                      <path fill="#CE2030" d="M-49.569,282.087"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center col-name"><h4>Xamarin</h4>
+                <div class="text-service"></div>
+              </div>
+            </a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-md">
+    <div class="mobile-development-middleware-desktop">
+      <div class="container">
+        <div class="row">
+          <h2 class="text-center">CROSS-PLATFORM MOBILE DEVELOPMENT SERVICES</h2>
+        </div>
+      </div>
+      <div class="container my-monitor-block">
+        <div class="desktop-soft-row row">
+          <div class="mobile-development-my-monitor-block blockchain-my-monitor-block col-md-6">
+            <noscript>
+              <%= image_tag 'services/syftet_mobile-app-development-company.png', alt: 'syftet_mobile-app-development-company' %>
+            </noscript>
+            <%= image_tag 'services/syftet_mobile-app-development-company.png', alt: 'syftet_mobile-app-development-company' %>
+          </div>
+          <div class="col-md-6 min-980-padding-20">
+            <p class="text_criptucyrrent">About 90% of the code written with the Xamarin framework can be used for all
+              targeted OS, so the cross-platform development approach is extremely effective for those who count the
+              money and need to push the application to the market as soon as possible.</p>
+            <p class="text_criptucyrrent">It is ideal for startups who launching the first app version, need an MVP or
+              for someone who needs the quick transition of their enterprise software into the mobile application that
+              can be launched on the diverse devices across the entire business ecosystem.</p>
+            <div class="desktop-soft-monitor cryptocurrency-block">
+              <ul>
+                <li>
+                  <div>Ideal for startups creating an MVP</div>
+                </li>
+                <li>
+                  <div>Significantly lower time-to-market</div>
+                </li>
+                <li>
+                  <div>iOS and Android versions in twice lower budget</div>
+                </li>
+                <li>
+                  <div>A quick and cheap transition of enterprise software to the mobile platforms</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-md" id="mobile-app-development-process-section">
+    <div class="container custom-software-content">
+      <h2 class="text-center">HOW YOUR APP DEVELOPMENT PROCESS WILL LOOK LIKE</h2>
+      <div class="mobile-development-content-page text-header-service content-page">
+        <p><span style="font-weight: 400;"></span></p>
+        <p><span style="font-weight: 400;">It is not that hard to create and publish a great mobile app. At least if you have an experienced technology partner at your side. We know how to develop mobile application starting with collecting your requirements, creating first user stories and up to publishing to the marketplaces. Our business and engineering teams will be the force that drives you through all the development process.</span>
+        </p>
+        <p></p>
+      </div>
+
+      <div class="top-border">
+        <div class="mobile-left-block"></div>
+        <div class="center-block-border"></div>
+        <div class="mobile-right-block"></div>
+      </div>
+      <div class="row" style="margin-top: 0px;">
+        <div class="col-xs-12">
+          <h3 class="mobile-development-text-center text-center">APPLICATION DESIGN</h3>
+        </div>
+      </div>
+      <div class="mobile-app-process">
+        <div class="service">
+          <div class="row">
+            <div class="col-xs-12 work-column text-right work-text-width">
+              <a>
+                <div class="center-border"></div>
+                <div class="col-xs-12 work-photo" style="padding: 0;">
+                  <div class="my-block-image-stage">
+                    <div class="mobile-development-svg-wrapper" style="margin: 0 auto;">
+                      <img src="" alt="" class="svg">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 work-text work-text-contents">
+                  <h4>WEEK 1</h4>
+                  <div class="text-service"></div>
+                </div>
+              </a>
+            </div>
+            <div class="center-border"></div>
+            <div class="col-xs-12 work-column work-column-width">
+              <a>
+                <div class="center-border"></div>
+                <div class="col-xs-12 work-photo" style="padding: 0;">
+                  <div class="my-block-image-stage"><div class="mobile-development-svg-wrapper" style="margin: 0 auto;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="479.203px" height="479.205px" viewBox="0 5.989 479.203 479.205" enable-background="new 0 5.989 479.203 479.205" xml:space="preserve" class="svg replaced-svg">
+                    <g>
+                      <path fill="#0087C4" d="M354.955,133.627h-14.021v9.378h9.377v253.272H153.3v-9.378h-9.377v14.11c0,2.579,2.15,4.646,4.73,4.646   h206.301c2.582,0,4.732-2.152,4.732-4.646V138.359C359.687,135.779,357.537,133.627,354.955,133.627z"></path>
+                      <path fill="#0087C4" d="M331.47,372.791V110.227c0-2.58-2.066-4.731-4.646-4.731H120.437c-2.58,0-4.646,2.151-4.646,4.731v262.648   c0,2.585,2.064,4.733,4.646,4.733h206.385C329.404,377.524,331.47,375.372,331.47,372.791z M322.091,368.146H125.167V114.874   h196.924V368.146z"></path>
+                      <path fill="#0087C4" d="M270.558,199.269c18.154,0,32.863-14.711,32.863-32.864c0-18.153-14.709-32.864-32.863-32.864   c-18.152,0-32.861,14.712-32.861,32.864C237.697,184.557,252.406,199.269,270.558,199.269z M293.529,161.76h-18.324v-18.325   C284.41,145.328,291.638,152.64,293.529,161.76z M265.828,143.435v22.97c0,2.581,2.064,4.645,4.646,4.645h22.971   c-2.15,10.668-11.701,18.755-22.971,18.755c-12.904,0-23.486-10.581-23.486-23.486C247.072,155.134,255.16,145.671,265.828,143.435   z"></path>
+                      <path fill="#0087C4" d="M148.654,199.269h75.02c2.58,0,4.646-2.15,4.646-4.732c0-2.581-2.066-4.646-4.646-4.646h-75.02   c-2.58,0-4.73,2.15-4.73,4.646C143.923,197.203,146.074,199.269,148.654,199.269z"></path>
+                      <path fill="#0087C4" d="M148.654,227.4h150.037c2.582,0,4.73-2.15,4.73-4.731s-2.148-4.731-4.73-4.731H148.654   c-2.58,0-4.73,2.15-4.73,4.731C143.923,225.335,146.074,227.4,148.654,227.4z"></path>
+                      <path fill="#0087C4" d="M148.654,255.531h150.037c2.582,0,4.73-2.151,4.73-4.646c0-2.581-2.148-4.731-4.73-4.731H148.654   c-2.58,0-4.73,2.15-4.73,4.731S146.074,255.531,148.654,255.531z"></path>
+                      <path fill="#0087C4" d="M148.654,143.005h75.02c2.58,0,4.646-2.15,4.646-4.731c0-2.582-2.066-4.646-4.646-4.646h-75.02   c-2.58,0-4.73,2.152-4.73,4.646C143.923,140.94,146.074,143.005,148.654,143.005z"></path>
+                      <path fill="#0087C4" d="M148.654,171.136h75.02c2.58,0,4.646-2.15,4.646-4.645c0-2.581-2.066-4.731-4.646-4.731h-75.02   c-2.58,0-4.73,2.15-4.73,4.731S146.074,171.136,148.654,171.136z"></path>
+                      <path fill="#0087C4" d="M148.654,349.39h150.037c2.582,0,4.73-2.147,4.73-4.645c0-2.581-2.148-4.73-4.73-4.73h-9.377v-51.619   c0-2.58-2.15-4.646-4.73-4.646c-2.582,0-4.646,2.149-4.646,4.646v51.619h-9.377V293.04c0-2.58-2.15-4.73-4.646-4.73   c-2.58,0-4.729,2.15-4.729,4.73v46.887h-9.467v-32.861c0-2.581-2.063-4.731-4.645-4.731c-2.58,0-4.646,2.15-4.646,4.731v32.861   h-9.379v-42.239c0-2.581-2.146-4.73-4.729-4.73s-4.646,2.149-4.646,4.73v42.239h-9.379v-18.752c0-2.581-2.063-4.732-4.645-4.732   c-2.58,0-4.73,2.151-4.73,4.732v18.752h-9.377v-37.509c0-2.58-2.15-4.646-4.73-4.646c-2.582,0-4.648,2.151-4.648,4.646v37.509   h-9.461V293.04c0-2.58-2.15-4.73-4.645-4.73c-2.584,0-4.734,2.15-4.734,4.73v46.887h-14.021v-65.639   c0-2.583-2.15-4.732-4.646-4.732c-2.58,0-4.73,2.149-4.73,4.732v70.372C143.923,347.241,146.074,349.39,148.654,349.39z"></path>
+                    </g>
+                    <g>
+                      <g>
+                        <path fill="#0087C4" d="M239.601,485.194C107.484,485.194,0,377.711,0,245.593C0,113.474,107.484,5.989,239.601,5.989    c132.115,0,239.602,107.486,239.602,239.604C479.203,377.711,371.716,485.194,239.601,485.194z M239.601,15.599    c-126.818,0-229.99,103.175-229.99,229.995c0,126.817,103.172,229.99,229.99,229.99c126.816,0,229.992-103.173,229.992-229.99    C469.593,118.774,366.419,15.599,239.601,15.599z"></path>
+                      </g>
+                    </g>
+                  </svg></div></div>                </div>
+                <div class="col-xs-12 work-text">
+                  <h4 class="text-left">REQUIREMENTS &amp; <br> BA ANALYSIS</h4>
+                  <div class="text-service">
+                    <p>We guide you through this stage using our standardized proven approach to effectively collect your functional and nonfunctional requirements.</p>
+                  </div>
+                </div>
+                <div class="col-xs-12 work-text work-text-sm d-none">
+                  <h4>WEEKS 2-3</h4>
+                  <div class="text-service"></div>
+                </div>
+              </a>
+            </div>
+            <div class="center-border"></div>
+            <div class="col-xs-12 work-column work-column-width">
+              <a>
+                <div class="center-border"></div>
+                <div class="col-xs-12 work-photo" style="padding: 0;">
+                  <div class="my-block-image-stage">
+                    <div class="mobile-development-svg-wrapper" style="margin: 0 auto;">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="479.204px" height="479.207px" viewBox="305.38 8.988 479.204 479.207" enable-background="new 305.38 8.988 479.204 479.207" xml:space="preserve" class="svg replaced-svg">
+                        <g>
+                          <g>
+                            <path fill="#0087C4" d="M544.982,488.194c-132.117,0-239.603-107.483-239.603-239.603c0-132.119,107.484-239.604,239.603-239.604    c132.114,0,239.602,107.486,239.602,239.604C784.583,380.711,677.097,488.194,544.982,488.194z M544.982,18.599    c-126.818,0-229.99,103.175-229.99,229.995c0,126.817,103.172,229.99,229.99,229.99c126.815,0,229.991-103.173,229.991-229.99    C774.974,121.774,671.8,18.599,544.982,18.599z"></path>
+                          </g>
+                        </g>
+                        <g>
+                          <g>
+                            <g>
+                              <g>
+                                <path fill="#0087C4" d="M585.189,387.968H418.841c-7.881,0-14.332-6.449-14.332-14.331V125.703      c0-7.882,6.451-14.331,14.332-14.331h110.863c2.354,0,4.301,1.945,4.301,4.299s-1.945,4.299-4.301,4.299H418.841      c-3.174,0-5.731,2.56-5.731,5.732v247.934c0,3.174,2.662,5.731,5.731,5.731h166.346c3.072,0,5.732-2.66,5.732-5.731v-192.45      c0-2.354,1.945-4.299,4.301-4.299c2.354,0,4.299,1.945,4.299,4.299v192.451C599.623,381.416,592.968,387.968,585.189,387.968z"></path>
+                              </g>
+                            </g>
+                            <g>
+                              <g>
+                                <path fill="#0087C4" d="M595.322,185.485H539.84c-7.881,0-14.332-6.449-14.332-14.331v-55.483c0-1.74,1.025-3.276,2.662-3.992      c1.639-0.614,3.48-0.307,4.711,0.921l65.615,65.617c1.229,1.229,1.639,3.071,0.922,4.709      C598.599,184.462,597.064,185.485,595.322,185.485z M534.005,126.01v45.144c0,3.173,2.56,5.732,5.834,5.732h45.146      L534.005,126.01z"></path>
+                              </g>
+                            </g>
+                            <g>
+                              <g>
+                                <path fill="#0087C4" d="M648.962,367.903c-10.748,0-22.213-10.031-22.213-32.145V149.248c0-2.355,1.945-4.299,4.299-4.299      h35.932c2.354,0,4.302,1.944,4.302,4.299v186.411C671.177,357.872,659.609,367.903,648.962,367.903z M635.246,153.547v182.214      c0,31.019,27.332,31.019,27.332,0V153.547H635.246z"></path>
+                              </g>
+                            </g>
+                            <g>
+                              <g>
+                                <path fill="#0087C4" d="M690.32,252.536L690.32,252.536c-2.355,0-4.302-1.945-4.302-4.301l0.104-65.412h-55.381      c-2.355,0-4.299-1.945-4.299-4.3c0-2.354,1.942-4.299,4.299-4.299h59.68c1.127,0,2.252,0.41,3.072,1.229      c0.815,0.819,1.227,1.945,1.227,3.071l-0.102,69.61C694.515,250.692,692.673,252.536,690.32,252.536z"></path>
+                              </g>
+                            </g>
+                            <g>
+                              <g>
+                                <path fill="#0087C4" d="M648.349,387.968c-2.354,0-4.299-1.942-4.299-4.3v-20.063c0-2.355,1.943-4.302,4.299-4.302      c2.354,0,4.302,1.944,4.302,4.302v20.063C652.648,386.023,650.703,387.968,648.349,387.968z"></path>
+                              </g>
+                            </g>
+                            <g>
+                              <path fill="#0087C4" d="M502.066,173.815h-53.025c-2.354,0-4.299-1.945-4.299-4.299s1.944-4.299,4.299-4.299h53.025     c2.354,0,4.301,1.945,4.301,4.299S504.421,173.815,502.066,173.815z"></path>
+                            </g>
+                            <g>
+                              <path fill="#0087C4" d="M555.093,224.077H449.041c-2.354,0-4.299-1.944-4.299-4.299s1.944-4.299,4.299-4.299h106.053     c2.354,0,4.299,1.944,4.299,4.299S557.447,224.077,555.093,224.077z"></path>
+                            </g>
+                            <g>
+                              <path fill="#0087C4" d="M555.093,253.354H449.041c-2.354,0-4.299-1.943-4.299-4.299c0-2.354,1.944-4.302,4.299-4.302h106.053     c2.354,0,4.299,1.945,4.299,4.302C559.393,251.411,557.447,253.354,555.093,253.354z"></path>
+                            </g>
+                            <g>
+                              <path fill="#0087C4" d="M555.093,282.632H449.041c-2.354,0-4.299-1.943-4.299-4.299s1.944-4.3,4.299-4.3h106.053     c2.354,0,4.299,1.944,4.299,4.3S557.447,282.632,555.093,282.632z"></path>
+                            </g>
+                            <g>
+                              <path fill="#0087C4" d="M502.066,311.909h-53.025c-2.354,0-4.299-1.945-4.299-4.3c0-2.355,1.944-4.302,4.299-4.302h53.025     c2.354,0,4.301,1.946,4.301,4.302C506.367,309.964,504.421,311.909,502.066,311.909z"></path>
+                            </g>
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 work-text">
+                  <h4>UX <br> DESIGN</h4>
+                  <div class="text-service">
+                    <p>We write and brainstorm the user stories and approve the user flow with you to make sure that app
+                      performs its primary tasks and looks good.</p></div>
+                </div>
+              </a>
+            </div>
+            <div class="center-border"></div>
+            <div class="col-xs-12 work-column work-text-width">
+              <a>
+                <div class="center-border"></div>
+                <div class="col-xs-12 work-photo" style="padding: 0;">
+                  <div class="my-block-image-stage">
+                    <div class="mobile-development-svg-wrapper" style="margin: 0 auto;">
+                      <img src="" alt="" class="svg">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 work-text work-text-md">
+                  <h4>WEEKS 2-3</h4>
+                  <div class="text-service"></div>
+                </div>
+              </a>
+            </div>
+            <div class="center-border"></div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 0px;">
+          <div class="col-xs-12">
+            <h3 class="mobile-development-text-center text-center">APPLICATION DEVELOPMENT</h3>
+          </div>
+        </div>
+
+        <div class="mobile-app-process mobile-app-process-second-block">
+          <div class="service">
+            <div class="row">
+              <div class="col-xs-12 work-column text-right work-text-width">
+                <a>
+                  <div class="second-block-border"></div>
+                  <div class="col-xs-12 work-photo" style="padding: 0;">
+                    <div class="my-block-image-stage">
+                      <div class="mobile-development-svg-wrapper" style="margin: 0 auto;">
+                        <img src="" alt="" class="svg">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 work-text work-text-contents">
+                    <h4>WEEKS 3-4</h4>
+                    <div class="text-service"></div>
+                  </div>
+                </a>
+              </div>
+              <div class="second-block-border"></div>
+              <div class="col-xs-12 work-column work-column-width">
+                <a>
+                  <div class="second-block-border"></div>
+                  <div class="col-xs-12 work-photo" style="padding: 0;">
+                    <div class="my-block-image-stage">
+                      <div class="mobile-development-svg-wrapper" style="margin: 0 auto;">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="479.204px" height="479.207px" viewBox="305.38 8.988 479.204 479.207" enable-background="new 305.38 8.988 479.204 479.207" xml:space="preserve" class="svg replaced-svg">
+                          <g>
+                            <g>
+                              <path fill="#CD2030" d="M544.982,488.194c-132.117,0-239.603-107.483-239.603-239.603c0-132.119,107.484-239.604,239.603-239.604    c132.114,0,239.602,107.486,239.602,239.604C784.583,380.711,677.097,488.194,544.982,488.194z M544.982,18.599    c-126.818,0-229.99,103.175-229.99,229.995c0,126.817,103.172,229.99,229.99,229.99c126.815,0,229.991-103.173,229.991-229.99    C774.974,121.774,671.8,18.599,544.982,18.599z"></path>
+                            </g>
+                          </g>
+                          <g>
+                            <g>
+                              <path fill="#CD2030" d="M581.119,242.08c-0.555,0-1.109-0.095-1.664-0.371c-1.756-0.923-2.496-3.142-1.57-4.897l61.183-118.945    c0.924-1.756,3.143-2.496,4.897-1.572l32.068,16.452c0.832,0.462,1.479,1.201,1.758,2.125c0.275,0.924,0.184,1.941-0.186,2.773    l-52.771,102.584c-0.926,1.756-3.143,2.496-4.897,1.57c-1.757-0.924-2.494-3.141-1.57-4.898l51.016-99.444l-25.602-13.124    l-59.426,115.804C583.705,241.339,582.412,242.08,581.119,242.08z"></path>
+                              <path fill="#CD2030" d="M649.878,238.567c-0.555,0-1.107-0.092-1.664-0.37c-1.754-0.923-2.494-3.142-1.57-4.898l30.314-58.778    l-50-25.693c-1.756-0.924-2.496-3.143-1.57-4.898c0.924-1.755,3.144-2.495,4.896-1.571l53.236,27.264    c0.829,0.463,1.479,1.201,1.848,2.126c0.277,0.924,0.184,1.941-0.277,2.773l-31.979,62.106    C652.466,237.828,651.265,238.567,649.878,238.567z"></path>
+                              <path fill="#CD2030" d="M511.25,242.08c-1.295,0-2.496-0.647-3.143-1.851l-39.371-69.87l-36.877-25.416l6.008,45.47l26.709,46.211    c1.016,1.755,0.369,3.976-1.293,4.989c-1.756,1.017-3.976,0.369-4.99-1.295l-27.172-46.947c-0.277-0.37-0.371-0.832-0.463-1.387    l-7.115-54.158c-0.186-1.387,0.461-2.866,1.754-3.605c1.203-0.739,2.773-0.739,3.976,0.092l44.36,30.5    c0.463,0.277,0.832,0.738,1.109,1.201l39.74,70.609c1.018,1.755,0.37,3.975-1.386,4.988    C512.542,241.896,511.896,242.08,511.25,242.08z"></path>
+                              <path fill="#CD2030" d="M436.574,199.104c-1.203,0-2.404-0.555-3.051-1.664c-1.109-1.664-0.648-3.974,1.106-5.083l34.381-22.272    c1.664-1.11,3.976-0.647,5.084,1.109c1.109,1.663,0.646,3.974-1.108,5.083l-34.379,22.273    C437.958,198.918,437.22,199.104,436.574,199.104z"></path>
+                              <path fill="#CD2030" d="M486.294,242.08c-1.203,0-2.496-0.647-3.143-1.758l-29.111-48.981c-1.016-1.756-0.463-3.975,1.293-4.992    c1.756-1.016,3.975-0.461,4.992,1.295l29.111,48.89c1.018,1.756,0.463,3.973-1.296,4.99    C487.589,241.896,486.943,242.08,486.294,242.08z"></path>
+                              <path fill="#CD2030" d="M569.38,242.08L569.38,242.08c-2.033,0-3.697-1.664-3.604-3.698l0.737-74.213l-16.727-35.121    l-15.25,36.784v72.55c0,2.034-1.664,3.604-3.605,3.604c-2.03,0-3.604-1.662-3.604-3.604v-73.289c0-0.462,0.092-0.924,0.276-1.387    l18.668-45.008c0.556-1.294,1.851-2.218,3.234-2.218c1.201,0.093,2.773,0.74,3.42,2.034l20.519,43.252    c0.276,0.462,0.368,1.018,0.368,1.572l-0.829,75.045C572.986,240.416,571.322,242.08,569.38,242.08z"></path>
+                              <path fill="#CD2030" d="M530.841,172.764c-1.938,0-3.512-1.478-3.604-3.419c-0.095-2.033,1.479-3.697,3.42-3.79l36.414-1.848    c2.125,0.093,3.694,1.479,3.789,3.42c0.092,2.033-1.48,3.696-3.42,3.789l-36.414,1.848    C531.027,172.764,530.935,172.764,530.841,172.764z"></path>
+                              <path fill="#CD2030" d="M550.619,129.974c-1.939,0-3.604-1.571-3.604-3.604l-0.463-19.131c-0.092-2.033,1.57-3.696,3.604-3.696    h0.094c1.939,0,3.604,1.571,3.604,3.604l0.463,19.131C554.316,128.217,552.746,129.881,550.619,129.974    C550.712,129.974,550.619,129.974,550.619,129.974z"></path>
+                              <path fill="#CD2030" d="M550.343,242.08c-2.033,0-3.604-1.573-3.604-3.605l-0.832-64.787c0-2.034,1.572-3.697,3.604-3.697    c2.312,0.093,3.695,1.571,3.695,3.604l0.832,64.787C553.947,240.322,552.375,241.985,550.343,242.08L550.343,242.08z"></path>
+                              <path fill="#CD2030" d="M464.023,367.862c-1.851,0-3.515-1.479-3.605-3.326l-9.795-124.12c-0.094-1.018,0.274-2.034,0.922-2.772    c0.74-0.741,1.664-1.202,2.68-1.202h173.566c1.018,0,1.94,0.461,2.68,1.202c0.646,0.738,1.019,1.754,0.927,2.772l-9.705,124.12    c-0.187,2.032-1.757,3.512-3.882,3.326c-2.032-0.187-3.514-1.94-3.327-3.881l9.428-120.146h-165.71l9.426,120.146    c0.187,2.031-1.387,3.787-3.328,3.881C464.207,367.862,464.113,367.862,464.023,367.862z"></path>
+                              <path fill="#CD2030" d="M626.496,400.21H455.611c-2.033,0-3.604-1.664-3.604-3.604v-30.223c0-2.034,1.662-3.604,3.604-3.604    h170.885c2.033,0,3.604,1.664,3.604,3.604v30.129C630.101,398.546,628.529,400.21,626.496,400.21z M459.216,392.909h163.582    v-22.921H459.216V392.909L459.216,392.909z"></path>
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 work-text">
+                    <h4>UI <br> DESIGN</h4>
+                    <div class="text-service">
+                      <p>We create the attractive and clean design cleverly bonded with the application functionality
+                        using strong sides of each platform.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="second-block-border"></div>
+              <div class="col-xs-12 work-column work-column-width"><a>
+                <div class="second-block-border"></div>
+                <div class="col-xs-12 work-photo" style="padding: 0;">
+                  <div class="my-block-image-stage">
+                    <div class="mobile-development-svg-wrapper" style="margin: 0 auto;">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="479.203px" height="479.205px" viewBox="305.38 8.989 479.203 479.205" enable-background="new 305.38 8.989 479.203 479.205" xml:space="preserve" class="svg replaced-svg">
+                        <g>
+                          <g>
+                            <path fill="#CD2030" d="M544.982,488.194c-132.117,0-239.602-107.483-239.602-239.602c0-132.119,107.484-239.604,239.602-239.604    c132.115,0,239.602,107.486,239.602,239.604C784.583,380.711,677.097,488.194,544.982,488.194z M544.982,18.599    c-126.818,0-229.99,103.175-229.99,229.995c0,126.817,103.172,229.99,229.99,229.99c126.816,0,229.992-103.173,229.992-229.99    C774.974,121.774,671.8,18.599,544.982,18.599z"></path>
+                          </g>
+                        </g>
+                        <g>
+                          <g id="surface1">
+                            <path fill="#CD2030" d="M429.556,343.355h8.873v-8.873h-8.873c-4.902,0-8.874-3.974-8.874-8.875V148.133    c0-4.902,3.972-8.874,8.874-8.874h195.223c4.9,0,8.875,3.971,8.875,8.874v8.874h8.871v-8.874c0-9.801-7.943-17.748-17.746-17.748    H429.556c-9.801,0-17.748,7.946-17.748,17.748v177.476C411.809,335.409,419.755,343.355,429.556,343.355z"></path>
+                            <path fill="#CD2030" d="M429.556,148.133h8.873v8.874h-8.873V148.133z"></path>
+                            <path fill="#CD2030" d="M447.304,148.133h8.873v8.874h-8.873V148.133z"></path>
+                            <path fill="#CD2030" d="M465.05,148.133h8.875v8.874h-8.875V148.133z"></path>
+                            <path fill="#CD2030" d="M447.304,361.104c0,9.802,7.945,17.747,17.746,17.747h195.223c9.803,0,17.748-7.945,17.748-17.747V183.627    c0-9.8-7.945-17.747-17.748-17.747H465.05c-9.801,0-17.746,7.946-17.746,17.747V361.104z M456.177,183.627    c0-4.901,3.973-8.873,8.875-8.873h195.223c4.9,0,8.875,3.972,8.875,8.873v177.476c0,4.901-3.975,8.873-8.875,8.873H465.05    c-4.9,0-8.873-3.972-8.873-8.873V183.627L456.177,183.627z"></path>
+                            <path fill="#CD2030" d="M465.05,183.627h8.875v8.874h-8.875V183.627z"></path>
+                            <path fill="#CD2030" d="M482.798,183.627h8.875v8.874h-8.875V183.627z"></path>
+                            <path fill="#CD2030" d="M500.546,183.627h8.873v8.874h-8.873V183.627z"></path>
+                            <path fill="#CD2030" d="M465.05,201.375h195.223v8.874H465.05V201.375z"></path>
+                            <path fill="#CD2030" d="M465.05,223.56h35.496v8.874H465.05V223.56z"></path>
+                            <path fill="#CD2030" d="M465.05,241.308h26.623v8.875H465.05V241.308z"></path>
+                            <path fill="#CD2030" d="M562.664,259.056c-17.154,0-31.059,13.903-31.059,31.057c0,17.155,13.902,31.06,31.059,31.06    c17.154,0,31.059-13.903,31.059-31.06C593.701,272.97,579.806,259.074,562.664,259.056z M562.664,312.298    c-12.252,0-22.186-9.933-22.186-22.186c0-12.25,9.934-22.186,22.186-22.186c12.25,0,22.182,9.936,22.182,22.186    C584.832,302.359,574.91,312.282,562.664,312.298z"></path>
+                            <path fill="#CD2030" d="M633.654,276.802c0-2.449-1.986-4.437-4.438-4.437h-11.729c-0.939-2.914-2.111-5.751-3.508-8.474    l8.291-8.287c1.73-1.734,1.73-4.543,0-6.275l-18.826-18.825c-1.732-1.731-4.541-1.731-6.275,0l-8.285,8.289    c-2.729-1.394-5.561-2.566-8.475-3.506V223.56c0-2.452-1.986-4.438-4.438-4.438h-26.623c-2.449,0-4.436,1.985-4.436,4.438v11.726    c-2.912,0.94-5.746,2.113-8.477,3.506l-8.285-8.289c-1.734-1.731-4.541-1.731-6.275,0l-18.826,18.825    c-1.729,1.733-1.729,4.541,0,6.274l8.289,8.287c-0.369,0.727-0.729,1.454-1.063,2.19c-0.939,2.046-1.752,4.144-2.443,6.282    h-11.725c-2.451,0-4.438,1.986-4.438,4.438v26.621c0,2.452,1.984,4.438,4.438,4.438h11.725c0.941,2.915,2.113,5.753,3.512,8.475    l-8.293,8.287c-1.73,1.732-1.73,4.541,0,6.273l18.826,18.827c1.732,1.729,4.539,1.729,6.273,0l8.287-8.289    c2.729,1.395,5.563,2.564,8.475,3.505v11.727c0,2.453,1.986,4.438,4.438,4.438h26.621c2.451,0,4.438-1.984,4.438-4.438v-11.727    c2.914-0.939,5.748-2.11,8.475-3.505l8.287,8.289c1.734,1.729,4.541,1.729,6.275,0l18.826-18.827c1.73-1.732,1.73-4.541,0-6.273    l-8.293-8.287c1.396-2.722,2.568-5.56,3.51-8.475h11.727c2.451,0,4.438-1.985,4.438-4.438V276.802L633.654,276.802z     M624.779,298.987h-10.621c-2.023,0-3.789,1.369-4.295,3.328c-1.133,4.401-2.881,8.629-5.191,12.546    c-1.029,1.741-0.746,3.96,0.684,5.391l7.502,7.507l-12.547,12.554l-7.508-7.508c-1.432-1.431-3.65-1.712-5.395-0.683    c-3.916,2.31-8.141,4.058-12.543,5.189c-1.959,0.507-3.328,2.271-3.328,4.296v10.621h-17.748v-10.621    c0-2.023-1.369-3.789-3.328-4.296c-4.402-1.133-8.627-2.881-12.545-5.189c-1.742-1.029-3.961-0.748-5.393,0.683l-7.506,7.508    l-12.549-12.554l7.502-7.507c1.43-1.431,1.711-3.648,0.684-5.391c-2.311-3.917-4.059-8.145-5.191-12.546    c-0.506-1.959-2.27-3.328-4.293-3.328h-10.623V281.24h10.623c2.021,0,3.787-1.37,4.293-3.329c0.717-2.792,1.686-5.514,2.887-8.131    c0.693-1.521,1.463-3,2.307-4.438c1.023-1.741,0.744-3.958-0.684-5.388l-7.504-7.505l12.551-12.554l7.504,7.508    c1.434,1.433,3.65,1.712,5.395,0.682c3.918-2.309,8.143-4.061,12.545-5.191c1.957-0.504,3.328-2.272,3.328-4.292v-10.605h17.748    v10.622c0,2.023,1.369,3.79,3.326,4.296c4.404,1.132,8.627,2.88,12.545,5.19c1.742,1.029,3.963,0.746,5.393-0.684l7.51-7.507    l12.547,12.553l-7.502,7.505c-1.43,1.432-1.713,3.65-0.684,5.393c2.311,3.916,4.059,8.144,5.189,12.547    c0.506,1.959,2.271,3.329,4.295,3.329h10.623v17.747H624.779z"></path>
+                            <path fill="#CD2030" d="M633.654,352.229h26.619v8.874h-26.619V352.229z"></path>
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 work-text"><h4>BACK-END <br> DEVELOPMENT</h4>
+                  <div class="text-service">
+                    <p>Using the software development best practices and trendy technologies we create reliable server
+                      side for your app.</p></div>
+                </div>
+              </a></div>
+              <div class="second-block-border"></div>
+              <div class="col-xs-12 work-column work-text-width">
+                <a>
+                  <div class="second-block-border"></div>
+                  <div class="col-xs-12 work-photo" style="padding: 0;">
+                    <div class="my-block-image-stage">
+                      <div class="mobile-development-svg-wrapper" style="margin: 0 auto;">
+                        <img src="" alt="" class="svg">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 work-text work-text-md">
+                    <h4>WEEKS 4-8</h4>
+                    <div class="text-service"></div>
+                  </div>
+                </a>
+              </div>
+              <div class="second-block-border"></div>
+            </div>
+          </div>
+          <div class=" mobile-app-process mobile-app-process-third-block">
+            <div class="service">
+              <div class="row">
+                <div class="col-xs-12 work-column text-right work-text-width">
+                  <a>
+                    <div class="third-block-border"></div>
+                    <div class="col-xs-12 work-photo" style="padding: 0;">
+                      <div class="my-block-image-stage">
+                        <div class="mobile-development-svg-wrapper" style="margin: 0 auto;">
+                          <img src="" alt="" class="svg">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-12 work-text">
+                      <h4>WEEKS 8-12</h4>
+                      <div class="text-service"></div>
+                    </div>
+                  </a>
+                </div>
+                <div class="third-block-border"></div>
+                <div class="col-xs-12 work-column work-column-width">
+                  <a>
+                    <div class="third-block-border"></div>
+                    <div class="col-xs-12 work-photo" style="padding: 0;">
+                      <div class="my-block-image-stage">
+                        <div class="mobile-development-svg-wrapper" style="margin: 0 auto;">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="479.205px" height="479.208px" viewBox="305.379 8.987 479.205 479.208" enable-background="new 305.379 8.987 479.205 479.208" xml:space="preserve" class="svg replaced-svg">
+                            <g>
+                              <g>
+                                <path fill="#CD2030" d="M544.983,488.194c-132.117,0-239.604-107.483-239.604-239.604c0-132.119,107.483-239.604,239.604-239.604    c132.113,0,239.602,107.486,239.602,239.604C784.583,380.711,677.096,488.194,544.983,488.194z M544.983,18.599    c-126.818,0-229.99,103.175-229.99,229.995c0,126.817,103.172,229.99,229.99,229.99c126.814,0,229.99-103.173,229.99-229.99    C774.973,121.774,671.799,18.599,544.983,18.599z"></path>
+                              </g>
+                            </g>
+                            <g>
+                              <g>
+                                <g>
+                                  <path fill="#CD2030" d="M546.377,358.899c-4.875,0-8.84,3.966-8.84,8.842c0,4.874,3.965,8.841,8.84,8.841s8.84-3.967,8.84-8.841     C555.217,362.865,551.252,358.899,546.377,358.899z M546.377,368.046c-0.168,0-0.305-0.138-0.305-0.305     c0-0.17,0.137-0.308,0.305-0.308c0.166,0,0.305,0.138,0.305,0.308C546.682,367.908,546.543,368.046,546.377,368.046z"></path>
+                                </g>
+                              </g>
+                              <g>
+                                <g>
+                                  <path fill="#CD2030" d="M607.292,110.588c-2.107,0-17.502,0.066-30.27,0c-2.889-0.015-5.428,9.794-4.818,9.85     c2.754,0.253,32.369,0,35.088,0c9.412,0,17.066,7.655,17.066,17.064v7.993H468.401v-7.993c0-9.41,7.65-17.064,17.063-17.064     h91.563c2.721,0,4.926-2.205,4.926-4.924c0-2.719-2.203-4.926-4.926-4.926h-91.563c-14.842,0-26.914,12.073-26.914,26.914     v226.552c0,14.845,12.072,26.914,26.914,26.914h121.83c14.84,0,26.914-12.069,26.914-26.914V137.502     C634.208,122.661,622.133,110.588,607.292,110.588z M624.36,344.756H495.602c-40.834-0.013-33.416-0.021-33.416,2.696     s-2.602,6.867,0.117,6.867l162.059,0.287v9.444c0,9.41-7.656,17.066-17.066,17.066h-121.83c-9.41,0-17.063-7.656-17.063-17.066     V155.344h155.959v189.412H624.36L624.36,344.756z"></path>
+                                </g>
+                              </g>
+                              <g>
+                                <g>
+                                  <path fill="#CD2030" d="M507.668,245.913l16.947-16.947c1.924-1.922,1.924-5.042,0-6.964c-1.922-1.923-5.041-1.923-6.963,0     l-20.434,20.432c-0.922,0.922-1.439,2.174-1.439,3.479s0.52,2.562,1.439,3.481l20.436,20.431c0.959,0.961,2.219,1.44,3.479,1.44     c1.264,0,2.521-0.479,3.482-1.44c1.924-1.923,1.924-5.042,0-6.966L507.668,245.913z"></path>
+                                </g>
+                              </g>
+                              <g>
+                                <g>
+                                  <path fill="#CD2030" d="M595.536,242.434l-20.432-20.431c-1.924-1.924-5.041-1.924-6.965,0c-1.926,1.924-1.926,5.042,0,6.963     l16.945,16.95l-16.945,16.945c-1.926,1.922-1.926,5.041,0,6.964c0.961,0.961,2.223,1.44,3.48,1.44c1.262,0,2.52-0.479,3.48-1.44     l20.434-20.429c0.924-0.924,1.438-2.176,1.438-3.48C596.977,244.609,596.458,243.354,595.536,242.434z"></path>
+                                </g>
+                              </g>
+                              <g>
+                                <g>
+                                  <path fill="#CD2030" d="M553.604,204.31c-2.672-0.521-5.26,1.214-5.781,3.884l-14.445,73.542     c-0.525,2.668,1.215,5.257,3.883,5.779c0.32,0.063,0.643,0.094,0.955,0.094c2.305,0,4.363-1.627,4.824-3.977l14.447-73.544     C558.008,207.423,556.27,204.834,553.604,204.31z"></path>
+                                </g>
+                              </g>
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-12 work-text">
+                      <h4>APPLICATION <br> DEVELOPMENT</h4>
+                      <div class="text-service">
+                        <p>We wrap up the backend and UI into the fluent application. This stage is divided into
+                          milestones each delivered for your acceptance with the demo.</p></div>
+                    </div>
+                    <div class="col-xs-12 work-text work-text-sm">
+                      <h4>WEEKS 12-15</h4>
+                      <div class="text-service"></div>
+                    </div>
+                  </a>
+                </div>
+                <div class="third-block-border"></div>
+                <div class="col-xs-12 work-column work-column-width">
+                  <a>
+                    <div class="third-block-border"></div>
+                    <div class="col-xs-12 work-photo" style="padding: 0;">
+                      <div class="my-block-image-stage">
+                        <div class="mobile-development-svg-wrapper" style="margin: 0 auto;">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="479.203px" height="479.205px" viewBox="305.38 8.989 479.203 479.205" enable-background="new 305.38 8.989 479.203 479.205" xml:space="preserve" class="svg replaced-svg">
+                            <g>
+                              <g>
+                                <path fill="#CD2030" d="M544.982,488.194c-132.117,0-239.602-107.483-239.602-239.602c0-132.119,107.484-239.604,239.602-239.604    c132.115,0,239.602,107.486,239.602,239.604C784.583,380.711,677.097,488.194,544.982,488.194z M544.982,18.599    c-126.818,0-229.99,103.175-229.99,229.995c0,126.817,103.172,229.99,229.99,229.99c126.816,0,229.992-103.173,229.992-229.99    C774.974,121.774,671.8,18.599,544.982,18.599z"></path>
+                              </g>
+                            </g>
+                            <g>
+                              <g id="surface1_1_">
+                                <path fill="#CD2030" d="M434.296,368.521h118.471v-9.113H434.296c-7.549,0-13.67-6.121-13.67-13.67V145.25    c0-7.551,6.121-13.67,13.67-13.67h200.488c7.553,0,13.67,6.119,13.67,13.67v104.799h9.115V145.25    c-0.016-12.576-10.207-22.768-22.785-22.782H434.296c-12.574,0.014-22.767,10.206-22.782,22.782v200.489    C411.53,358.314,421.722,368.506,434.296,368.521z"></path>
+                                <path fill="#CD2030" d="M429.742,140.695h9.113v9.112h-9.113V140.695z"></path>
+                                <path fill="#CD2030" d="M447.966,140.695h9.113v9.112h-9.113V140.695z"></path>
+                                <path fill="#CD2030" d="M466.193,140.695h9.113v9.112h-9.113V140.695z"></path>
+                                <path fill="#CD2030" d="M429.742,158.919h209.6v9.114h-209.6V158.919L429.742,158.919z"></path>
+                                <path fill="#CD2030" d="M476.64,178.481l-11.572,11.573c-9.783-6.477-22.885-4.49-30.309,4.597    c-7.424,9.086-6.758,22.32,1.537,30.615c8.295,8.298,21.531,8.964,30.617,1.539c9.086-7.423,11.074-20.527,4.596-30.307    l11.574-11.574L476.64,178.481z M452.521,222.71c-7.549,0-13.668-6.119-13.668-13.668c0-7.551,6.119-13.669,13.668-13.669    c2.033,0.007,4.033,0.473,5.857,1.365l-9.078,9.077l6.441,6.444l9.084-9.072c0.893,1.824,1.359,3.824,1.367,5.855    C466.193,216.591,460.074,222.71,452.521,222.71z"></path>
+                                <path fill="#CD2030" d="M488.976,195.374h77.459v9.111h-77.459V195.374z"></path>
+                                <path fill="#CD2030" d="M488.976,213.6h31.895v9.111h-31.895V213.6L488.976,213.6z"></path>
+                                <path fill="#CD2030" d="M529.984,213.6h63.791v9.111h-63.791V213.6z"></path>
+                                <path fill="#CD2030" d="M575.55,195.374h45.564v9.111H575.55V195.374z"></path>
+                                <path fill="#CD2030" d="M476.64,233.16l-11.572,11.573c-9.783-6.478-22.885-4.488-30.309,4.597    c-7.424,9.086-6.758,22.319,1.537,30.616c8.295,8.298,21.531,8.964,30.617,1.537c9.086-7.426,11.074-20.522,4.596-30.307    l11.574-11.575L476.64,233.16z M452.521,277.392c-7.549,0-13.668-6.121-13.668-13.67c0-7.552,6.119-13.673,13.668-13.673    c2.033,0.009,4.033,0.478,5.857,1.369l-9.078,9.078l6.441,6.44l9.084-9.071c0.893,1.823,1.359,3.823,1.367,5.854    C466.193,271.271,460.074,277.392,452.521,277.392z"></path>
+                                <path fill="#CD2030" d="M488.976,250.049h77.459v9.115h-77.459V250.049z"></path>
+                                <path fill="#CD2030" d="M488.976,268.276h31.895v9.113h-31.895V268.276L488.976,268.276z"></path>
+                                <path fill="#CD2030" d="M529.984,268.276h36.451v9.113h-36.451V268.276z"></path>
+                                <path fill="#CD2030" d="M575.55,250.049h18.225v9.115H575.55V250.049z"></path>
+                                <path fill="#CD2030" d="M476.64,287.838l-11.572,11.574c-9.783-6.478-22.885-4.488-30.309,4.596    c-7.424,9.088-6.758,22.322,1.537,30.619s21.531,8.961,30.617,1.537c9.086-7.426,11.074-20.525,4.596-30.312l11.574-11.571    L476.64,287.838z M452.521,332.068c-7.549,0-13.668-6.121-13.668-13.67c0-7.55,6.119-13.671,13.668-13.671    c2.033,0.009,4.033,0.474,5.857,1.367l-9.078,9.08l6.441,6.441l9.084-9.074c0.893,1.824,1.359,3.826,1.367,5.854    C466.193,325.947,460.074,332.068,452.521,332.068z"></path>
+                                <path fill="#CD2030" d="M488.976,304.729h59.234v9.117h-59.234V304.729z"></path>
+                                <path fill="#CD2030" d="M488.976,322.955h31.895v9.113h-31.895V322.955L488.976,322.955z"></path>
+                                <path fill="#CD2030" d="M529.984,322.955h18.227v9.113h-18.227V322.955z"></path>
+                                <path fill="#CD2030" d="M625.673,395.861c37.75,0,68.348-30.604,68.348-68.349c0-37.75-30.598-68.35-68.348-68.35    s-68.35,30.6-68.35,68.35C557.369,365.242,587.943,395.816,625.673,395.861z M625.673,268.276    c32.713,0,59.236,26.521,59.236,59.236s-26.523,59.234-59.236,59.234c-32.717,0-59.238-26.521-59.238-59.234    C566.474,294.813,592.972,268.313,625.673,268.276z"></path>
+                                <path fill="#CD2030" d="M597.878,330.031l-8.156,4.071l9.113,18.229c0.652,1.311,1.9,2.227,3.348,2.461    c0.234,0.037,0.471,0.055,0.707,0.061c1.207,0,2.365-0.481,3.225-1.336l54.676-54.68l-6.441-6.442l-50.211,50.208L597.878,330.031    z"></path>
+                              </g>
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-12 work-text">
+                      <h4>TESTING &amp; <br> LAUNCH</h4>
+                      <div class="text-service">
+                        <p>Final version undergoes through the series of manual, automated and user acceptance test to
+                          eliminate all potential flaws and then we launch it. Existek guarantees post-launch bug fixing
+                          and support warranty period.</p></div>
+                    </div>
+                  </a>
+                </div>
+                <div class="third-block-border"></div>
+                <div class="col-xs-12 work-column work-text-width">
+                  <a>
+                    <div class="third-block-border"></div>
+                    <div class="col-xs-12 work-photo" style="padding: 0;">
+                      <div class="my-block-image-stage">
+                        <div class="mobile-development-svg-wrapper" style="margin: 0 auto;">
+                          <img src="" alt="" class="svg">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-12 work-text work-text-md">
+                      <h4>WEEKS 12-15</h4>
+                      <div class="text-service"></div>
+                    </div>
+                  </a>
+                </div>
+                <div class="third-block-border"></div>
+              </div>
+            </div>
+            <div class="row" style="margin-top: 0px;">
+              <div class="col-xs-12">
+                <h3 class="mobile-development-text-center text-center">SUPPORT, MAINTENANCE AND UPDATES</h3>
+              </div>
+            </div>
+            <div class="bottom-border">
+              <div class="mobile-left-block"></div>
+              <div class="center-blok-border"></div>
+              <div class="mobile-right-block"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section-md bg-default">
+    <div class="container" style="padding-top: 40px;">
+      <div class="row">
+        <h2 class="text-center">WHAT YOU GET</h2>
+        <div class="text-header-service content-page">
+          <p>We keep our development process reasonably formalized and well-documented. Our company makes everything
+            needed to make sure that after the project completion you will have everything needed to effectively
+            maintain, update and extend your application.</p>
+          <div class="row">
+            <div class="net-development-approach-list">
+              <div class="row">
+                <div class="col-sm-6">
+                  <ul>
+                    <li><strong>PROJECT DOCUMENTATION</strong> <br> For each project, we create a product specification
+                      document and design document with the full scope of work described. After the project, you will get
+                      all the documentation needed to maintain, extend and update the product.
+                    </li>
+                    <li><strong>INTEGRATION-READY</strong> <br> Users appreciate interconnection between services that
+                      perform different tasks. We design our application the way they are ready and easy to integrate with
+                      which will help you win an extra market share.
+                    </li>
+                    <li><strong>POST-LAUNCH WARRANTY</strong> <br> Our standard agreement contains the two months bug fixing
+                      and support period after the project completed which means that all the issues with your application
+                      backend or frontend will be fixed for free.
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-sm-6">
+                  <ul>
+                    <li><strong>EXTRA BUSINESS VALUE </strong><br> Our business analysts, UX and UI design, development, and
+                      testing teams are always ready to go the extra mile to enrich your application technological side and
+                      functionality with the expertise we accumulated in our previous projects.
+                    </li>
+                    <li><strong>COMPLETE TRANSPARENCY </strong><br> Every our project is splitted into the milestones which
+                      are paid separately. We plan each stage with our customers to deliver you the results of each
+                      iteration in a form of a demo to get your feedback and change the project flow if needed.
+                    </li>
+                    <li><strong>IP PROTECTION </strong><br> SYFTET cooperation agreement, company policy, and security
+                      measures provide our customers with the superior IP protection when you’re the sole owner of the idea
+                      and all assets created under the working agreement.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-md bg-gray-lighter">
+    <div class="industry-block container">
+      <div class="row"><h2 class="text-center line">OUR EXPERTISE</h2>
+        <div class="text-header-service content-page over-blue-block"><p>
+          <span style="font-weight: 400;">For 8 years on the market, SYFTET has worked on dozens of projects for different industries and business domains. We are ready to leverage that experience to deliver more value to your mobile app and enhance the final result with the innovative ideas we have learned during all that years in the software development medium.</span>
+        </p></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="desktop-soft-col-md-6 min-980-padding-20">
+          <div class="blockchain-border">
+            <div class="blockchain-my-head-blue-block">DIGITAL HEALTH &amp; <br>
+              mHEALTH
+            </div>
+            <div class="blockchain-my-text-blue-block "><p>
+              <span style="font-weight: 400;">SYFTET is helping the clients from the medical sector to provide better healthcare services for their patients, whether these are the complex tasks like VR/AR training simulators or more simple but still important visit scheduling and medical records management solutions.</span>
+            </p></div>
+          </div>
+        </div>
+        <div class="desktop-soft-col-md-6 min-980-padding-20">
+          <div class="blockchain-border">
+            <div class="blockchain-my-head-blue-block ">IoT &amp; <br> WEARABLES
+            </div>
+            <div class="blockchain-my-text-blue-block"><p>
+              <span style="font-weight: 400;">We know that the user experience with an IoT device or wearable device almost completely relies on the interaction with mobile applications. We help vendors and service providers to pack the true power of connected things into the easy-to-use mobile apps.</span>
+            </p></div>
+          </div>
+        </div>
+        <div class="desktop-soft-col-md-6 min-980-padding-20">
+          <div class="blockchain-border">
+            <div class="blockchain-my-head-blue-block ">eLEARNING <br> SOLUTIONS
+            </div>
+            <div class="blockchain-my-text-blue-block "><p>
+              <span style="font-weight: 400;">Extensive experience in the software development for education gives us an understanding of how to create the highly-interactive applications and assets for the eLearning to increase the users' engagement rate and learning process effectiveness.</span>
+            </p></div>
+          </div>
+        </div>
+        <div class="desktop-soft-col-md-6 min-980-padding-20">
+          <div class="blockchain-border">
+            <div class="blockchain-my-head-blue-block ">VR &amp; <br> AR</div>
+            <div class="blockchain-my-text-blue-block ">
+              <p>Our company is experienced in researching and development of the immersive experiences with the latest
+                technologies such as Apple ARKit and Google ARCore to provide your business with the most engaging way
+                of
+                customer interaction.</p></div>
+          </div>
+        </div>
+        <div class="desktop-soft-col-md-6 min-980-padding-20">
+          <div class="blockchain-border">
+            <div class="blockchain-my-head-blue-block">FIELD FORCE <br>
+              EFFECTIVENESS
+            </div>
+            <div class="blockchain-my-text-blue-block"><p>
+              <span style="font-weight: 400;">Development of the mobile CRM, ERP and sales force effectiveness solutions which perfectly duplicate data and functionality of their desktop and web-based counterparts is one of our core strengths. We help make your business mobile.</span>
+            </p></div>
+          </div>
+        </div>
+        <div class="desktop-soft-col-md-6 min-980-padding-20">
+          <div class="blockchain-border">
+            <div class="blockchain-my-head-blue-block">IMAGE &amp; DATA <br>
+              RECOGNITION
+            </div>
+            <div class="blockchain-my-text-blue-block">
+              <p>The solutions created by SYFTET allows our customers to provide their users with the next level of
+                real-world interaction with their mobile devices. We are experts in creating and improving solutions for
+                printed data OCR and image recognition.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-md bg-default">
+    <div class="container">
+      <div class="row"><h2 class="text-center line">WHY GO WITH SYFTET FOR YOUR NEXT PROJECT?</h2>
+        <div class="text-header-service content-page over-blue-block">
+          <p>SYFTET develops and improves enterprise software that helps businesses of all sizes to enable automation,
+            analytics, and collaboration. We know exactly how to leverage the cutting-edge technology solutions to
+            generate more revenue for your and create greater value for your customers.</p></div>
+        <div>
+          <div class="service" id="service_17">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="row">
+                  <div class="bloch-auto-height col-sm-6 ">
+                    <div class="post-service ">
+                      <div class="mobile-app-next-project-section-avatar">
+                        <%= image_tag 'services/syftet-full-cycle.svg', alt: 'syftet-full-cycle' %>
+                      </div>
+                      <div class="text-post">
+                        <div class="title-post">Full-Cycle of The Services</div>
+                        <div class="desc-post">
+                          <p>Syftet offers the full cycle of the services you might need to build an application of any
+                            complexity, from zero to final product, in one place. These services, among others, include
+                            product requirements analysis, UI/UX, development, testing, post-launch support, and
+                            updates.</p></div>
+                      </div>
+                    </div>
+                    <div class="post-service ">
+                      <div class="mobile-app-next-project-section-avatar" style="padding-top: 120px">
+                        <%= image_tag 'services/syftet-high-quality.svg', alt: 'syftet-high-quality' %>
+                      </div>
+                      <div class="text-post">
+                        <div class="title-post">High Quality For Lower Price</div>
+                        <div class="desc-post">
+                          <p>Eastern Europe, especially Ukraine, is recognized as one the leaders in IT sphere. Our rates
+                            are at least 30% lower than prices in Europe or North America, which allows you to save money.
+                            Use your savings for marketing, new features, or other projects.</p></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bloch-auto-height col-sm-6 ">
+                    <div class="post-service ">
+                      <div class="mobile-app-next-project-section-avatar">
+                        <%= image_tag 'services/syftet-agile-methodologies.svg', alt: 'syftet-agile-methodologies' %>
+                      </div>
+                      <div class="text-post">
+                        <div class="title-post">Agile Methodologies</div>
+                        <div class="desc-post">
+                          <p>We use Agile as our main software development life-cycle model for the projects. Experienced
+                            project managers and Scrum masters will ensure that your project systematically meets all your
+                            requirements, goals, and milestones.</p></div>
+                      </div>
+                    </div>
+                    <div class="post-service ">
+                      <div class="mobile-app-next-project-section-avatar" style="padding-top: 90px">
+                        <%= image_tag 'services/syftet-sprint-cycle.svg', alt: 'syftet-sprint-cycle' %>
+                      </div>
+                      <div class="text-post">
+                        <div class="title-post">Highly-Skilled Developers</div>
+                        <div class="desc-post">
+                          <p>Equipped with the experienced and certified engineers, our team is capable of crafting
+                            compelling applications with maintainable and secure code.</p></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bloch-auto-height"></div>
+              <div id="bussines-automation-works"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
+<section class="bg-gray-lighter section-md">
+  <%= render 'homes/shared/start_project_form', contact: @contactinfo %>
+</section>

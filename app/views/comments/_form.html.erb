@@ -1,0 +1,24 @@
+<%= form_for([@blog, @blog.comments.new], :html => {class: 'rd-mailformx rd-mailform_style-1x text-leftx'}) do |form| %>
+
+    <div class="form-wrap form-wrap_icon linear-icon-man">
+    <!--<input class="form-input" id="contact-name" type="text" name="name" data-constraints="@Required">-->
+    <%#= form.label :name %>
+    <%= form.text_field :name, class: 'form-input', placeholder: 'Your name',required: true %>
+  </div>
+
+  <div class="form-wrap form-wrap_icon linear-icon-envelope">
+    <!--<input class="form-input" id="contact-email" type="email" name="email" data-constraints="@Email @Required">-->
+    <%#= form.label :name %>
+    <%= form.email_field :email, class: 'form-input', placeholder: 'Your email',required: true%>
+  </div>
+
+  <div class="form-wrap form-wrap_icon linear-icon-pencil form-group">
+    <!--<textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"></textarea>-->
+    <!--<label class="form-label" for="contact-message">Your message</label>-->
+    <%= form.text_area :text, class: 'form-input', placeholder: 'Your coments', required: true %>
+  </div>
+
+  <div class="form-group">
+    <%= form.submit 'Post comment', class: "button button-primary" %>
+  </div>
+<% end %>

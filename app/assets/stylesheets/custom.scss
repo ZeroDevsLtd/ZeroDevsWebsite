@@ -1,0 +1,491 @@
+@media (max-width: 768px) {
+  .how_we_work_page .custom.custom-software-dev .aligncenter {
+    max-width: 250px !important;
+  }
+}
+//.company-background {
+//  background: linear-gradient(rgba(255, 255, 255, 0.87), rgba(255, 255, 255, 0.75)), url('syftet-logo.png') center center no-repeat  ;
+//  background-size: 1213px 1268px;
+//  color: #113448;
+//}
+.background-color::after {
+  content: "";
+  background-image: url("syftet-logo.png");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  opacity: 0.3;
+  background-size: 600px;
+  transform: rotate(-50deg);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: -1;
+}
+// stating
+@media (min-width: 992px) {
+  .lg-2 {
+    flex: 1 0 16.66667%;
+    max-width: 20.66667%;
+  }
+}
+// end
+
+.col-xxs-1, .col-xxs-2, .col-xxs-3, .col-xxs-4, .col-xxs-5, .col-xxs-6, .col-xxs-7, .col-xxs-8, .col-xxs-9, .col-xxs-10, .col-xxs-11, .col-xxs-12 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+.col-xxs-1, .col-xxs-2, .col-xxs-3, .col-xxs-4, .col-xxs-5, .col-xxs-6, .col-xxs-7, .col-xxs-8, .col-xxs-9, .col-xxs-10, .col-xxs-11, .col-xxs-12 {
+  float: left;
+}
+
+
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+//.col-xs-12 {
+//  float: left;
+//}
+
+.swiper-overlay, .portfolio-overlay, .about-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.about-overlay-bg {
+    background-attachment: fixed;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    -ms-filter: blur(80px);
+    filter: blur(80px);
+    opacity: .8;
+}
+.portfolio-overlayx {
+    background: #00abc9;
+    opacity: .4;
+    transition: opacity 400ms;
+    -webkit-transition: opacity 400ms;
+}
+
+.portfolio-overlay:hoverx {
+    background: #00abc9;
+    opacity: 0;
+    -webkit-transition: opacity 400ms;
+    -moz-transition: opacity 400ms;
+    -ms-transition: opacity 400ms;
+    -o-transition: opacity 400ms;
+    transition: opacity 400ms;
+}
+
+.bg-img-src1 {
+    background-image: image_url("dot.png");
+}
+
+.bg-img-src2 {
+    //background-image: image_url("primary-dot.png");
+  background: #113448a1;
+}
+
+.rd-navbar-bg {
+    /*background: rgba(174, 224, 118, 0.5);*/
+    /*background: rgba(337, 337, 337, .8);*/
+}
+
+/*.logo-wrap img {*/
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*top: 2px;*/
+    /*max-width: 100%;*/
+/*}*/
+
+.unique-logo-wrap {
+    background-color: #113448;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    position: relative;
+}
+
+.unique-logo-wrap:hover {
+    background-color: #333;
+    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in ;
+    -ms-transition: all .3s ease-in ;
+    -o-transition: all .3s ease-in ;
+    transition: all .3s ease-in ;
+}
+
+.unique-logo-wrap img {
+    width: 30px;
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+    left: 28%;
+    top: 25%;
+}
+
+/*.custom-unit-body {*/
+    /*margin-left: 40px;*/
+/*}*/
+
+/* Largest community */
+#largest-community {
+    background: #fff;
+    box-shadow: 2px 2px 4px #ccc,3px 3px 2px #ddd,2px 2px 1px #eee;
+}
+
+.largest-brand-wrap {
+    padding-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.brand-column {
+    margin-bottom: 10px;
+}
+
+.brand-item .custom-item-img {
+    float: left;
+    margin-right: 20px;
+    /*border: 2px solid #00abc9;*/
+    border-radius: 2px;
+}
+
+.brand-column .custom-item-img img {
+    width: 52px;
+}
+
+.brand-item .item-text {
+    padding-left: 70px;
+}
+
+.brand-item .item-text h4 {
+    /*font-family: "Open Sans",sans-serif;*/
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.brand-item .item-text p {
+    /*font-family: "Open Sans",sans-serif;*/
+    font-size: 12px;
+    margin-top: 0;
+}
+
+.clients-item {
+    /*border: 1px solid #dddddd;*/
+}
+
+.clients-item:hover {
+    cursor: pointer;
+    border-color: #00abc9;
+    -webkit-transition: border-color .5s;
+    -moz-transition: border-color .5s;
+    -ms-transition: border-color .5s;
+    -o-transition: border-color .5s;
+    transition: border-color .5s;
+}
+
+.clients-item img {
+    width: 100px;
+    text-align: center;
+}
+
+.video-wrap {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+
+.video-wrap iframe,
+.video-wrap object,
+.video-wrap embed {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    border: 0;
+    box-shadow: 5px 5px 10px #555;
+}
+
+/* Public class declaration */
+.reset-padding {
+    padding: inherit !important;
+}
+
+.reset-l-p {padding-left: inherit}
+.reset-r-p {padding-right: inherit}
+.reset-t-p {padding-top: inherit}
+.reset-b-p {padding-bottom: inherit}
+
+/* Best services offer design */
+.sub-heading {
+    /*text-align: center;*/
+    margin: 0 auto;
+    margin-top: 0px;
+    max-width: 750px;
+}
+
+.text-wrap {
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.title {
+    line-height: 1.5;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* Who we are? design */
+.half-background.style-1 {
+    background-image: image_url("best-services/team.jpg");
+    background-size: cover;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.themesflat-headings .heading {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2b323a;
+    letter-spacing: -0.5px;
+    text-align: left;
+}
+
+.themesflat-icon.style-1 .icon {
+    color: #113448;
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    font-size: 25px;
+    border-radius: 35px;
+    line-height: 70px;
+}
+
+.themesflat-icon.style-1 {
+    margin: -30px 0 0 -30px;
+}
+
+.themesflat-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.themesflat-icon:hover {
+    opacity: 0.75;
+}
+
+/* Technology we use */
+.logo-wrap {
+    background-color: #CCCCCC80;
+    /*border: 1px solid #CCCCCC;*/
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    width: 58px;
+    height: 58px;
+}
+
+/* Call to action design */
+.themesflat-action-box.style-1 .heading-wrap .heading {
+    color: #fff;
+}
+
+.themesflat-action-box {
+    padding-left: 110px;
+    padding-right: 110px;
+}
+
+.themesflat-action-box .inner {
+    display: table;
+    overflow: hidden;
+    width: 100%;
+}
+
+.themesflat-action-box .heading-wrap {
+    display: table-cell;
+    margin: 0;
+    text-align: left;
+    vertical-align: middle;
+    width: 75%;
+}
+
+.themesflat-action-box .heading-wrap .heading {
+    margin: 0;
+    letter-spacing: 0.8px;
+    font-size: 18px;
+}
+
+.themesflat-action-box.style-1 .heading-wrap .text-wrap {
+    padding-left: 70px;
+    position: relative;
+    display: inline-block;
+}
+
+.themesflat-action-box.style-1.has-icon .icon {
+    font-size: 55px;
+    color: #fff;
+    line-height: normal;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    padding-left: 1px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+/* CLIENT TESTIMONIALS */
+/*.themesflat-testimonials {*/
+    /*margin-top: 45px;*/
+/*}*/
+
+/*.owl-item .themesflat-testimonials .item .inner {*/
+    /*position: relative;*/
+    /*text-align: center;*/
+    /*background-color: #f1f1f1;*/
+/*}*/
+
+/*.thumb {*/
+    /*text-align: center;*/
+    /*width: 90px;*/
+    /*height: 90px;*/
+    /*z-index: 999;*/
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*top: 0;*/
+    /*-webkit-transform: translate3d(-50%,-50%,0);*/
+    /*-moz-transform: translate3d(-50%,-50%,0);*/
+    /*transform: translate3d(-50%,-50%,0);*/
+/*}*/
+
+/*.inner .text {*/
+    /*border-left: 0;*/
+    /*padding: 56px 35px 40px 35px;*/
+/*}*/
+
+/*.inner .text p {*/
+    /*font-style: italic;*/
+    /*font-size: 15px;*/
+/*}*/
+
+/*.themesflat-testimonials .start {*/
+    /*margin-bottom: 6px;*/
+/*}*/
+
+.star i {
+    color: #ffc925;
+}
+
+.client-says {
+    color: #333;
+}
+
+.client-says-container h4 {
+    color: #333;
+}
+
+.box-icon-image img {
+    width: 100px;
+    text-align: center;
+}
+
+.quote-default__image {
+    position: absolute;
+    top: 0;
+    margin: auto;
+    transform: translate(-50%, -50%);
+    left: 50%;
+}
+
+.quote-default__image img {
+    width: 80px;
+    height: 80px;
+}
+
+.quote-default__text {
+    padding-top: 50px;
+    margin-top: 50px;
+}
+
+.quote-default__text .name-pos span {
+    font-weight: 500;
+}
+.quote-default__text .name-pos h6 {
+    color: #333;
+}
+.quote-default__text .name-pos {
+    color: #999;
+    padding-bottom: 40px;
+
+}
+.quote-default__text p {
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #999;
+    margin-top: 20px;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 500;
+}
+.maincontent {
+  margin-bottom: 0 !important;
+}
+.maincontent {
+  //float: left;
+  width: 100%;
+  margin-bottom: 60px;
+  overflow: hidden;
+}
+
+.ml-6, .mx-6 {
+  margin-left: 4rem !important;
+}
+
+/* Header */
+.header .header-content {
+  padding-top: 13rem;
+  padding-bottom: 7.5rem;
+}
+
+.header h1 {
+  font: 700 3.5rem/4rem "Montserrat", sans-serif;
+}
+
+.new-service-content h2, .custom-software-dev h2, .software-product-dev h2, .it-consulting-services h2, .dedicated-development-team h2, .we-hire-new h2, .job-page-new h2 {
+  font-size: 42px;
+  padding-bottom: 40px;
+  border-bottom: 4px solid #113448 !important;
+  padding: 40px !important;
+  max-width: 85%;
+  display: table;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.clearfix:before, .clearfix:after, .dl-horizontal dd:before, .dl-horizontal dd:after, .container:before, .container:after, .container-fluid:before, .container-fluid:after, .row:before, .row:after, .form-horizontal .form-group:before, .form-horizontal .form-group:after, .btn-toolbar:before, .btn-toolbar:after, .btn-group-vertical>.btn-group:before, .btn-group-vertical>.btn-group:after, .nav:before, .nav:after, .navbar:before, .navbar:after, .navbar-header:before, .navbar-header:after, .navbar-collapse:before, .navbar-collapse:after, .pager:before, .pager:after, .panel-body:before, .panel-body:after, .modal-footer:before, .modal-footer:after {
+  display: table;
+  content: " ";
+}
+

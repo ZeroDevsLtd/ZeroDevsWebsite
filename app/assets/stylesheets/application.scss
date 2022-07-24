@@ -1,0 +1,70 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require social-share-button
+ *= require_tree .
+ *= require_self
+ */
+/* cyrillic-ext */
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: font-url("fa-brands-400.eot");
+  src: font-url("fa-brands-400.eot") format("embedded-opentype"),
+  font-url("fa-brands-400.woff2") format("woff2"),
+  font-url("fa-brands-400.woff") format("woff"),
+  font-url("fa-brands-400.ttf") format("truetype"),
+  font-url("fa-brands-400.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Material Design Icons";
+  src: font-url("materialdesignicons-webfont.eot");
+  src: font-url("materialdesignicons-webfont.eot") format("embedded-opentype"),
+  font-url("materialdesignicons-webfont.woff2") format("woff2"),
+  font-url("materialdesignicons-webfont.woff") format("woff"),
+  font-url("materialdesignicons-webfont.ttf") format("truetype"),
+  font-url("materialdesignicons-webfont.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Linearicons';
+  src: font-url("Linearicons.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Customize social-share-button  */
+$size: 24px;
+
+.social-share-button {
+  .ssb-icon {
+    background-size: $size $size;
+    height: $size;
+    width: $size;
+  }
+}
+
+
+.test {
+  width: 200px;
+  height: 200px;
+  border: 1px solid tomato;
+}
+
+.cb {
+  clear: both;
+}

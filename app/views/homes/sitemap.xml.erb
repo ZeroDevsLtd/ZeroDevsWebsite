@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc><%= @domain %></loc>
+    <lastmod><%= Time.now.strftime("%Y-%m-%d") %></lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc><%= "#{@domain}"'/about-us' %></loc>
+    <lastmod><%= Time.now.strftime("%Y-%m-%d") %></lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc><%= "#{@domain}"'/company-profile' %></loc>
+    <lastmod><%= Time.now.strftime("%Y-%m-%d") %></lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc><%= "#{@domain}"'/photo-gallery' %></loc>
+    <lastmod><%= Time.now.strftime("%Y-%m-%d") %></lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc><%= "#{@domain}"'/contact-us' %></loc>
+    <lastmod><%= Time.now.strftime("%Y-%m-%d") %></lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc><%= "#{@domain}"'/how-we-work' %></loc>
+    <lastmod><%= Time.now.strftime("%Y-%m-%d") %></lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc><%= "#{@domain}"'/technologies' %></loc>
+    <lastmod><%= Time.now.strftime("%Y-%m-%d") %></lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc><%= "#{@domain}"'/java-application-development-services' %></loc>
+    <lastmod><%= Time.now.strftime("%Y-%m-%d") %></lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc><%= "#{@domain}"'/ruby-on-rails-development-company' %></loc>
+    <lastmod><%= Time.now.strftime("%Y-%m-%d") %></lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc><%= "#{@domain}"'/web-development-company' %></loc>
+    <lastmod><%= Time.now.strftime("%Y-%m-%d") %></lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc><%= "#{@domain}"'/.net-development' %></loc>
+    <lastmod><%= Time.now.strftime("%Y-%m-%d") %></lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc><%= "#{@domain}"'/portfolios' %></loc>
+    <lastmod><%= Time.now.strftime("%Y-%m-%d") %></lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc><%= "#{@domain}"'/software-development-services' %></loc>
+    <lastmod><%= Time.now.strftime("%Y-%m-%d") %></lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc><%= "#{@domain}"'/custom-software-development-company' %></loc>
+    <lastmod><%= Time.now.strftime("%Y-%m-%d") %></lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc><%= "#{@domain}"'/desktop-application-development-company' %></loc>
+    <lastmod><%= Time.now.strftime("%Y-%m-%d") %></lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc><%= "#{@domain}"'/ui-ux-design' %></loc>
+    <lastmod><%= Time.now.strftime("%Y-%m-%d") %></lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc><%= "#{@domain}"'/mobile-app-development-company' %></loc>
+    <lastmod><%= Time.now.strftime("%Y-%m-%d") %></lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc><%= "#{@domain}"'/website-maintenance-services-company' %></loc>
+    <lastmod><%= Time.now.strftime("%Y-%m-%d") %></lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc><%= "#{@domain}"'/privacy-and-policy' %></loc>
+    <lastmod><%= Time.now.strftime("%Y-%m-%d") %></lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <% @blogs.each do |blog| %>
+    <url>
+      <loc><%= "#{@domain}/#{blog.title}" %></loc>
+      <lastmod><%= blog.updated_at.strftime("%Y-%m-%d") %></lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+  <% end %>
+</urlset>

@@ -1,0 +1,444 @@
+/*
+Theme Name: Syftet
+Author Name: Syftet Development Team
+Date: 05 March 2018
+*/
+.primary-color {
+  color: #113448 !important;
+}
+
+.main-btn, .wpcf7-submit {
+  color: #fff;
+  text-align: center;
+  padding: 5px 25px;
+  background-color: #113448;
+  border: 1px solid #113448;
+  cursor: pointer;
+  border-bottom: 2px solid #000;
+  -webkit-transition: all .2s ease-in;
+  -moz-transition: all .2s ease-in;
+  -ms-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.main-btn:hover, .wpcf7-submit:hover {
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid #113448;
+  border-bottom: 2px solid #113448;
+  color: #113448;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-transition: all .2s ease-in;
+  -moz-transition: all .2s ease-in;
+  -ms-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.pulse {
+  cursor: pointer;
+  box-shadow: 0 0 0 rgba(99, 198, 173, 0.4);
+  animation: pulse 2s infinite;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 rgba(99, 198, 173, 0.4);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 rgba(99, 198, 173, 0.4);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 rgba(99, 198, 173, 0.4);
+    box-shadow: 0 0 0 rgba(99, 198, 173, 0.4);
+  }
+  70% {
+    -moz-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+    box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+  }
+}
+
+.wpcf7-form p label {
+  display: block;
+}
+
+.wpcf7-form-control-wrap {
+  input, textarea {
+    display: block;
+    width: 100%;
+    border: 1px solid #c7c7c7;
+    min-height: 45px;
+    border-bottom: 2px solid #113448;
+    padding-left: 15px;
+  }
+}
+
+div.wpcf7-response-output {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: inherit;
+  margin-right: inherit;
+  padding: 5px 10px 5px 50px;
+}
+
+div.wpcf7-validation-errors::before {
+  content: '\f071';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  left: 30px;
+  bottom: 15px;
+  background-color: #f7e700;
+  font-family: FontAwesome;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+  font-size: 18px;
+  padding-top: 3px;
+}
+
+.career-row {
+  //margin-top: 100px;
+}
+
+.cv-wrap {
+  margin-bottom: 20px;
+}
+
+.job-description ul > li, .job-description ol > li {
+  margin-bottom: 10px;
+  line-height: 18px;
+}
+
+.job-description {
+  margin-bottom: 20px;
+}
+
+.job-description p {
+  margin: 0;
+}
+
+.career-row .job-summary {
+  border: 1px solid #00abc9 !important;
+  margin-bottom: 20px;
+}
+
+.job-summary h5 {
+  -webkit-border-radius: inherit !important;
+  -moz-border-radius: inherit !important;
+  border-radius: inherit !important;
+  background-color: #00abc9;
+  color: #fff;
+}
+
+.dn {
+  display: none
+}
+
+.position-relative {
+  position: relative;
+}
+
+.wpcf7-file {
+  border: inherit !important;
+  border-bottom: inherit !important;
+  padding-left: inherit !important;
+}
+
+.bg-gray-darkest {
+  border-top: 1px solid #222 !important;
+}
+
+.read-more {
+  color: #00abc9 !important;
+  cursor: pointer;
+}
+
+.read-more:hover {
+  text-decoration: underline !important;
+}
+
+.modal-header span:before {
+  content: '\ec35';
+  font-family: 'Linearicons';
+  color: red;
+  cursor: pointer;
+}
+
+.item-content img {
+  float: left;
+  width: 300px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.item-content p {
+  margin: 0;
+}
+
+.item-info {
+  margin-top: 15px;
+}
+
+.team-img-wrap {
+  height: 250px;
+  overflow: hidden;
+}
+
+.team-img-wrap img {
+  height: 250px;
+}
+
+/* Team social info design */
+/*.team-img-wrap {*/
+/*position: relative;*/
+/*max-width: 200px;*/
+/*margin: auto;*/
+/*}*/
+
+/*.team-social-info {*/
+/*position: absolute;*/
+/*left: 0;*/
+/*bottom: 0;*/
+/*right: 0;*/
+/*background-color: #006072;*/
+/*top: 85%;*/
+/*opacity: .75;*/
+/*}*/
+
+.team-social-info ul li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.team-social-info ul li a {
+  font-size: 16px;
+  color: #fff;
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  padding: 0 2px;
+  text-align: right;
+}
+
+.team-social-info ul li a:hover {
+  position: relative;
+}
+
+.team-social-info ul li a:hover:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #00abc9;
+}
+
+.team-social-info ul li a i {
+  padding: 3px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  /*border-radius: 2px;*/
+  /*background-color: #fff;*/
+  /*border: 1px solid #fff;*/
+}
+
+.facebook-color {
+  color: #3b5999;
+}
+
+.twitter-color {
+  color: #55acee;
+}
+
+.linkedin-color {
+  color: #0077B5;
+}
+
+.youtube-color {
+  color: #cd201f;
+}
+
+.github-color {
+  color: #2bb149;
+}
+
+.facebook-bg {
+  background-color: #3b5999;
+}
+
+.twitter-bg {
+  background-color: #55acee;
+}
+
+.linkedin-bg {
+  background-color: #0077B5;
+}
+
+.youtube-bg {
+  background-color: #cd201f;
+}
+
+.github-bg {
+  background-color: #2bb149;
+}
+
+.button-wrap {
+  padding-top: 30px;
+}
+
+.small-box {
+  max-width: 400px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  margin: auto;
+}
+
+/* Responsive design code */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  //.heading-decorated {
+  //  color: black !important;
+  //}
+
+  .map-wrap {
+    overflow: hidden;
+    height: 500px;
+  }
+
+  .section-lg {
+    padding-bottom: inherit !important;
+  }
+
+  .portfolio-item {
+    flex: inherit !important;
+    max-width: inherit !important;
+    width: calc(100% / 1) !important;
+  }
+
+  .themesflat-action-box {
+    padding-left: inherit !important;
+    padding-right: inherit !important;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .themesflat-action-box .heading-wrap .heading {
+    text-align: left;
+    padding-right: 0 !important;
+    margin-right: 0;
+    font-size: 13px !important;
+    font-weight: 400;
+  }
+  .themesflat-action-box .heading-wrap {
+    display: inherit !important;
+    width: 100% !important;
+  }
+  .button-wrap {
+    padding-top: inherit;
+    text-align: center;
+  }
+
+  .button-default {
+    display: block !important;
+  }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  //.heading-decorated {
+  //  color: tomato !important;
+  //}
+
+  .map-wrap {
+    overflow: hidden;
+    height: 500px;
+  }
+
+  .section-lg {
+    padding-bottom: inherit !important;
+  }
+  .themesflat-action-box {
+    padding-left: inherit !important;
+    padding-right: inherit !important;
+  }
+  .portfolio-item {
+    width: calc(100% / 2) !important;
+  }
+
+  .map-wrap {
+    overflow: hidden;
+    height: 850px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  //.heading-decorated {
+  //  color: yellow !important;
+  //}
+
+  .map-wrap {
+    overflow: hidden;
+    height: 600px;
+  }
+
+  .section-lg {
+    padding-bottom: inherit !important;
+  }
+
+  .themesflat-action-box {
+    padding-left: inherit !important;
+    padding-right: inherit !important;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  //.heading-decorated {
+  //  color: green !important;
+  //}
+
+  .themesflat-action-box {
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+  }
+  .desktop .swiper-slider_fullheight {
+    min-height: calc(100vh - 67px);
+  }
+
+  .portfolio-item {
+    width: calc(100% / 3) !important;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  //.heading-decorated {
+  //  color: red !important;
+  //}
+  .desktop .swiper-slider_fullheight {
+    min-height: calc(100vh - 67px);
+  }
+
+  .portfolio-item {
+    width: calc(100% / 3) !important;
+  }
+}
+

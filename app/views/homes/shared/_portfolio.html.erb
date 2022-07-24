@@ -1,0 +1,91 @@
+<section id="portfolio" class="section-md">
+  <div class="explore-our-exp-title-wrapper">
+    <div class="container">
+      <div class="row explore-our-exp-title"><h2>Products & Portfolio</h2>
+        <p class="paragraph-padding font-size-p" style="text-align:
+          center;margin-bottom: 50px;
+          font-size: 20px;
+          line-height: 1.34783;
+          font-weight: 400;
+          letter-spacing: .01em;
+          color: #333;"> Decade-long track record of successful projects across various industry domains, technologies,
+          and areas of expertise. Working with SYFTET you can be sure that we put all our experience at your
+          disposal.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+
+    <div class="text-center">
+      <ul class="portfolio-filter " id="myBtnContainer">
+        <li><a class="active" href="#" data-filter="*" >All</a></li>
+        <li><a href="#" data-filter=".apps-ios" >Apps & IOS</a></li>
+        <li><a href="#" data-filter=".web" >Web</a></li>
+        <li><a href="#" data-filter=".desktop" >Desktop</a></li>
+        <li><a href="#" data-filter=".products" >Products</a></li>
+      </ul><!--/#portfolio-filter-->
+    </div>
+
+    <div class="portfolio-items">
+
+      <div class="syftet-flex-row">
+        <% portfolios.each do |portfolio| %>
+          <div class="portfolio-item <%= portfolio.portfolio_type %> ">
+            <div class="portfolio-item-inner" data-toggle="modal" data-target="#<%= portfolio.title.downcase.split(' ').join('_') %>">
+              <div class="portfolio-overlay"></div>
+              <!--<img src="https://avada.theme-fusion.com/wp-content/uploads/2012/08/port_slide_10.jpg" alt="">-->
+              <%= image_tag portfolio.portfolio_photos.first.image_url, alt: "#{portfolio.title}", class: 'img-responsive' %>
+              <div class="portfolio-info">
+                <div class="display-table">
+                  <div class="display-table-cell">
+                    <h3><%= portfolio.title %></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="<%= portfolio.title.downcase.split(' ').join('_') %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title"><%= portfolio.title %></h5>
+                  <span aria-hidden="true" data-dismiss="modal"></span>
+                </div>
+                <div class="modal-body">
+                  <div class="item-wrap">
+                    <div class="item-container">
+                      <div class="item-content clearfix">
+                        <%= image_tag portfolio.portfolio_photos.first.image_url, alt: "#{portfolio.title}" %>
+                        <p>
+                          <%= portfolio.content %>
+                        </p>
+                      </div>
+                      <div class="item-info">
+                        <h5> Project Details </h5>
+                        <p style="margin-top: 0">
+                          <strong> Technology: </strong>
+                          <% portfolio.portfolio_technologies.each do |portfolio_technology| %>
+                            <%= link_to "#{portfolio_technology.technology.name}", portfolio_technology.technology.page_url, target: '_blank'%><%= portfolio_technology == portfolio.portfolio_technologies.last ? ' .' : ',' %>
+                          <% end %>
+                        </p>
+                        <p style="margin-top: 0">
+                          <strong> Project Link: </strong> <%= link_to portfolio.title, portfolio.url, target: '_blank' %>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <a href="<%= contact_us_path %>" target="_blank" class="main-btn">
+                    <span class="fa fa-envelope"> Contact Us </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+

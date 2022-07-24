@@ -1,0 +1,348 @@
+.custom-software-dev-new .work-block {
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: row
+}
+.work-block {
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: row;
+}
+.work-block .we-hire-block-image:first-child {
+  margin-left: 0;
+}
+.work-block .we-hire-block-image:last-child {
+  margin-right: 0
+}
+
+.we-hire-block-image {
+  width: 25%;
+  margin: 0 20px 20px;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  flex-direction: column
+}
+
+.we-hire-block-image h3 {
+  margin-top: 20px;
+  padding: 0 !important;
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: #343434;
+  border: none
+}
+
+.we-hire-block-image p {
+  margin-top: 10px;
+  padding: 0 !important;
+  text-align: left;
+  font-size: 16px !important;
+  line-height: 120.4%;
+  color: #113448
+}
+
+.custom-software-dev-new .we-hire-block-image {
+  max-width: 280px
+}
+
+.custom-software-dev-new .we-hire-block-image h3 {
+  font-size: 22px;
+  line-height: 1
+}
+
+.custom-software-dev-new .we-hire-block-image p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px !important;
+  line-height: 134.1% !important;
+  text-align: left;
+}
+
+.custom-software-dev-new .software-dev-project .col-md-6 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.custom-software-dev-new .software-dev-project .case-one {
+  padding-top: 110px;
+  background: linear-gradient(180deg, rgba(44, 44, 44, 45%) 19.53%, rgba(44, 44, 44, 78%) 43.91%, rgba(44, 44, 44, 0.9) 100%), rgba(44, 44, 44, 0.4) url('custom-dev-page-case-one.jpg') center/cover no-repeat;}
+.custom-software-dev-new .software-dev-project .case-two {
+  padding-top: 110px;
+  background: linear-gradient(180deg, rgba(44, 44, 44, 29%) 19.53%, rgba(44, 44, 44, 89%) 43.91%, rgba(44, 44, 44, 0.9) 100%), rgba(44, 44, 44, 81%) url('custom-dev-page-case-two.jpg') center/cover no-repeat;}
+
+.software-dev-project-left-content, .software-dev-project-right-content {
+  position: relative;
+  z-index: 3;
+  width: 100% !important;
+  max-width: 510px;
+  padding: 40px 15px !important;
+}
+.software-dev-project h3 {
+  text-align: left !important;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 134.1%;
+}
+.software-dev-project p {
+  margin-bottom: 30px !important;
+  height: 200px;
+  text-align: left !important;
+  font-weight: 300 !important;
+  font-size: 18px !important;
+  line-height: 134.1%;
+  color: #fff !important;
+}
+.custom-dev-block-image {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.custom-dev-block-image svg {
+  width: auto;
+  height: 60px;
+  margin: 0 17px;
+}
+
+.software-dev-project a {
+  width: 163px !important;
+  padding: 20px 0;
+  border: 1px solid #fff !important;
+  font-size: 18px !important;
+  line-height: 18px !important;
+}
+
+.custom-software-dev-new .container, .we-hire-new .container {
+  padding-right: 34px;
+  padding-left: 34px;
+}
+
+.custom-software-dev-new .block-work {
+  margin: 0 0 20px !important
+}
+.block-work .services-dev-work-content:last-child .left-work-content, .block-work .services-dev-work-content:last-child .right-work-content {
+  padding-bottom: 0 !important
+}
+.net-development-company-projects {
+  display: flex ;
+  width: 100%;
+}
+
+.custom-software-dev .approach-list-item:before {
+  content: "\f046";
+  font-family: FontAwesome;
+  position: relative;
+  margin: 0 15px 0 -40px;
+  top: 24px;
+  color: #113448;
+  font-size: 25px;
+}
+
+
+
+.development-approach-list.col-sm-6:nth-child(2n+1) {
+  clear: both;
+}
+
+.web-develop-approach-list .col-sm-6 {
+  margin-bottom: 50px;
+}
+.development-approach-list ul {
+  margin: 50px 0 0 0!important;
+}
+.development-approach-list ul li {
+  text-align: left !important;
+  padding: 5px;
+  padding-left: 40px;
+  text-indent: -24px;
+}
+.development-approach-list ul li::before {
+  content: "\f046";
+  font-family: FontAwesome;
+  color: #113448;
+  position: relative;
+  font-size: 25px;
+  top: 3px !important;
+  left: -10px;
+}
+
+.web-develop-service-col-size-os {
+  width: 25%;
+}
+.web-develop-col-picture-os {
+  text-align: center;
+  height: 150px;
+}
+#service_12 .service-tab:nth-child(2n) {
+  margin-bottom: 0 !important;
+}
+.service {
+  margin-bottom: 10px;
+}
+.web-develop {
+  width: 100%;
+}
+.web-develop-comp .web-develop-my-head-purple-block {
+  font-size: 40px;
+  padding: 45px 35px;
+}
+
+.web-develop-my-head-purple-block {
+width: 100%;
+background-color: #f8f8f8;
+color: #111;
+text-align: center;
+}
+
+.web-develop-my-text-purple-block {
+text-align: center;
+padding: 0;
+}
+
+.web-develop-my-text-purple-block .alignnone {
+margin: 0;
+}
+
+.alignnone {
+margin: 5px 20px 20px 0;
+}
+
+.web-develop-row {
+margin: 30px 0;
+}
+
+.web-develop-img-block {
+float: initial;
+display: -webkit-inline-box;
+}
+
+.custom .my-monitor-block img {
+margin-bottom: 20px;
+}
+.web-develop-text-block {
+margin-top: 66px !important;
+}
+.value-title {
+text-align: center;
+padding-bottom: 50px;
+}
+.my-monitor-block .row {
+padding: 20px;
+}
+
+
+
+//.approach-list {
+//margin: 0 0 20px !important;
+//padding: 0;
+//display: flex;
+//flex-direction: row;
+//flex-wrap: wrap;
+//}
+//.approach-list-item {
+//width: 46%;
+//padding-left: 50px;
+//margin: 20px 30px 0 0;
+//}
+//.approach-list-item p:before {
+//content: url(https://existek-838c.kxcdn.com/wp-content/themes/roadrunner/images/check-circle-outline.svg);
+//position: relative;
+//margin: 0 20px 0 -50px;
+//top: 10px;
+//}
+
+.header {
+background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('bg-image-2.jpg') center center no-repeat;
+background-size: cover;
+}
+
+.header .header-content {
+padding-top: 8rem;
+padding-bottom: 2.125rem;
+text-align: center;
+}
+
+.header .text-container {
+margin-bottom: 3rem;
+}
+
+.header h1 {
+margin-bottom: 0.5rem;
+color: #fff;
+font-weight: bold;
+}
+
+.header .p-large {
+margin-bottom: 2rem;
+color: #dfe5ec;
+}
+
+.p-center {
+  text-align: center !important;
+}
+
+.header .btn-solid-lg {
+margin-right: 0.5rem;
+margin-bottom: 1.25rem;
+}
+
+
+.custom-software-dev .case-one, .custom-software-dev .case-two, .custom-software-dev .case-three, .custom-software-dev .case-four, .software-product-dev .case-one, .software-product-dev .case-two {
+text-align: center;
+color: #fff;
+font-size: 16px
+}
+
+.custom-software-dev .case-one > div, .custom-software-dev .case-two > div, .custom-software-dev .case-three > div, .custom-software-dev .case-four > div, .software-product-dev .case-one > div, .software-product-dev .case-two > div {
+padding: 30px 40px;
+width: 70%;
+margin: auto;
+text-align: justify
+}
+
+.custom-software-dev .case-one > div p, .custom-software-dev .case-two > div p, .custom-software-dev .case-three > div p, .custom-software-dev .case-four > div p, .software-product-dev .case-one > div p, .software-product-dev .case-two > div p {
+margin-bottom: 35px
+}
+
+.custom-software-dev .case-one > div a, .custom-software-dev .case-two > div a, .custom-software-dev .case-three > div a, .custom-software-dev .case-four > div a, .software-product-dev .case-one > div a, .software-product-dev .case-two > div a {
+border: 0;
+font-size: 20px;
+margin-top: 40px;
+width: 200px;
+line-height: 45px;
+display: block;
+margin: 0 auto;
+border: 1px solid #fff;
+color: #fff;
+transition: all .3s;
+cursor: pointer;
+text-align: center
+}
+
+.custom-software-dev .case-one > div a:hover, .custom-software-dev .case-two > div a:hover, .custom-software-dev .case-three > div a:hover, .custom-software-dev .case-four > div a:hover, .software-product-dev .case-one > div a:hover, .software-product-dev .case-two > div a:hover {
+background-color: #113448
+}
+
+.custom-software-dev .case-one > div h3, .custom-software-dev .case-two > div h3, .custom-software-dev .case-three > div h3, .custom-software-dev .case-four > div h3, .software-product-dev .case-one > div h3, .software-product-dev .case-two > div h3 {
+  color: #fff;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  text-align: center
+}
+p:empty:before {
+content: "​";
+}
+@media (max-width: 786px) {
+  .custom-software-dev-new .software-dev-project .case-one, .custom-software-dev-new .software-dev-project .case-two {
+    padding-top: 0px;
+  }
+}

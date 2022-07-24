@@ -1,0 +1,310 @@
+// Place all the styles related to the Revenues controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* Position the image container (needed to position the left and right arrows) */
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white !important;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: #113448;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #113448;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+  margin-right: 22px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.section-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  font-weight: 400;
+  display: inline-block;
+  position: relative;
+}
+.section-title:after,
+.section-title:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+}
+.section-title:after {
+  height: 2px;
+  background-color: #113448;
+  left: 25%;
+  right: 25%;
+}
+
+.section-title:before {
+  width: 15px;
+  height: 15px;
+  border: 3px solid #fff;
+  background-color: #113448;
+  left: 50%;
+  transform: translatex(-50%);
+  bottom: -6px;
+  z-index: 9;
+  border-radius: 50%;
+}
+
+/* CAROUSEL STARTS */
+.customer-feedback .owl-item img {
+  width: 168px;
+  height: 170px;
+  border: 2px solid #113448;
+}
+
+.feedback-slider-item {
+  position: relative;
+  padding: 60px;
+  margin-top: -40px;
+}
+
+.customer-name {
+  margin-top: 15px;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.feedback-slider-item p {
+  line-height: 1.875;
+}
+
+.customer-rating {
+  background-color: #eee;
+  border: 3px solid #fff;
+  color: rgba(1, 1, 1, 0.702);
+  font-weight: 700;
+  border-radius: 50%;
+  position: absolute;
+  width: 47px;
+  height: 47px;
+  line-height: 44px;
+  font-size: 15px;
+  right: 0;
+  top: 77px;
+  text-indent: -3px;
+}
+
+.thumb-prev .customer-rating {
+  top: -20px;
+  left: 0;
+  right: auto;
+}
+
+.thumb-next .customer-rating {
+  top: -20px;
+  right: 0;
+}
+
+.customer-rating i {
+  color: #ff000a;
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+/* GREY BACKGROUND COLOR OF THE ACTIVE SLIDER */
+.feedback-slider-item:after {
+  content: '';
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  top: 103px;
+  z-index: -1;
+}
+
+.thumb-prev,
+.thumb-next {
+  position: absolute;
+  z-index: 99;
+  top: 25%;
+  width: 100px;
+  height: 100px;
+  left: -90px;
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.thumb-next {
+  left: auto;
+  right: -90px;
+}
+
+.feedback-slider-thumb img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.feedback-slider-thumb:hover {
+  opacity: .8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+}
+
+.customer-feedback .owl-nav [class*="owl-"] {
+  position: relative;
+  display: inline-block;
+  bottom: 45px;
+  transition: all .2s ease-in;
+}
+
+.customer-feedback .owl-nav i {
+  background-color: transparent;
+  color: #113448;
+  font-size: 25px;
+}
+
+.customer-feedback .owl-prev {
+  left: -15px;
+}
+
+.customer-feedback .owl-prev:hover {
+  left: -20px;
+}
+
+.customer-feedback .owl-next {
+  right: -15px;
+}
+
+.customer-feedback .owl-next:hover {
+  right: -20px;
+}
+
+/* DOTS */
+.customer-feedback .owl-dots {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 35px;
+}
+.customer-feedback .owl-dot {
+  display: inline-block;
+}
+
+.customer-feedback .owl-dots .owl-dot span {
+  position: relative;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  background-color: #d9d9d9;
+  transition: .2s;
+
+}
+
+.customer-feedback .owl-dots .owl-dot.active span {
+  background-color: #00abc9;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 767px) {
+  .service-tab-margin {
+    h4{
+      text-align: center !important;
+    }
+    p {
+      text-align: left !important;
+    }
+  }
+  .feedback-slider-item:after {
+    left: 30px;
+    right: 30px;
+  }
+  .customer-feedback .owl-nav [class*="owl-"] {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 45px;
+    bottom: auto;
+  }
+  .customer-feedback .owl-prev {
+    left: 0;
+  }
+  .customer-feedback .owl-next {
+    right: 0;
+  }
+  .thumb-prev , .thumb-next {
+    display: none;
+  }
+}
+.feedback-slider .owl-nav .owl-prev:before, .feedback-slider .owl-nav .owl-next:before {
+  content: '' !important;
+}

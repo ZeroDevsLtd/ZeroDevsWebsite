@@ -1,0 +1,72 @@
+<% content_for :title do %>
+  Coustom Software Development Company in Dhaka | Syftet Limited
+<% end %>
+<% content_for :meta_title do %>
+  Coustom Software Development Company in Bangladesh About -Us | Syftet
+<% end %>
+
+<div class="custom-software-dev custom">
+  <header id="header" class="header">
+    <div class="header-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="text-container">
+              <h1>About Us</h1>
+              <p class="p-heading p-large">Best Software Development Company in Dhaka, Bangladesh</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="content_divider">
+    <a>About Us</a>
+  </div>
+
+  <section class="about-us">
+    <div class="container pt80x pb20x">
+      <h2 class="text-center">About Us</h2>
+      <div class="row ">
+        <div class="col-md-7 mb10">
+          <div class="themesflat-headings style-1 clearfix">
+            <h4 class="heading-decorated letter-spacing--09px clearfix" style="text-align: left">WE HAVE A WIDE BREADTH OF <br> EXPERIENCE</h4>
+            <p class="sub-heading mt10 fz18">
+              <strong> We are independent and free from third party influence. </strong>
+            </p>
+            <div class="sep clearfix"></div>
+            <p>
+              Syftet is a fast growing software product and services company in Bangladesh. Our journey started
+              in 2016, But within a very short time, Syftet successfully tracked records of delivering innovative and
+              cost-effective technical services to customers in both Corporate and Public sectors. We follow agile
+              methodologies for developing software. We have a team of talented engineers and they are fully
+              devoted to serving the customers in software developing problems. We are experts in Ruby on Rails,
+              .Net, PHP, Java, Android. Building valuable relationship by providing desired final product is the
+              main goal of Syftet. It always continuously works to satisfy the customers. We have professionalized
+              us in software development area. Syftet also works to innovate and to have continues development
+              in the process. It has launched several applications. It works with Bequent, Secret Chat, Biometric
+              Authentication, School Management, Point of Sale(POS) for the easier life of the customers.
+            </p>
+            <a href="https://www.youtube.com/channel/UCVPyFdbHv5haeqL-3bpVIEg/videos" target="_blank" class="button button-primary">WATCH MORE VIDEO</a>
+          </div><!-- /.themesflat-headings -->
+        </div><!-- /.col-md-6 -->
+
+        <div class="col-md-5 mb20 half-background style-1" style="height: 388px;">
+          <div class="themesflat-icon style-1 clearfix background">
+            <a href="#syftet-video" data-toggle="modal" class="icon-wrap popup-video">
+              <span class="icon"><i class="pl5 fa fa-play"></i></span>
+            </a>
+          </div><!-- /.themesflat-icon -->
+        </div><!-- /.col-md-6 -->
+      </div>
+    </div>
+  </section>
+  <section id="photo_gallery" class="section-md bg-gray-lighter text-center">
+    <div class="container">
+      <h2 class="text-center">Our Festival Glory</h2>
+      <%= render 'homes/shared/photo_gallery', photos: @photos %>
+    </div>
+  </section>
+</div>
+
+<%= render 'homes/shared/start_project_form', contact: @contactinfo %>
