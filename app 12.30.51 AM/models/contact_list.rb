@@ -1,2 +1,0 @@
-class ContactList < ApplicationRecord
-end
