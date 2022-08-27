@@ -30,7 +30,7 @@ function App() {
         <Route path='/dashboard' element={<Dashboard></Dashboard>}>
           <Route index element={<AddTeam></AddTeam>}></Route>
         </Route>
-        <Route path='/signup' element={<Signup></Signup>}></Route>
+        {/* <Route path='/signup' element={<Signup></Signup>}></Route> */}
         <Route path='/login' element={<Login></Login>}></Route>
       </Routes>
       <Footer></Footer>

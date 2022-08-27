@@ -10,7 +10,7 @@ const Team = (props) => {
 
 
   useEffect(() => {
-    fetch('http://localhost:5000/team-member')
+    fetch('https://quiet-fjord-73452.herokuapp.com/team-member')
       .then(res => res.json())
       .then(data => setTeams(data.data))
 
