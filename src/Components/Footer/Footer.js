@@ -1,4 +1,7 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faGooglePlus, faLinkedin, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -16,11 +19,11 @@ const Footer = () => {
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Terms of service</a></li>
-              <li><a href="#">Privacy policy</a></li>
+              <li><Link to=''>Home</Link></li>
+              <li><Link to=''>About us</Link></li>
+              <li><Link to=''>Services</Link></li>
+              <li><Link to=''>Terms of service</Link></li>
+              <li><Link to=''>Privacy policy</Link></li>
             </ul>
           </div>
 
@@ -35,13 +38,12 @@ const Footer = () => {
             </p>
 
             <div class="social-links">
-              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+              <Link to='' class="twitter"><FontAwesomeIcon icon={faTwitterSquare} /></Link>
+              <Link to='' class="facebook"><FontAwesomeIcon icon={faFacebookF} /></Link>
+              <Link to='' class="google-plus"><FontAwesomeIcon icon={faGooglePlus} /></Link>
+              <Link to='' class="linkedin"><FontAwesomeIcon icon={faLinkedin} /></Link>
             </div>
-
+            
           </div>
 
           <div class="col-lg-3 col-md-6 footer-newsletter">

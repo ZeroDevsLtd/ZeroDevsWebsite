@@ -11,15 +11,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import Portfolio from '../Portfolio/Portfolio';
 const Home = () => {
-    // const [members,setMembers] = useState([]);
 
-    // useEffect(()=>{
-    //     fetch('https://quiet-fjord-73452.herokuapp.com/team-member')
-    //     .then(res=>res.json())
-    //     .then(data=>{setMembers(data.data)
-    // //  console.log(data)
-    // })
-    // },[])
     useEffect(()=>{
         Aos.init({duration:'3000'});
     },[])
@@ -29,14 +21,8 @@ const Home = () => {
         <Banner></Banner>
         <AboutUs Aos={Aos}></AboutUs>
         <Services Aos={Aos}></Services>
-        <ChooseUs></ChooseUs>
+        <ChooseUs Aos={Aos}></ChooseUs>
         <Testimonial></Testimonial>
-       {/* {
-        members.map(member=>  <Team 
-            // Aos={Aos}
-            member={member}
-            ></Team>)
-       } */}
        <Team
        Aos={Aos}></Team>
         <Portfolio></Portfolio>

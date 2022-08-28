@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faGooglePlus, faLinkedin, faTwitterSquare, faWindows } from '@fortawesome/free-brands-svg-icons';
+
 import TeamDetails from './TeamDetails';
 
 const Team = (props) => {
-  // const {name,image} = props.member;
-  // console.log(name);
+  
   const [teams, setTeams] = useState([]);
 
 
@@ -15,20 +13,7 @@ const Team = (props) => {
       .then(data => setTeams(data.data))
 
   }, []);
-  // const {data:teams, isLoading} = useQuery('teams',()=> fetch('http://localhost:5000/team-member').then(res=>res.json()))
-
-
-  // teams.map(team=>{
-  //   if(team ){
-  //     // console.log(team.name);
-  //     // console.log(team?.email);
-  //   }
-  // })
-
-  // if(isLoading){
-  //   return <Loading></Loading>
-  // }
-  // console.log(teams);
+ 
 
   return (
     <div>

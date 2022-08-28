@@ -1,15 +1,16 @@
-import { faClock, faObjectGroup } from '@fortawesome/free-regular-svg-icons';
-import { faDiamond, faDiamondTurnRight, faLanguage } from '@fortawesome/free-solid-svg-icons';
+import { faObjectGroup } from '@fortawesome/free-regular-svg-icons';
+import { faDiamond, faLanguage } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import CountUp from 'react-countup';
+import { Link } from 'react-router-dom';
 import VisibilitySensor from 'react-visibility-sensor';
 
-const ChooseUs = () => {
+const ChooseUs = (props) => {
   return (
     <>
 
-      <section id="why-us" class="wow fadeIn">
+      <section id="why-us" data-aos={props.aos} data-aos-offset={props.aos_offset} class="wow fadeIn">
         <div class="container">
           <header class="section-header">
             <h3>Why choose us?</h3>
@@ -18,35 +19,35 @@ const ChooseUs = () => {
 
           <div class="row row-eq-height justify-content-center">
 
-            <div class="col-lg-4 mb-4">
+            <div data-aos="fade-up" class="col-lg-4 mb-4">
               <div class="card wow bounceInUp">
                 <FontAwesomeIcon icon={faDiamond} className='h-16'></FontAwesomeIcon>
                 <div class="card-body">
                   <h5 class="card-title">Corporis dolorem</h5>
                   <p class="card-text">Deleniti optio et nisi dolorem debitis. Aliquam nobis est temporibus sunt ab inventore officiis aut voluptatibus.</p>
-                  <a href="#" class="readmore">Read more </a>
+                  <Link to='' className='text-decoration-none readmore'>Read more </Link>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-4 mb-4">
+            <div data-aos="fade-up" class="col-lg-4 mb-4">
               <div class="card wow bounceInUp">
                 <FontAwesomeIcon icon={faLanguage} className='h-16'></FontAwesomeIcon>
                 <div class="card-body">
                   <h5 class="card-title">Voluptates dolores</h5>
                   <p class="card-text">Voluptates nihil et quis omnis et eaque omnis sint aut. Ducimus dolorum aspernatur.</p>
-                  <a href="#" class="readmore">Read more </a>
+                  <Link to='' className='text-decoration-none readmore'>Read more </Link>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-4 mb-4">
+            <div data-aos="fade-up" class="col-lg-4 mb-4">
               <div class="card wow bounceInUp">
                 <FontAwesomeIcon icon={faObjectGroup} className='text- h-16'></FontAwesomeIcon>
                 <div class="card-body">
                   <h5 class="card-title">Eum ut aspernatur</h5>
                   <p class="card-text">Autem quod nesciunt eos ea aut amet laboriosam ab. Eos quis porro in non nemo ex. </p>
-                  <a href="#" class="readmore">Read more </a>
+                  <Link to='' className='text-decoration-none readmore'>Read more </Link>
                 </div>
               </div>
             </div>
@@ -59,7 +60,7 @@ const ChooseUs = () => {
               <VisibilitySensor partialVisibility offset={{ bottom: 200 }}>
                 {({ isVisible }) => (
                   <div style={{ height: 100 }}>
-                    {isVisible ? <CountUp end={1000} /> : null}
+                    {isVisible ? <CountUp end={274} /> : null}
                   </div>
                 )}
               </VisibilitySensor>
@@ -70,7 +71,7 @@ const ChooseUs = () => {
               <VisibilitySensor partialVisibility offset={{ bottom: 200 }}>
                 {({ isVisible }) => (
                   <div style={{ height: 100 }}>
-                    {isVisible ? <CountUp end={1000} /> : null}
+                    {isVisible ? <CountUp end={421} /> : null}
                   </div>
                 )}
               </VisibilitySensor>
@@ -81,7 +82,7 @@ const ChooseUs = () => {
               <VisibilitySensor partialVisibility offset={{ bottom: 200 }}>
                 {({ isVisible }) => (
                   <div style={{ height: 100 }}>
-                    {isVisible ? <CountUp end={1000} /> : null}
+                    {isVisible ? <CountUp end={1364} /> : null}
                   </div>
                 )}
               </VisibilitySensor>
@@ -92,7 +93,7 @@ const ChooseUs = () => {
               <VisibilitySensor partialVisibility offset={{ bottom: 200 }}>
                 {({ isVisible }) => (
                   <div style={{ height: 100 }}>
-                    {isVisible ? <CountUp end={1000} /> : null}
+                    {isVisible ? <CountUp end={18} /> : null}
                   </div>
                 )}
               </VisibilitySensor>
