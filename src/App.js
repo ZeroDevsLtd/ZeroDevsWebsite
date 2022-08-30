@@ -1,5 +1,4 @@
-import logo from './logo.svg';
-// import './App.css';
+
 import { Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -18,7 +17,7 @@ import Team from './Components/Team/Team';
 
 function App() {
   return (
-    <div className="App">
+    <div className="sideBorder">
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>

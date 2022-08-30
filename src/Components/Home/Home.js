@@ -17,7 +17,7 @@ const Home = () => {
     },[])
     return (
         
-        <>
+        <div className=''>
         <Banner></Banner>
         <AboutUs Aos={Aos}></AboutUs>
         <Services Aos={Aos}></Services>
@@ -25,10 +25,10 @@ const Home = () => {
         <Testimonial></Testimonial>
        <Team
        Aos={Aos}></Team>
-        <Portfolio></Portfolio>
+        <Portfolio Aos={Aos}></Portfolio>
         <Client Aos={Aos}></Client>
         <Contact></Contact>
-        </>
+        </div>
     );
 };
 
