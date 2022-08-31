@@ -7,42 +7,54 @@ import logo from '../images/logo.png';
 
 const Navbar = () => {
 
-    const [user] = useAuthState(auth);
+  const [user] = useAuthState(auth);
 
-    const logout = () => {
-        signOut(auth);
-      };
+  const logout = () => {
+    signOut(auth);
+  };
 
-    const menuItems = <>
-        <li><Link className='text-decoration-none' to='/'>Home </Link></li>
-        <li><Link className='text-decoration-none' to='/about'>About Us </Link></li>
-        <li><Link className='text-decoration-none' to='/service'>Service </Link></li>
-        <li><Link className='text-decoration-none' to='/portfolio'>Portfolio </Link></li>
-        <li><Link className='text-decoration-none' to='/team'>Team </Link></li>
-        <li><Link className='text-decoration-none' to='/contact'>Contact us </Link></li>
-    </>
+  const menuItems = <>
+    <li class="nav-item"><Link className='text-decoration-none nav-link active' to='/'>Home </Link></li>
+    <li class="nav-item"><Link className='text-decoration-none nav-link active' to='/about'>About Us </Link></li>
+    <li class="nav-item"><Link className='text-decoration-none nav-link active' to='/service'>Service </Link></li>
+    <li class="nav-item"><Link className='text-decoration-none nav-link active' to='/portfolio'>Portfolio </Link></li>
+    <li class="nav-item"><Link className='text-decoration-none nav-link active' to='/team'>Team </Link></li>
+    <li class="nav-item"><Link className='text-decoration-none nav-link active' to='/contact'>Contact us </Link></li>
+  </>
+
+// window.onscroll = function() {scrollFunction()};
+
+// function scrollFunction() {
+//   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+//     document.getElementById("navbar").style.padding = "30px 5px";
+//     document.getElementById("logo").style.fontSize = "25px";
+//   } else {
+//     document.getElementById("navbar").style.padding = "40px 10px";
+//     document.getElementById("logo").style.fontSize = "35px";
+//   }
+// }
 
 
-    return (
-        <div class="navbar sticky-top fixed-nav-bar mt-3">
-  <div class="navbar-start">
-    <div class="dropdown ">
-      <label tabindex="0" className="btn btn-ghost lg:invisible ">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-      </label>
-      <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-0 shadow bg-slate-100 rounded-box w-52">
+  return (
+
+    // bootstrap navbar
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container">
+    {/* <a  href="#">Navbar</a> */}
+    <Link id='logo' to='/'><img src={logo} alt="" className=' h-6 w-40 mb-2' /></Link>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
         {menuItems}
       </ul>
+       
     </div>
-    <Link to='/'><img src={logo} alt="" className='ml-16 h-6 w-40 mb-4' /></Link>
   </div>
-  <div class="navbar-center hidden lg:flex mr-5 ">
-    <ul class="menu menu-horizontal p-0">
-      {menuItems}
-    </ul>
-  </div>
-</div>
-    );
+</nav>
+  );
 };
 
 export default Navbar;

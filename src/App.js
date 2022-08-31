@@ -17,7 +17,7 @@ import Team from './Components/Team/Team';
 
 function App() {
   return (
-    <div className="sideBorder">
+    <div className="">
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>

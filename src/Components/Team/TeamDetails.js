@@ -8,7 +8,7 @@ const TeamDetails = (props) => {
     // console.log(props);
     
     return (
-            <div class="member">
+            <div class=" member">
               <img src={image} class="img-fluid" alt=""/>
               <div class="member-info">
                 <div class="member-info-content">

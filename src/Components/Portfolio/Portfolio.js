@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import PortItems from './Elements';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faGooglePlus, faLinkedin, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
 
 const Portfolio = () => {
 
@@ -22,7 +25,7 @@ const Portfolio = () => {
           <div className="row">
             <div className="col-lg-12">
               <ul id="portfolio-flters">
-                <li className="filter-active"><button onClick={() => setItems(PortItems)}>All</button></li>
+                <li><button onClick={() => setItems(PortItems)}>All</button></li>
                 <li><button onClick={() => filterItem('app')}>App</button></li>
                 <li><button onClick={() => filterItem('card')}>Card</button></li>
                 <li><button onClick={() => filterItem('web')}>Web</button></li>
@@ -40,8 +43,8 @@ const Portfolio = () => {
                         <h4><a href="#">{item.name}</a></h4>
                         <p>{item.category}</p>
                         <div>
-                          <a href="img/portfolio/app1.jpg" data-lightbox="portfolio" data-title="App 1" className="link-preview" title="Preview"><i className="ion ion-eye" /></a>
-                          <a href="#" className="link-details" title="More Details"><i className="ion ion-android-open" /></a>
+                          <a href="img/portfolio/app1.jpg" data-lightbox="portfolio" data-title="App 1" className="link-preview" title="Preview"><Link to=''><FontAwesomeIcon className='text-white text-2xl mt-1' icon={faTwitterSquare} /></Link></a>
+                          <a href="#" className="link-details" title="More Details"><Link to=''><FontAwesomeIcon className='text-white text-2xl mt-1' icon={faFacebookF} /></Link></a>
                         </div>
                       </div>
                     </div>
