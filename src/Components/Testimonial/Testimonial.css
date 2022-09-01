@@ -8,7 +8,19 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-
+ /* #portfolio-flters a.active{
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+} */
+.port{
+  color: rgb(235, 48, 48);
+  font-weight: bold;
+  font-size: large;
+}
+.change{
+  color:red;
+}
 body {
     background: #fff;
     color: #444;
@@ -245,35 +257,38 @@ body {
   # Navigation Menu
   --------------------------------------------------------------*/
 
-  /* #navbar {
+  #navbar {
     overflow: hidden;
     background-color: #f1f1f1;
-    padding: 50px 10px;
+    padding: 10px 5px;
     padding: 0%;
     margin-top: 0%;
     transition: 0.4s;
     position: fixed;
-  } */
+    top: -10px;
+    z-index: 99;
+    margin-bottom: 5px;
+  } 
   
-  /* #navbar Link {
+   #navbar Link {
     float: left;
     color: black;
     text-align: center;
-    padding: 12px;
+    padding: 5px;
     text-decoration: none;
     font-size: 18px; 
     line-height: 5px;
     border-radius: 4px;
-  } */
+  } 
   
-  /* #navbar #logo {
+   #navbar #logo {
     font-size: 35px;
     font-weight: bold;
     transition: 0.4s;
-  } */
+  }
   
 
-  .fixed-nav-bar { position: fixed; top: 0; left: 0; z-index: 9999; width: 100%; height:1px; background-color: white; }
+  /* .fixed-nav-bar { position: fixed; top: 0; left: 0; z-index: 9999; width: 100%; height:1px; background-color: white; } */
   
   
   /*--------------------------------------------------------------

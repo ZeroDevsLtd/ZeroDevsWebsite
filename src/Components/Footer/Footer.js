@@ -30,11 +30,14 @@ const Footer = () => {
           <div class="col-lg-3 col-md-6 footer-contact">
             <h4>Contact Us</h4>
             <p>
-            A108 Adam Street <br/>
-              New York, NY 535022 <br/>
-              United States <br/>
-              <strong>Phone:</strong> +1 5589 55488 55 <br/>
-              <strong>Email:</strong> info@example.com <br/>
+            2049 Mcgrow Ave,Bronx <br/>
+              New York, USA <br/>
+              37/18, Sector-11 Uttara<br/>
+              Dhaka,Bangladesh <br/>
+              <strong>Phone:</strong> +880 1521415838 <br/>
+              <strong>Phone:</strong> (937) 612-2367 <br/>
+              <strong>Email:</strong> info@zerodevs.com <br/>
+              <strong>Email:</strong> zerodevs@gmail.com <br/>
             </p>
 
             <div class="social-links">

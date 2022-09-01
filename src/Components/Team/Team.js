@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-
 import TeamDetails from './TeamDetails';
 
 const Team = (props) => {
@@ -13,7 +12,6 @@ const Team = (props) => {
       .then(data => setTeams(data.data))
 
   }, []);
- 
 
   return (
     <div>

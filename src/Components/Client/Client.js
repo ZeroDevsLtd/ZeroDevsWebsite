@@ -22,49 +22,49 @@ const Client = (props) => {
 
   <div data-aos={props.aos} data-aos-offset={props.aos_offset} class="row no-gutters clearfix wow fadeInUp">
 
-    <div data-aos="fade-up" class="col-lg-3 col-md-4 col-xs-6 mt-3">
+    <div data-aos="fade-up" class="col-lg-3 col-md-4 col-xs-6 mt-4">
       <div class="client-logo">
         <img src={client1} class="img-fluid" alt=""/>
       </div>
     </div>
     
-    <div data-aos="fade-right" class="col-lg-3 col-md-4 col-xs-6 mt-3">
+    <div data-aos="fade-right" class="col-lg-3 col-md-4 col-xs-6 mt-4">
       <div class="client-logo">
         <img src={client2} class="img-fluid" alt=""/>
       </div>
     </div>
   
-    <div data-aos="fade-left" class="col-lg-3 col-md-4 col-xs-6 mt-3">
+    <div data-aos="fade-left" class="col-lg-3 col-md-4 col-xs-6 mt-4">
       <div class="client-logo">
         <img src={client3} class="img-fluid" alt=""/>
       </div>
     </div>
     
-    <div data-aos="fade-up" class="col-lg-3 col-md-4 col-xs-6 mt-3">
+    <div data-aos="fade-up" class="col-lg-3 col-md-4 col-xs-6 mt-4">
       <div class="client-logo">
         <img src={client4} class="img-fluid" alt=""/>
       </div>
     </div>
     
-    <div data-aos="fade-down" class="col-lg-3 col-md-4 col-xs-6 mt-3">
+    <div data-aos="fade-down" class="col-lg-3 col-md-4 col-xs-6 mt-4">
       <div class="client-logo">
         <img src={client5} class="img-fluid" alt=""/>
       </div>
     </div>
   
-    <div data-aos="fade-left" class="col-lg-3 col-md-4 col-xs-6 mt-3">
+    <div data-aos="fade-left" class="col-lg-3 col-md-4 col-xs-6 mt-4">
       <div class="client-logo">
         <img src={client6} class="img-fluid" alt=""/>
       </div>
     </div>
     
-    <div data-aos="fade-right" class="col-lg-3 col-md-4 col-xs-6 mt-3">
+    <div data-aos="fade-right" class="col-lg-3 col-md-4 col-xs-6 mt-4">
       <div class="client-logo">
         <img src={client7} class="img-fluid" alt=""/>
       </div>
     </div>
     
-    <div data-aos="fade-up" class="col-lg-3 col-md-4 col-xs-6 mt-3">
+    <div data-aos="fade-up" class="col-lg-3 col-md-4 col-xs-6 mt-4">
       <div class="client-logo">
         <img src={client8} class="img-fluid" alt=""/>
       </div>
