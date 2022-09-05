@@ -30,7 +30,7 @@ const Navbar = () => {
   }
 
   let links = document.querySelectorAll('.linkChange');
-  console.log(links)
+  // console.log(links)
   links.forEach(link =>{
    link.addEventListener('click',function () {
      links.forEach(btn=>btn.classList.remove('change'));
@@ -41,7 +41,9 @@ const Navbar = () => {
 
   return (
 
-    <nav id='navbar' class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    // bootstrap navbar
+
+    <nav id='navbar' class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container">
         <Link id='logo' to='/'><img src={logo} alt="" className=' h-6 w-40 ' /></Link>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

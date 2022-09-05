@@ -1,15 +1,26 @@
-import React, { useState } from 'react';
-import {PortItems} from './Elements';
+import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 
 const Portfolio = (props) => {
 
-  const [items, setItems] = useState(PortItems);
+  const [items, setItems] = useState([]);
+  const [portfolios, setPortfolios] = useState([]);
+  console.log('item :',items);
+  console.log('portfolio :',portfolios);
+  useEffect(()=>{
+      fetch('http://localhost:5000/portfolio')
+      .then(res=>res.json())
+      .then(data=>{
+        setItems(data);
+        setPortfolios(data);
+      });
+  },[])
 
-  const filterItem = (categItem) => {
-    const updateItem = PortItems.filter(protItem => {
-      return protItem.category === categItem;
+  const filterItem = (category) => {
+
+    const updateItem = portfolios.filter(item => {
+      return item.category === category;
     });
     setItems(updateItem);
   }
@@ -32,7 +43,7 @@ const Portfolio = (props) => {
           <div className="row">
             <div className="col-lg-12">
               <ul id="portfolio-flters">
-                <li ><button className='port'  onClick={() => setItems(PortItems)}>All</button></li>
+                <li ><button className='port'  onClick={() => setItems(portfolios)}>All</button></li>
                 <li ><button onClick={() => filterItem('app')}>App</button></li>
                 <li ><button onClick={() => filterItem('card')}>Card</button></li>
                 <li ><button onClick={() => filterItem('web')}>Web</button></li>
@@ -45,7 +56,7 @@ const Portfolio = (props) => {
                   return (
                     <div data-aos='fade-right' className="col-lg-4 col-md-6 portfolio-item filter-app">
                     <div className="portfolio-wrap">
-                      <img src={item.ima} className="img-fluid" alt="" />
+                      <img src={item.image} className="img-fluid" alt="" />
                       <div className="portfolio-info">
                         <h4><a href="#">{item.name}</a></h4>
                         <p>{item.category}</p>

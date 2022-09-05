@@ -14,13 +14,13 @@
   font-weight: bold;
 } */
 .port{
-  color: rgb(235, 48, 48);
+  color: blue;
   font-weight: bold;
   font-size: large;
 }
-.change{
+/* .change{
   color:red;
-}
+} */
 body {
     background: #fff;
     color: #444;
@@ -455,11 +455,11 @@ body {
     top: calc(50% - 32px);
   }
   
-  #services .icon i {
+  /* #services .icon i {
     font-size: 64px;
     line-height: 1;
     transition: 0.5s;
-  }
+  } */
   
   #services .title {
     margin-left: 40px;
@@ -536,6 +536,7 @@ body {
   
   #why-us .card .readmore:hover {
     border-bottom: #fff solid 2px;
+
   }
   
   #why-us .counters {

@@ -2,14 +2,24 @@ import { faObjectGroup } from '@fortawesome/free-regular-svg-icons';
 import { faDiamond, faLanguage } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { useEffect } from 'react';
+import { useState } from 'react';
 import CountUp from 'react-countup';
 import { Link } from 'react-router-dom';
 import VisibilitySensor from 'react-visibility-sensor';
 
 const ChooseUs = (props) => {
+
+  const [chooses, setChooses] = useState([]);
+  console.log(chooses);
+
+  useEffect(()=>{
+    fetch('http://localhost:5000/choose-us')
+    .then(res => res.json())
+    .then(data => setChooses(data))
+  },[])
   return (
     <>
-
       <section id="why-us" data-aos={props.aos} data-aos-offset={props.aos_offset} class="wow fadeIn">
         <div class="container">
           <header class="section-header">
@@ -19,41 +29,26 @@ const ChooseUs = (props) => {
 
           <div class="row row-eq-height justify-content-center">
 
-            <div data-aos="fade-up" class="col-lg-4 mb-4">
+            {
+              chooses.map(choose =>{
+                return (
+                  <div data-aos="fade-up" class="col-lg-4 mb-4">
               <div class="card wow bounceInUp">
-                <FontAwesomeIcon icon={faDiamond} className='h-16'></FontAwesomeIcon>
+                {/* <FontAwesomeIcon icon={faDiamond} className='h-16'></FontAwesomeIcon> */}
+                <i className='grid place-items-center '>
+                  <img className='bg-white rounded-lg h-16' src={choose.image} alt="" />
+                  </i>
                 <div class="card-body">
-                  <h5 class="card-title">Corporis dolorem</h5>
-                  <p class="card-text">Deleniti optio et nisi dolorem debitis. Aliquam nobis est temporibus sunt ab inventore officiis aut voluptatibus.</p>
+                  <h5 class="card-title">{choose.title}</h5>
+                  <p class="card-text">{choose.description}</p>
                   <Link to='' className='text-decoration-none readmore'>Read more </Link>
                 </div>
               </div>
             </div>
-
-            <div data-aos="fade-up" class="col-lg-4 mb-4">
-              <div class="card wow bounceInUp">
-                <FontAwesomeIcon icon={faLanguage} className='h-16'></FontAwesomeIcon>
-                <div class="card-body">
-                  <h5 class="card-title">Voluptates dolores</h5>
-                  <p class="card-text">Voluptates nihil et quis omnis et eaque omnis sint aut. Ducimus dolorum aspernatur.</p>
-                  <Link to='' className='text-decoration-none readmore'>Read more </Link>
-                </div>
-              </div>
-            </div>
-
-            <div data-aos="fade-up" class="col-lg-4 mb-4">
-              <div class="card wow bounceInUp">
-                <FontAwesomeIcon icon={faObjectGroup} className='text- h-16'></FontAwesomeIcon>
-                <div class="card-body">
-                  <h5 class="card-title">Eum ut aspernatur</h5>
-                  <p class="card-text">Autem quod nesciunt eos ea aut amet laboriosam ab. Eos quis porro in non nemo ex. </p>
-                  <Link to='' className='text-decoration-none readmore'>Read more </Link>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
+                )
+              })
+            }
+          </div> 
           <div class="row counters">
 
             <div class="col-lg-3 col-6 text-center">
