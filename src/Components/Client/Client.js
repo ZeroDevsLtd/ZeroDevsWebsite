@@ -22,7 +22,7 @@ const Client = (props) => {
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque dere santome nida.</p>
           </div>
 
-          <div data-aos={props.aos} data-aos-offset={props.aos_offset} class="row no-gutters clearfix wow fadeInUp">
+          <div data-aos={props.aos} data-aos-offset={props.aos_offset} class="row ">
 
             {
               clients.map(client => {

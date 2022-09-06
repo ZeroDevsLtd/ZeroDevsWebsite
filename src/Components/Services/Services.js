@@ -14,6 +14,17 @@ const Services = (props) => {
       .then(res => res.json())
       .then(data => setServices(data))
   }, [])
+  // let changeClasses = [];
+  // console.log(changeClasses);
+  // services.map(service => {
+  //   const lastDigit = service._id.toString().slice(-1);
+
+  //   if (lastDigit % 2 == 0) {
+  //     changeClasses.push('col-md-6 col-lg-5 wow bounceInUp offset-lg-1');
+  //   } else {
+  //     changeClasses.push('col-md-6 col-lg-5 wow bounceInUp');
+  //   }
+  // })
   return (
     <div>
       <section id="services" class="section-bg">
@@ -28,8 +39,17 @@ const Services = (props) => {
 
             {
               services.map(service => {
+                // daynamic style
+                const lastDigit = service._id.toString().slice(-1);
+                let changeClasses = [];
+                if (lastDigit % 2 == 0) {
+                  changeClasses.push('col-md-6 col-lg-5 wow bounceInUp offset-lg-1');
+                } else {
+                  changeClasses.push('col-md-6 col-lg-5 wow bounceInUp');
+                }
+                
                 return (
-                  <div data-aos="fade-right" class="col-md-6 col-lg-5 wow bounceInUp offset-lg-1" >
+                  <div data-aos="fade-right" class=" " className={changeClasses} >
                     <div class="box">
                       <div class="icon"><img src={service.image} alt="" /></div>
                       <h4 class="title"><a href="">{service.name}</a></h4>

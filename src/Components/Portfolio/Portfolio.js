@@ -6,8 +6,7 @@ const Portfolio = (props) => {
 
   const [items, setItems] = useState([]);
   const [portfolios, setPortfolios] = useState([]);
-  console.log('item :',items);
-  console.log('portfolio :',portfolios);
+  
   useEffect(()=>{
       fetch('http://localhost:5000/portfolio')
       .then(res=>res.json())

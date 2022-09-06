@@ -20,7 +20,7 @@ const AboutUs = (props) => {
 
         <div class="row about-container" data-aos={props.aos} data-aos-offset={props.aos_offset}>
 
-          <div data-aos="fade-up" class="col-lg-6 content order-lg-1 order-2">
+          <div data-aos="fade-up" class="col-lg-6 content order-lg-1 order-2 ">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
@@ -45,8 +45,8 @@ const AboutUs = (props) => {
 
           </div>
 
-          <div data-aos="fade-up" class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
-            <img src={about1} class="img-fluid w-96 h-96 ml-20 mt-8" alt=""/>
+          <div data-aos="fade-up" class="col-lg-6 background order-lg-2 order-1 wow fadeInUp grid place-items-center">
+            <img src={about1} class="img-fluid w-96 h-96 mt-8" alt=""/>
           </div>
         </div>
 
@@ -66,8 +66,8 @@ const AboutUs = (props) => {
         </div>
 
         <div data-aos={props.aos} data-aos-offset={props.aos_offset} class="row about-extra">
-          <div data-aos="fade-up" class="col-lg-6 wow fadeInUp order-1 order-lg-2">
-            <img src={about3} class="img-fluid w-96 h-96 ml-20" alt=""/>
+          <div data-aos="fade-up" class="col-lg-6 wow fadeInUp order-1 order-lg-2 grid place-items-center">
+            <img src={about3} class="img-fluid w-96 h-96 " alt=""/>
           </div>
 
           <div data-aos="fade-up" class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
