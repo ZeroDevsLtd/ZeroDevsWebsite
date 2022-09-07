@@ -5,9 +5,18 @@ import about3 from '../../Components/images/about-extra-2.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhotoFilm, faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 import { faBarChart } from '@fortawesome/free-regular-svg-icons';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 const AboutUs = (props) => {
   // console.log(props);
+  const [abouts, setAbouts] = useState([]);
+
+  useEffect(()=>{
+    fetch('http://localhost:5000/about-us')
+    .then(res=>res.json())
+    .then(data=> setAbouts(data))
+  },[])
     return (
        <>
        <section id="about">
@@ -31,13 +40,13 @@ const AboutUs = (props) => {
               <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
             </div>
 
-            <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
+            <div class="icon-box wow fadeInUp">
               <div class="icon"><FontAwesomeIcon icon={faPhotoFilm} className='text-2xl text-blue-700'></FontAwesomeIcon></div>
               <h4 class="title"><a href="">Magni Dolores</a></h4>
               <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
             </div>
 
-            <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
+            <div class="icon-box wow fadeInUp" >
               <div class="icon"><FontAwesomeIcon icon={faBarChart} className='text-2xl text-blue-700'></FontAwesomeIcon></div>
               <h4 class="title"><a href="">Dolor Sitema</a></h4>
               <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>

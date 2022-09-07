@@ -60,8 +60,8 @@ const Portfolio = (props) => {
                         <h4><a href="#">{item.name}</a></h4>
                         <p>{item.category}</p>
                         <div>
-                          <a href={item.url2} target='_blank' data-lightbox="portfolio" data-title="App 1" className="link-preview" title="Preview"><FontAwesomeIcon className='text-white text-2xl mt-1' icon={faTwitterSquare} /></a>
-                          <a href={item.url1} target='_blank' className="link-details" title="More Details"><FontAwesomeIcon className='text-white text-2xl mt-1' icon={faFacebookF} /></a>
+                          <a href={item.twitter} target='_blank' data-lightbox="portfolio" data-title="App 1" className="link-preview" title="Preview"><FontAwesomeIcon className='text-white text-2xl mt-1' icon={faTwitterSquare} /></a>
+                          <a href={item.facebook} target='_blank' className="link-details" title="More Details"><FontAwesomeIcon className='text-white text-2xl mt-1' icon={faFacebookF} /></a>
                         </div>
                       </div>
                     </div>

@@ -26,9 +26,9 @@ function App() {
         <Route path='/team' element={<Team></Team>}></Route>
         <Route path='/service' element={<Services></Services>}></Route>
         <Route path='/contact' element={<Contact></Contact>}></Route>
-        <Route path='/dashboard' element={<Dashboard></Dashboard>}>
+        {/* <Route path='/dashboard' element={<Dashboard></Dashboard>}>
           <Route index element={<AddTeam></AddTeam>}></Route>
-        </Route>
+        </Route> */}
         {/* <Route path='/signup' element={<Signup></Signup>}></Route> */}
         {/* <Route path='/login' element={<Login></Login>}></Route> */}
       </Routes>
