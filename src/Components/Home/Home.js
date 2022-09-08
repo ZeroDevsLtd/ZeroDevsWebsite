@@ -10,6 +10,7 @@ import Banner from './Banner';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import Portfolio from '../Portfolio/Portfolio';
+import Packages from '../Packages/Packages';
 const Home = () => {
 
     useEffect(()=>{
@@ -21,6 +22,7 @@ const Home = () => {
         <Banner></Banner>
         <AboutUs Aos={Aos}></AboutUs>
         <Services Aos={Aos}></Services>
+        <Packages></Packages>
         <ChooseUs Aos={Aos}></ChooseUs>
         <Testimonial></Testimonial>
        <Team
