@@ -38,7 +38,7 @@ const AboutUs = (props) => {
 
               <div class="icon-box wow fadeInUp">
                 <div class="icon"><FontAwesomeIcon icon={faShoppingBag} className='text-2xl text-blue-700'></FontAwesomeIcon></div>
-                <h4 class="title"><a href="">Process & Quality</a></h4>
+                <h4 class="title">Process & Quality</h4>
                 <p class="description">
                   We follow an agile project management system which reduces our development cost and helps to meet deadlines. Our dedicated QA team ensures excellent product quality.
                 </p>
@@ -46,7 +46,7 @@ const AboutUs = (props) => {
 
               <div class="icon-box wow fadeInUp">
                 <div class="icon"><FontAwesomeIcon icon={faPhotoFilm} className='text-2xl text-blue-700'></FontAwesomeIcon></div>
-                <h4 class="title"><a href="">Customer Support</a></h4>
+                <h4 class="title">Customer Support</h4>
                 <p class="description">
                   There are two offices located in New York and one in Dhaka making a team who will support its clients round the clock.
                 </p>
@@ -54,7 +54,7 @@ const AboutUs = (props) => {
 
               <div class="icon-box wow fadeInUp" >
                 <div class="icon"><FontAwesomeIcon icon={faBarChart} className='text-2xl text-blue-700'></FontAwesomeIcon></div>
-                <h4 class="title"><a href="">Customer RelationShip</a></h4>
+                <h4 class="title">Customer RelationShip</h4>
                 <p class="description">
                   We always go the extra mile to maintain long lasting relationships with our partners & clients.
                 </p>

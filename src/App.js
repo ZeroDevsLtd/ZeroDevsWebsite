@@ -9,22 +9,22 @@ import Home from './Components/Home/Home';
 import Footer from './Components/Footer/Footer';
 import Dashboard from './Components/Dashboard/Dashboard';
 import AddTeam from './Components/Dashboard/AddTeam';
-import Services from './Components/Services/Services';
 import Contact from './Components/Contact/Contact';
 import AboutUs from './Components/Home/AboutUs';
 import Portfolio from './Components/Portfolio/Portfolio';
 import Team from './Components/Team/Team';
+import Packages from './Components/Packages/Packages';
 
 function App() {
   return (
     <div className="">
-      <Navbar></Navbar>
+      <Navbar></Navbar> 
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/about' element={<AboutUs></AboutUs>}></Route>
         <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
-        <Route path='/team' element={<Team></Team>}></Route>
-        <Route path='/service' element={<Services></Services>}></Route>
+        <Route path='/team' element={<Team></Team> }></Route>
+        <Route path='/service' element={<Packages></Packages>}></Route>
         <Route path='/contact' element={<Contact></Contact>}></Route>
         {/* <Route path='/dashboard' element={<Dashboard></Dashboard>}>
           <Route index element={<AddTeam></AddTeam>}></Route>
