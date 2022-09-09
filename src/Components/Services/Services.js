@@ -32,7 +32,7 @@ const Services = (props) => {
 
           <header class="section-header">
             <h3>Services</h3>
-            <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
+            <p>We not only provide development & support services of software or apps but we provide a finished solution which will help our clients to grow their businesses. </p>
           </header>
 
           <div data-aos={props.aos} data-aos-offset={props.aos_offset} class="row">

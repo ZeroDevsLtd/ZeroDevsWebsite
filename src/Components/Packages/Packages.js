@@ -151,8 +151,8 @@ const Packages = () => {
                     </div>
                 </div>
                 <div className='text-center fst-italic shadow-md bg-success bg-opacity-10'>
-                    <p>1.For additional page extra 50$ will be added</p>
-                    <p>2.For customize multiple website - contact us</p>
+                    <p>1. For additional page extra 50$ will be added</p>
+                    <p>2. For customize multi-page website - contact us</p>
                 </div>
             </div>
         </section>

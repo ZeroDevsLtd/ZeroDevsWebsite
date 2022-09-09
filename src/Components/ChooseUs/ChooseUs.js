@@ -13,42 +13,43 @@ const ChooseUs = (props) => {
   const [chooses, setChooses] = useState([]);
   console.log(chooses);
 
-  useEffect(()=>{
+  useEffect(() => {
     fetch('http://localhost:5000/choose-us')
-    .then(res => res.json())
-    .then(data => setChooses(data))
-  },[])
+      .then(res => res.json())
+      .then(data => setChooses(data))
+  }, [])
   return (
     <>
       <section id="why-us" data-aos={props.aos} data-aos-offset={props.aos_offset} class="wow fadeIn">
         <div class="container">
           <header class="section-header">
             <h3>Why choose us?</h3>
-            <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
+            <p>Outsourcing software development to us means peace of mind. As one of the advanced IT outsourcing companies, we stay on schedule, scale the teams and ensure product quality. Even when working remotely with us, you have flexibility, and full control over the project just like your in-house team.
+            </p>
           </header>
 
           <div class="row row-eq-height justify-content-center">
 
             {
-              chooses.map(choose =>{
+              chooses.map(choose => {
                 return (
                   <div data-aos="fade-up" class="col-lg-4 mb-4">
-              <div class="card wow bounceInUp">
-                {/* <FontAwesomeIcon icon={faDiamond} className='h-16'></FontAwesomeIcon> */}
-                <i className='grid place-items-center '>
-                  <img className='bg-white rounded-lg h-16' src={choose.image} alt="" />
-                  </i>
-                <div class="card-body">
-                  <h5 class="card-title">{choose.title}</h5>
-                  <p class="card-text">{choose.description}</p>
-                  <Link to='' className='text-decoration-none readmore'>Read more </Link>
-                </div>
-              </div>
-            </div>
+                    <div class="card wow bounceInUp">
+                      {/* <FontAwesomeIcon icon={faDiamond} className='h-16'></FontAwesomeIcon> */}
+                      <i className='grid place-items-center '>
+                        <img className='bg-white rounded-lg h-16' src={choose.image} alt="" />
+                      </i>
+                      <div class="card-body">
+                        <h5 class="card-title">{choose.title}</h5>
+                        <p class="card-text">{choose.description}</p>
+                        <Link to='' className='text-decoration-none readmore'>Read more </Link>
+                      </div>
+                    </div>
+                  </div>
                 )
               })
             }
-          </div> 
+          </div>
           <div class="row counters">
 
             <div class="col-lg-3 col-6 text-center">

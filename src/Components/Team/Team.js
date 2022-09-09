@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import TeamDetails from './TeamDetails';
 
 const Team = (props) => {
-  
+
   const [teams, setTeams] = useState([]);
 
 
@@ -19,7 +19,9 @@ const Team = (props) => {
         <div class="container">
           <div class="section-header">
             <h3>Team</h3>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+            <p>Meet our heroes who run this immensely creative and innovative group of people and
+              Make the magic happen .
+            </p>
           </div>
 
           <div data-aos={props.aos} data-aos-offset={props.aos_offset} class="row">

@@ -12,94 +12,107 @@ const AboutUs = (props) => {
   // console.log(props);
   const [abouts, setAbouts] = useState([]);
 
-  useEffect(()=>{
+  useEffect(() => {
     fetch('http://localhost:5000/about-us')
-    .then(res=>res.json())
-    .then(data=> setAbouts(data))
-  },[])
-    return (
-       <>
-       <section id="about">
-      <div class="container">
+      .then(res => res.json())
+      .then(data => setAbouts(data))
+  }, [])
+  return (
+    <>
+      <section id="about">
+        <div class="container">
 
-        <header class="section-header">
-          <h3>About Us</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </header>
+          <header class="section-header">
+            <h3>About Us</h3>
+            <p>Our complete spectrum of mobile app development and web solutions help businesses to create
+              outcome-focused solutions with enhanced agility
+              .</p>
+          </header>
 
-        <div class="row about-container" data-aos={props.aos} data-aos-offset={props.aos_offset}>
+          <div class="row about-container" data-aos={props.aos} data-aos-offset={props.aos_offset}>
 
-          <div data-aos="fade-up" class="col-lg-6 content order-lg-1 order-2 ">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
+            <div data-aos="fade-up" class="col-lg-6 content order-lg-1 order-2 ">
+              <p>
+                Our complete spectrum of mobile app development and web solutions help businesses to create outcome-focused solutions with enhanced agility that help them to rapidly reshape, renew and build new capabilities for their business.
+              </p>
 
-            <div class="icon-box wow fadeInUp">
-              <div class="icon"><FontAwesomeIcon icon={faShoppingBag} className='text-2xl text-blue-700'></FontAwesomeIcon></div>
-              <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+              <div class="icon-box wow fadeInUp">
+                <div class="icon"><FontAwesomeIcon icon={faShoppingBag} className='text-2xl text-blue-700'></FontAwesomeIcon></div>
+                <h4 class="title"><a href="">Process & Quality</a></h4>
+                <p class="description">
+                  We follow an agile project management system which reduces our development cost and helps to meet deadlines. Our dedicated QA team ensures excellent product quality.
+                </p>
+              </div>
+
+              <div class="icon-box wow fadeInUp">
+                <div class="icon"><FontAwesomeIcon icon={faPhotoFilm} className='text-2xl text-blue-700'></FontAwesomeIcon></div>
+                <h4 class="title"><a href="">Customer Support</a></h4>
+                <p class="description">
+                  There are two offices located in New York and one in Dhaka making a team who will support its clients round the clock.
+                </p>
+              </div>
+
+              <div class="icon-box wow fadeInUp" >
+                <div class="icon"><FontAwesomeIcon icon={faBarChart} className='text-2xl text-blue-700'></FontAwesomeIcon></div>
+                <h4 class="title"><a href="">Customer RelationShip</a></h4>
+                <p class="description">
+                  We always go the extra mile to maintain long lasting relationships with our partners & clients.
+                </p>
+              </div>
+
             </div>
 
-            <div class="icon-box wow fadeInUp">
-              <div class="icon"><FontAwesomeIcon icon={faPhotoFilm} className='text-2xl text-blue-700'></FontAwesomeIcon></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <div data-aos="fade-up" class="col-lg-6 background order-lg-2 order-1 wow fadeInUp grid place-items-center">
+              <img src={about1} class="img-fluid w-96 h-96 mt-8" alt="" />
+            </div>
+          </div>
+
+          <div data-aos={props.aos} data-aos-offset={props.aos_offset} class="row about-extra">
+            <div data-aos="fade-up" class="col-lg-6 wow fadeInUp">
+              <img src={about2} class="img-fluid w-96 h-96" alt="" />
+            </div>
+            <div data-aos="fade-up" class="col-lg-6 wow fadeInUp pt-5 pt-lg-0">
+              {/* <h4>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h4> */}
+              <p>
+                <b> ZeroDevs Limited</b> is one of the leading IT/Software solution provider companies in Bangladesh.
+
+
+              </p>
+              <p>
+                ZeroDevs is involved in designing, developing, implementing and maintaining business application software for both domestic and overseas markets.
+              </p>
+              <p>
+                Our complete spectrum of mobile app development and web solutions help businesses to create outcome-focused solutions with enhanced agility that help them to rapidly reshape, renew and build new capabilities for their business.
+
+              </p>
+            </div>
+          </div>
+
+          <div data-aos={props.aos} data-aos-offset={props.aos_offset} class="row about-extra">
+            <div data-aos="fade-up" class="col-lg-6 wow fadeInUp order-1 order-lg-2 grid place-items-center">
+              <img src={about3} class="img-fluid w-96 h-96 " alt="" />
             </div>
 
-            <div class="icon-box wow fadeInUp" >
-              <div class="icon"><FontAwesomeIcon icon={faBarChart} className='text-2xl text-blue-700'></FontAwesomeIcon></div>
-              <h4 class="title"><a href="">Dolor Sitema</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+            <div data-aos="fade-up" class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
+              {/* <h4>Neque saepe temporibus repellat ea ipsum et. Id vel et quia tempora facere reprehenderit.</h4> */}
+              <div>
+                <p>
+                  <b>ZeroDevs Limited</b> provides complete life cycle of software development services including system analysis, use case development, system architecture & design, system integration, web API development, UI/UX design, database design and administration, functional and system­­­­ testing, quality assurance and project management.
+                </p>
+                <p>
+                  We are mainly a software & mobile app development company specializing in AR/VR, IoT, AI/ML, Web & Windows System and Android & iOS. We follow an agile project management system which reduces our development cost and helps to meet deadlines. Our dedicated QA team ensures excellent product quality.
+
+                </p>
+
+              </div>
             </div>
 
           </div>
 
-          <div data-aos="fade-up" class="col-lg-6 background order-lg-2 order-1 wow fadeInUp grid place-items-center">
-            <img src={about1} class="img-fluid w-96 h-96 mt-8" alt=""/>
-          </div>
         </div>
-
-        <div data-aos={props.aos} data-aos-offset={props.aos_offset} class="row about-extra">
-          <div data-aos="fade-up" class="col-lg-6 wow fadeInUp">
-            <img src={about2} class="img-fluid w-96 h-96" alt=""/>
-          </div>
-          <div data-aos="fade-up" class="col-lg-6 wow fadeInUp pt-5 pt-lg-0">
-            <h4>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h4>
-            <p>
-              Ipsum in aspernatur ut possimus sint. Quia omnis est occaecati possimus ea. Quas molestiae perspiciatis occaecati qui rerum. Deleniti quod porro sed quisquam saepe. Numquam mollitia recusandae non ad at et a.
-            </p>
-            <p>
-              Ad vitae recusandae odit possimus. Quaerat cum ipsum corrupti. Odit qui asperiores ea corporis deserunt veritatis quidem expedita perferendis. Qui rerum eligendi ex doloribus quia sit. Porro rerum eum eum.
-            </p>
-          </div>
-        </div>
-
-        <div data-aos={props.aos} data-aos-offset={props.aos_offset} class="row about-extra">
-          <div data-aos="fade-up" class="col-lg-6 wow fadeInUp order-1 order-lg-2 grid place-items-center">
-            <img src={about3} class="img-fluid w-96 h-96 " alt=""/>
-          </div>
-
-          <div data-aos="fade-up" class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
-            <h4>Neque saepe temporibus repellat ea ipsum et. Id vel et quia tempora facere reprehenderit.</h4>
-            <div>
-            <p>
-             Delectus alias ut incidunt delectus nam placeat in consequatur. Sed cupiditate quia ea quis. Voluptas nemo qui aut distinctio. Cumque fugit earum est quam officiis numquam. Ducimus corporis autem at blanditiis beatae incidunt sunt. 
-            </p>
-            <p>
-              Voluptas saepe natus quidem blanditiis. Non sunt impedit voluptas mollitia beatae. Qui esse molestias. Laudantium libero nisi vitae debitis. Dolorem cupiditate est perferendis iusto.
-            </p>
-            <p>
-              Eum quia in. Magni quas ipsum a. Quis ex voluptatem inventore sint quia modi. Numquam est aut fuga mollitia exercitationem nam accusantium provident quia.
-            </p>
-            </div>
-          </div>
-          
-        </div>
-
-      </div>
-    </section>
-</>
-    );
+      </section>
+    </>
+  );
 };
 
 export default AboutUs;

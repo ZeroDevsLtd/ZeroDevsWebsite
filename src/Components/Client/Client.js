@@ -19,7 +19,7 @@ const Client = (props) => {
 
           <div class="section-header">
             <h3>Our Clients</h3>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque dere santome nida.</p>
+            <p>Our clients are dispersed all over the globe. We are resolute in providing you quality service & maintaining the standard doubtlessly .</p>
           </div>
 
           <div data-aos={props.aos} data-aos-offset={props.aos_offset} class="row ">
