@@ -78,10 +78,10 @@ const AddTeam = () => {
     }
 
     return (
-        <div className=' h-screen justify-center items-center'>
+        <div className=' h-screen justify-center items-center mt-5'>
             <div class="card w-96 bg-base-100 shadow-xl">
                 <div class="card-body">
-                    <h1 className='text-center text-2xl text-bold mt-24'>Add Team Member</h1>
+                    <h1 className='text-center text-2xl text-bold'>Add Team Member</h1>
 
 
                     <form onSubmit={handleSubmit(onSubmit)}>

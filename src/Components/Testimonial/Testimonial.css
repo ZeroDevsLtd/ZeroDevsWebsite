@@ -18,9 +18,7 @@
   font-weight: bold;
   font-size: large;
 }
-/* .change{
-  color:red;
-} */
+
 body {
     background: #fff;
     color: #444;
@@ -813,6 +811,8 @@ body {
     background: rgba(21, 107, 206, 0.7);
     opacity: 1;
     transition: 0.4s;
+   
+    
   }
   
   #team .member:hover .member-info-content {

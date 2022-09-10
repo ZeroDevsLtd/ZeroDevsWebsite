@@ -92,8 +92,8 @@ const Login = () => {
                                 {signError}
                         <input className='btn btn-primary w-full max-w-xs' type="submit" value='Login' />
                     </form>
-                        {/* <p><small>New to Zero-Devs <Link className='text-primary' to='/signup'>Create a new account</Link></small></p> */}
-                    {/* <div class="divider">OR</div>
+                        {/* <p><small>New to Zero-Devs <Link className='text-primary' to='/signup'>Create a new account</Link></small></p>
+                    <div class="divider">OR</div>
                     <button
                         onClick={() => signInWithGoogle()}
                         class="btn btn-outline flex justify-items-center"

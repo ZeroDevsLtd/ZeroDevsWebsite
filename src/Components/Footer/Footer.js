@@ -13,16 +13,16 @@ const Footer = () => {
 
           <div class="col-lg-4 col-md-6 footer-info">
             <h3>ZeroDevs</h3>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+            <p>Our complete spectrum of mobile app development and web solutions help businesses to create outcome-focused solutions with enhanced agility .</p>
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><Link to=''>Home</Link></li>
-              <li><Link to=''>About us</Link></li>
-              <li><Link to=''>Services</Link></li>
-              <li><Link to=''>Terms of service</Link></li>
+              <li><Link to='/'>Home</Link></li>
+              <li><Link to='/about'>About us</Link></li>
+              <li><Link to='/service'>Services</Link></li>
+              <li><Link to='/terms'>Terms of service</Link></li>
               <li><Link to=''>Privacy policy</Link></li>
             </ul>
           </div>
@@ -35,9 +35,9 @@ const Footer = () => {
               37/18, Sector-11 Uttara<br/>
               Dhaka,Bangladesh <br/>
               <strong>Phone:</strong> +880 1521415838 <br/>
-              <strong>Phone:</strong> (937) 612-2367 <br/>
+              <strong></strong> (937) 612-2367 <br/>
               <strong>Email:</strong> info@zerodevs.com <br/>
-              <strong>Email:</strong> zerodevs@gmail.com <br/>
+              <strong></strong> zerodevs@gmail.com <br/>
             </p>
 
             <div class="social-links">
@@ -51,7 +51,7 @@ const Footer = () => {
 
           <div class="col-lg-3 col-md-6 footer-newsletter">
             <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
+            <p>Please enter your email</p>
             <form>
             <input type="email" name="email"/>
             <input type="submit"  value="Subscribe"/>

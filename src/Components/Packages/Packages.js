@@ -1,8 +1,11 @@
 import React from 'react';
+import Hero from '../Sheare/Hero';
 // import './Packages.css';
 
 const Packages = () => {
     return (
+        <>
+        <Hero></Hero>
         <section className='bg-slate-200'>
             <div className='container'>
                 <div className='text-center mt-10 p-5 '>
@@ -156,6 +159,7 @@ const Packages = () => {
                 </div>
             </div>
         </section>
+        </>
     );
 };
 

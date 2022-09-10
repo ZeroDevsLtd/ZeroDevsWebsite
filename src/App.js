@@ -9,11 +9,19 @@ import Home from './Components/Home/Home';
 import Footer from './Components/Footer/Footer';
 import Dashboard from './Components/Dashboard/Dashboard';
 import AddTeam from './Components/Dashboard/AddTeam';
-import Contact from './Components/Contact/Contact';
-import AboutUs from './Components/Home/AboutUs';
-import Portfolio from './Components/Portfolio/Portfolio';
-import Team from './Components/Team/Team';
+import AddTestimonial from './Components/Dashboard/AddTestimonial';
+import AddPortfolio from './Components/Dashboard/AddPortfolio';
+import AddService from './Components/Dashboard/AddService';
+import AddClient from './Components/Dashboard/AddClient';
+import AddChooseUs from './Components/Dashboard/AddChooseUs';
 import Packages from './Components/Packages/Packages';
+import SingleAboutUs from './Components/SinglePages/SingleAboutUs';
+import SinglePortfolio from './Components/SinglePages/SinglePortfolio';
+import SingleTeam from './Components/SinglePages/SingleTeam';
+import SingleContactUs from './Components/SinglePages/SingleContactUs';
+import TermsCondition from './Components/TermsCondition/TermsCondition';
+import RequireAuth from './Components/RequiredAuth/RequireAuth';
+
 
 function App() {
   return (
@@ -21,16 +29,26 @@ function App() {
       <Navbar></Navbar> 
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
-        <Route path='/about' element={<AboutUs></AboutUs>}></Route>
-        <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
-        <Route path='/team' element={<Team></Team> }></Route>
+        <Route path='/about' element={<SingleAboutUs></SingleAboutUs>}></Route>
+        <Route path='/portfolio' element={<SinglePortfolio></SinglePortfolio>}></Route>
+        <Route path='/team' element={<SingleTeam></SingleTeam> }></Route>
         <Route path='/service' element={<Packages></Packages>}></Route>
-        <Route path='/contact' element={<Contact></Contact>}></Route>
-        {/* <Route path='/dashboard' element={<Dashboard></Dashboard>}>
+        <Route path='/terms' element={<TermsCondition></TermsCondition>}></Route>
+        <Route path='/contact' element={<SingleContactUs></SingleContactUs>}></Route>
+        <Route path='/dashboard' element={
+          <RequireAuth>
+            <Dashboard></Dashboard>
+          </RequireAuth>
+        }>
           <Route index element={<AddTeam></AddTeam>}></Route>
-        </Route> */}
+          <Route path='testimonial' element={<AddTestimonial></AddTestimonial>}></Route>
+          <Route path='portfolio' element={<AddPortfolio></AddPortfolio>}></Route>
+          <Route path='service' element={<AddService></AddService>}></Route>
+          <Route path='client' element={<AddClient></AddClient>}></Route>
+          <Route path='choose-us' element={<AddChooseUs></AddChooseUs>}></Route>
+        </Route>
+        <Route path='/login' element={<Login></Login>}></Route>
         {/* <Route path='/signup' element={<Signup></Signup>}></Route> */}
-        {/* <Route path='/login' element={<Login></Login>}></Route> */}
       </Routes>
       <Footer></Footer>
       <ToastContainer />

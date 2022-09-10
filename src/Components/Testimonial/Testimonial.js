@@ -9,7 +9,6 @@ const Testimonial = () => {
 
   // const [testimonials, setTestimonials] = useState(Testimonials);
   const [testimonials, setTestimonials] = useState([]);
-  console.log(testimonials);
   useEffect(()=>{
       fetch('http://localhost:5000/testimonial')
       .then(res=>res.json())
