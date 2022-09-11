@@ -1,5 +1,5 @@
 
-import { Route, Routes } from 'react-router-dom';
+import { Route, Router, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Signup from './Components/Signup/Signup';
@@ -27,7 +27,7 @@ function App() {
   return (
     <div className="">
       <Navbar></Navbar> 
-      <Routes>
+      <Routes basename='/tothepoint_login'>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/about' element={<SingleAboutUs></SingleAboutUs>}></Route>
         <Route path='/portfolio' element={<SinglePortfolio></SinglePortfolio>}></Route>
