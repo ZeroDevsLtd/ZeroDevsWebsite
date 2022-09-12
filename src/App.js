@@ -27,7 +27,7 @@ function App() {
   return (
     <div className="">
       <Navbar></Navbar> 
-      <Routes basename='/tothepoint_login'>
+      <Routes >
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/about' element={<SingleAboutUs></SingleAboutUs>}></Route>
         <Route path='/portfolio' element={<SinglePortfolio></SinglePortfolio>}></Route>

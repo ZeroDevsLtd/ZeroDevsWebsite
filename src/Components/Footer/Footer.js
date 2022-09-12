@@ -35,9 +35,9 @@ const Footer = () => {
               37/18, Sector-11 Uttara<br/>
               Dhaka,Bangladesh <br/>
               <strong>Phone:</strong> +880 1521415838 <br/>
-              <strong></strong> (937) 612-2367 <br/>
+              <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong> (937) 612-2367 <br/>
               <strong>Email:</strong> info@zerodevs.com <br/>
-              <strong></strong> zerodevs@gmail.com <br/>
+              <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong> zerodevs@gmail.com <br/>
             </p>
 
             <div class="social-links">

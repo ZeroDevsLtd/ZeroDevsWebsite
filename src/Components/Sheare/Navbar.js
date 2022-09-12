@@ -1,33 +1,36 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../images/logo.png';
 import './Navbar.css';
 
 const Navbar = () => {
-  let menuChange = document.querySelectorAll('.linkChange');
-   console.log(menuChange)
-   menuChange.forEach(mc =>{
-    mc.addEventListener('click',function () {
-      menuChange.forEach(lnk=>lnk.classList.remove('change'))
-      this.classList.add('change')
-    })
-   });
- 
-  const scroll =()=>{
-    window.scrollTo(0,0);
-   }
+  useEffect(() => {
+    let menuChange = document.querySelectorAll('.linkChange');
+    console.log(menuChange)
+    menuChange.forEach(mc => {
+      mc.addEventListener('click', function () {
+        menuChange.forEach(lnk => lnk.classList.remove('change'))
+        this.classList.add('change')
+      })
+    });
+  }, [])
 
-  const menuItems = 
-  <>
-    <li class="nav-item"><Link onClick={scroll} className='text-decoration-none nav-link active effect linkChange' to='/'>Home </Link></li>
-    <li class="nav-item"><Link className='text-decoration-none nav-link active effect linkChange' to='/service'>Service</Link></li>
-    <li class="nav-item"><Link className='text-decoration-none nav-link active effect linkChange' to='/portfolio'>Portfolio</Link></li>
-    <li class="nav-item"><Link className='text-decoration-none nav-link active effect linkChange' to='/about'>About Us </Link></li>
-    <li class="nav-item"><Link className='text-decoration-none nav-link active effect linkChange' to='/team'>Team</Link></li>
-    <li class="nav-item"><Link className='text-decoration-none nav-link active effect linkChange' to='/contact'>Contact Us</Link></li>
-  
-  </>
-   
+  const scroll = () => {
+    window.scrollTo(0, 0);
+  }
+
+  const menuItems =
+    <>
+      <li class="nav-item"><Link onClick={scroll} className='text-decoration-none nav-link active effect linkChange' to='/'>Home </Link></li>
+      <li class="nav-item"><Link onClick={scroll} className='text-decoration-none nav-link active effect linkChange' to='/service'>Service</Link></li>
+      <li class="nav-item"><Link onClick={scroll} className='text-decoration-none nav-link active effect linkChange' to='/portfolio'>Portfolio</Link></li>
+      <li class="nav-item"><Link onClick={scroll} className='text-decoration-none nav-link active effect linkChange' to='/about'>About Us </Link></li>
+      <li class="nav-item"><Link onClick={scroll} className='text-decoration-none nav-link active effect linkChange' to='/team'>Team</Link></li>
+      <li class="nav-item"><Link onClick={scroll} className='text-decoration-none nav-link active effect linkChange' to='/contact'>Contact Us</Link></li>
+
+    </>
+
+
 
   window.onscroll = function () { scrollFunction() };
 
@@ -54,7 +57,7 @@ const Navbar = () => {
           <ul class="navbar-nav ml-auto mb-2 mb-lg-0 nav-links">
 
             {menuItems}
-    
+
           </ul>
 
         </div>
