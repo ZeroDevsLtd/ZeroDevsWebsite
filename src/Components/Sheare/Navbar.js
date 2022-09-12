@@ -6,13 +6,13 @@ import './Navbar.css';
 const Navbar = () => {
   useEffect(() => {
     let menuChange = document.querySelectorAll('.linkChange');
-    console.log(menuChange)
+    console.log(menuChange);
     menuChange.forEach(mc => {
       mc.addEventListener('click', function () {
         menuChange.forEach(lnk => lnk.classList.remove('change'))
         this.classList.add('change')
       })
-    });
+    })
   }, [])
 
   const scroll = () => {
@@ -49,7 +49,7 @@ const Navbar = () => {
 
     <nav id='navbar' class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container">
-        <Link onClick={scroll} id='logo' to='/'><img src={logo} alt="" className=' h-6 w-40 ' /></Link>
+        <Link onClick={scroll} id='logo' to='/'><img src={logo} alt="" className='real h-6 w-40 linkChange' /></Link>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>

@@ -4,6 +4,11 @@ import { faFacebookF, faGooglePlus, faLinkedin, faTwitterSquare } from '@fortawe
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+
+  const scroll = () => {
+    window.scrollTo(0, 0);
+  }
+
     return (
         <div>
             <footer id="footer">
@@ -19,11 +24,11 @@ const Footer = () => {
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><Link to='/'>Home</Link></li>
-              <li><Link to='/about'>About us</Link></li>
-              <li><Link to='/service'>Services</Link></li>
-              <li><Link to='/terms'>Terms of service</Link></li>
-              <li><Link to=''>Privacy policy</Link></li>
+              <li><Link onClick={scroll} to='/'>Home</Link></li>
+              <li><Link onClick={scroll} to='/about'>About us</Link></li>
+              <li><Link onClick={scroll} to='/service'>Services</Link></li>
+              <li><Link onClick={scroll} to='/terms'>Terms of service</Link></li>
+              <li><Link onClick={scroll} to=''>Privacy policy</Link></li>
             </ul>
           </div>
 

@@ -21,6 +21,7 @@ import SingleTeam from './Components/SinglePages/SingleTeam';
 import SingleContactUs from './Components/SinglePages/SingleContactUs';
 import TermsCondition from './Components/TermsCondition/TermsCondition';
 import RequireAuth from './Components/RequiredAuth/RequireAuth';
+import NotFound from './Components/NotFound/NotFound';
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
           <Route path='choose-us' element={<AddChooseUs></AddChooseUs>}></Route>
         </Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
         {/* <Route path='/signup' element={<Signup></Signup>}></Route> */}
       </Routes>
       <Footer></Footer>

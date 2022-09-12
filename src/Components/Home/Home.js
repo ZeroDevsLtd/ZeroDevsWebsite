@@ -10,6 +10,7 @@ import Banner from './Banner';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import Portfolio from '../Portfolio/Portfolio';
+
 const Home = () => {
 
     useEffect(()=>{
