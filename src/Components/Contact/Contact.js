@@ -1,10 +1,11 @@
 import React from 'react';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
-  // servie id = service_cg0fgta
-  // name = Gmail
+
     const form = useRef();
   
     const sendEmail = (e) => {
@@ -14,9 +15,12 @@ const Contact = () => {
         .then((result) => {
             console.log(result.text);
             console.log(result);
+            toast(`Message send successfully!!!`);
+            e.target.reset();
         }, (error) => {
             console.log(error.text);
         });
+        
     };
 
   return (
@@ -53,16 +57,6 @@ const Contact = () => {
               <br />
               <div class="text-center"><button className='btn btn-primary' type="submit" title="Send Message">Send Message</button></div>
             </form>
-
-            {/* <form ref={form} onSubmit={sendEmail}>
-              <label>Name</label>
-              <input type="text" name="user_name" />
-              <label>Email</label>
-              <input type="email" name="user_email" />
-              <label>Message</label>
-              <textarea name="message" />
-              <input type="submit" value="Send" />
-            </form> */}
           </div>
         </div >
       </div>

@@ -1,6 +1,3 @@
-import { faObjectGroup } from '@fortawesome/free-regular-svg-icons';
-import { faDiamond, faLanguage } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -11,7 +8,6 @@ import VisibilitySensor from 'react-visibility-sensor';
 const ChooseUs = (props) => {
 
   const [chooses, setChooses] = useState([]);
-  console.log(chooses);
 
   useEffect(() => {
     fetch('http://localhost:5000/choose-us')
@@ -35,7 +31,6 @@ const ChooseUs = (props) => {
                 return (
                   <div data-aos="fade-up" class="col-lg-4 mb-4">
                     <div class="card wow bounceInUp">
-                      {/* <FontAwesomeIcon icon={faDiamond} className='h-16'></FontAwesomeIcon> */}
                       <i className='grid place-items-center '>
                         <img className='bg-white rounded-lg h-16' src={choose.image} alt="" />
                       </i>

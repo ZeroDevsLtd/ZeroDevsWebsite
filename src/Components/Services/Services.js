@@ -51,7 +51,7 @@ const Services = (props) => {
                 return (
                   <div data-aos="fade-right" class=" " className={changeClasses} >
                     <div class="box">
-                      <div class="icon"><img src={service.image} alt="" /></div>
+                      <div class="icon"><img src={service.image} alt=""  className='h-14' /></div>
                       <h4 class="title"><a href="">{service.name}</a></h4>
                       <p class="description">{service.description}</p>
                     </div>

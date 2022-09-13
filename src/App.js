@@ -22,6 +22,7 @@ import SingleContactUs from './Components/SinglePages/SingleContactUs';
 import TermsCondition from './Components/TermsCondition/TermsCondition';
 import RequireAuth from './Components/RequiredAuth/RequireAuth';
 import NotFound from './Components/NotFound/NotFound';
+import UpdateTeamMember from './Components/Dashboard/Update/UpdateTeamMember';
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
           <Route path='service' element={<AddService></AddService>}></Route>
           <Route path='client' element={<AddClient></AddClient>}></Route>
           <Route path='choose-us' element={<AddChooseUs></AddChooseUs>}></Route>
+          <Route path='update-member/:id' element={<UpdateTeamMember></UpdateTeamMember>}></Route>
         </Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>

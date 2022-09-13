@@ -10,15 +10,15 @@ import Loading from '../Sheare/Loading';
 const AddTeam = () => {
     const [genders, setGenders] = useState([]);
 
-    const { data: statuses, isLoading } = useQuery('statuses', () => fetch('https://quiet-fjord-73452.herokuapp.com/status').then(res => res.json()))
+    const { data: statuses, isLoading } = useQuery('statuses', () => fetch('http://localhost:5000/status').then(res => res.json()))
     useEffect(() => {
-        fetch('https://quiet-fjord-73452.herokuapp.com/gender')
+        fetch('http://localhost:5000/gender')
             .then(res => res.json())
             .then(data => setGenders(data))
     }, [])
 
     const imageStorageKey = 'dda575c25e356160f275a5e36cd35bbd';
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
         // console.log(data);
         const image = data.image[0];
@@ -56,7 +56,7 @@ const AddTeam = () => {
                         join: data.date,
                         status: data.status
                     }
-                    fetch('https://quiet-fjord-73452.herokuapp.com/add-team-member', {
+                    fetch('http://localhost:5000/add-team-member', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',
@@ -65,9 +65,8 @@ const AddTeam = () => {
                     })
                         .then(res => res.json())
                         .then(data1 => {
-                            // console.log(data1);
-
                             toast(`New team member added!!!`);
+                            reset();
                         })
                 }
             })

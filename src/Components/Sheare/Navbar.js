@@ -6,7 +6,6 @@ import './Navbar.css';
 const Navbar = () => {
   useEffect(() => {
     let menuChange = document.querySelectorAll('.linkChange');
-    console.log(menuChange);
     menuChange.forEach(mc => {
       mc.addEventListener('click', function () {
         menuChange.forEach(lnk => lnk.classList.remove('change'))
@@ -18,6 +17,7 @@ const Navbar = () => {
   const scroll = () => {
     window.scrollTo(0, 0);
   }
+
 
   const menuItems =
     <>

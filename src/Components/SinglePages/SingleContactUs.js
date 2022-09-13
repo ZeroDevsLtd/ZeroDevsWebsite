@@ -1,8 +1,28 @@
 import React from 'react';
-// import { Navbar } from 'react-bootstrap';
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Hero from '../Sheare/Hero';
 
 const SingleContactUs = () => {
+
+  const form = useRef();
+  
+    const sendEmail = (e) => {
+      e.preventDefault();
+  
+      emailjs.sendForm('service_cg0fgta', 'template_vxk58bg', form.current, 'M6vHaULS1dcMtZujn')
+        .then((result) => {
+            console.log(result.text);
+            console.log(result);
+            toast(`Message send successfully!!!`);
+            e.target.reset();
+        }, (error) => {
+            console.log(error.text);
+        });
+        
+    };
   return (
     <>
       <Hero></Hero>
@@ -14,15 +34,15 @@ const SingleContactUs = () => {
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d912.0983122321464!2d90.38670342922897!3d23.875670199033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c5bd946664ff%3A0xe30ae8fd1607aae!2sZeroDevs!5e0!3m2!1sen!2sbd!4v1661867024233!5m2!1sen!2sbd" className='w-full h-full' style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
             </div>
             <div className=''>
-              <form class="contactForm ">
+              <form ref={form} onSubmit={sendEmail} class="contactForm ">
                 <div class="form-row">
                   <div class="form-group">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                    <input type="text" name="user_name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                     <div class="validation"></div>
                   </div>
                   <br />
                   <div class="form-group">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                    <input type="email" class="form-control" name="user_email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
                     <div class="validation"></div>
                   </div>
                   <br />

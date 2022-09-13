@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const AddChooseUs = () => {
     const imageStorageKey = 'dda575c25e356160f275a5e36cd35bbd';
 
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     const onSubmit = data => {
         const image = data.image[0];
@@ -35,9 +35,8 @@ const AddChooseUs = () => {
                     })
                         .then(res => res.json())
                         .then(data1 => {
-                            // console.log(data1);
-
                             toast(`Choose us added!!!`);
+                            reset();
                         })
                 }
             })

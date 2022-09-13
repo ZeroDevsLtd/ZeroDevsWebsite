@@ -1,6 +1,8 @@
 .change{
-    background-color: rgb(230, 223, 223);
+    background-color: rgb(246, 241, 241);
     border-radius: 10px;
+    color: aqua;
+    
   }
 
   .effect:hover{
