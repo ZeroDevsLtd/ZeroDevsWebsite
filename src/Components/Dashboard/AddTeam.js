@@ -10,12 +10,12 @@ import Loading from '../Sheare/Loading';
 const AddTeam = () => {
     const [genders, setGenders] = useState([]);
 
-    const { data: statuses, isLoading } = useQuery('statuses', () => fetch('http://localhost:5000/status').then(res => res.json()))
+    const { data: statuses, isLoading } = useQuery('statuses', () => fetch('https://webbackend-production.up.railway.app/status').then(res => res.json()))
     useEffect(() => {
-        fetch('http://localhost:5000/gender')
+        fetch('https://webbackend-production.up.railway.app/gender')
             .then(res => res.json())
             .then(data => setGenders(data))
-    }, [])
+    }, []);
 
     const imageStorageKey = 'dda575c25e356160f275a5e36cd35bbd';
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
@@ -56,7 +56,7 @@ const AddTeam = () => {
                         join: data.date,
                         status: data.status
                     }
-                    fetch('http://localhost:5000/add-team-member', {
+                    fetch('https://webbackend-production.up.railway.app/add-team-member', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

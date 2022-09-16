@@ -26,7 +26,7 @@ const AddService = () => {
                         image: img,
                         description: data.description
                     }
-                    fetch('http://localhost:5000/service', {
+                    fetch('https://webbackend-production.up.railway.app/service', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

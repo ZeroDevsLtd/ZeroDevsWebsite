@@ -29,7 +29,7 @@ const AddTestimonial = () => {
                         image: img,
                         description: data.description
                     }
-                    fetch('http://localhost:5000/testimonial', {
+                    fetch('https://webbackend-production.up.railway.app/testimonial', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

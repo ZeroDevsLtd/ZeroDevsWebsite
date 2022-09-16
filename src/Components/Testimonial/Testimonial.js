@@ -3,11 +3,9 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import './Testimonial.css'
-import { Testimonials } from '../Portfolio/Elements';
 
 const Testimonial = () => {
 
-  // const [testimonials, setTestimonials] = useState(Testimonials);
   const [testimonials, setTestimonials] = useState([]);
   useEffect(()=>{
       fetch('https://webbackend-production.up.railway.app/testimonial')
