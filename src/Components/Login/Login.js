@@ -5,6 +5,8 @@ import { useForm } from "react-hook-form";
 import { Link } from 'react-router-dom';
 import Loading from '../Sheare/Loading';
 import {useNavigate} from "react-router-dom"
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () => {
@@ -28,7 +30,8 @@ const Login = () => {
     }
     const onSubmit = data => {
         signInWithEmailAndPassword(data.email,data.password);
-        navigate('/dashboard');
+        toast('Successfully login....');
+        navigate('/dashboard', {replace: true});
     };
 
     return (

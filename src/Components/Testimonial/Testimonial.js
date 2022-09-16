@@ -12,7 +12,7 @@ const Testimonial = () => {
       .then(res=>res.json())
       .then(data=>setTestimonials(data))
   },[])
-console.log(testimonials);
+
   return (
     <div>
       <section id="testimonials" className="section-bg">
@@ -20,8 +20,7 @@ console.log(testimonials);
           <header className="section-header">
             <h3>Testimonials</h3>
           </header>
-          <div
-            className="row justify-content-center">
+          <div className="row justify-content-center">
             <div className="col-lg-8">
               <OwlCarousel
                 items={1}

@@ -35,7 +35,7 @@ const ChooseUs = (props) => {
                         <img className='bg-white rounded-lg h-16' src={choose.image} alt="" />
                       </i>
                       <div class="card-body">
-                        <h5 class="card-title">{choose.title}</h5>
+                        <h5 class="text-center">{choose.title}</h5>
                         <p class="card-text">{choose.description}</p>
                         <Link to='' className='text-decoration-none readmore'>Read more </Link>
                       </div>

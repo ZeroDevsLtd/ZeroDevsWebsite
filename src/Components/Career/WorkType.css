@@ -1,0 +1,26 @@
+.galary{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* height: 300px;
+    width: 300px; */
+}
+
+.col{
+    height: 300px;
+    width: 449px;
+    text-align: center;
+    padding: 120px 0;
+    
+}
+ .col p{
+    display: none;
+  }
+
+h1 , span{
+    display: block;
+}
+
+.col:hover + .col p{
+    padding: 0;
+ display: block;
+}

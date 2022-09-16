@@ -23,6 +23,7 @@ import TermsCondition from './Components/TermsCondition/TermsCondition';
 import RequireAuth from './Components/RequiredAuth/RequireAuth';
 import NotFound from './Components/NotFound/NotFound';
 import UpdateTeamMember from './Components/Dashboard/Update/UpdateTeamMember';
+import Career from './Components/Career/Career';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
         <Route path='/team' element={<SingleTeam></SingleTeam> }></Route>
         <Route path='/service' element={<Packages></Packages>}></Route>
         <Route path='/terms' element={<TermsCondition></TermsCondition>}></Route>
+        <Route path='/career' element={<Career></Career>}></Route>
         <Route path='/contact' element={<SingleContactUs></SingleContactUs>}></Route>
         <Route path='/dashboard' element={
           <RequireAuth>
