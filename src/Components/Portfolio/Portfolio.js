@@ -8,7 +8,7 @@ const Portfolio = (props) => {
   const [portfolios, setPortfolios] = useState([]);
   
   useEffect(()=>{
-      fetch('http://localhost:5000/portfolio')
+      fetch('https://webbackend-production.up.railway.app/portfolio')
       .then(res=>res.json())
       .then(data=>{
         setItems(data);

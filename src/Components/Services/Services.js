@@ -10,7 +10,7 @@ const Services = (props) => {
 
   const [services, setServices] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:5000/service')
+    fetch('https://webbackend-production.up.railway.app/service')
       .then(res => res.json())
       .then(data => setServices(data))
   }, [])
@@ -47,11 +47,11 @@ const Services = (props) => {
                 } else {
                   changeClasses.push('col-md-6 col-lg-5 wow bounceInUp');
                 }
-                
+
                 return (
                   <div data-aos="fade-right" class=" " className={changeClasses} >
                     <div class="box">
-                      <div class="icon"><img src={service.image} alt=""  className='h-14' /></div>
+                      <div class="icon"><img src={service.image} alt="" className='h-14' /></div>
                       <h4 class="title"><a href="">{service.name}</a></h4>
                       <p class="description">{service.description}</p>
                     </div>

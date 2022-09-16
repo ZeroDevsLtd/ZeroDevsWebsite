@@ -7,7 +7,7 @@ const Team = (props) => {
 
 
   useEffect(() => {
-    fetch('http://localhost:5000/team-member')
+    fetch('https://webbackend-production.up.railway.app/team-member')
       .then(res => res.json())
       .then(data => setTeams(data.data))
 

@@ -13,7 +13,7 @@ const AboutUs = (props) => {
   const [abouts, setAbouts] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/about-us')
+    fetch('https://webbackend-production.up.railway.app/about-us')
       .then(res => res.json())
       .then(data => setAbouts(data))
   }, [])

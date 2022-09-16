@@ -10,7 +10,7 @@ const ChooseUs = (props) => {
   const [chooses, setChooses] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/choose-us')
+    fetch('https://webbackend-production.up.railway.app/choose-us')
       .then(res => res.json())
       .then(data => setChooses(data))
   }, [])

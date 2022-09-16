@@ -10,11 +10,11 @@ const Testimonial = () => {
   // const [testimonials, setTestimonials] = useState(Testimonials);
   const [testimonials, setTestimonials] = useState([]);
   useEffect(()=>{
-      fetch('http://localhost:5000/testimonial')
+      fetch('https://webbackend-production.up.railway.app/testimonial')
       .then(res=>res.json())
       .then(data=>setTestimonials(data))
   },[])
-
+console.log(testimonials);
   return (
     <div>
       <section id="testimonials" className="section-bg">

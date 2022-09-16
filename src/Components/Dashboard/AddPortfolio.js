@@ -9,7 +9,7 @@ const AddPortfolio = () => {
 
     const [categories, setCategories] = useState([]);
     useEffect(()=> {
-        fetch('http://localhost:5000/category')
+        fetch('https://webbackend-production.up.railway.app/category')
         .then(res=>res.json())
         .then(data=>setCategories(data))
     },[])

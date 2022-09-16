@@ -24,7 +24,7 @@ const AddClient = () => {
                     const blog = {
                         image: img
                     }
-                    fetch('http://localhost:5000/client', {
+                    fetch('https://webbackend-production.up.railway.app/client', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

@@ -26,7 +26,7 @@ const AddChooseUs = () => {
                         image: img,
                         description: data.description
                     }
-                    fetch('http://localhost:5000/choose-us', {
+                    fetch('https://webbackend-production.up.railway.app/choose-us', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',
