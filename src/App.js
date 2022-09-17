@@ -24,6 +24,8 @@ import RequireAuth from './Components/RequiredAuth/RequireAuth';
 import NotFound from './Components/NotFound/NotFound';
 import UpdateTeamMember from './Components/Dashboard/Update/UpdateTeamMember';
 import Career from './Components/Career/Career';
+import AddCircular from './Components/Dashboard/AddCircular';
+import JobView from './Components/JobView/JobView';
 
 
 function App() {
@@ -38,6 +40,7 @@ function App() {
         <Route path='/service' element={<Packages></Packages>}></Route>
         <Route path='/terms' element={<TermsCondition></TermsCondition>}></Route>
         <Route path='/career' element={<Career></Career>}></Route>
+        <Route path='/job' element={<JobView></JobView>}></Route>
         <Route path='/contact' element={<SingleContactUs></SingleContactUs>}></Route>
         <Route path='/dashboard' element={
           <RequireAuth>
@@ -49,6 +52,7 @@ function App() {
           <Route path='portfolio' element={<AddPortfolio></AddPortfolio>}></Route>
           <Route path='service' element={<AddService></AddService>}></Route>
           <Route path='client' element={<AddClient></AddClient>}></Route>
+          <Route path='circular' element={<AddCircular></AddCircular>}></Route>
           <Route path='choose-us' element={<AddChooseUs></AddChooseUs>}></Route>
           <Route path='update-member/:id' element={<UpdateTeamMember></UpdateTeamMember>}></Route>
         </Route>

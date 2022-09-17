@@ -2,9 +2,9 @@ import React from 'react';
 
 const CompanyAbout = () => {
     return (
-        <div class="jumbotron jumbotron-fluid h-screen">
+        <div class="jumbotron jumbotron-fluid h-screen bg-gray-200">
             <div class="container">
-                <div className='p-14 mt-12'>
+                <div className='p-5'>
                     <p className='mb-5'>
                         <span className='text-7xl'>Be a Part of Our</span> <br />
                         <span className='text-7xl'> Incredible Team</span>

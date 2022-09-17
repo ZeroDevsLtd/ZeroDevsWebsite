@@ -2,20 +2,18 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faGooglePlus, faLinkedin, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import { useEffect } from 'react';
 import Hero from '../Sheare/Hero';
+import { useQuery } from 'react-query';
+import Loading from '../Sheare/Loading';
 
 const SingleTeam = (props) => {
-  const [teams, setTeams] = useState([]);
 
+  const { data: teams, isLoading } = useQuery('teamsService', () => fetch('https://webbackend-production.up.railway.app/team-member').then(res => res.json()))
 
-  useEffect(() => {
-    fetch('https://webbackend-production.up.railway.app/team-member')
-      .then(res => res.json())
-      .then(data => setTeams(data.data))
-
-  }, []);
+ 
+  if(isLoading){
+    return <Loading></Loading>
+  }
   return (
     <div>
       <Hero></Hero>
@@ -31,7 +29,7 @@ const SingleTeam = (props) => {
           <div data-aos={props.aos} data-aos-offset={props.aos_offset} class="row">
 
             <div data-aos="fade-up" class="columns-2 lg:columns-4">
-              {teams.map(team => {
+              {teams.data.map(team => {
                 return (
                   <div class=" member">
                     <img src={team.image} class="img-fluid" alt="" />

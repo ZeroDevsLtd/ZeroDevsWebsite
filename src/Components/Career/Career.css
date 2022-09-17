@@ -1,0 +1,12 @@
+.apply{
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.apply:hover{
+    text-decoration: underline;
+    color: blue;
+}
+.applyPara{
+    margin-top: 20px;
+}

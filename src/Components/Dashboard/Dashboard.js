@@ -28,6 +28,7 @@ const Dashboard = () => {
           <li className=' hover:bg-slate-400'><Link className='text-decoration-none' to='/dashboard/portfolio'>Add Portfolio</Link></li>
           <li className=' hover:bg-slate-400'><Link className='text-decoration-none' to='/dashboard/client'>Add Client</Link></li>
           <li className=' hover:bg-slate-400'><Link className='text-decoration-none' to='/dashboard/choose-us'>Add Choose Us</Link></li>
+          <li className=' hover:bg-slate-400'><Link className='text-decoration-none' to='/dashboard/circular'>Add Circular</Link></li>
           <li className=' hover:bg-slate-400'><Link onClick={logout} className='text-decoration-none' to=''>Logout</Link></li>
         </ul>
 
