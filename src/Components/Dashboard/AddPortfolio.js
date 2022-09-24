@@ -9,7 +9,7 @@ const AddPortfolio = () => {
 
     const [categories, setCategories] = useState([]);
     useEffect(()=> {
-        fetch('https://webbackend-production.up.railway.app/category')
+        fetch('http://51.159.105.249:18520/category')
         .then(res=>res.json())
         .then(data=>setCategories(data))
     },[])
@@ -38,7 +38,7 @@ const AddPortfolio = () => {
                         twitter:data.twitter,
                         facebook:data.facebook
                     }
-                    fetch('https://webbackend-production.up.railway.app/portfolio', {
+                    fetch('http://51.159.105.249:18520/portfolio', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

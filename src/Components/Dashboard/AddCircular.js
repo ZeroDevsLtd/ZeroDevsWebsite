@@ -19,7 +19,7 @@ const AddCircular = () => {
             deadline: data.deadline,
             note: data.note
         }
-        fetch('https://webbackend-production.up.railway.app/circular', {
+        fetch('http://51.159.105.249:18520/circular', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

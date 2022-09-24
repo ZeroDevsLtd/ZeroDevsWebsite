@@ -10,7 +10,7 @@ const AddBenefit = () => {
         const benefits = {
             benefit: data.benefit
         }
-        fetch('https://webbackend-production.up.railway.app/benefit', {
+        fetch('http://51.159.105.249:18520/benefit', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

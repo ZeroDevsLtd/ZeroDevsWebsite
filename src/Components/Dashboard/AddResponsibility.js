@@ -11,7 +11,7 @@ const AddResponsibility = () => {
         const respon = {
             responsibility: data.responsibility
         }
-        fetch('https://webbackend-production.up.railway.app/responsibility', {
+        fetch('http://51.159.105.249:18520/responsibility', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

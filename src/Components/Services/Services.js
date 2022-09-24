@@ -10,7 +10,7 @@ const Services = (props) => {
 
   const [services, setServices] = useState([]);
   useEffect(() => {
-    fetch('https://webbackend-production.up.railway.app/service')
+    fetch('http://51.159.105.249:18520/service')
       .then(res => res.json())
       .then(data => setServices(data))
   }, [])

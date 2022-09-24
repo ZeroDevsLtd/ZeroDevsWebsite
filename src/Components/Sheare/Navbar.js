@@ -25,7 +25,7 @@ const Navbar = () => {
       <li class="nav-item"><Link onClick={scroll} className='text-decoration-none nav-link active effect linkChange' to='/service'>Service</Link></li>
       <li class="nav-item"><Link onClick={scroll} className='text-decoration-none nav-link active effect linkChange' to='/portfolio'>Portfolio</Link></li>
       <li class="nav-item"><Link onClick={scroll} className='text-decoration-none nav-link active effect linkChange' to='/about'>About Us </Link></li>
-      <li class="nav-item"><Link onClick={scroll} className='text-decoration-none nav-link active effect linkChange' to='/career'>Career </Link></li>
+      {/* <li class="nav-item"><Link onClick={scroll} className='text-decoration-none nav-link active effect linkChange' to='/career'>Career </Link></li> */}
       <li class="nav-item"><Link onClick={scroll} className='text-decoration-none nav-link active effect linkChange' to='/team'>Team</Link></li>
       <li class="nav-item"><Link onClick={scroll} className='text-decoration-none nav-link active effect linkChange' to='/contact'>Contact Us</Link></li>
 

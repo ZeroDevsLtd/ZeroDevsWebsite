@@ -29,6 +29,7 @@ const Home = () => {
         <Portfolio Aos={Aos}></Portfolio>
         <Client Aos={Aos}></Client>
         <Contact></Contact>
+
         </div>
     );
 };

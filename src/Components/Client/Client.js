@@ -7,7 +7,7 @@ const Client = (props) => {
   const [clients, setClients] = useState([]);
 
   useEffect(() => {
-    fetch('https://webbackend-production.up.railway.app/client')
+    fetch('http://51.159.105.249:18520/client')
       .then(res => res.json())
       .then(data => setClients(data))
   }, [])
