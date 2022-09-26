@@ -11,7 +11,7 @@ const AddRequirement = data => {
         const requirements = {
             requirement: data.requirement
         }
-        fetch('http://51.159.105.249:18520/requirement', {
+        fetch('//51.159.105.249:18520/requirement', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

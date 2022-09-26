@@ -8,22 +8,22 @@ const JobView = () => {
     const [requirements, setRequirements] = useState([]);
 
     useEffect(() => {
-        fetch('http://51.159.105.249:18520/circular')
+        fetch('//51.159.105.249:18520/circular')
             .then(res => res.json())
             .then(data => setContents(data))
     }, []);
     useEffect(() => {
-        fetch('http://51.159.105.249:18520/benefit')
+        fetch('//51.159.105.249:18520/benefit')
             .then(res => res.json())
             .then(data => setBenefits(data))
     }, []);
     useEffect(() => {
-        fetch('http://51.159.105.249:18520/responsibility')
+        fetch('//51.159.105.249:18520/responsibility')
             .then(res => res.json())
             .then(data => setResponsibilities(data))
     }, []);
     useEffect(() => {
-        fetch('http://51.159.105.249:18520/requirement')
+        fetch('//51.159.105.249:18520/requirement')
             .then(res => res.json())
             .then(data => setRequirements(data))
     }, []);

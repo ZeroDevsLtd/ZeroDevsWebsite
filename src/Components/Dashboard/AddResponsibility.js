@@ -11,7 +11,7 @@ const AddResponsibility = () => {
         const respon = {
             responsibility: data.responsibility
         }
-        fetch('http://51.159.105.249:18520/responsibility', {
+        fetch('//51.159.105.249:18520/responsibility', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

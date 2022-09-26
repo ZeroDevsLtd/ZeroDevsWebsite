@@ -24,7 +24,7 @@ const AddClient = () => {
                     const blog = {
                         image: img
                     }
-                    fetch('http://51.159.105.249:18520/client', {
+                    fetch('//51.159.105.249:18520/client', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

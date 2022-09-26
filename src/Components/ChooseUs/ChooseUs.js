@@ -10,9 +10,10 @@ const ChooseUs = (props) => {
   const [chooses, setChooses] = useState([]);
 
   useEffect(() => {
-    fetch('http://51.159.105.249:18520/choose-us')
+      fetch('//51.159.105.249:18520/choose-us')
       .then(res => res.json())
       .then(data => setChooses(data))
+      .catch(err=>console.log(err))
   }, [])
   return (
     <>

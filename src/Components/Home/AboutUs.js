@@ -9,14 +9,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 
 const AboutUs = (props) => {
-  // console.log(props);
-  const [abouts, setAbouts] = useState([]);
-
-  useEffect(() => {
-    fetch('http://51.159.105.249:18520/about-us')
-      .then(res => res.json())
-      .then(data => setAbouts(data))
-  }, [])
+ 
   return (
     <>
       <section id="about">

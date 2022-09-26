@@ -10,9 +10,11 @@ const Services = (props) => {
 
   const [services, setServices] = useState([]);
   useEffect(() => {
-    fetch('http://51.159.105.249:18520/service')
-      .then(res => res.json())
-      .then(data => setServices(data))
+    fetch('//51.159.105.249:18520/service')
+    .then(res => res.json())
+    .then(data => setServices(data))
+    .catch(err=>console.log(err))
+   
   }, [])
   // let changeClasses = [];
   // console.log(changeClasses);
@@ -51,9 +53,9 @@ const Services = (props) => {
                 return (
                   <div data-aos="fade-right" class=" " className={changeClasses} >
                     <div class="box">
-                      <div class="icon"><img src={service.image} alt="" className='h-14' /></div>
-                      <h4 class="title"><a href="">{service.name}</a></h4>
-                      <p class="description">{service.description}</p>
+                      <div class="icon"><img src={service?.image} alt="" className='h-14' /></div>
+                      <h4 class="title"><a href="">{service?.name}</a></h4>
+                      <p class="description">{service?.description}</p>
                     </div>
                   </div>
                 )

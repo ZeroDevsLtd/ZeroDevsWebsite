@@ -1,15 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import TeamDetails from './TeamDetails';
+import axios from 'axios';
 
 const Team = (props) => {
 
   const [teams, setTeams] = useState([]);
-
+console.log(teams);
 
   useEffect(() => {
-    fetch('http://51.159.105.249:18520/team-member')
-      .then(res => res.json())
-      .then(data => setTeams(data.data))
+    // fetch('//51.159.105.249:18520/team-member')
+    // .then(res => res.json())
+    // .then(data => setTeams(data.data))
+    // .catch(err=>console.log(err))
+
+    // axios.get('http://51.159.105.249:18520/team-member')
+    // .then(res=>setTeams(res.data.data))
+    // .catch(err=>{
+    //   console.log(err.res);
+    // })
+
+    axios.get('http://51.159.105.249:18520/team-member')
+    .then(res=>setTeams(res.data.data))
+    .catch( error => { return Promise.reject(error.response); });
 
   }, []);
 

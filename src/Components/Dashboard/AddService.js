@@ -26,7 +26,7 @@ const AddService = () => {
                         image: img,
                         description: data.description
                     }
-                    fetch('http://51.159.105.249:18520/service', {
+                    fetch('//51.159.105.249:18520/service', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

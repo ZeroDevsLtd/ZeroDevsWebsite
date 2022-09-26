@@ -9,7 +9,7 @@ const SinglePortfolio = (props) => {
     const [portfolios, setPortfolios] = useState([]);
 
     useEffect(() => {
-        fetch('http://51.159.105.249:18520/portfolio')
+        fetch('//51.159.105.249:18520/portfolio')
             .then(res => res.json())
             .then(data => {
                 setItems(data);

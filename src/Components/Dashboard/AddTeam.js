@@ -10,9 +10,9 @@ import Loading from '../Sheare/Loading';
 const AddTeam = () => {
     const [genders, setGenders] = useState([]);
 
-    const { data: statuses, isLoading } = useQuery('statuses', () => fetch('http://51.159.105.249:18520/status').then(res => res.json()))
+    const { data: statuses, isLoading } = useQuery('statuses', () => fetch('//51.159.105.249:18520/status').then(res => res.json()))
     useEffect(() => {
-        fetch('http://51.159.105.249:18520/gender')
+        fetch('//51.159.105.249:18520/gender')
             .then(res => res.json())
             .then(data => setGenders(data))
     }, []);
@@ -56,7 +56,7 @@ const AddTeam = () => {
                         join: data.date,
                         status: data.status
                     }
-                    fetch('http://51.159.105.249:18520/add-team-member', {
+                    fetch('//51.159.105.249:18520/add-team-member', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

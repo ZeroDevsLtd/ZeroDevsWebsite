@@ -8,12 +8,18 @@ import Loading from '../Sheare/Loading';
 
 const Testimonial = () => {
 
-  const { data: testimonials, isLoading } = useQuery('testimonials', () => fetch('http://51.159.105.249:18520/testimonial').then(res => res.json()))
+  const [testimonials, setTestimonials] = useState([]);
 
- 
-  if(isLoading){
-    return <Loading></Loading>
-  }
+  useEffect(() => {
+    fetch('//51.159.105.249:18520/testimonial')
+      .then(res => res.json())
+      .then(data => setTestimonials(data))
+      .catch(err => console.log(err))
+  }, [])
+
+  // if(isLoading){
+  //   return <Loading></Loading>
+  // }
   return (
     <div>
       <section id="testimonials" className="section-bg">

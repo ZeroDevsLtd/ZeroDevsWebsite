@@ -8,7 +8,7 @@ import Loading from '../Sheare/Loading';
 
 const SingleTeam = (props) => {
 
-  const { data: teams, isLoading } = useQuery('teamsService', () => fetch('http://51.159.105.249:18520/team-member').then(res => res.json()))
+  const { data: teams, isLoading } = useQuery('teamsService', () => fetch('//51.159.105.249:18520/team-member').then(res => res.json()))
 
  
   if(isLoading){

@@ -26,7 +26,7 @@ const AddChooseUs = () => {
                         image: img,
                         description: data.description
                     }
-                    fetch('http://51.159.105.249:18520/choose-us', {
+                    fetch('//51.159.105.249:18520/choose-us', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

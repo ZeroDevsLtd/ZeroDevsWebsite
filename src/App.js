@@ -32,18 +32,18 @@ import UploadPdf from './Components/Dashboard/UploadPdf';
 function App() {
   return (
     <div className="">
-      <Navbar></Navbar> 
+      <Navbar></Navbar>
       <Routes >
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/about' element={<SingleAboutUs></SingleAboutUs>}></Route>
         <Route path='/portfolio' element={<SinglePortfolio></SinglePortfolio>}></Route>
-        <Route path='/team' element={<SingleTeam></SingleTeam> }></Route>
+        <Route path='/team' element={<SingleTeam></SingleTeam>}></Route>
         <Route path='/service' element={<Packages></Packages>}></Route>
         <Route path='/terms' element={<TermsCondition></TermsCondition>}></Route>
         {/* <Route path='/career' element={<Career></Career>}></Route> */}
         <Route path='/job' element={<JobView></JobView>}></Route>
         <Route path='/contact' element={<SingleContactUs></SingleContactUs>}></Route>
-        <Route path='/dashboard' element={
+        {/* <Route path='/dashboard' element={
           <RequireAuth>
             <Dashboard></Dashboard>
           </RequireAuth>
@@ -54,10 +54,9 @@ function App() {
           <Route path='service' element={<AddService></AddService>}></Route>
           <Route path='client' element={<AddClient></AddClient>}></Route>
           <Route path='circular' element={<AddCircular></AddCircular>}></Route>
-          {/* <Route path='file' element={<UploadPdf></UploadPdf>}></Route> */}
           <Route path='choose-us' element={<AddChooseUs></AddChooseUs>}></Route>
           <Route path='update-member/:id' element={<UpdateTeamMember></UpdateTeamMember>}></Route>
-        </Route>
+        </Route> */}
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
         {/* <Route path='/signup' element={<Signup></Signup>}></Route> */}
