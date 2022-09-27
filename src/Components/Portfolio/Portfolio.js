@@ -8,13 +8,18 @@ const Portfolio = (props) => {
   const [portfolios, setPortfolios] = useState([]);
   
   useEffect(()=>{
-      fetch('//51.159.105.249:18520/portfolio')
-      .then(res=>res.json())
-      .then(data=>{
-        setItems(data);
-        setPortfolios(data);
-      })
-      .catch(err=>console.log(err))
+      var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+      };
+      
+      fetch("http://51.159.105.249:18520/portfolio", requestOptions)
+        .then(response => response.json())
+        .then(result => {
+          setPortfolios(result)
+          setItems(result)
+        })
+        .catch(error => console.log('error', error));
   },[])
 
   const filterItem = (category) => {

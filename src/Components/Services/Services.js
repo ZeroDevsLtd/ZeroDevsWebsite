@@ -10,10 +10,15 @@ const Services = (props) => {
 
   const [services, setServices] = useState([]);
   useEffect(() => {
-    fetch('//51.159.105.249:18520/service')
-    .then(res => res.json())
-    .then(data => setServices(data))
-    .catch(err=>console.log(err))
+    var requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+    };
+    
+    fetch("http://51.159.105.249:18520/service", requestOptions)
+      .then(response => response.json())
+      .then(result => setServices(result))
+      .catch(error => console.log('error', error));
    
   }, [])
   // let changeClasses = [];

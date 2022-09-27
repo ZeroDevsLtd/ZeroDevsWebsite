@@ -6,33 +6,20 @@ import axios from 'axios';
 const Client = (props) => {
 
   const [clients, setClients] = useState([]);
-  const url = 'http://51.159.105.249:18520/client'
   console.log(clients);
 
   useEffect(() => {
-    // fetch('http://51.159.105.249:18520/client')
-    // .then(res => res.json())
-    // .then(data => setClients(data))
-    // .catch(err=>console.log(err))
-  //   var request = new Request(`https://ip:8080/click?url=${url}`, {
-  //     method: 'GET',
-  //     headers: new Headers({
-  //         "Content-Type": "application/json"
-  //     }),
-  // });
-  // fetch(request)
-  // .then(res=>res.json())
-  // .then(data=>setClients(data))
 
-  // axios.get('http://51.159.105.249:18520/client')
-  // .then(res=>setClients(res.data))
-  // .catch(err=>{
-  //   console.log(err.res);
-  // })
+    var requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+    };
+    
+    fetch("http://51.159.105.249:18520/client", requestOptions)
+      .then(response => response.json())
+      .then(result => setClients(result))
+      .catch(error => console.log('error', error));
 
-  axios.get('http://51.159.105.249:18520/client')
-  .then(res=>setClients(res.data))
-  .catch( error => { return Promise.reject(error.response); });
  }, [])
   return (
     <div>

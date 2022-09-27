@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import HttpsRedirect from 'react-https-redirect';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {
@@ -17,10 +18,12 @@ const queryClient = new QueryClient()
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-     <QueryClientProvider client={queryClient}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <HttpsRedirect>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </HttpsRedirect>
     </QueryClientProvider>
   </React.StrictMode>
 );
