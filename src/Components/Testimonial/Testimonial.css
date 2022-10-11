@@ -13,6 +13,9 @@
   color: #007bff;
   font-weight: bold;
 } */
+.error{
+  text-align: center;
+}
 .port{
   color: blue;
   font-weight: bold;

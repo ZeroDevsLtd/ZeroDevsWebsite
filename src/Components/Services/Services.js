@@ -9,16 +9,18 @@ import { useEffect } from 'react';
 const Services = (props) => {
 
   const [services, setServices] = useState([]);
+  const [error,setError] = useState('');
+  console.log(error);
   useEffect(() => {
     var requestOptions = {
       method: 'GET',
       redirect: 'follow'
     };
     
-    fetch("http://51.159.105.249:18520/service", requestOptions)
+    fetch("http://51.159.105.249:18520/services", requestOptions)
       .then(response => response.json())
       .then(result => setServices(result))
-      .catch(error => console.log('error', error));
+      .catch(error => setError('This section is under construction'));
    
   }, [])
   // let changeClasses = [];
@@ -69,6 +71,7 @@ const Services = (props) => {
 
           </div>
 
+          <p className='error'>{error}</p>
         </div>
       </section>
     </div>

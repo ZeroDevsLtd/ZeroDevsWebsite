@@ -6,6 +6,7 @@ import api from '../BaseUrl/BaseUrl';
 const Team = (props) => {
 
   const [teams, setTeams] = useState([]);
+  const [error, setError] = useState('');
 console.log(teams);
 
   useEffect(() => {
@@ -18,7 +19,7 @@ console.log(teams);
     fetch("http://51.159.105.249:18520/team-member", requestOptions)
       .then(response => response.json())
       .then(result => setTeams(result.data))
-      .catch(error => console.log('error', error));
+      .catch(error => setError('This section is under construction'));
 
   }, []);
 
@@ -39,6 +40,7 @@ console.log(teams);
               {teams.map(team => <TeamDetails team={team}></TeamDetails>)}
             </div>
           </div>
+          <p className='error'>{error}</p>
         </div>
       </section>
     </div>

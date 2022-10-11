@@ -6,6 +6,7 @@ const Portfolio = (props) => {
 
   const [items, setItems] = useState([]);
   const [portfolios, setPortfolios] = useState([]);
+  const [error,setError] = useState('');
   
   useEffect(()=>{
       var requestOptions = {
@@ -19,7 +20,7 @@ const Portfolio = (props) => {
           setPortfolios(result)
           setItems(result)
         })
-        .catch(error => console.log('error', error));
+        .catch(error => setError('This section is under construction'));
   },[])
 
   const filterItem = (category) => {
@@ -76,6 +77,7 @@ const Portfolio = (props) => {
                 })
               }
           </div>
+          <p className='error'>{error}</p>
         </div>
       </section>
     </div>

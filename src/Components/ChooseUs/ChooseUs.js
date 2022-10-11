@@ -8,6 +8,7 @@ import VisibilitySensor from 'react-visibility-sensor';
 const ChooseUs = (props) => {
 
   const [chooses, setChooses] = useState([]);
+  const [error, setError] = useState('');
 
   useEffect(() => {
     var requestOptions = {
@@ -18,7 +19,7 @@ const ChooseUs = (props) => {
     fetch("http://51.159.105.249:18520/choose-us", requestOptions)
       .then(response => response.json())
       .then(result => setChooses(result))
-      .catch(error => console.log('error', error));
+      .catch(error => setError('This section is under construction'));
   }, [])
   return (
     <>
@@ -98,7 +99,7 @@ const ChooseUs = (props) => {
             </div>
 
           </div>
-
+                  <p className='error'>{error}</p>
         </div>
       </section>
     </>

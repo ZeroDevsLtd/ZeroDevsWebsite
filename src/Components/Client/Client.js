@@ -6,6 +6,7 @@ import axios from 'axios';
 const Client = (props) => {
 
   const [clients, setClients] = useState([]);
+  const [error, setError] = useState('');
   console.log(clients);
 
   useEffect(() => {
@@ -18,7 +19,7 @@ const Client = (props) => {
     fetch("http://51.159.105.249:18520/client", requestOptions)
       .then(response => response.json())
       .then(result => setClients(result))
-      .catch(error => console.log('error', error));
+      .catch(error => setError('This section is under construction'));
 
  }, [])
   return (
@@ -46,6 +47,7 @@ const Client = (props) => {
               })
             }
           </div>
+          <p className='error'>{error}</p>
         </div>
       </section>
     </div>

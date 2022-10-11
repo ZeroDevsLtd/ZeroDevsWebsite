@@ -9,6 +9,7 @@ import Loading from '../Sheare/Loading';
 const Testimonial = () => {
 
   const [testimonials, setTestimonials] = useState([]);
+  const [error,setError] = useState('');
 
   useEffect(() => {
     var requestOptions = {
@@ -19,7 +20,7 @@ const Testimonial = () => {
     fetch("http://51.159.105.249:18520/testimonial", requestOptions)
       .then(response => response.json())
       .then(result => setTestimonials(result))
-      .catch(error => console.log('error', error));
+      .catch(error => setError('This section is under construction'));
   }, [])
 
   // if(isLoading){
@@ -57,6 +58,7 @@ const Testimonial = () => {
               </OwlCarousel>
             </div>
           </div>
+          <p className='error'>{error}</p>
         </div>
       </section >
     </div >
