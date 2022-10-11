@@ -99,7 +99,10 @@ const ChooseUs = (props) => {
             </div>
 
           </div>
-                  <p className='error'>{error}</p>
+                 {
+                  error &&
+                  <p className='error fst-italic shadow-md bg-info text-white bg-opacity-10'>{error}</p>
+                 }
         </div>
       </section>
     </>

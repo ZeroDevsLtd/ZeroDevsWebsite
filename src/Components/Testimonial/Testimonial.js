@@ -58,7 +58,10 @@ const Testimonial = () => {
               </OwlCarousel>
             </div>
           </div>
-          <p className='error'>{error}</p>
+          {
+            error &&
+            <p className='error fst-italic shadow-md bg-success bg-opacity-10'>{error}</p>
+          }
         </div>
       </section >
     </div >
