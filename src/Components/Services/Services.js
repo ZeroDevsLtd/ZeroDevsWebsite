@@ -17,7 +17,7 @@ const Services = (props) => {
       redirect: 'follow'
     };
     
-    fetch("http://51.159.105.249:18520/services", requestOptions)
+    fetch("http://51.159.105.249:18520/service", requestOptions)
       .then(response => response.json())
       .then(result => setServices(result))
       .catch(error => setError('This section is under construction'));
