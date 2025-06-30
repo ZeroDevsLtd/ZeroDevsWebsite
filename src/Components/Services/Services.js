@@ -1,72 +1,35 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobe, faStopwatch } from '@fortawesome/free-solid-svg-icons';
-import { faBookmark, faChartBar, faClock } from '@fortawesome/free-regular-svg-icons';
-import { faPagelines } from '@fortawesome/free-brands-svg-icons';
+import custom from '../images/about-extra-1.svg';
+import web from '../images/about-extra-2.svg';
+import mobile from '../images/intro-img.svg';
+import qa from '../images/about-img.svg';
+import content from '../../content/websiteContent';
+
+const serviceImages = [custom, web, mobile, qa];
 
 const Services = (props) => {
   return (
-    <div>
-      <section id="services" class="section-bg">
-        <div class="container">
-
-          <header class="section-header">
-            <h3>Services</h3>
-            <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
-          </header>
-
-          <div data-aos={props.aos} data-aos-offset={props.aos_offset} class="row">
-
-            <div data-aos="fade-right" class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" >
-              <div  class="box">
-                <div class="icon"><FontAwesomeIcon icon={faClock} className='h-16'></FontAwesomeIcon></div>
-                <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+    <section id="services" className="py-20 bg-[#f8f6f3]">
+      <div className="container mx-auto px-4 max-w-5xl">
+        <header className="mb-12 text-center">
+          <h3 className="text-3xl font-bold text-gray-900 mb-4 uppercase tracking-wide">{content.services.title}</h3>
+          <p className="text-lg text-gray-700 max-w-2xl mx-auto">{content.services.description}</p>
+        </header>
+        <div className="space-y-16">
+          {content.services.offerings.map((service, idx) => (
+            <div key={idx} className={`flex flex-col md:flex-row items-center md:items-start gap-8 ${idx % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
+              <div className="flex-shrink-0 w-full md:w-1/3 flex justify-center">
+                <img src={serviceImages[idx]} alt={service.title} className="w-56 h-56 object-contain" />
+              </div>
+              <div className="md:w-2/3">
+                <h4 className="text-xl font-semibold text-blue-700 mb-3">{service.title}</h4>
+                <p className="text-gray-700 text-base">{service.text}</p>
               </div>
             </div>
-            <div data-aos="fade-left" class="col-md-6 col-lg-5 wow bounceInUp" data-wow-duration="1.4s">
-              <div class="box">
-                <div class="icon"><FontAwesomeIcon icon={faGlobe} className='h-16'></FontAwesomeIcon></div>
-                <h4 class="title"><a href="">Dolor Sitema</a></h4>
-                <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-              </div>
-            </div>
-
-            <div data-aos="fade-left" class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
-              <div class="box">
-                <div class="icon"><FontAwesomeIcon icon={faStopwatch} className='h-16'></FontAwesomeIcon></div>
-                <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-                <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-              </div>
-            </div>
-            <div data-aos="fade-right" class="col-md-6 col-lg-5 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
-              <div class="box">
-                <div class="icon"><FontAwesomeIcon icon={faPagelines} className='h-16'></FontAwesomeIcon></div>
-                <h4 class="title"><a href="">Magni Dolores</a></h4>
-                <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-              </div>
-            </div>
-
-            <div data-aos="data-left" class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
-              <div class="box">
-                <div class="icon"><FontAwesomeIcon icon={faBookmark} className='h-16'></FontAwesomeIcon></div>
-                <h4 class="title"><a href="">Nemo Enim</a></h4>
-                <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-              </div>
-            </div>
-            <div data-aos="fade-right" class="col-md-6 col-lg-5 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
-              <div class="box">
-                <div class="icon"><FontAwesomeIcon icon={faChartBar} className='h-16'></FontAwesomeIcon></div>
-                <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-                <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-              </div>
-            </div>
-
-          </div>
-
+          ))}
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import content from '../../content/websiteContent';
 
 const jobs = [
 	{
@@ -30,7 +31,8 @@ const Career = () => {
 
 	return (
 		<div className="max-w-3xl mx-auto pt-24 pb-12 px-4 min-h-screen bg-gray-50">
-			<h1 className="text-3xl font-bold mb-8 text-center">Open Positions</h1>
+			<h1 className="text-3xl font-bold mb-8 text-center">{content.career.title}</h1>
+			<p className="text-center text-gray-600 mb-8">{content.career.intro}</p>
 			<div className="space-y-4">
 				{jobs.map((job) => (
 					<div

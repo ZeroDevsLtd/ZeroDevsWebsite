@@ -8,6 +8,7 @@ import testimonial2 from '../../Components/images/testimonial-2.jpg'
 import testimonial3 from '../../Components/images/testimonial-3.jpg'
 import testimonial4 from '../../Components/images/testimonial-4.jpg'
 import testimonial5 from '../../Components/images/testimonial-5.jpg'
+import content from '../../content/websiteContent';
 
 const Testimonial = () => {
   return (
@@ -15,7 +16,7 @@ const Testimonial = () => {
       <section id="testimonials" className="section-bg">
         <div className="container">
           <header className="section-header">
-            <h3>Testimonials</h3>
+            <h3>{content.testimonial.title}</h3>
           </header>
           <div
             className="row justify-content-center">

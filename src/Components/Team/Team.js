@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faGooglePlus, faLinkedin, faTwitterSquare, faWindows } from '@fortawesome/free-brands-svg-icons';
 import TeamDetails from './TeamDetails';
+import content from '../../content/websiteContent';
 
 const Team = (props) => {
   // const {name,image} = props.member;
@@ -35,8 +36,8 @@ const Team = (props) => {
       <section id="team">
         <div class="container">
           <div class="section-header">
-            <h3>Team</h3>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+            <h3>{content.team.title}</h3>
+            <p>{content.team.description}</p>
           </div>
 
           <div data-aos={props.aos} data-aos-offset={props.aos_offset} class="row">

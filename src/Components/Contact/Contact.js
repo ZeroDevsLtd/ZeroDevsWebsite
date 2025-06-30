@@ -1,75 +1,96 @@
-import { faLocation, faPhone, faVoicemail } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import React, { useState } from 'react';
+import content from '../../content/websiteContent';
 
 const Contact = () => {
+  const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = e => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    setSubmitted(true);
+    // Here you would handle sending the form data
+  };
+
   return (
-    <div>
-      <section id="contact">
-        <div class="container-fluid">
-
-          <div class="section-header">
-            <h3>Contact Us</h3>
-          </div>
-
-          <div class="row wow fadeInUp">
-
-            <div class="col-lg-6">
-              <div class="map mb-4 mb-lg-0">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameBorder={0} style={{border: 0, width: '100%', height: '312px'}} allowFullScreen />
-               
+    <section id="contact" className="py-20 bg-[#f8f6f3]">
+      <div className="container mx-auto px-4 max-w-2xl">
+        <header className="mb-10 text-center">
+          <h3 className="text-3xl font-bold text-gray-900 mb-2 uppercase tracking-wide">{content.contact.title}</h3>
+          <p className="text-gray-600 mb-6">We'd love to hear from you! Fill out the form and our team will get back to you soon.</p>
+        </header>
+        <div className="bg-white rounded-2xl shadow-lg p-8">
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="flex flex-col md:flex-row gap-4">
+              <input
+                type="text"
+                name="name"
+                className="form-input flex-1 rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                placeholder="Your Name"
+                value={form.name}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                className="form-input flex-1 rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                placeholder="Your Email"
+                value={form.email}
+                onChange={handleChange}
+                required
+              />
             </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="row">
-              <div class="col-md-5 info flex">
-                <FontAwesomeIcon icon={faLocation} className='h-4'></FontAwesomeIcon>
-                <p>A108 Adam Street, NY 535022</p>
-              </div>
-              <div class="col-md-4 info flex place-item-center space-x-0">
-                <FontAwesomeIcon icon={faVoicemail} className='h-4'></FontAwesomeIcon>
-                <p>info@example.com</p>
-              </div>
-              <div class="col-md-3 info flex space-x-0">
-                <FontAwesomeIcon icon={faPhone} className='h-4'></FontAwesomeIcon>
-                <p>+1 5589 55488 55</p>
-              </div>
+            <input
+              type="text"
+              name="subject"
+              className="form-input w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-200"
+              placeholder="Subject"
+              value={form.subject}
+              onChange={handleChange}
+              required
+            />
+            <textarea
+              name="message"
+              className="form-textarea w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-200"
+              rows={5}
+              placeholder="Message"
+              value={form.message}
+              onChange={handleChange}
+              required
+            />
+            <div className="flex flex-col md:flex-row gap-4 items-center justify-center mt-4">
+              <button
+                type="submit"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition"
+              >
+                Send Message
+              </button>
+              <a
+                href="https://calendly.com/zerodevs/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-3 rounded-lg transition text-center"
+              >
+                Schedule a Free 30-Minute Session
+              </a>
             </div>
-
-            <div class="form">
-              <div id="sendmessage">Your message has been sent. Thank you!</div>
-              <div id="errormessage"></div>
-              <form action="" method="post" role="form" class="contactForm">
-                <div class="form-row">
-                  <div class="form-group col-lg-6">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                    <div class="validation"></div>
-                  </div>
-                  <div class="form-group col-lg-6">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                    <div class="validation"></div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                  <div class="validation"></div>
-                </div>
-                <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
-              </form>
-            </div>
+            {submitted && (
+              <div className="text-green-600 text-center font-medium mt-4">Your message has been sent. Thank you!</div>
+            )}
+          </form>
+          <div className="mt-10 text-center text-gray-500 text-sm">
+            <div>{content.contact.address}</div>
+            <div className="mt-1">Phone: <a href={`tel:${content.contact.phone}`} className="text-blue-700">{content.contact.phone}</a></div>
+            <div>Email: <a href={`mailto:${content.contact.email}`} className="text-blue-700">{content.contact.email}</a></div>
           </div>
-
         </div>
-
-    </div>
-    </section >
-        </div >
-    );
+      </div>
+    </section>
+  );
 };
 
 export default Contact;

@@ -10,6 +10,7 @@ import Banner from './Banner';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import Portfolio from '../Portfolio/Portfolio';
+import WhatWeOffer from './WhatWeOffer';
 const Home = () => {
     // const [members,setMembers] = useState([]);
 
@@ -28,18 +29,19 @@ const Home = () => {
         <>
         <Banner></Banner>
         <AboutUs Aos={Aos}></AboutUs>
+        <WhatWeOffer />
         <Services Aos={Aos}></Services>
-        <ChooseUs></ChooseUs>
-        <Testimonial></Testimonial>
+        {/* <ChooseUs></ChooseUs> */}
+        {/* <Testimonial></Testimonial> */}
        {/* {
         members.map(member=>  <Team 
             // Aos={Aos}
             member={member}
             ></Team>)
        } */}
-       <Team
-       Aos={Aos}></Team>
-        <Portfolio></Portfolio>
+       {/* <Team
+       Aos={Aos}></Team> */}
+        {/* <Portfolio></Portfolio> */}
         <Client Aos={Aos}></Client>
         <Contact></Contact>
         </>
