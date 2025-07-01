@@ -81,8 +81,8 @@ const JobDetails = () => {
   if (!job) return <div className="max-w-xl mx-auto mt-24 p-4 text-center min-h-screen">Job not found.</div>;
 
   return (
-    <div className="max-w-2xl mx-auto pt-24 pb-16 px-4 min-h-screen bg-gray-50 flex flex-col justify-between">
-      <div className="bg-white rounded-lg shadow p-8">
+    <div className="pt-24 pb-16 px-4 min-h-screen flex flex-col justify-between" style={{ background: '#f8f6f3' }}>
+      <div className="p-8">
         <h2 className="text-2xl font-bold mb-2 text-gray-900">{job.title}</h2>
         <div className="text-gray-500 text-sm mb-4">{job.location} &bull; {job.type}</div>
         <p className="mb-6 text-gray-700">{job.description}</p>
@@ -104,11 +104,11 @@ const JobDetails = () => {
             <li key={idx}>{b}</li>
           ))}
         </ul>
-        <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full mt-4" onClick={() => navigate(`/apply/${id}`)}>
+        <button className="bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-800 w-full mt-4" onClick={() => navigate(`/apply/${id}`)}>
           Apply Now
         </button>
       </div>
-      <button className="mt-8 text-blue-600 underline hover:text-blue-800 text-center" onClick={() => navigate(-1)}>
+      <button className="mt-8 text-blue-900 underline hover:text-blue-900 text-center" onClick={() => navigate(-1)}>
         &larr; Back to all jobs
       </button>
     </div>

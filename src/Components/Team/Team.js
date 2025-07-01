@@ -13,8 +13,16 @@ const Team = (props) => {
   useEffect(() => {
     fetch('https://quiet-fjord-73452.herokuapp.com/team-member')
       .then(res => res.json())
-      .then(data => setTeams(data.data))
-
+      .then(data => {
+        if (data && data.data && data.data.length > 0) {
+          setTeams(data.data);
+        } else {
+          setTeams(content.team.members);
+        }
+      })
+      .catch(() => {
+        setTeams(content.team.members);
+      });
   }, []);
   // const {data:teams, isLoading} = useQuery('teams',()=> fetch('http://localhost:5000/team-member').then(res=>res.json()))
 

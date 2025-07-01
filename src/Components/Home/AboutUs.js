@@ -6,17 +6,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhotoFilm, faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 import { faBarChart } from '@fortawesome/free-regular-svg-icons';
 import content from '../../content/websiteContent';
+import './AboutUs.css';
 
 const AboutUs = (props) => {
   // console.log(props);
     return (
        <>
-       <section id="about">
-      <div class="container">
+       <section id="about" style={{ background: '#f8f6f3', color: '#111' }}>
+      <div class="container" style={{ background: '#f8f6f3', color: '#111' }}>
 
-        <header class="section-header">
-          <h3>{content.about.title}</h3>
-          <p>{content.about.description}</p>
+        <header class="section-header" style={{ color: '#111' }}>
+          <h3 style={{ color: '#111' }}>{content.about.title}</h3>
+          <p style={{ color: '#111' }}>{content.about.description}</p>
         </header>
 
         <div class="row about-container" data-aos={props.aos} data-aos-offset={props.aos_offset}>
@@ -28,10 +29,10 @@ const AboutUs = (props) => {
               else if (feature.icon === 'faPhotoFilm') icon = faPhotoFilm;
               else if (feature.icon === 'faBarChart') icon = faBarChart;
               return (
-                <div class="icon-box wow fadeInUp" key={idx}>
-                  <div class="icon"><FontAwesomeIcon icon={icon} className='text-2xl text-blue-700' /></div>
-                  <h4 class="title">{feature.title}</h4>
-                  <p class="description">{feature.text}</p>
+                <div className="icon-box wow fadeInUp aboutus-icon-box" key={idx} style={{ color: '#111' }}>
+                  <div class="icon"><FontAwesomeIcon icon={icon} className='text-2xl' style={{color:'#1a237e'}} /></div>
+                  <h4 class="title" style={{ color: '#111' }}>{feature.title}</h4>
+                  <p class="description" style={{ color: '#111' }}>{feature.text}</p>
                 </div>
               );
             })}
@@ -47,11 +48,11 @@ const AboutUs = (props) => {
             <img src={about2} class="img-fluid w-96 h-96" alt=""/>
           </div>
           <div data-aos="fade-up" class="col-lg-6 wow fadeInUp pt-5 pt-lg-0">
-            <h4>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h4>
-            <p>
+            <h4 style={{ color: '#111' }}>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h4>
+            <p style={{ color: '#111' }}>
               Ipsum in aspernatur ut possimus sint. Quia omnis est occaecati possimus ea. Quas molestiae perspiciatis occaecati qui rerum. Deleniti quod porro sed quisquam saepe. Numquam mollitia recusandae non ad at et a.
             </p>
-            <p>
+            <p style={{ color: '#111' }}>
               Ad vitae recusandae odit possimus. Quaerat cum ipsum corrupti. Odit qui asperiores ea corporis deserunt veritatis quidem expedita perferendis. Qui rerum eligendi ex doloribus quia sit. Porro rerum eum eum.
             </p>
           </div>
@@ -63,15 +64,15 @@ const AboutUs = (props) => {
           </div>
 
           <div data-aos="fade-up" class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
-            <h4>Neque saepe temporibus repellat ea ipsum et. Id vel et quia tempora facere reprehenderit.</h4>
+            <h4 style={{ color: '#111' }}>Neque saepe temporibus repellat ea ipsum et. Id vel et quia tempora facere reprehenderit.</h4>
             <div>
-            <p>
+            <p style={{ color: '#111' }}>
              Delectus alias ut incidunt delectus nam placeat in consequatur. Sed cupiditate quia ea quis. Voluptas nemo qui aut distinctio. Cumque fugit earum est quam officiis numquam. Ducimus corporis autem at blanditiis beatae incidunt sunt. 
             </p>
-            <p>
+            <p style={{ color: '#111' }}>
               Voluptas saepe natus quidem blanditiis. Non sunt impedit voluptas mollitia beatae. Qui esse molestias. Laudantium libero nisi vitae debitis. Dolorem cupiditate est perferendis iusto.
             </p>
-            <p>
+            <p style={{ color: '#111' }}>
               Eum quia in. Magni quas ipsum a. Quis ex voluptatem inventore sint quia modi. Numquam est aut fuga mollitia exercitationem nam accusantium provident quia.
             </p>
             </div>

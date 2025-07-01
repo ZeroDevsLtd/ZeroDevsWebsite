@@ -9,8 +9,8 @@ const serviceImages = [custom, web, mobile, qa];
 
 const Services = (props) => {
   return (
-    <section id="services" className="py-20 bg-[#f8f6f3]">
-      <div className="container mx-auto px-4 max-w-5xl">
+    <section id="services" className="py-20" style={{ background: '#f8f6f3' }}>
+      <div className="container mx-auto px-4">
         <header className="mb-12 text-center">
           <h3 className="text-3xl font-bold text-gray-900 mb-4 uppercase tracking-wide">{content.services.title}</h3>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto">{content.services.description}</p>
@@ -22,7 +22,7 @@ const Services = (props) => {
                 <img src={serviceImages[idx]} alt={service.title} className="w-56 h-56 object-contain" />
               </div>
               <div className="md:w-2/3">
-                <h4 className="text-xl font-semibold text-blue-700 mb-3">{service.title}</h4>
+                <h4 className="text-xl font-semibold text-blue-900 mb-3">{service.title}</h4>
                 <p className="text-gray-700 text-base">{service.text}</p>
               </div>
             </div>

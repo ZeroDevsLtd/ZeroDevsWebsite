@@ -26,25 +26,21 @@ const Home = () => {
     },[])
     return (
         
-        <>
-        <Banner></Banner>
-        <AboutUs Aos={Aos}></AboutUs>
-        <WhatWeOffer />
-        <Services Aos={Aos}></Services>
-        {/* <ChooseUs></ChooseUs> */}
-        {/* <Testimonial></Testimonial> */}
-       {/* {
-        members.map(member=>  <Team 
-            // Aos={Aos}
-            member={member}
-            ></Team>)
-       } */}
-       {/* <Team
-       Aos={Aos}></Team> */}
-        {/* <Portfolio></Portfolio> */}
-        <Client Aos={Aos}></Client>
-        <Contact></Contact>
-        </>
+        <div>
+          <Banner />
+          <AboutUs Aos={Aos} />
+          <WhatWeOffer />
+          <Services Aos={Aos} />
+          {/* <ChooseUs /> */}
+          {/* <Testimonial /> */}
+          {/* {
+            members.map(member => <Team member={member} />)
+          } */}
+          {/* <Team Aos={Aos} /> */}
+          {/* <Portfolio /> */}
+          <Client Aos={Aos} />
+          <Contact />
+        </div>
     );
 };
 

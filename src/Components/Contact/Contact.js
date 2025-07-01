@@ -16,19 +16,19 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-[#f8f6f3]">
+    <section id="contact" className="py-20" style={{ background: '#f8f6f3' }}>
       <div className="container mx-auto px-4 max-w-2xl">
         <header className="mb-10 text-center">
           <h3 className="text-3xl font-bold text-gray-900 mb-2 uppercase tracking-wide">{content.contact.title}</h3>
           <p className="text-gray-600 mb-6">We'd love to hear from you! Fill out the form and our team will get back to you soon.</p>
         </header>
-        <div className="bg-white rounded-2xl shadow-lg p-8">
+        <div className="p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="flex flex-col md:flex-row gap-4">
               <input
                 type="text"
                 name="name"
-                className="form-input flex-1 rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                className="form-input flex-1 rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-900"
                 placeholder="Your Name"
                 value={form.name}
                 onChange={handleChange}
@@ -37,7 +37,7 @@ const Contact = () => {
               <input
                 type="email"
                 name="email"
-                className="form-input flex-1 rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                className="form-input flex-1 rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-900"
                 placeholder="Your Email"
                 value={form.email}
                 onChange={handleChange}
@@ -47,7 +47,7 @@ const Contact = () => {
             <input
               type="text"
               name="subject"
-              className="form-input w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-200"
+              className="form-input w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-900"
               placeholder="Subject"
               value={form.subject}
               onChange={handleChange}
@@ -55,7 +55,7 @@ const Contact = () => {
             />
             <textarea
               name="message"
-              className="form-textarea w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-200"
+              className="form-textarea w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-900"
               rows={5}
               placeholder="Message"
               value={form.message}
@@ -65,7 +65,7 @@ const Contact = () => {
             <div className="flex flex-col md:flex-row gap-4 items-center justify-center mt-4">
               <button
                 type="submit"
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition"
+                className="bg-blue-900 hover:bg-blue-800 text-white font-semibold px-8 py-3 rounded-lg transition"
               >
                 Send Message
               </button>
@@ -84,8 +84,8 @@ const Contact = () => {
           </form>
           <div className="mt-10 text-center text-gray-500 text-sm">
             <div>{content.contact.address}</div>
-            <div className="mt-1">Phone: <a href={`tel:${content.contact.phone}`} className="text-blue-700">{content.contact.phone}</a></div>
-            <div>Email: <a href={`mailto:${content.contact.email}`} className="text-blue-700">{content.contact.email}</a></div>
+            <div className="mt-1">Phone: <a href={`tel:${content.contact.phone}`} className="text-blue-900">{content.contact.phone}</a></div>
+            <div>Email: <a href={`mailto:${content.contact.email}`} className="text-blue-900">{content.contact.email}</a></div>
           </div>
         </div>
       </div>

@@ -14,8 +14,8 @@ const content = {
   },
   banner: {
     headline: "We provide solutions for your business!",
-    subheadline: "Let us help you grow with modern, scalable digital solutions.",
-    cta: "Get Started"
+    subheadline: "ZERODEVS - Your trusted Software Development Partner",
+    description: "A top tier software development team assisting owners and decision makers to implement digital initiatives to achieve lasting financial success"
   },
   about: {
     title: "About Us",
@@ -66,7 +66,7 @@ const content = {
       },
       {
         title: "Mobile Application Development",
-        text: "Our expertise in custom mobile app development gives our clients the opportunity to pack incredible functionality into their customer’s hands. We develop apps that perform across different mobile devices and operating systems. We are experts at Swift/Objective-C to build native iOS apps and Java/Kotlin for native Android app development. For cross-platform and hybrid development our expertise include, but are not limited to, Ionic, Xamarin, and React Native."
+        text: "Our expertise in custom mobile app development gives our clients the opportunity to pack incredible functionality into their customer's hands. We develop apps that perform across different mobile devices and operating systems. We are experts at Swift/Objective-C to build native iOS apps and Java/Kotlin for native Android app development. For cross-platform and hybrid development our expertise include, but are not limited to, Ionic, Xamarin, and React Native."
       },
       {
         title: "Quality Assurance & Testing",
@@ -76,7 +76,29 @@ const content = {
   },
   team: {
     title: "Team",
-    description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque"
+    description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
+    members: [
+      {
+        name: "Alice Johnson",
+        title: "CEO & Founder",
+        image: require('../Components/images/team-1.jpg'),
+      },
+      {
+        name: "Bob Smith",
+        title: "Lead Developer",
+        image: require('../Components/images/team-2.jpg'),
+      },
+      {
+        name: "Carol Lee",
+        title: "UI/UX Designer",
+        image: require('../Components/images/team-3.jpg'),
+      },
+      {
+        name: "David Kim",
+        title: "Project Manager",
+        image: require('../Components/images/team-4.jpg'),
+      },
+    ]
   },
   testimonial: {
     title: "Testimonials"

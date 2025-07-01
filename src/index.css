@@ -10,8 +10,17 @@ body {
   background-color: #f8f6f3;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #f8f6f3 !important;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+a, a:focus, a:active, a:visited, a:hover, button, button:focus, button:active, button:visited, button:hover {
+  outline: none !important;
+  color: inherit !important;
+  background: none !important;
+  box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent !important;
 }

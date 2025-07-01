@@ -112,11 +112,11 @@ const Apply = () => {
   };
 
   return (
-    <div className="max-w-5xl mx-auto pt-24 pb-16 px-2 min-h-screen bg-gray-50 flex flex-col justify-between">
+    <div className="pt-24 pb-16 px-2 min-h-screen flex flex-col justify-between" style={{ background: '#f8f6f3' }}>
       <h2 className="text-3xl font-bold mb-8 text-gray-900 text-center">Apply for {job.title}</h2>
       <div className="text-gray-500 text-sm mb-8 text-center">{job.location} &bull; {job.type}</div>
       {submitted ? (
-        <div className="bg-white rounded-lg shadow p-12 text-center mx-auto w-full max-w-2xl">
+        <div className="p-12 text-center mx-auto w-full">
           <div className="text-green-600 text-2xl font-bold mb-4">Application Received!</div>
           <div className="text-gray-700">Thank you for applying. As we receive a lot of applications, we will only contact shortlisted candidates.</div>
         </div>
@@ -263,15 +263,15 @@ const Apply = () => {
             <h3 className="text-xl font-semibold mb-4">4. Submit Application</h3>
             <div className="mb-4 flex items-center">
               <input type="checkbox" name="consent" checked={form.consent} onChange={handleChange} required className="mr-2" />
-              <span className="text-gray-700">Allow us to process your personal information. <a href="#" className="text-blue-600 underline ml-1">Privacy notice</a></span>
+              <span className="text-gray-700">Allow us to process your personal information. <a href="#" className="text-blue-900 underline ml-1">Privacy notice</a></span>
             </div>
             <div className="flex flex-col md:flex-row gap-4">
-              <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full md:w-auto" type="submit">Submit Application</button>
+              <button className="bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-800 w-full md:w-auto" type="submit">Submit Application</button>
             </div>
           </div>
         </form>
       )}
-      <button className="mt-8 text-blue-600 underline hover:text-blue-800 text-center" onClick={() => navigate(-1)}>
+      <button className="mt-8 text-blue-900 underline hover:text-blue-800 text-center" onClick={() => navigate(-1)}>
         &larr; Back to job details
       </button>
     </div>

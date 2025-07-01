@@ -13,7 +13,7 @@ const clientLogos = [client1, client2, client3, client4, client5, client6, clien
 
 const Client = () => {
   return (
-    <section id="clients" className="py-8">
+    <section id="clients" className="py-8" style={{ background: '#f8f6f3' }}>
       <div className="container mx-auto px-4 max-w-3xl">
         <header className="mb-6 text-center">
           <h3 className="text-xl font-bold text-gray-900 mb-2 uppercase tracking-wide">{content.client.title}</h3>
@@ -21,7 +21,7 @@ const Client = () => {
         <div className="flex flex-wrap justify-center items-center gap-8">
           {clientLogos.map((logo, idx) => (
             <div key={idx} className="flex items-center justify-center p-2">
-              <img src={logo} alt={`Client ${idx + 1}`} className="w-28 h-28 rounded-full object-cover border-4 border-blue-200 shadow-sm" />
+              <img src={logo} alt={`Client ${idx + 1}`} className="w-28 h-28 rounded-full object-cover border-4 border-blue-900 shadow-sm" />
             </div>
           ))}
         </div>
