@@ -15,11 +15,11 @@ const content = {
   banner: {
     headline: "We provide solutions for your business!",
     subheadline: "ZERODEVS - Your trusted Software Development Partner",
-    description: "A top tier software development team assisting owners and decision makers to implement digital initiatives to achieve lasting financial success"
+    description: "Empowering business leaders to achieve lasting success through digital innovation. We deliver SaaS products, custom and AI-driven solutions, and connect you with top global talent—helping your business scale and lead in a digital world."
   },
   about: {
     title: "About Us",
-    description: "ZeroDevs is involved in designing, developing, implementing and maintaining business application software for both domestic and overseas markets. Our complete spectrum of mobile app development and web solutions help businesses to create outcome-focused solutions with enhanced agility that help them to rapidly reshape, renew and build new capabilities for their business.",
+    description: "ZeroDevs empowers businesses worldwide with innovative SaaS products, custom and AI-driven solutions, and a global talent hiring program. Our expertise in mobile and web development helps organizations rapidly adapt, scale, and build new capabilities for lasting success.",
     features: [
       {
         title: "Process & Quality",
@@ -36,21 +36,25 @@ const content = {
     ],
     iconFeatures: [
       {
-        title: "Process & Quality",
-        text: "We follow an agile project management system which reduces our development cost and helps to meet deadlines. Our dedicated QA team ensures excellent product quality.",
-        icon: "faShoppingBag"
+        title: "Agile Process",
+        text: "Our agile project management ensures on-time delivery and cost efficiency, with dedicated QA for top-tier quality.",
+        icon: "faProjectDiagram"
       },
       {
-        title: "Customer Support",
-        text: "There are two offices located in New York and one in Dhaka making a team who will support its clients round the clock.",
-        icon: "faPhotoFilm"
+        title: "24/7 Support",
+        text: "With offices in New York and Dhaka, our global team provides round-the-clock support for all clients.",
+        icon: "faHeadset"
       },
       {
-        title: "Customer Relationship",
-        text: "We always go the extra mile to maintain long lasting relationships with our partners & clients.",
-        icon: "faBarChart"
+        title: "Client Partnership",
+        text: "We build lasting partnerships, going the extra mile to support and grow with our clients.",
+        icon: "faHandshake"
       }
-    ]
+    ],
+    extraHeading: "Global Talent Hiring for Your Success",
+    extraParagraph1: "Access a world-class pool of engineers, developers, and specialists. Our global talent hiring program connects you with the right experts to drive your business forward, no matter where you are.",
+    extraParagraph2: "We manage recruitment, onboarding, and seamless integration, so you can focus on your business while we build your dream team.",
+    extraParagraph3: "Partner with ZeroDevs to scale quickly, stay competitive, and ensure your team always has the skills needed for success in a fast-changing digital world.",
   },
   services: {
     title: "OUR SERVICES",

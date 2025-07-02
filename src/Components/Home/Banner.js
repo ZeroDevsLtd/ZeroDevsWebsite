@@ -13,9 +13,14 @@ const Banner = () => {
                     </div>
 
                     <div class="intro-info" style={{ color: '#111' }}>
-                        <h2 style={{ color: '#111' }}>{content.banner.headline}</h2>
-                        <h3 style={{ color: '#111', fontWeight: 600, marginTop: 16 }}>{content.banner.subheadline}</h3>
-                        <p style={{ color: '#111', marginTop: 8 }}>{content.banner.description}</p>
+                        <h2 style={{ color: '#0a2259' }}>{content.banner.headline}</h2>
+                        <h3 style={{ color: '#0a2259', fontWeight: 600, marginTop: 16 }}>
+                            <span style={{ fontFamily: 'Montserrat, sans-serif', color: '#007bff', fontWeight: 800, letterSpacing: '2px' }}>
+                                ZERODEVS
+                            </span>
+                            <span> - Your trusted Software Development Partner</span>
+                        </h3>
+                        <p style={{ color: '#111', marginTop: 8, paddingRight: 32 }}>{content.banner.description}</p>
                         <div>
                             <a href="#services" class="btn-services scrollto">Our Services</a>
                         </div>

@@ -11,7 +11,7 @@ const ChooseUs = () => {
 
       <section id="why-us" class="wow fadeIn">
         <div class="container">
-          <header class="section-header">
+          <header class="section-header" style={{ color: '#0a2259' }}>
             <h3>Why choose us?</h3>
             <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
           </header>

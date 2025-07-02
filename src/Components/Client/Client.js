@@ -15,8 +15,8 @@ const Client = () => {
   return (
     <section id="clients" className="py-8" style={{ background: '#f8f6f3' }}>
       <div className="container mx-auto px-4 max-w-3xl">
-        <header className="mb-6 text-center">
-          <h3 className="text-xl font-bold text-gray-900 mb-2 uppercase tracking-wide">{content.client.title}</h3>
+        <header className="section-header" style={{ color: '#0a2259' }}>
+          <h3 style={{ color: '#0a2259', textTransform: 'uppercase', fontWeight: 700, fontSize: 36 }}>{content.client.title}</h3>
         </header>
         <div className="flex flex-wrap justify-center items-center gap-8">
           {clientLogos.map((logo, idx) => (

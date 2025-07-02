@@ -14,7 +14,7 @@ const Portfolio = () => {
         <div>
             <section id="portfolio" className="clearfix">
         <div className="container">
-          <header className="section-header">
+          <header className="section-header" style={{ color: '#0a2259' }}>
             <h3 className="section-title">Our Portfolio</h3>
           </header>
           <div className="row">

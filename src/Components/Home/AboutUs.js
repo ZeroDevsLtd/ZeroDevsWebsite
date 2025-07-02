@@ -3,7 +3,7 @@ import about1 from '../../Components/images/about-img.svg';
 import about2 from '../../Components/images/about-extra-1.svg';
 import about3 from '../../Components/images/about-extra-2.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhotoFilm, faShoppingBag } from '@fortawesome/free-solid-svg-icons';
+import { faPhotoFilm, faShoppingBag, faProjectDiagram, faHeadset, faHandshake } from '@fortawesome/free-solid-svg-icons';
 import { faBarChart } from '@fortawesome/free-regular-svg-icons';
 import content from '../../content/websiteContent';
 import './AboutUs.css';
@@ -15,8 +15,8 @@ const AboutUs = (props) => {
        <section id="about" style={{ background: '#f8f6f3', color: '#111' }}>
       <div class="container" style={{ background: '#f8f6f3', color: '#111' }}>
 
-        <header class="section-header" style={{ color: '#111' }}>
-          <h3 style={{ color: '#111' }}>{content.about.title}</h3>
+        <header class="section-header" style={{ color: '#0a2259' }}>
+          <h3 style={{ color: '#0a2259', textTransform: 'uppercase', fontWeight: 700, fontSize: 36 }}>{content.about.title}</h3>
           <p style={{ color: '#111' }}>{content.about.description}</p>
         </header>
 
@@ -28,10 +28,13 @@ const AboutUs = (props) => {
               if (feature.icon === 'faShoppingBag') icon = faShoppingBag;
               else if (feature.icon === 'faPhotoFilm') icon = faPhotoFilm;
               else if (feature.icon === 'faBarChart') icon = faBarChart;
+              else if (feature.icon === 'faProjectDiagram') icon = faProjectDiagram;
+              else if (feature.icon === 'faHeadset') icon = faHeadset;
+              else if (feature.icon === 'faHandshake') icon = faHandshake;
               return (
                 <div className="icon-box wow fadeInUp aboutus-icon-box" key={idx} style={{ color: '#111' }}>
                   <div class="icon"><FontAwesomeIcon icon={icon} className='text-2xl' style={{color:'#1a237e'}} /></div>
-                  <h4 class="title" style={{ color: '#111' }}>{feature.title}</h4>
+                  <h4 class="title" style={{ color: '#0a2259', fontWeight: 700, fontSize: 20 }}>{feature.title}</h4>
                   <p class="description" style={{ color: '#111' }}>{feature.text}</p>
                 </div>
               );
@@ -48,13 +51,10 @@ const AboutUs = (props) => {
             <img src={about2} class="img-fluid w-96 h-96" alt=""/>
           </div>
           <div data-aos="fade-up" class="col-lg-6 wow fadeInUp pt-5 pt-lg-0">
-            <h4 style={{ color: '#111' }}>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h4>
-            <p style={{ color: '#111' }}>
-              Ipsum in aspernatur ut possimus sint. Quia omnis est occaecati possimus ea. Quas molestiae perspiciatis occaecati qui rerum. Deleniti quod porro sed quisquam saepe. Numquam mollitia recusandae non ad at et a.
-            </p>
-            <p style={{ color: '#111' }}>
-              Ad vitae recusandae odit possimus. Quaerat cum ipsum corrupti. Odit qui asperiores ea corporis deserunt veritatis quidem expedita perferendis. Qui rerum eligendi ex doloribus quia sit. Porro rerum eum eum.
-            </p>
+            <h4 style={{ color: '#0a2259', fontWeight: 700 }}>{content.about.extraHeading}</h4>
+            <p style={{ color: '#111' }}>{content.about.extraParagraph1}</p>
+            <p style={{ color: '#111' }}>{content.about.extraParagraph2}</p>
+            <p style={{ color: '#111' }}>{content.about.extraParagraph3}</p>
           </div>
         </div>
 

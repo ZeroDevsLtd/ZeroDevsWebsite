@@ -12,7 +12,7 @@ const Services = (props) => {
     <section id="services" className="py-20" style={{ background: '#f8f6f3' }}>
       <div className="container mx-auto px-4">
         <header className="mb-12 text-center">
-          <h3 className="text-3xl font-bold text-gray-900 mb-4 uppercase tracking-wide">{content.services.title}</h3>
+          <h3 className="text-3xl font-bold text-gray-900 mb-4 uppercase tracking-wide" style={{ color: '#0a2259', textTransform: 'uppercase', fontWeight: 700, fontSize: 36 }}>{content.services.title}</h3>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto">{content.services.description}</p>
         </header>
         <div className="space-y-16">

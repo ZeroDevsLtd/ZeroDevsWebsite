@@ -18,8 +18,8 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20" style={{ background: '#f8f6f3' }}>
       <div className="container mx-auto px-4 max-w-2xl">
-        <header className="mb-10 text-center">
-          <h3 className="text-3xl font-bold text-gray-900 mb-2 uppercase tracking-wide">{content.contact.title}</h3>
+        <header className="section-header" style={{ color: '#0a2259' }}>
+          <h3 style={{ color: '#0a2259', textTransform: 'uppercase', fontWeight: 700, fontSize: 36 }}>{content.contact.title}</h3>
           <p className="text-gray-600 mb-6">We'd love to hear from you! Fill out the form and our team will get back to you soon.</p>
         </header>
         <div className="p-8">

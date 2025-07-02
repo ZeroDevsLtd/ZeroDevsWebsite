@@ -11,8 +11,8 @@ const WhatWeOffer = () => {
   return (
     <section id="what-we-offer" className="py-20" style={{ background: '#f8f6f3', color: '#111' }}>
       <div className="container mx-auto px-4 max-w-6xl" style={{ color: '#111' }}>
-        <header className="mb-12 text-center" style={{ color: '#111' }}>
-          <h3 className="text-4xl font-bold text-gray-900 mb-6 uppercase tracking-wide" style={{ color: '#111' }}>{content.whatWeOffer.title}</h3>
+        <header className="section-header" style={{ color: '#0a2259' }}>
+          <h3 style={{ color: '#0a2259', textTransform: 'uppercase', fontWeight: 700, fontSize: 36 }}>{content.whatWeOffer.title}</h3>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto" style={{ color: '#111' }}>{content.whatWeOffer.description}</p>
         </header>
         <div className="grid md:grid-cols-2 gap-10">
