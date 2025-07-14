@@ -4,15 +4,39 @@ import content from '../../content/websiteContent';
 const Contact = () => {
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = e => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    // Here you would handle sending the form data
+    setLoading(true);
+    setError(null);
+    setSubmitted(false);
+    try {
+      const response = await fetch('https://formspree.io/f/mdkdnwqz', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(form),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        setSubmitted(true);
+        setForm({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setError(data.error || 'Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      setError('Something went wrong. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -24,43 +48,48 @@ const Contact = () => {
         </header>
         <div className="p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
+            <input type="hidden" name="_subject" value="New Contact Form Submission" />
             <div className="flex flex-col md:flex-row gap-4">
               <input
                 type="text"
                 name="name"
-                className="form-input flex-1 rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-900"
+                className="form-input flex-1 rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-900 bg-white text-gray-900"
                 placeholder="Your Name"
                 value={form.name}
                 onChange={handleChange}
                 required
+                autoComplete="off"
               />
               <input
                 type="email"
                 name="email"
-                className="form-input flex-1 rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-900"
+                className="form-input flex-1 rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-900 bg-white text-gray-900"
                 placeholder="Your Email"
                 value={form.email}
                 onChange={handleChange}
                 required
+                autoComplete="off"
               />
             </div>
             <input
               type="text"
               name="subject"
-              className="form-input w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-900"
+              className="form-input w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-900 bg-white text-gray-900"
               placeholder="Subject"
               value={form.subject}
               onChange={handleChange}
               required
+              autoComplete="off"
             />
             <textarea
               name="message"
-              className="form-textarea w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-900"
+              className="form-textarea w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-900 bg-white text-gray-900"
               rows={5}
               placeholder="Message"
               value={form.message}
               onChange={handleChange}
               required
+              autoComplete="off"
             />
             <div className="flex justify-center mt-4">
               <button
@@ -81,6 +110,7 @@ const Contact = () => {
                   border: "2px solid #007bff",
                   background: "#007bff"
                 }}
+                disabled={loading}
                 onMouseOver={(e) => {
                   e.target.style.background = "none";
                   e.target.style.borderColor = "#007bff";
@@ -92,11 +122,14 @@ const Contact = () => {
                   e.target.style.color = "#fff";
                 }}
               >
-                Send Message
+                {loading ? 'Sending...' : 'Send Message'}
               </button>
             </div>
             {submitted && (
-              <div className="text-green-600 text-center font-medium mt-4">Your message has been sent. Thank you!</div>
+              <div className="text-green-600 text-center font-medium mt-4">Thank you for reaching out! We’ve received your message and will get back to you soon.</div>
+            )}
+            {error && (
+              <div className="text-red-600 text-center font-medium mt-4">{error}</div>
             )}
           </form>
           <div className="mt-10 text-center text-gray-500 text-sm">
