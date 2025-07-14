@@ -75,6 +75,14 @@ const content = {
       {
         title: "Quality Assurance & Testing",
         text: "Treading on Agile development methodologies and Rational Unified Process practices in testing, Zerodevs ensures highest quality of software solutions to you. Our software testing strategy ensures every component of your software are free of bugs and issues."
+      },
+      {
+        title: "Global Talent Hiring",
+        text: "We connect companies worldwide with top-tier talent, offering flexible hiring solutions for both permanent and contract-based roles. Our global network ensures you have access to the right experts to drive your business forward, wherever you are."
+      },
+      {
+        title: "SaaS Product Development",
+        text: "We build and sell innovative SaaS products, and also create custom feature-rich solutions tailored to your business needs. Whether you need a ready-to-use platform or a bespoke product, our team delivers scalable, secure, and user-friendly software."
       }
     ]
   },

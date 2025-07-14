@@ -62,21 +62,38 @@ const Contact = () => {
               onChange={handleChange}
               required
             />
-            <div className="flex flex-col md:flex-row gap-4 items-center justify-center mt-4">
+            <div className="flex justify-center mt-4">
               <button
                 type="submit"
-                className="bg-blue-900 hover:bg-blue-800 text-white font-semibold px-8 py-3 rounded-lg transition"
+                className="btn-services"
+                style={{
+                  fontFamily: "Montserrat, sans-serif",
+                  fontSize: "14px",
+                  fontWeight: 600,
+                  letterSpacing: "1px",
+                  display: "inline-block",
+                  padding: "10px 32px",
+                  borderRadius: "50px",
+                  transition: "0.5s",
+                  margin: "0 20px 20px 0",
+                  color: "#fff",
+                  textDecoration: "none",
+                  border: "2px solid #007bff",
+                  background: "#007bff"
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.background = "none";
+                  e.target.style.borderColor = "#007bff";
+                  e.target.style.color = "#007bff";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.background = "#007bff";
+                  e.target.style.borderColor = "#007bff";
+                  e.target.style.color = "#fff";
+                }}
               >
                 Send Message
               </button>
-              <a
-                href="https://calendly.com/zerodevs/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-3 rounded-lg transition text-center"
-              >
-                Schedule a Free 30-Minute Session
-              </a>
             </div>
             {submitted && (
               <div className="text-green-600 text-center font-medium mt-4">Your message has been sent. Thank you!</div>

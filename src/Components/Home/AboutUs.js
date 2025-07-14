@@ -64,16 +64,16 @@ const AboutUs = (props) => {
           </div>
 
           <div data-aos="fade-up" class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
-            <h4 style={{ color: '#111' }}>Neque saepe temporibus repellat ea ipsum et. Id vel et quia tempora facere reprehenderit.</h4>
+            <h4 style={{ color: '#111' }}>Empowering Your Digital Future</h4>
             <div>
             <p style={{ color: '#111' }}>
-             Delectus alias ut incidunt delectus nam placeat in consequatur. Sed cupiditate quia ea quis. Voluptas nemo qui aut distinctio. Cumque fugit earum est quam officiis numquam. Ducimus corporis autem at blanditiis beatae incidunt sunt. 
+              At ZeroDevs, we believe in transforming ideas into impactful digital solutions. Our team of expert engineers and innovators is dedicated to helping businesses thrive in a rapidly evolving technological landscape.
             </p>
             <p style={{ color: '#111' }}>
-              Voluptas saepe natus quidem blanditiis. Non sunt impedit voluptas mollitia beatae. Qui esse molestias. Laudantium libero nisi vitae debitis. Dolorem cupiditate est perferendis iusto.
+              From custom software and SaaS products to global talent hiring, we provide end-to-end services that drive growth, efficiency, and long-term success. We work as an extension of your team, ensuring seamless collaboration and outstanding results.
             </p>
             <p style={{ color: '#111' }}>
-              Eum quia in. Magni quas ipsum a. Quis ex voluptatem inventore sint quia modi. Numquam est aut fuga mollitia exercitationem nam accusantium provident quia.
+              Partner with ZeroDevs to unlock new opportunities, scale your business, and stay ahead of the competition. Your vision, our expertise—together, we build the future.
             </p>
             </div>
           </div>
