@@ -74,6 +74,27 @@ const jobDetails = {
   },
 };
 
+const CustomFileInput = ({ id, name, accept, onChange, required, label, value }) => (
+  <div className="relative w-full">
+    <input
+      id={id}
+      name={name}
+      type="file"
+      accept={accept}
+      onChange={onChange}
+      required={required}
+      className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
+    />
+    <label
+      htmlFor={id}
+      className="block w-full border px-3 py-2 rounded bg-white text-gray-900 cursor-pointer text-left font-normal focus-within:ring-2 focus-within:ring-blue-900 transition"
+      style={{ minHeight: '2.5rem' }}
+    >
+      {value && value.name ? value.name : label || 'Choose file...'}
+    </label>
+  </div>
+);
+
 const Apply = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -128,23 +149,23 @@ const Apply = () => {
             <div className="flex flex-col md:flex-row gap-4 mb-4">
               <div className="flex-1">
                 <label className="block mb-1 font-medium">First Name *</label>
-                <input className="w-full border px-3 py-2 rounded" name="firstName" value={form.firstName} onChange={handleChange} required />
+                <input className="w-full border px-3 py-2 rounded bg-white text-gray-900" name="firstName" value={form.firstName} onChange={handleChange} required />
               </div>
               <div className="flex-1">
                 <label className="block mb-1 font-medium">Last Name *</label>
-                <input className="w-full border px-3 py-2 rounded" name="lastName" value={form.lastName} onChange={handleChange} required />
+                <input className="w-full border px-3 py-2 rounded bg-white text-gray-900" name="lastName" value={form.lastName} onChange={handleChange} required />
               </div>
             </div>
             <div className="flex flex-col md:flex-row gap-4 mb-4">
               <div className="flex-1">
                 <label className="block mb-1 font-medium">Email Address *</label>
-                <input className="w-full border px-3 py-2 rounded" type="email" name="email" value={form.email} onChange={handleChange} required />
+                <input className="w-full border px-3 py-2 rounded bg-white text-gray-900" type="email" name="email" value={form.email} onChange={handleChange} required />
               </div>
               <div className="flex-1">
                 <label className="block mb-1 font-medium">Phone *</label>
                 <div className="flex gap-2">
                   <select
-                    className="border px-2 py-2 rounded bg-gray-50"
+                    className="w-full border px-3 py-2 rounded bg-white text-gray-900 appearance-none focus:outline-none focus:ring-2 focus:ring-blue-900 custom-select-arrow"
                     name="countryCode"
                     value={form.countryCode}
                     onChange={handleChange}
@@ -155,7 +176,7 @@ const Apply = () => {
                     ))}
                   </select>
                   <input
-                    className="w-full border px-3 py-2 rounded"
+                    className="w-full border px-3 py-2 rounded bg-white text-gray-900"
                     name="phone"
                     value={form.phone}
                     onChange={handleChange}
@@ -171,17 +192,32 @@ const Apply = () => {
             <h3 className="text-xl font-semibold mb-4">2. Profile</h3>
             <div className="mb-4">
               <label className="block mb-1 font-medium">Résumé / CV *</label>
-              <input className="w-full border px-3 py-2 rounded" type="file" name="cv" accept=".pdf,.doc,.docx" onChange={handleChange} required />
+              <CustomFileInput
+                id="cv-upload"
+                name="cv"
+                accept=".pdf,.doc,.docx"
+                onChange={handleChange}
+                required
+                label="Upload your CV (PDF, DOC, DOCX)"
+                value={form.cv}
+              />
             </div>
             <div className="mb-4">
               <label className="block mb-1 font-medium">Personal Summary <span className="text-gray-400">(optional)</span></label>
-              <textarea className="w-full border px-3 py-2 rounded" name="summary" value={form.summary} onChange={handleChange} rows="4"></textarea>
+              <textarea className="w-full border px-3 py-2 rounded bg-white text-gray-900" name="summary" value={form.summary} onChange={handleChange} rows="4"></textarea>
             </div>
             <div className="mb-4">
               <label className="block mb-1 font-medium">Cover Letter (optional)</label>
-              <input className="w-full border px-3 py-2 rounded mb-2" type="file" name="coverLetterFile" accept=".pdf,.doc,.docx" onChange={handleChange} />
+              <CustomFileInput
+                id="cover-letter-upload"
+                name="coverLetterFile"
+                accept=".pdf,.doc,.docx"
+                onChange={handleChange}
+                label="Upload your cover letter (PDF, DOC, DOCX)"
+                value={form.coverLetterFile}
+              />
               <span className="block text-gray-400 text-xs mb-2">Or write your cover letter below</span>
-              <textarea className="w-full border px-3 py-2 rounded" name="coverLetterText" value={form.coverLetterText || ''} onChange={handleChange} rows="4" placeholder="Write your cover letter here..."></textarea>
+              <textarea className="w-full border px-3 py-2 rounded bg-white text-gray-900" name="coverLetterText" value={form.coverLetterText || ''} onChange={handleChange} rows="4" placeholder="Write your cover letter here..."></textarea>
             </div>
           </div>
           {/* 3. Questions */}
@@ -201,7 +237,7 @@ const Apply = () => {
                 <div className="mt-4">
                   <label className="block mb-1 font-medium">Select your country</label>
                   <select
-                    className="w-full border px-3 py-2 rounded"
+                    className="w-full border px-3 py-2 rounded bg-white text-gray-900 appearance-none focus:outline-none focus:ring-2 focus:ring-blue-900 custom-select-arrow"
                     name="countryNonBD"
                     value={form.countryNonBD || ''}
                     onChange={handleChange}
@@ -228,7 +264,7 @@ const Apply = () => {
             </div>
             <div className="mb-4">
               <label className="block mb-1 font-medium">Please select the passing year of your undergraduate degree.</label>
-              <select className="w-full border px-3 py-2 rounded" name="passingYear" value={form.passingYear} onChange={handleChange} required>
+              <select className="w-full border px-3 py-2 rounded bg-white text-gray-900 appearance-none focus:outline-none focus:ring-2 focus:ring-blue-900 custom-select-arrow" name="passingYear" value={form.passingYear} onChange={handleChange} required>
                 <option value="">Select...</option>
                 {Array.from({length: 30}, (_, i) => 1995 + i).map(year => (
                   <option key={year} value={year}>{year}</option>
@@ -248,7 +284,7 @@ const Apply = () => {
             </div>
             <div className="mb-4">
               <label className="block mb-1 font-medium">How many years of experience do you have in your field?</label>
-              <select className="w-full border px-3 py-2 rounded" name="experience" value={form.experience} onChange={handleChange} required>
+              <select className="w-full border px-3 py-2 rounded bg-white text-gray-900 appearance-none focus:outline-none focus:ring-2 focus:ring-blue-900 custom-select-arrow" name="experience" value={form.experience} onChange={handleChange} required>
                 <option value="">Select...</option>
                 <option value="0-1">0-1</option>
                 <option value="1-2">1-2</option>
@@ -266,7 +302,37 @@ const Apply = () => {
               <span className="text-gray-700">Allow us to process your personal information. <a href="#" className="text-blue-900 underline ml-1">Privacy notice</a></span>
             </div>
             <div className="flex flex-col md:flex-row gap-4">
-              <button className="bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-800 w-full md:w-auto" type="submit">Submit Application</button>
+              <button
+                type="submit"
+                style={{
+                  background: '#007bff',
+                  color: '#fff',
+                  border: '3px solid #007bff',
+                  borderRadius: '999px',
+                  padding: '12px 40px',
+                  fontWeight: 700,
+                  fontSize: '16px',
+                  fontFamily: 'Montserrat, Arial, sans-serif',
+                  boxShadow: '0 4px 16px 0 rgba(0,0,0,0.08)',
+                  letterSpacing: '1px',
+                  transition: 'all 0.2s',
+                  cursor: 'pointer',
+                  width: '100%',
+                  maxWidth: '320px',
+                  margin: '0 auto',
+                  display: 'block',
+                }}
+                onMouseOver={e => {
+                  e.target.style.background = '#0056b3';
+                  e.target.style.borderColor = '#0056b3';
+                }}
+                onMouseOut={e => {
+                  e.target.style.background = '#007bff';
+                  e.target.style.borderColor = '#007bff';
+                }}
+              >
+                Submit Application
+              </button>
             </div>
           </div>
         </form>
@@ -279,3 +345,13 @@ const Apply = () => {
 };
 
 export default Apply;
+
+<style>{`
+.custom-select-arrow {
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%2360a5fa" height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7.293 7.293a1 1 0 011.414 0L10 8.586l1.293-1.293a1 1 0 111.414 1.414l-2 2a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1.25rem 1.25rem;
+  padding-right: 2.5rem;
+}
+`}</style>
