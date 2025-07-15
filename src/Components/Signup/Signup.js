@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import Loading from '../Sheare/Loading';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import auth from '../../firebase.init';
+import { auth } from '../../firebase.init';
 
 const Signup = () => {
     // SignInwithGoogle

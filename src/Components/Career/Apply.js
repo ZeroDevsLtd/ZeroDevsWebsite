@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { countryCodes } from './countryCodes';
+import app from '../../firebase.init';
+import { getFirestore, collection, addDoc, Timestamp } from 'firebase/firestore';
+
+const db = getFirestore(app);
 
 const jobDetails = {
   1: {
@@ -100,6 +104,8 @@ const Apply = () => {
   const navigate = useNavigate();
   const job = jobDetails[id];
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
     firstName: '',
     lastName: '',
@@ -126,10 +132,59 @@ const Apply = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const fileToBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+    });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you would send the data to your backend or email service
-    setSubmitted(true);
+    setLoading(true);
+    setError(null);
+    setSubmitted(false);
+    try {
+      let cvBase64 = '';
+      if (form.cv) {
+        if (form.cv.size > 1024 * 1024) {
+          setError('CV file must be less than 1MB.');
+          setLoading(false);
+          return;
+        }
+        cvBase64 = await fileToBase64(form.cv);
+      }
+      const dataToSave = {
+        ...form,
+        cv: cvBase64,
+        jobId: id,
+        jobTitle: job.title,
+        submittedAt: Timestamp.now(),
+      };
+      await addDoc(collection(db, 'applications'), dataToSave);
+      setSubmitted(true);
+      setForm({
+        firstName: '',
+        lastName: '',
+        email: '',
+        countryCode: '+1',
+        phone: '',
+        cv: null,
+        summary: '',
+        citizen: '',
+        degree: '',
+        passingYear: '',
+        interviewed: '',
+        experience: '',
+        consent: false,
+      });
+    } catch (err) {
+      setError('Failed to submit application. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -330,8 +385,9 @@ const Apply = () => {
                   e.target.style.background = '#007bff';
                   e.target.style.borderColor = '#007bff';
                 }}
+                disabled={loading}
               >
-                Submit Application
+                {loading ? 'Submitting...' : 'Submit Application'}
               </button>
             </div>
           </div>

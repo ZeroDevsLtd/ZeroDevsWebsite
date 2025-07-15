@@ -2,7 +2,7 @@ import { signOut } from 'firebase/auth';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useLocation } from 'react-router-dom';
-import auth from '../../firebase.init';
+import { auth } from '../../firebase.init';
 import logo from '../images/logo.png';
 import content from '../../content/websiteContent';
 

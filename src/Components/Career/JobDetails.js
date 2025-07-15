@@ -104,7 +104,35 @@ const JobDetails = () => {
             <li key={idx}>{b}</li>
           ))}
         </ul>
-        <button className="bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-800 w-full mt-4" onClick={() => navigate(`/apply/${id}`)}>
+        <button
+          style={{
+            background: '#007bff',
+            color: '#fff',
+            border: '3px solid #007bff',
+            borderRadius: '999px',
+            padding: '12px 40px',
+            fontWeight: 700,
+            fontSize: '16px',
+            fontFamily: 'Montserrat, Arial, sans-serif',
+            boxShadow: '0 4px 16px 0 rgba(0,0,0,0.08)',
+            letterSpacing: '1px',
+            transition: 'all 0.2s',
+            cursor: 'pointer',
+            width: '100%',
+            maxWidth: '320px',
+            margin: '0 auto',
+            display: 'block',
+          }}
+          onMouseOver={e => {
+            e.target.style.background = '#0056b3';
+            e.target.style.borderColor = '#0056b3';
+          }}
+          onMouseOut={e => {
+            e.target.style.background = '#007bff';
+            e.target.style.borderColor = '#007bff';
+          }}
+          onClick={() => navigate(`/apply/${id}`)}
+        >
           Apply Now
         </button>
       </div>
