@@ -1,11 +1,15 @@
 import React from 'react';
-import custom from '../images/about-extra-1.svg';
-import web from '../images/about-extra-2.svg';
-import mobile from '../images/intro-img.svg';
-import qa from '../images/about-img.svg';
+import Lottie from 'lottie-react';
 import content from '../../content/websiteContent';
 
-const serviceImages = [custom, web, mobile, qa, custom, web];
+const lottieFiles = [
+  require('../Home/Business_team.json'),
+  require('../Home/lottie-about.json'),
+  require('../Home/Business_team.json'),
+  require('../Home/lottie-about.json'),
+  require('../Home/Business_team.json'),
+  require('../Home/lottie-about.json'),
+];
 
 const Services = (props) => {
   return (
@@ -19,7 +23,12 @@ const Services = (props) => {
           {content.services.offerings.map((service, idx) => (
             <div key={idx} className={`flex flex-col md:flex-row items-center md:items-start gap-8 ${idx % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
               <div className="flex-shrink-0 w-full md:w-1/2 flex justify-center">
-                <img src={serviceImages[idx]} alt={service.title} className="w-56 h-56 object-contain" />
+                <Lottie
+                  animationData={lottieFiles[idx]}
+                  loop
+                  autoplay
+                  style={{ width: '100%', maxWidth: '320px', height: 'auto', minHeight: '224px' }}
+                />
               </div>
               <div className="md:w-1/2">
                 <h4 className="text-xl font-semibold text-blue-900 mb-3">{service.title}</h4>

@@ -18,7 +18,7 @@ const Navbar = () => {
         <li><Link className={`text-black text-decoration-none pb-1 ${location.pathname === '/' ? 'border-b-2 border-blue-900' : 'border-b-2 border-transparent'}`} to='/'>{content.navbar.home}</Link></li>
         <li><Link className={`text-black text-decoration-none pb-1 ${location.pathname === '/about' ? 'border-b-2 border-blue-900' : 'border-b-2 border-transparent'}`} to='/about'>{content.navbar.about}</Link></li>
         <li><Link className={`text-black text-decoration-none pb-1 ${location.pathname === '/service' ? 'border-b-2 border-blue-900' : 'border-b-2 border-transparent'}`} to='/service'>{content.navbar.services}</Link></li>
-        <li><Link className={`text-black text-decoration-none pb-1 ${location.pathname === '/team' ? 'border-b-2 border-blue-900' : 'border-b-2 border-transparent'}`} to='/team'>{content.navbar.team}</Link></li>
+        <li><Link className={`text-black text-decoration-none pb-1 ${location.pathname === '/products' ? 'border-b-2 border-blue-900' : 'border-b-2 border-transparent'}`} to='/products'>Products</Link></li>
         <li><Link className={`text-black text-decoration-none pb-1 ${location.pathname === '/career' ? 'border-b-2 border-blue-900' : 'border-b-2 border-transparent'}`} to='/career'>{content.navbar.career}</Link></li>
         <li><Link className={`text-black text-decoration-none pb-1 ${location.pathname === '/contact' ? 'border-b-2 border-blue-900' : 'border-b-2 border-transparent'}`} to='/contact'>{content.navbar.contact}</Link></li>
     </>

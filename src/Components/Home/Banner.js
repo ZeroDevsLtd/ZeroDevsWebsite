@@ -2,6 +2,7 @@ import React from 'react';
 import intro from '../images/intro-img.svg';
 import content from '../../content/websiteContent';
 import BackgroundDecor from '../Sheare/BackgroundDecor';
+import Lottie from "lottie-react";
 
 const bannerCircles = [
   { type: 'circle', color: '#60a5fa', opacity: 0.18, size: 80, style: { top: '6%', left: '8%' }, animationName: 'moveCircle1', animationDuration: 22 },
@@ -16,8 +17,13 @@ const Banner = () => {
             <section id="intro" className="clearfix" style={{ background: 'transparent', color: '#111' }}>
                 <div className="container" style={{ background: 'transparent', color: '#111' }}>
 
-                    <div className="intro-img">
-                        <img src={intro} alt="" className="img-fluid" />
+                    <div className="intro-img flex justify-center items-center w-full" style={{ minHeight: '320px' }}>
+                        <Lottie
+                          animationData={require("./Business_team.json")}
+                          loop
+                          autoplay
+                          style={{ width: '100%', maxWidth: '600px', height: 'auto', minHeight: '320px' }}
+                        />
                     </div>
 
                     <div className="intro-info" style={{ color: '#111' }}>

@@ -133,7 +133,12 @@ const Contact = () => {
             )}
           </form>
           <div className="mt-10 text-center text-gray-500 text-sm">
-            <div>{content.contact.address}</div>
+            <div>{content.contact.address.split('\n').map((line, idx) => (
+              <React.Fragment key={idx}>
+                {line}
+                <br />
+              </React.Fragment>
+            ))}</div>
             <div className="mt-1">Phone: <a href={`tel:${content.contact.phone}`} className="text-blue-900">{content.contact.phone}</a></div>
             <div>Email: <a href={`mailto:${content.contact.email}`} className="text-blue-900">{content.contact.email}</a></div>
           </div>

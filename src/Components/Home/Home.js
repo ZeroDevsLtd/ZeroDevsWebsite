@@ -3,7 +3,6 @@ import ChooseUs from '../ChooseUs/ChooseUs';
 import Client from '../Client/Client';
 import Contact from '../Contact/Contact';
 import Services from '../Services/Services';
-import Team from '../Team/Team';
 import Testimonial from '../Testimonial/Testimonial';
 import AboutUs from './AboutUs';
 import Banner from './Banner';

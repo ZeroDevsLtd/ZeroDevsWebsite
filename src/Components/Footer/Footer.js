@@ -28,7 +28,11 @@ const Footer = () => {
           <div class="col-lg-3 col-md-6 footer-contact">
             <h4>{content.contact.title}</h4>
             <p>
-            {content.contact.address} <br/>
+            {content.contact.address.split('\n').map((line, idx) => (
+              <React.Fragment key={idx}>
+                {line}<br/>
+              </React.Fragment>
+            ))}
               <strong>Phone:</strong> {content.contact.phone} <br/>
               <strong>Email:</strong> {content.contact.email} <br/>
             </p>
@@ -45,7 +49,7 @@ const Footer = () => {
 
           <div class="col-lg-3 col-md-6 footer-newsletter">
             <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
+            <p>Stay updated with the latest news, insights, and exclusive offers from ZeroDevs. Subscribe to our newsletter and never miss an update!</p>
             <form>
             <input type="email" name="email"/>
             <input type="submit"  value="Subscribe"/>

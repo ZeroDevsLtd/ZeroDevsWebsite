@@ -6,7 +6,7 @@ const content = {
     home: "Home",
     about: "About Us",
     services: "Services",
-    team: "Team",
+    products: "Products",
     testimonial: "Testimonials",
     client: "Clients",
     contact: "Contact",
@@ -86,30 +86,57 @@ const content = {
       }
     ]
   },
-  team: {
-    title: "Team",
-    description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
-    members: [
+  products: {
+    title: "Our Products",
+    description: "Explore our suite of innovative products, each designed to solve real-world problems and empower businesses and individuals to achieve more.",
+    stats: [
+      { label: "Products Launched", value: 3 },
+      { label: "Active Users", value: "10,000+" },
+      { label: "Countries Served", value: 12 },
+      { label: "Years of Innovation", value: 5 }
+    ],
+    items: [
       {
-        name: "Alice Johnson",
-        title: "CEO & Founder",
-        image: require('../Components/images/team-1.jpg'),
+        name: "InverseMe",
+        url: "https://inverseme.com",
+        summary: "A powerful, privacy-focused social platform for sharing thoughts, connecting with like-minded people, and building your personal brand.",
+        features: [
+          "Real-time content sharing and discovery",
+          "Advanced privacy controls for users",
+          "Personalized feeds and trending topics",
+          "Community building tools and analytics",
+          "Mobile-first, responsive design"
+        ],
+        image: null // Add image path if available
       },
       {
-        name: "Bob Smith",
-        title: "Lead Developer",
-        image: require('../Components/images/team-2.jpg'),
+        name: "SchoolMS",
+        url: "https://schoolms.zerodevs.com",
+        summary: "A comprehensive school management system that streamlines administration, communication, and learning for modern educational institutions.",
+        features: [
+          "Student enrollment and records management",
+          "Attendance tracking and reporting",
+          "Online gradebooks and assessments",
+          "Parent-teacher communication portal",
+          "Timetable and event scheduling",
+          "Secure cloud-based access"
+        ],
+        image: null
       },
       {
-        name: "Carol Lee",
-        title: "UI/UX Designer",
-        image: require('../Components/images/team-3.jpg'),
-      },
-      {
-        name: "David Kim",
-        title: "Project Manager",
-        image: require('../Components/images/team-4.jpg'),
-      },
+        name: "BR Pakshi",
+        url: "https://brpakshi.zerodevs.com",
+        summary: "A robust business resource platform for managing operations, inventory, and customer relationships, tailored for growing enterprises.",
+        features: [
+          "Inventory and order management",
+          "Customer relationship management (CRM)",
+          "Sales and purchase analytics dashboard",
+          "Multi-user roles and permissions",
+          "Automated invoicing and billing",
+          "Integration with popular accounting tools"
+        ],
+        image: null
+      }
     ]
   },
   testimonial: {
@@ -121,16 +148,16 @@ const content = {
   },
   contact: {
     title: "Contact Us",
-    address: "A108 Adam Street, New York, NY 535022, United States",
-    phone: "+1 5589 55488 55",
-    email: "info@example.com"
+    address: "A108 Adam Street, New York, NY 535022, United States\nDevelopment Center: 36/18, S-11, Uttara, Dhaka 1230",
+    phone: "+880 1521 415838",
+    email: "info@zerodevs.com"
   },
   career: {
     title: "Open Positions",
     intro: "Join our team and help shape the future of technology!"
   },
   footer: {
-    description: "Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue."
+    description: "ZeroDevs is your global partner for innovative software solutions. With a presence in New York and Dhaka, we empower businesses worldwide through custom development, SaaS products, and access to top-tier talent. Our expert team is dedicated to delivering quality, fostering long-term partnerships, and helping you scale and succeed in today’s digital world."
   },
   whatWeOffer: {
     title: "WHAT WE OFFER",

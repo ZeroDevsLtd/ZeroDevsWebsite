@@ -4,6 +4,7 @@ import offer2 from '../images/about-extra-2.svg';
 import offer3 from '../images/intro-img.svg';
 import offer4 from '../images/about-img.svg';
 import content from '../../content/websiteContent';
+import Lottie from "lottie-react";
 
 const offerImages = [offer1, offer2, offer3, offer4, offer1, offer2]; // Only vector SVGs, repeat as needed
 

@@ -1,12 +1,13 @@
 import React from 'react';
-import about1 from '../../Components/images/about-img.svg';
-import about2 from '../../Components/images/about-extra-1.svg';
-import about3 from '../../Components/images/about-extra-2.svg';
+import Lottie from "lottie-react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhotoFilm, faShoppingBag, faProjectDiagram, faHeadset, faHandshake } from '@fortawesome/free-solid-svg-icons';
 import { faBarChart } from '@fortawesome/free-regular-svg-icons';
 import content from '../../content/websiteContent';
 import './AboutUs.css';
+import about1 from '../../Components/images/about-img.svg';
+import about2 from '../../Components/images/about-extra-1.svg';
+import about3 from '../../Components/images/about-extra-2.svg';
 
 const AboutUs = (props) => {
   // console.log(props);
