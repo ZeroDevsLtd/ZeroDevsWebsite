@@ -17,6 +17,8 @@ import Products from './Components/Products/Products';
 import Career from './Components/Career/Career';
 import Apply from './Components/Career/Apply';
 import JobDetails from './Components/Career/JobDetails';
+import Terms from './Components/Legal/Terms';
+import Privacy from './Components/Legal/Privacy';
 
 function App() {
   return (
@@ -38,6 +40,8 @@ function App() {
           </Route>
           {/* <Route path='/signup' element={<Signup></Signup>}></Route> */}
           <Route path='/login' element={<div className='pt-24 pb-12 px-2'><Login /></div>}></Route>
+          <Route path='/terms' element={<div className='pt-24 pb-12 px-2'><Terms /></div>}></Route>
+          <Route path='/privacy' element={<div className='pt-24 pb-12 px-2'><Privacy /></div>}></Route>
         </Routes>
       </main>
       <Footer />
