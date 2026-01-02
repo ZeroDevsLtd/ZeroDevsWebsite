@@ -14,8 +14,8 @@ const AdminDashboard = () => {
     const [error, setError] = useState('');
 
     // Hardcoded Admin Credentials
-    const ADMIN_EMAIL = 'admin@zerodevs.com';
-    const ADMIN_PASS = 'admin123'; // Simple password as requested
+    const ADMIN_EMAIL = 'info@zerodevs.com';
+    const ADMIN_PASS = 'ZeroDevs@1230';
 
     const [activeTab, setActiveTab] = useState('applications'); // 'applications', 'jobs', 'postJob'
     const [jobForm, setJobForm] = useState({
@@ -189,6 +189,26 @@ const AdminDashboard = () => {
     if (!isAuthenticated) {
         return (
             <div className="min-h-screen flex items-center justify-center bg-gray-100">
+                <style>{`
+                    input[type="email"].admin-login-input,
+                    input[type="password"].admin-login-input {
+                        background-color: #ffffff !important;
+                        background: #ffffff !important;
+                        color: #111827 !important;
+                        -webkit-text-fill-color: #111827 !important;
+                    }
+                    input[type="email"].admin-login-input:-webkit-autofill,
+                    input[type="password"].admin-login-input:-webkit-autofill {
+                        -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+                        -webkit-text-fill-color: #111827 !important;
+                        background-color: #ffffff !important;
+                        background: #ffffff !important;
+                    }
+                    input[type="email"].admin-login-input::placeholder,
+                    input[type="password"].admin-login-input::placeholder {
+                        color: #9ca3af !important;
+                    }
+                `}</style>
                 <div className="bg-white p-8 rounded shadow-md w-full max-w-md">
                     <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Admin Login</h2>
                     {error && <div className="bg-red-100 text-red-700 p-3 rounded mb-4">{error}</div>}
@@ -199,7 +219,13 @@ const AdminDashboard = () => {
                                 type="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                className="w-full border p-2 rounded focus:outline-none focus:border-blue-500 bg-white text-gray-900"
+                                className="admin-login-input w-full border p-2 rounded focus:outline-none focus:border-blue-500"
+                                style={{
+                                    backgroundColor: '#ffffff',
+                                    color: '#111827',
+                                    WebkitTextFillColor: '#111827'
+                                }}
+                                autoComplete="email"
                                 required
                             />
                         </div>
@@ -209,7 +235,13 @@ const AdminDashboard = () => {
                                 type="password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
-                                className="w-full border p-2 rounded focus:outline-none focus:border-blue-500 bg-white text-gray-900"
+                                className="admin-login-input w-full border p-2 rounded focus:outline-none focus:border-blue-500"
+                                style={{
+                                    backgroundColor: '#ffffff',
+                                    color: '#111827',
+                                    WebkitTextFillColor: '#111827'
+                                }}
+                                autoComplete="current-password"
                                 required
                             />
                         </div>

@@ -1,8 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import content from '../../content/websiteContent';
 
 const Footer = () => {
+    const navigate = useNavigate();
+
+    const handleOfficeDoubleClick = () => {
+        navigate('/login');
+    };
+
     return (
         <div>
             <footer id="footer">
@@ -63,7 +69,22 @@ const Footer = () => {
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>ZeroDevs</strong>. All Rights Reserved
+        &copy; Copyright <strong>ZeroDevs</strong>. All Rights Reserved{' '}
+        <button 
+          onDoubleClick={handleOfficeDoubleClick}
+          style={{
+            background: 'transparent',
+            border: 'none',
+            color: 'inherit',
+            cursor: 'pointer',
+            fontSize: 'inherit',
+            padding: '0',
+            marginLeft: '5px',
+            textDecoration: 'none'
+          }}
+        >
+          office
+        </button>
       </div>
       <div class="credits">
        
