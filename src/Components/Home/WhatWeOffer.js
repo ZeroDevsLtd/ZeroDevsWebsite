@@ -1,12 +1,15 @@
 import React from 'react';
-import offer1 from '../images/about-extra-1.svg';
-import offer2 from '../images/about-extra-2.svg';
-import offer3 from '../images/intro-img.svg';
-import offer4 from '../images/about-img.svg';
 import content from '../../content/websiteContent';
-import Lottie from "lottie-react";
+import Lottie from 'lottie-react';
 
-const offerImages = [offer1, offer2, offer3, offer4, offer1, offer2]; // Only vector SVGs, repeat as needed
+const lottieFiles = [
+  require('./Business team.json'), // Qualified Engineers
+  require('./Web Design Illustration.json'), // Dedicated Team
+  require('./Man and robot with computers sitting together in workplace.json'), // Collaborative Process
+  require('./Business_team.json'), // Continuous Supervision
+  require('./search for employee.json'), // Global Talent Hiring
+  require('./job hunt concept.json'), // SaaS Product Development
+];
 
 const WhatWeOffer = () => {
   return (
@@ -20,7 +23,12 @@ const WhatWeOffer = () => {
           {content.whatWeOffer.items.map((item, idx) => (
             <div key={idx} className="bg-white rounded-2xl shadow-lg flex flex-col items-center text-center p-8 hover:shadow-2xl transition" style={{ color: '#111' }}>
               <div className="flex-shrink-0 w-40 h-40 rounded-xl bg-gray-100 flex items-center justify-center overflow-hidden mb-6">
-                <img src={offerImages[idx]} alt={item.title} className="w-32 h-32 object-contain" />
+                <Lottie
+                  animationData={lottieFiles[idx]}
+                  loop
+                  autoplay
+                  style={{ width: '100%', maxWidth: '160px', height: 'auto', minHeight: '120px' }}
+                />
               </div>
               <h4 className="text-xl font-semibold mb-2 text-gray-900 max-w-md mx-auto" style={{ color: '#111' }}>{item.title}</h4>
               <p className="text-gray-700 text-base max-w-md mx-auto" style={{ color: '#111' }}>{item.text}</p>

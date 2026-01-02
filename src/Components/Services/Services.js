@@ -3,12 +3,12 @@ import Lottie from 'lottie-react';
 import content from '../../content/websiteContent';
 
 const lottieFiles = [
-  require('../Home/Business_team.json'),
-  require('../Home/lottie-about.json'),
-  require('../Home/Business_team.json'),
-  require('../Home/lottie-about.json'),
-  require('../Home/Business_team.json'),
-  require('../Home/lottie-about.json'),
+  require('../Home/Business team.json'), // Custom Software Development
+  require('../Home/Web Design Illustration.json'), // Web Application Development
+  require('../Home/Man and robot with computers sitting together in workplace.json'), // Mobile Application Development
+  require('../Home/Business_team.json'), // Quality Assurance & Testing
+  require('../Home/search for employee.json'), // Global Talent Hiring
+  require('../Home/job hunt concept.json'), // SaaS Product Development
 ];
 
 const Services = (props) => {

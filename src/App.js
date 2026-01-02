@@ -19,6 +19,7 @@ import Apply from './Components/Career/Apply';
 import JobDetails from './Components/Career/JobDetails';
 import Terms from './Components/Legal/Terms';
 import Privacy from './Components/Legal/Privacy';
+import AdminDashboard from './Components/Admin/AdminDashboard';
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
           <Route path='/login' element={<div className='pt-24 pb-12 px-2'><Login /></div>}></Route>
           <Route path='/terms' element={<div className='pt-24 pb-12 px-2'><Terms /></div>}></Route>
           <Route path='/privacy' element={<div className='pt-24 pb-12 px-2'><Privacy /></div>}></Route>
+          <Route path='/admin/dashboard' element={<AdminDashboard />}></Route>
         </Routes>
       </main>
       <Footer />

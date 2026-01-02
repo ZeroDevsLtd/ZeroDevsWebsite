@@ -1,82 +1,38 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { getFirestore, doc, getDoc } from 'firebase/firestore';
+import app from '../../firebase.init';
 
-const jobDetails = {
-  1: {
-    title: 'Frontend Developer',
-    location: 'Dhaka, Bangladesh',
-    type: 'Full Time',
-    description: 'We are looking for a skilled React developer with experience in Tailwind CSS and modern JavaScript frameworks. 2+ years experience required.',
-    responsibilities: [
-      'Develop and maintain user-facing features using React.js',
-      'Write clean, scalable, and efficient code',
-      'Collaborate with UI/UX designers and backend developers',
-      'Optimize applications for maximum speed and scalability',
-    ],
-    requirements: [
-      '2+ years experience with React',
-      'Strong knowledge of JavaScript and ES6+',
-      'Experience with Tailwind CSS',
-      'Familiarity with REST APIs',
-    ],
-    benefits: [
-      'Competitive salary',
-      'Flexible working hours',
-      'Friendly team environment',
-    ],
-  },
-  2: {
-    title: 'Backend Developer',
-    location: 'Remote',
-    type: 'Full Time',
-    description: 'Seeking a Node.js/Express developer familiar with REST APIs and MongoDB. 3+ years experience preferred.',
-    responsibilities: [
-      'Design and implement RESTful APIs',
-      'Maintain and optimize database systems',
-      'Work closely with frontend developers',
-      'Ensure application security and data protection',
-    ],
-    requirements: [
-      '3+ years experience with Node.js/Express',
-      'Experience with MongoDB',
-      'Understanding of RESTful API design',
-      'Familiarity with cloud deployment',
-    ],
-    benefits: [
-      'Remote work',
-      'Growth opportunities',
-      'Supportive team',
-    ],
-  },
-  3: {
-    title: 'UI/UX Designer',
-    location: 'Dhaka, Bangladesh',
-    type: 'Contract',
-    description: 'Creative designer needed for web and mobile app projects. Proficiency in Figma or Adobe XD required.',
-    responsibilities: [
-      'Design user interfaces for web and mobile apps',
-      'Create wireframes, prototypes, and mockups',
-      'Work with developers to implement designs',
-      'Conduct user research and usability testing',
-    ],
-    requirements: [
-      'Portfolio of design projects',
-      'Proficiency in Figma or Adobe XD',
-      'Strong sense of modern UI/UX',
-      'Ability to work with developers',
-    ],
-    benefits: [
-      'Project-based compensation',
-      'Creative freedom',
-      'Collaborative environment',
-    ],
-  },
-};
+const db = getFirestore(app);
 
 const JobDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const job = jobDetails[id];
+  const [job, setJob] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchJob = async () => {
+      try {
+        const docRef = doc(db, 'jobs', id);
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+          setJob(docSnap.data());
+        } else {
+          console.log("No such document!");
+        }
+      } catch (error) {
+        console.error("Error fetching job details:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchJob();
+  }, [id]);
+
+  if (loading) return <div className="max-w-xl mx-auto mt-24 p-4 text-center min-h-screen">Loading job details...</div>;
 
   if (!job) return <div className="max-w-xl mx-auto mt-24 p-4 text-center min-h-screen">Job not found.</div>;
 
@@ -86,24 +42,62 @@ const JobDetails = () => {
         <h2 className="text-2xl font-bold mb-2 text-gray-900">{job.title}</h2>
         <div className="text-gray-500 text-sm mb-4">{job.location} &bull; {job.type}</div>
         <p className="mb-6 text-gray-700">{job.description}</p>
-        <h3 className="font-semibold mb-2">Responsibilities:</h3>
-        <ul className="list-disc list-inside mb-6 text-gray-700">
-          {job.responsibilities.map((item, idx) => (
-            <li key={idx}>{item}</li>
-          ))}
-        </ul>
-        <h3 className="font-semibold mb-2">Requirements:</h3>
-        <ul className="list-disc list-inside mb-6 text-gray-700">
-          {job.requirements.map((req, idx) => (
-            <li key={idx}>{req}</li>
-          ))}
-        </ul>
-        <h3 className="font-semibold mb-2">Benefits:</h3>
-        <ul className="list-disc list-inside mb-6 text-gray-700">
-          {job.benefits.map((b, idx) => (
-            <li key={idx}>{b}</li>
-          ))}
-        </ul>
+
+        {job.responsibilities && job.responsibilities.length > 0 && (
+          <>
+            <h3 className="font-semibold mb-2">Responsibilities:</h3>
+            <ul className="list-disc list-inside mb-6 text-gray-700">
+              {job.responsibilities.map((item, idx) => (
+                <li key={idx}>{item}</li>
+              ))}
+            </ul>
+          </>
+        )}
+
+        {job.requirements && job.requirements.length > 0 && (
+          <>
+            <h3 className="font-semibold mb-2">Requirements:</h3>
+            <ul className="list-disc list-inside mb-6 text-gray-700">
+              {job.requirements.map((req, idx) => (
+                <li key={idx}>{req}</li>
+              ))}
+            </ul>
+          </>
+        )}
+
+        {job.benefits && job.benefits.length > 0 && (
+          <>
+            <h3 className="font-semibold mb-2">Benefits:</h3>
+            <ul className="list-disc list-inside mb-6 text-gray-700">
+              {job.benefits.map((b, idx) => (
+                <li key={idx}>{b}</li>
+              ))}
+            </ul>
+          </>
+        )}
+
+        {job.training && job.training.length > 0 && (
+          <>
+            <h3 className="font-semibold mb-2">Training & Support:</h3>
+            <ul className="list-disc list-inside mb-6 text-gray-700">
+              {job.training.map((t, idx) => (
+                <li key={idx}>{t}</li>
+              ))}
+            </ul>
+          </>
+        )}
+
+        {job.whyJoin && job.whyJoin.length > 0 && (
+          <>
+            <h3 className="font-semibold mb-2">Why Join ZeroDevs?</h3>
+            <ul className="list-disc list-inside mb-6 text-gray-700">
+              {job.whyJoin.map((w, idx) => (
+                <li key={idx}>{w}</li>
+              ))}
+            </ul>
+          </>
+        )}
+
         <button
           style={{
             background: '#007bff',
