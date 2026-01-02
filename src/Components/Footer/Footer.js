@@ -6,7 +6,7 @@ const Footer = () => {
     const navigate = useNavigate();
 
     const handleOfficeDoubleClick = () => {
-        navigate('/login');
+        navigate('/admin/dashboard');
     };
 
     return (

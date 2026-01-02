@@ -17,7 +17,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-a, a:focus, a:active, a:visited, a:hover, button, button:focus, button:active, button:visited, button:hover {
+a, a:focus, a:active, a:visited, a:hover {
+  outline: none !important;
+  color: inherit !important;
+  background: none !important;
+  box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+button:not(.btn), 
+button:not(.btn):focus, 
+button:not(.btn):active, 
+button:not(.btn):visited, 
+button:not(.btn):hover {
+  outline: none !important;
+  color: inherit !important;
+  background: none !important;
+  box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+input[type="button"]:not(.btn),
+input[type="submit"]:not(.btn) {
   outline: none !important;
   color: inherit !important;
   background: none !important;

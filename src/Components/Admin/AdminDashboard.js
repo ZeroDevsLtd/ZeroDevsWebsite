@@ -18,6 +18,7 @@ const AdminDashboard = () => {
     const ADMIN_PASS = 'ZeroDevs@1230';
 
     const [activeTab, setActiveTab] = useState('applications'); // 'applications', 'jobs', 'postJob'
+    const [expandedApp, setExpandedApp] = useState(null); // Track which application is expanded
     const [jobForm, setJobForm] = useState({
         title: '',
         location: '',
@@ -316,49 +317,125 @@ const AdminDashboard = () => {
                                         </tr>
                                     ) : (
                                         applications.map((app) => (
-                                            <tr key={app.id}>
-                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                                    {app.submittedAt?.seconds ? new Date(app.submittedAt.seconds * 1000).toLocaleDateString() : 'N/A'}
-                                                </td>
-                                                <td className="px-6 py-4 whitespace-nowrap">
-                                                    <div className="text-sm font-medium text-gray-900">{app.firstName} {app.lastName}</div>
-                                                    <div className="text-sm text-gray-500">{app.email}</div>
-                                                    <div className="text-sm text-gray-500">{app.countryCode} {app.phone}</div>
-                                                </td>
-                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                                    {app.jobTitle}
-                                                </td>
-                                                <td className="px-6 py-4 text-sm text-gray-500">
-                                                    <div className="max-w-xs truncate" title={app.summary}>{app.summary || 'No summary'}</div>
-                                                    <div className="mt-1">
-                                                        <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800 mr-2">
-                                                            Exp: {app.experience}
-                                                        </span>
-                                                        <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800">
-                                                            Degree: {app.degree}
-                                                        </span>
-                                                    </div>
-                                                </td>
-                                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
-                                                    {app.cv ? (
+                                            <React.Fragment key={app.id}>
+                                                <tr className="cursor-pointer hover:bg-gray-50" onClick={() => setExpandedApp(expandedApp === app.id ? null : app.id)}>
+                                                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                                        {app.submittedAt?.seconds ? new Date(app.submittedAt.seconds * 1000).toLocaleDateString() : 'N/A'}
+                                                    </td>
+                                                    <td className="px-6 py-4 whitespace-nowrap">
+                                                        <div className="text-sm font-medium text-gray-900">{app.firstName} {app.lastName}</div>
+                                                        <div className="text-sm text-gray-500">{app.email}</div>
+                                                        <div className="text-sm text-gray-500">{app.countryCode} {app.phone}</div>
+                                                    </td>
+                                                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                                        {app.jobTitle}
+                                                    </td>
+                                                    <td className="px-6 py-4 text-sm text-gray-500">
+                                                        <div className="max-w-xs truncate" title={app.summary}>{app.summary || 'No summary'}</div>
+                                                        <div className="mt-1">
+                                                            <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800 mr-2">
+                                                                Exp: {app.experience}
+                                                            </span>
+                                                            <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800">
+                                                                Degree: {app.degree}
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2" onClick={(e) => e.stopPropagation()}>
                                                         <button
-                                                            onClick={() => downloadCV(app.cv, `${app.firstName}_${app.lastName}`)}
-                                                            className="text-blue-600 hover:text-blue-900"
+                                                            onClick={() => setExpandedApp(expandedApp === app.id ? null : app.id)}
+                                                            className="text-blue-600 hover:text-blue-900 mr-2"
                                                         >
-                                                            Download CV
+                                                            {expandedApp === app.id ? 'Hide' : 'View All'}
                                                         </button>
-                                                    ) : (
-                                                        <span className="text-gray-400">No CV</span>
-                                                    )}
-                                                    <button
-                                                        onClick={() => handleDeleteApplication(app.id)}
-                                                        className="px-3 py-1.5 rounded hover:opacity-90 transition text-xs font-semibold"
-                                                        style={{ backgroundColor: '#EF4444', color: 'white' }}
-                                                    >
-                                                        Delete
-                                                    </button>
-                                                </td>
-                                            </tr>
+                                                        {app.cv && (
+                                                            <button
+                                                                onClick={() => downloadCV(app.cv, `${app.firstName}_${app.lastName}`)}
+                                                                className="text-blue-600 hover:text-blue-900 mr-2"
+                                                            >
+                                                                CV
+                                                            </button>
+                                                        )}
+                                                        <button
+                                                            onClick={() => handleDeleteApplication(app.id)}
+                                                            className="px-3 py-1.5 rounded hover:opacity-90 transition text-xs font-semibold"
+                                                            style={{ backgroundColor: '#EF4444', color: 'white' }}
+                                                        >
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                {expandedApp === app.id && (
+                                                    <tr>
+                                                        <td colSpan="5" className="px-6 py-4 bg-gray-50">
+                                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                                                                <div>
+                                                                    <strong className="text-gray-700">Full Name:</strong>
+                                                                    <p className="text-gray-900">{app.firstName} {app.lastName}</p>
+                                                                </div>
+                                                                <div>
+                                                                    <strong className="text-gray-700">Email:</strong>
+                                                                    <p className="text-gray-900">{app.email}</p>
+                                                                </div>
+                                                                <div>
+                                                                    <strong className="text-gray-700">Phone:</strong>
+                                                                    <p className="text-gray-900">{app.countryCode} {app.phone}</p>
+                                                                </div>
+                                                                <div>
+                                                                    <strong className="text-gray-700">Job Title:</strong>
+                                                                    <p className="text-gray-900">{app.jobTitle}</p>
+                                                                </div>
+                                                                <div>
+                                                                    <strong className="text-gray-700">Citizen:</strong>
+                                                                    <p className="text-gray-900">{app.citizen === 'yes' ? 'Yes (Bangladeshi)' : `No (${app.countryNonBD || 'Not specified'})`}</p>
+                                                                </div>
+                                                                <div>
+                                                                    <strong className="text-gray-700">Degree Completed:</strong>
+                                                                    <p className="text-gray-900">{app.degree === 'yes' ? 'Yes' : 'No'}</p>
+                                                                </div>
+                                                                <div>
+                                                                    <strong className="text-gray-700">Passing Year:</strong>
+                                                                    <p className="text-gray-900">{app.passingYear || 'N/A'}</p>
+                                                                </div>
+                                                                <div>
+                                                                    <strong className="text-gray-700">Experience:</strong>
+                                                                    <p className="text-gray-900">{app.experience || 'N/A'}</p>
+                                                                </div>
+                                                                <div>
+                                                                    <strong className="text-gray-700">Previously Interviewed:</strong>
+                                                                    <p className="text-gray-900">{app.interviewed === 'yes' ? 'Yes' : 'No'}</p>
+                                                                </div>
+                                                                <div>
+                                                                    <strong className="text-gray-700">CV:</strong>
+                                                                    <p className="text-gray-900">{app.cv ? '✓ Uploaded' : '✗ Not uploaded'}</p>
+                                                                </div>
+                                                                {app.coverLetterFile && (
+                                                                    <div>
+                                                                        <strong className="text-gray-700">Cover Letter File:</strong>
+                                                                        <p className="text-gray-900">✓ Uploaded</p>
+                                                                    </div>
+                                                                )}
+                                                                <div className="md:col-span-2">
+                                                                    <strong className="text-gray-700">Personal Summary:</strong>
+                                                                    <p className="text-gray-900 whitespace-pre-wrap">{app.summary || 'No summary provided'}</p>
+                                                                </div>
+                                                                {app.coverLetterText && (
+                                                                    <div className="md:col-span-2">
+                                                                        <strong className="text-gray-700">Cover Letter:</strong>
+                                                                        <p className="text-gray-900 whitespace-pre-wrap">{app.coverLetterText}</p>
+                                                                    </div>
+                                                                )}
+                                                                <div>
+                                                                    <strong className="text-gray-700">Submitted Date:</strong>
+                                                                    <p className="text-gray-900">
+                                                                        {app.submittedAt?.seconds ? new Date(app.submittedAt.seconds * 1000).toLocaleString() : 'N/A'}
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                )}
+                                            </React.Fragment>
                                         ))
                                     )}
                                 </tbody>
