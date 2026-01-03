@@ -45,7 +45,7 @@ const JobDetails = () => {
 
         {job.responsibilities && job.responsibilities.length > 0 && (
           <>
-            <h3 className="font-semibold mb-2">Responsibilities:</h3>
+            <h3 className="font-semibold mb-2">What You Will Do:</h3>
             <ul className="list-disc list-inside mb-6 text-gray-700">
               {job.responsibilities.map((item, idx) => (
                 <li key={idx}>{item}</li>
@@ -67,7 +67,7 @@ const JobDetails = () => {
 
         {job.benefits && job.benefits.length > 0 && (
           <>
-            <h3 className="font-semibold mb-2">Benefits:</h3>
+            <h3 className="font-semibold mb-2">What You Will Receive:</h3>
             <ul className="list-disc list-inside mb-6 text-gray-700">
               {job.benefits.map((b, idx) => (
                 <li key={idx}>{b}</li>

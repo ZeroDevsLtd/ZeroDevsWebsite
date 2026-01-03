@@ -551,7 +551,7 @@ const AdminDashboard = () => {
                             </div>
 
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">Responsibilities (One per line)</label>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">What You Will Do (One per line)</label>
                                 <textarea
                                     rows="4"
                                     className="w-full border rounded p-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-900"
@@ -573,7 +573,7 @@ const AdminDashboard = () => {
                             </div>
 
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">Benefits (One per line)</label>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">What You Will Receive (One per line)</label>
                                 <textarea
                                     rows="4"
                                     className="w-full border rounded p-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-900"
